@@ -11,16 +11,20 @@ description: 写下来就一定要看完哟
 ## 文学
 
  1. [文学回忆录][1]——木心
+
 ![memoir.jpg-25.6kB][2]
 ## 艺术
 
  2. [Living With Art][3]
+
 ![licving-with-art.jpg-43.1kB][4]
 ## 语言
 
  1. [On Writing Well][5]
+
 ![on-writing-well.jpg-29.1kB][6]
  2. [Merriam-Webster's Vocabulary Builder][7]
+
 ![webster1.jpg-42.9kB][8]
 
  
@@ -28,14 +32,19 @@ description: 写下来就一定要看完哟
 ## 科学
 
  1. [The Grand Design][9]
+
 ![the-grand-design.jpg-49.1kB][10]
  2. [Neural Networks and Learning Machine][11]
+
 ![neural-networks-and-learnig-machine.jpg-38.7kB][12]
  3. [The MIT Encyvlopedia of the Cognitive Sciences][13]
+
 ![the-mit-encyclopedia-of-the-cognitive-sciences.jpg-19.3kB][14]
  4. [统计自然语言处理][15]——宗成庆
+
 ![statistical-nlp.jpg-30.3kB][16]
  5. [Speech and Language Processing][17]
+
 ![speech-and -language-processing.jpg-30.3kB][18]
 
 
