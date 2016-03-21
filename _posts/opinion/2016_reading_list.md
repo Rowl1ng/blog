@@ -4,18 +4,20 @@ title: 2016 Reading List
 category: opinion
 description: 写下来就一定要看完哟
 ---
-# 2016 Reading List
-
-标签（空格分隔）： 读书
 
 ---
+# 2016 Reading List
+---
 ## 文学
+
  1. [文学回忆录][1]——木心
 ![memoir.jpg-25.6kB][2]
 ## 艺术
+
  2. [Living With Art][3]
 ![licving-with-art.jpg-43.1kB][4]
 ## 语言
+
  1. [On Writing Well][5]
 ![on-writing-well.jpg-29.1kB][6]
  2. [Merriam-Webster's Vocabulary Builder][7]
