@@ -67,30 +67,36 @@ and a possibly nonlinear activation link.The bias is represented by a synaptic l
 question.
 - The activation link squashes the induced local field of the neuron to produce an output.
 Output layer:
-\\begin{equation}
+$$
+\begin{equation}
 y_{j}=f(net_{j})
-\\end{equation}
-$f()$ is the \emph{activation function}.It defines the output of a neuron in terms of
-the induced local field $net$ .\\
-
+\end{equation}
+$$
+$$f()$$ is the \emph{activation function}.It defines the output of a neuron in terms of
+the induced local field $$net$$ .\\
+$$
 \xymatrix {
  x_{0}=+1 \ar[ddr]|(0.6){w_{j0}} &  &\\
  x_{1} \ar[r]|(0.6){w_{j1}} & B & C\\
  x_{2} \ar[r]^(0.6){w_{j2}} & net_{j} \ar[r]^(0.6){f()} & y_{j} \\
 x
 }
-
+$$
 
 For example:
-\\begin{equation}
+$$
+\begin{equation}
 net_{k}=\sum_{j=1}^{n_{H}}y_{i}w_{kj}+w_{k0}=\sum_{j=0}^{n_{H}}x_{i}w_{ji}=w_{k}^{t}y
-\\end{equation}
-$n_{H}$is the number of hidden layers.
+\end{equation}
+$$
+$$n_{H}$$is the number of hidden layers.
 
 So:
-\\begin{equation}
+$$
+\begin{equation}
 g_{k}(x)=f(\sum_{j=1}^{n_{H}}w_{kj}+f(\sum_{i=0}^{d}x_{i}w_{ji}+w_{j0})+w_{k0})
-\\end{equation}
+\end{equation}
+$$
 The activate function of output layer can be different from hidden layer while each unit can have different activate function.
 
 %%                  BP Algorithm                        %%
@@ -101,32 +107,36 @@ Backpropagation, an abbreviation for "backward propagation of errors",is the eas
 The partial derivative $\partial J /\partial w_{ji}$ represents a sensitivity factor, determining the
 direction of search in weight space for the synaptic weight $ w_{ji}$.
 Learning:
-\\begin{gather}
+$$
+\begin{gather}
 \mathcal T =\{ x(n),d(n)\}_{n=1}^{N}\\
 e_{j}(n)=d_{j}(n)-y_{j}(n)
-\\end{gather}
+\end{gather}
+$$
 the instantaneous error energy of neuron $j$ is defined by
-
-\\begin{gather}
+$$
+\begin{gather}
 J(w)=\frac 12 \sum_{k=1}^{c}(e_{k})^{2}=\frac 12||t-\delta||^{2} \\
-\\end{gather}
+\end{gather}
+$$
 In the batch method of supervised learning, adjustments to the synaptic weights of the
 multilayer perceptron are performed \emph{after} the presentation of all the %N% examples in the
 training sample $\mathcal T$ that constitute one \emph{epoch} of training.  In other words, the cost function
 for batch learning is defined by the average error energy $J(w)$.
 - firstly define the training bias of output layer:
-
-\\begin{gather}
+$$
+\begin{gather}
 \Delta w=-\eta\frac {\partial J(w)}{\partial w} \\\\
 w(m+1)=w(m)+\Delta w(m)
-\\end{gather}
-
-\\begin{gather}
+\end{gather}
+$$
+$$
+\begin{gather}
 \frac {\partial J}{\partial w_{kj}}=\frac {\partial J}{\partial net_{k}}\frac {\partial net_{k}}{\partial w_{kj}} \\
 \frac {\partial J}{\partial net_{k}}= \frac {\partial J}{\partial \delta _{k}}\frac {\partial \delta _{k}}{\partial J}=-(t_{k}-\delta _{k})f'(net_{k}) \\
 \Delta w_{kj}=\eta \frac {\partial J}{\partial net_{k}}=\eta (t_{k}-\delta _{k}))f'(net_{k})y_{j} 
-\\end{gather}
-
+\end{gather}
+$$
 - input->hidden
 
 
