@@ -7,19 +7,23 @@ description: 写下来就一定要看完哟
 
 
 
-# 2016 Reading List
 ---
+
 ## 文学
+
 
  1. [文学回忆录][1]——木心
 
 ![memoir.jpg-25.6kB][2]
+
 ## 艺术
 
  2. [Living With Art][3]
 
 ![licving-with-art.jpg-43.1kB][4]
+
 ## 语言
+
 
  1. [On Writing Well][5]
 
@@ -31,6 +35,7 @@ description: 写下来就一定要看完哟
  
 
 ## 科学
+
 
  1. [The Grand Design][9]
 
