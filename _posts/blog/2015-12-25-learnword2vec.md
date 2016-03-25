@@ -61,7 +61,10 @@ markdown和MathJax的冲突：
 
 ## Multi-Layer Neural Network
 
-A.3-layer network: Input Layer,Hidden Lyer,Output layer.
+A.3-layer network: 
+- Input Layer,
+- Hidden Lyer,
+- Output layer.
 Except input units,each unit has a bias.
 
 ### preassumption calculation
@@ -77,7 +80,7 @@ Specifically, a signal $$x_{i}$$ at the input of synapse $$i$$ connected to nuer
 $$i$$ refers input layer,$$j$$ refers hidden layer.$$w_{j0}$$ is the bias.$$x_{0}=+1$$.
 
 - Each neuron is represented by a set of linear synaptic links, an externally applied bias,
-and a possibly nonlinear activation link.The bias is represented by a synaptic link connected to an input fixed at $+1$.
+and a possibly nonlinear activation link.The bias is represented by a synaptic link connected to an input fixed at $$+1$$.
 - The synaptic links of a neuron weight their respective input signals.
 - The weighted sum of the input signals defines the induced local field of the neuron in
 question.
