@@ -11,7 +11,8 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 
 
 
-## 问题 
+## 问题
+
 不同亮度的图片能统一
 
  - 检测图像白色（255）像素的比例，如果过高的话，调整相应阈值。或者，换句话是检测亮度？
@@ -21,7 +22,8 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 	* cv2的image和PIL的image区别？
 		* PIL的阈值函数？
 
-## 环境 
+## 环境
+
 <ul>
  <li>安装numpy、scipy、PIL（Pillow）、matplotlib</li>
  <li>安装openCV <li>		
@@ -38,6 +40,7 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 ### 基础操作
 
 #### 1. 读入、输出jpg
+
 ```python
     for infile in  glob.glob('../photos/test/*.jpg'):
          out=processImage(infile)
@@ -48,10 +51,13 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 #### 2. **trackbar**实时调节参数
 
 创建trackbar
+
 ```python 
     cv2.createTrackbar('thrs1', 'fill', 2000, 10000, nothing)
 ```
+
 从trackbar获取参数
+
 ```python
     while True 
         thrs1 = cv2.getTrackbarPos('thrs1', 'fill')
@@ -59,15 +65,20 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
         cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
+
 #### 3. Scharr操作
+
 没用到，因为标识线不清晰的情况下只能突出密密麻麻的裂缝，但能有效区别开没有污损的标识线（平滑）和路面上的白色印记（粗糙）。
+
 ```python
     gradX = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = 1, dy = 0, ksize = -1)
     gradY = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = 0, dy = 1, ksize = -1)
     gradient = cv2.subtract(gradX, gradY)
     gradient = cv2.convertScaleAbs(gradient)
 ```
+
 ### 平滑化处理
+
 #### 1. 双边滤波
 
 > 该滤波器可以在保证**边界清晰**的情况下有效的**去掉噪声**。它的构造比较复杂，即考虑了图像的**空间关系**，也考虑图像的**灰度关系**。双边滤波同时使用了空间高斯权重和灰度相似性高斯权重，确保了边界不会被模糊掉。
@@ -77,7 +88,9 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
  `cv2.bilateralFilter(image, 9, 90,16)`
 cv2.bilateralFilter(img,d,’p1’,’p2’)函数有四个参数需要，d是领域的直径，后面两个参数是空间高斯函数标准差和灰度值相似性高斯函数标准差。
     `cv2.bilateralFilter(img, 9, 90,16)`
+
 #### 2. 高斯滤波（*这个好像没有太大影响。。。*）
+
 - [ ] 必须是奇数，可以trackbar*2+1啊
 ```python
     img = cv2.GaussianBlur(image,(7,7),0)
@@ -124,11 +137,17 @@ OpenCV的[Histograms][2]
     plt.imshow(binImg, cmap = 'gray', interpolation = 'bicubic')
     plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
 ```
+
 ----------
+
 ## GUI部分（PyQt4）
+
 [参考代码][5]
+
 ### 1.界面
+
 ![gui.png-6.8kB][6]
+
 ```python
     # -*- coding: utf-8 -*-
     
@@ -279,10 +298,13 @@ if __name__ == "__main__":
  
 ```
 ### 3. 核心函数文件
+
 ```python
 
 ```
+
 ## 打包成EXE
+
 可以看这个[视频][7]，有好几种选择：
  - py2exe 
  - cx_Freeze
@@ -303,7 +325,9 @@ if __name__ == "__main__":
 没执行成功呃。。。咋回事儿?
 
 ----------
-## 花絮 
+
+## 花絮
+
 这次用的是全局性阈值，自适应阈值能平衡细节，但对有裂缝的车道来说并不适用。因为最后的结果强调标志线与路面的黑白对比，所以只是通过一个全局的阈值“筛出”白色标志线。不过这时遇到一个问题：对于光照条件不同的路面照片，阈值是不同的,甚至在一种光照条件（暗光），路面照片也不一样，这个时候开始考虑归一化和增强对比度的问题。
 真傻还是假傻。。。。在powershell里执行命令，默认都是在system32文件夹里啊。。。。得切到工程文件夹里才好啊啊啊啊
 -  **ToDo List**
