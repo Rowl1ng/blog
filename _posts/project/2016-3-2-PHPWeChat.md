@@ -69,6 +69,8 @@ phpmyadmin安装完后，并不在apache默认路径下，需要建立一个连�
     >which svn
     >/usr/bin/svn
 
+    $ svn checkout https://svn.sinacloud.com/$appname
+
 #### cgi
 
     sudo apt-get install php5-cgi
