@@ -59,7 +59,7 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
         cv2.imshow('fill', image)
         cv2.waitKey(0)
     cv2.destroyAllWindows()
-`~~~
+~~~
 
 #### 3. Scharr操作
 
@@ -88,6 +88,7 @@ cv2.bilateralFilter(img,d,’p1’,’p2’)函数有四个参数需要，d是�
 #### 2. 高斯滤波（*这个好像没有太大影响。。。*）
 
 - [ ] 必须是奇数，可以trackbar*2+1啊
+
 ~~~python
     img = cv2.GaussianBlur(image,(7,7),0)
 ~~~
@@ -96,10 +97,12 @@ cv2.bilateralFilter(img,d,’p1’,’p2’)函数有四个参数需要，d是�
 OpenCV的[Histograms][2]
 
 - [ ] 用trackbar调节参数
+
 ~~~python
     img2 = cdf[img]
     res = np.hstack((img,equ)) #stacking images side-by-side
 ~~~
+
 ![Image.png-7.9kB][3]
 
 ### 阈值处理
@@ -238,6 +241,7 @@ OpenCV的[Histograms][2]
         sys.exit(app.exec_())
         #应用程序的主事件循环，事件处理从这里开始
 ~~~
+
 - exec是Python的关键字，因此，用 exec_() 来取代它。
 
 #### 2. 自定义槽

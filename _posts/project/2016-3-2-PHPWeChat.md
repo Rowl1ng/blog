@@ -20,15 +20,19 @@ description: 别人做的啦，但是需求改了就要改代码。。。。。�
     mysql> create database village;
     mysql> use village;
     mysql> set names utf8;
-    mysql> show tables; 
+    mysql> show tables;
+
 打算配一下PHPadmin,方便看数据库。先来安装PHP：
 
     sudo apt-get install php5 libapache2-mod-php5
     sudo service apache2 restart //重启一下服务
+
 下面编辑一个php文件验证一下：
 
     sudo vim /var/www/html/phpinfo.php
+
 内容：
+
 ```php
     <?php  
        phpinfo();  
@@ -40,11 +44,14 @@ description: 别人做的啦，但是需求改了就要改代码。。。。。�
 下面来装mysql的图形界面phpadmin：
 
     sudo apt-get install phpmyadmin
+
 有提示选择web服务器，选择apache。
 phpmyadmin安装完后，并不在apache默认路径下，需要建立一个连接：
     
     sudo ln -s /usr/share/phpmyadmin /var/www/html
+
 重启apache服务器，浏览器打开：`http://localhost/phpmyadmin`
+
 ![2016-03-02 21-28-26屏幕截图.png-146.4kB][3]
 
 
@@ -52,18 +59,23 @@ phpmyadmin安装完后，并不在apache默认路径下，需要建立一个连�
 ## PHPStorm
 
 ### Checking out Files from a Repository
+
 #### SVN
 
 在终端查看svn安装位置：
+
     >which svn
     >/usr/bin/svn
+
 #### cgi
 
     sudo apt-get install php5-cgi
 
 
 ----------
+
 ## 进入正题
+
 **ThinkPHP 3.2**版本采用模块化的设计架构，下面是一个应用目录下面的模块目录结构，每个模块可以方便的卸载和部署，并且支持公共模块。
 
     Application      默认应用目录（可以设置）
@@ -84,7 +96,9 @@ phpmyadmin安装完后，并不在apache默认路径下，需要建立一个连�
     │  ├─Service     Service目录（可选）
     │  ... 更多分层目录可选
     │  └─View        视图目录
+
 ### 1. Common公共模块
+
 Common模块是一个特殊的模块，是应用的公共模块，访问所有的模块之前都会首先加载公共模块下面的配置文件（Conf/config.php）和公共函数文件（Common/function.php）。但Common模块本身不能通过URL直接访问，公共模块的其他文件则可以被其他模块继承或者调用。
 
   [1]: http://static.zybuluo.com/sixijinling/hh6hogyza7mluss3xgpd5ga4/2016-03-02%2016-18-21%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png
