@@ -10,6 +10,7 @@ description: 别人做的啦，但是需求改了就要改代码。。。。。�
 
     sudo apt-get install tasksel
     sudo tasksel
+
 选择lamp服务器（空格输入 * 代表选中）,之后就会自动安装相关的套件。安装mysql时需要输入密码。
 安装完成后就可以在浏览器中输入127.0.0.1来进行测试了。
 
@@ -39,6 +40,7 @@ description: 别人做的啦，但是需求改了就要改代码。。。。。�
     ?> 
 ```
 在浏览器中访问`http://localhost/phpinfo.php`
+
 ![2016-03-02 21-21-28屏幕截图.png-219.9kB][2]
 
 下面来装mysql的图形界面phpadmin：
