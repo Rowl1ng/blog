@@ -5,11 +5,6 @@ category: project
 description: 识别车道线，输出黑白图片：车道线纯白（255），其他全黑。
 ---
 
-标签： OpenCv Python PyQt4
-
----
-
-
 
 ## 问题
 
@@ -41,41 +36,41 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 
 #### 1. 读入、输出jpg
 
-```python
+~~~python
     for infile in  glob.glob('../photos/test/*.jpg'):
          out=processImage(infile)
          outfile=str(infile).split('\\')[1]
          outfile=outfile.split('.')[0]
          cv2.imwrite('../result/normlaneresult/'+outfile+'.jpg',out)
-```
+~~~
 #### 2. **trackbar**实时调节参数
 
 创建trackbar
 
-```python 
+~~~python
     cv2.createTrackbar('thrs1', 'fill', 2000, 10000, nothing)
-```
+~~~
 
 从trackbar获取参数
 
-```python
+~~~python
     while True 
         thrs1 = cv2.getTrackbarPos('thrs1', 'fill')
         cv2.imshow('fill', image)
         cv2.waitKey(0)
     cv2.destroyAllWindows()
-```
+`~~~
 
 #### 3. Scharr操作
 
 没用到，因为标识线不清晰的情况下只能突出密密麻麻的裂缝，但能有效区别开没有污损的标识线（平滑）和路面上的白色印记（粗糙）。
 
-```python
+~~~python
     gradX = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = 1, dy = 0, ksize = -1)
     gradY = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = 0, dy = 1, ksize = -1)
     gradient = cv2.subtract(gradX, gradY)
     gradient = cv2.convertScaleAbs(gradient)
-```
+~~~
 
 ### 平滑化处理
 
@@ -86,25 +81,29 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 
  `cv2.bilateralFilter(src, d, sigmaColor, sigmaSpace[, dst[, borderType]])`
  `cv2.bilateralFilter(image, 9, 90,16)`
+
 cv2.bilateralFilter(img,d,’p1’,’p2’)函数有四个参数需要，d是领域的直径，后面两个参数是空间高斯函数标准差和灰度值相似性高斯函数标准差。
     `cv2.bilateralFilter(img, 9, 90,16)`
 
 #### 2. 高斯滤波（*这个好像没有太大影响。。。*）
 
 - [ ] 必须是奇数，可以trackbar*2+1啊
-```python
+~~~python
     img = cv2.GaussianBlur(image,(7,7),0)
-```
+~~~
 ### 对比度
+
 OpenCV的[Histograms][2]
+
 - [ ] 用trackbar调节参数
-```python
+~~~python
     img2 = cdf[img]
     res = np.hstack((img,equ)) #stacking images side-by-side
-```
+~~~
 ![Image.png-7.9kB][3]
 
 ### 阈值处理
+
 > 一般使得图像的像素值更单一、图像更简单。阈值可以分为全局性质的阈值，也可以分为局部性质的阈值，可以是单阈值的也可以是多阈值的。
 
 #### 1.全局性的阈值
@@ -113,10 +112,12 @@ OpenCV的[Histograms][2]
 
 > 通过某种算法分别为不同的区域计算不同的阈值(自适应的阈值)，然后再根据每个区域的阈值具体地去处理每个区域
 ![Image1.png-210kB][4]
+
 <p>可以看到上述窗口大小使用的为11，当窗口越小的时候，得到的图像越细。想想一下，如果把窗口设置足够大以后（不能超过图像大小），那么得到的结果可能就和第二幅图像的相同了。</p>
  感觉不适合车道标线这种强调轮廓，忽视细节的对象
 		`binImg = cv2.adaptiveThreshold( img , 1 , cv2.ADAPTIVE_THRESH_MEAN_C , cv2.THRESH_BINARY, 11 , 2 ) `
 该函数需要填6个参数：
+
 <ol>
 <li>原始图像</li>
 <li>像素值上限</li>
@@ -127,16 +128,17 @@ OpenCV的[Histograms][2]
 <li>Block size:规定领域大小（一个正方形的领域）</li>
 <li>常数C，阈值等于均值或者加权值减去这个常数（为0相当于阈值 就是求得领域内均值或者加权值） </li>
 </ol>
+
 这种方法理论上得到的效果更好，相当于在动态自适应的调整属于自己像素点的阈值，而不是整幅图像都用一个阈值。
     
-```python
+~~~python
     cv2.THRESH_BINARY # 黑白二值
     binImg = cv2.adaptiveThreshold(img, 1, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 55, -3)#cv2.bilateralFilter(binImg, 9, 90,16)
     #binImg = cv2.GaussianBlur(binImg, (3,3), 0)
     #ret, binImg = cv2.threshold(img, 35000, 1, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     plt.imshow(binImg, cmap = 'gray', interpolation = 'bicubic')
     plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
-```
+~~~
 
 ----------
 
@@ -148,7 +150,7 @@ OpenCV的[Histograms][2]
 
 ![gui.png-6.8kB][6]
 
-```python
+~~~python
     # -*- coding: utf-8 -*-
     
     import sys
@@ -235,12 +237,12 @@ OpenCV的[Histograms][2]
         Dialog.show()
         sys.exit(app.exec_())
         #应用程序的主事件循环，事件处理从这里开始
-```
+~~~
 - exec是Python的关键字，因此，用 exec_() 来取代它。
 
 #### 2. 自定义槽
 
-```python
+~~~python
         # -*- coding: utf-8 -*-
  
 import sys
@@ -296,19 +298,22 @@ if __name__ == "__main__":
     dlg.show()
     sys.exit(app.exec_())
  
-```
+~~~
+
 ### 3. 核心函数文件
 
-```python
+~~~python
 
-```
+~~~
 
 ## 打包成EXE
 
 可以看这个[视频][7]，有好几种选择：
+
  - py2exe 
  - cx_Freeze
  - pyinstaller
+
  这里来安装pyinstaller,按Documentation的要求，首先就是要安装pywin32,选择合适的版本即可， 比如我的Python是2.7，系统是64位。
 安装完后，直接用powershell(管理员模式下打开)，运行`pip install PyInstaller`。
 之后切到要打包的python程序的文件夹运行`pyinstaller XXX.py`即可，目标exe保存在dist目录下。
@@ -320,8 +325,10 @@ if __name__ == "__main__":
 >  - -F, --onefile	Create a one-file bundled executable.
 >  - -D, --onedir	Create a one-folder bundle containing an executable (default)
 
-所以最后的执行语句是： 
+所以最后的执行语句是：
+
     pyinstaller -F -D --noconsole -n Lane G:\C\Lane\Lane\file_ui.py
+
 没执行成功呃。。。咋回事儿?
 
 ----------
@@ -330,11 +337,14 @@ if __name__ == "__main__":
 
 这次用的是全局性阈值，自适应阈值能平衡细节，但对有裂缝的车道来说并不适用。因为最后的结果强调标志线与路面的黑白对比，所以只是通过一个全局的阈值“筛出”白色标志线。不过这时遇到一个问题：对于光照条件不同的路面照片，阈值是不同的,甚至在一种光照条件（暗光），路面照片也不一样，这个时候开始考虑归一化和增强对比度的问题。
 真傻还是假傻。。。。在powershell里执行命令，默认都是在system32文件夹里啊。。。。得切到工程文件夹里才好啊啊啊啊
+
 -  **ToDo List**
     - [ ] 其中一个环节就是通过track bar来找到合适的滤波参数（cdf的对比度没参数……）
     - [ ] 下一步的思路是：模糊化增强（双边滤波）-》增强对比度-》阈值-》输出
     - [x] 用cdf增强对比度后发现路面上稍亮一些的印记也被强化了。
+
 - 参考
+
 清华大学出版社的《图像处理与计算机视觉算法及应用(第0版) 》TP391.41/P121.
 
 图书馆还有一本但就是找不到。。。
