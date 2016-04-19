@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      How to learn word2vec 
