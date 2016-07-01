@@ -7,11 +7,21 @@ description: 这是本科毕设，通过对APP评论进行分类，提取bug rep
 
 ## 1. 背景
 
-APP评论中包含大量价值信息，譬如bug report能帮助开发者决定新版本的修复，user experience能帮助用户决定是否下载该应用。由于评论数量庞大，采取自动化方法进行分类则能省去大量人工成本，为需求方提供其更关注的信息。然而，实际采样发现一条评论中可能包含不止一种事件类型，我们的目标也就变成解决短文本的多标签分类问题。此外，评论的长度波动也较大（短的只有一个词，长的达到三百多词），又为这个任务增加了难度。
+APP评论中包含大量价值信息，譬如bug report能帮助开发者决定新版本的修复，user experience能帮助用户决定是否下载该应用。但评论数量庞大，采取自动化方法进行分类则能省去大量人工成本，为需求方提供自身相关的评论信息。实际采样发现：一条评论中可能包含不止一种事件类型。因此，我们的目标也就变成解决短文本的多标签分类问题。此外，评论的长度波动也较大（短的只有一个词，长的达到三百多词），又为这个任务增加了难度。
 
-首先，我们通过词向量来表征评论文本，作为学习模型的输入，进而使用神经网络模型在训练集上进行学习。我们分别实现了卷积神经网络模型（CNN）和门限循环网络模型（GRU），输出层的输出即为某评论被分为不同标签的概率，可人为设定阈值来判断是否赋予该标签。最后，我们通过在测试集上进行实验评估并比较其最终分类效果。
+在实际应用中，Binary Relevance（BR）方法是处理多标签分类问题最通用的方法。该方法的基本思想是“拆解法”，即将多分类问题拆为若干个二分类任务求解。具体来说，考虑$$L$$ 个标签的多分类问题，首先将问题转化为$$L$$ 个二分类子问题，然后对每个标签都训练一个分类器；在测试时，对这些分类器的预测结果进行集成以获得最终的多分类结果。由于要训练$$L$$个分类器，该方法自带并行特点，计算量级也是线性增长的，因此通常计算复杂度较低。此外，该方法可以直接删除或增加标签而不需要重新训练整个分类器模型。
 
-从代码来说明：
+然而，将多标签问题转化为二分类也带来了一系列缺陷：
+
+- BR 假定了标签之间是相互独立的，而该假设并不符合大多都实际情况。由于忽视了标签之间的关联，BR 无法预测不同的标签组合，因而会减弱分类效果。
+- 数据集不均衡也会对分类器产生巨大影响，因为负样本通常比正样本要多得多。最后，当某些标签只会和其它标签一起出现时，BR会训练过剩的分类器，使得训练过程十分低效。类似地，一些标签可能很少出现，这时为频繁、不频繁出现的标签分配相同数量的参数容易浪费资源。
+
+正是因为这些问题的出现，我们开始探索神经网络在
+多标签分类中的应用。
+
+首先，我们通过词向量来表征评论文本，作为学习模型的输入，进而使用神经网络模型在训练集上进行学习。我们分别实现了卷积神经网络模型（CNN）和门限循环网络模型（GRU），输出层的输出即为某评论被分为不同标签的概率，可人为设定阈值来判断是否赋予该标签。最后，我们在测试集上进行实验评估并比较其最终分类效果。
+
+将整个分类模型作为一个类：
 
 ```
     self.labels = labels
@@ -44,37 +54,115 @@ APP评论中包含大量价值信息，譬如bug report能帮助开发者决定�
 
 多标签评论举例：
 
-> “Dosen’t work at the moment.Was quite satisfied before the last update.Will change the rating once it’s functional again”
+> 故障报告+感性评价
+“Dosen’t work at the moment.Was quite satisfied before the last update.Will change the rating once it’s functional again”
 
-应被归类为故障报告和感性评价，而不是用户体验或功能需求。
-评论
-
-> “Wish it had live audio, like Voxer does. It would be nice if you could press the play button and have it play all messages, instead of having to play for each individual message. Be nice to have a speed button, like Voxer does, to speed up the playing of messages. Be nice to have changeable backgrounds, for each chat, like We Chat does. Other than those feature requests, it’s a great app ”
-
-应被分类为功能需求以及评价，而不是故障报告或用户体验。
+> 功能需求+评价 “Wish it had live audio, like Voxer does. It would be nice if you could press the play button and have it play all messages, instead of having to play for each individual message. Be nice to have a speed button, like Voxer does, to speed up the playing of messages. Be nice to have changeable backgrounds, for each chat, like We Chat does. Other than those feature requests, it’s a great app ”
 
 评论的长度分布如下图：
 
 ![review.png-24.2kB][3]
 
+可以看到长度分布极不均匀，最长的达到600词，而大部分为50词内。
+
 ## 3. 构造输入
 
 ### 3.1 word representation
 
-我们的第一步是得到高质量的词表示(Word Representation)，即将词进行数值化，
-同时保留其语义、语法层面的近邻关系。继而用这些词表示来表征评论文本，作为机器学习模型的输入。在这一步使用[Word2vec][4]。
+我们的第一步是得到高质量的词表示(Word Representation)，即将词进行数值化，同时保留其语义、语法层面的近邻关系。继而用这些词表示来表征评论文本，作为机器学习模型的输入。这里我们使用[Word2vec][4]中的**CBOW**模型（Mikolov et al.）来从大量无标签文本中学习词的分布式表示。
+
 ![word2vec.png-427.4kB][5]
-本文使用**CBOW**来从大量无标签文本中学习词的分布式表示。为学习得到高质量的词向量，我们首先需要庞大的英文语料。维基百科官方提供了一个很好的[维基百科数据源][6]，可以方便的下载多种语言多种格式的维基百科数据。我们选择在在的英文维基语料上训练，下载得到.处理包括两个阶段，首先将xml的wiki数据转换为text格式。本文中使用的机器是intel i5，RAM 8G。在运行三个小时后，得到了13.6G的wiki.en.txt。每篇文章一行，且忽略掉标点符号。其词典足以覆盖评论文本中出现的词汇。我们在维基语料上训练得到了100维的词向量作为后续神经网络模型的输入。
+
+为学习得到覆盖全面、高质量的词向量，我们首先需要庞大的英文语料。维基百科官方提供了一个很好的[维基百科数据源][6]，可以方便的下载多种语言多种格式的维基百科数据。
+
+首先从网站上下载xm格式的英文语料下载目录，再通过运行下面的python程序下载得到text格式的语料。
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+ 
+import logging
+import os.path
+import sys
+ 
+from gensim.corpora import WikiCorpus
+ 
+if __name__ == '__main__':
+    program = os.path.basename(sys.argv[0])
+    logger = logging.getLogger(program)
+ 
+    logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s')
+    logging.root.setLevel(level=logging.INFO)
+    logger.info("running %s" % ' '.join(sys.argv))
+ 
+    # check and process input arguments
+    if len(sys.argv) < 3:
+        print globals()['__doc__'] % locals()
+        sys.exit(1)
+    inp, outp = sys.argv[1:3]
+    space = " "
+    i = 0
+ 
+    output = open(outp, 'w')
+    wiki = WikiCorpus(inp, lemmatize=False, dictionary={})
+    for text in wiki.get_texts():
+        output.write(space.join(text) + "\n")
+        i = i + 1
+        if (i % 10000 == 0):
+            logger.info("Saved " + str(i) + " articles")
+ 
+    output.close()
+    logger.info("Finished Saved " + str(i) + " articles")
+```
+运行：
+```
+python process_wiki.py enwiki-latest-pages-articles.xml.bz2 wiki.en.text
+```
+
+```
+2016-05-08 17:35:23,331: INFO: running wiki.py enwiki-latest-pages-articles.xml.bz2 wiki.en.txt
+2016-05-08 17:36:23,808: INFO: Saved 10000 articles
+2016-05-08 17:37:30,998: INFO: Saved 20000 articles
+2016-05-08 17:38:32,782: INFO: Saved 30000 articles
+2016-05-08 17:39:26,416: INFO: Saved 40000 articles
+2016-05-08 17:40:06,519: INFO: Saved 50000 articles
+2016-05-08 17:40:32,465: INFO: Saved 60000 articles
+2016-05-08 17:40:56,136: INFO: Saved 70000 articles
+2016-05-08 17:41:17,961: INFO: Saved 80000 articles
+2016-05-08 17:41:59,623: INFO: Saved 90000 articles
+2016-05-08 17:42:47,462: INFO: Saved 100000 articles
+...
+2016-05-08 20:20:33,866: INFO: Saved 3950000 articles
+2016-05-08 20:20:55,727: INFO: Saved 3960000 articles
+2016-05-08 20:21:15,743: INFO: Saved 3970000 articles
+2016-05-08 20:21:39,305: INFO: Saved 3980000 articles
+2016-05-08 20:21:57,551: INFO: Saved 3990000 articles
+2016-05-08 20:22:22,602: INFO: Saved 4000000 articles
+2016-05-08 20:22:45,434: INFO: Saved 4010000 articles
+2016-05-08 20:23:21,200: INFO: Saved 4020000 articles
+2016-05-08 20:23:44,131: INFO: Saved 4030000 articles
+2016-05-08 20:24:06,676: INFO: Saved 4040000 articles
+2016-05-08 20:24:29,436: INFO: finished iterating over Wikipedia corpus of 4047704 documents with 2198527566 positions (total 16527332 articles, 2258809529 positions before pruning articles shorter than 50 words)
+2016-05-08 20:24:29,437: INFO: Finished Saved 4047704 articles
+
+```
+我的机器是intel i5,RAM 8G。在运行三个小时后，得到了13.6G的wiki.en.txt。每篇文章一行，且忽略掉标点符号：
+
+> anarchism is collection of movements and ideologies that hold the state to be undesirable unnecessary or harmful these movements advocate some form of stateless society instead often based on self governed voluntary institutions or non hierarchical free associations although anti statism is central to anarchism as political philosophy anarchism also entails rejection of and often hierarchical organisation in general as an anti dogmatic philosophy anarchism draws on many currents of thought and strategy anarchism does not offer fixed body of doctrine from single particular world view instead fluxing and flowing as philosophy there are many types and traditions of anarchism not all of which are mutually exclusive anarchist schools of thought can differ fundamentally supporting anything from extreme individualism to complete collectivism strains of anarchism have often been divided into the categories of social and individualist anarchism or similar dual classifications anarchism is usually considered radical left wing ideology and much of anarchist economics and anarchist legal philosophy reflect anti authoritarian interpretations of communism collectivism syndicalism mutualism or participatory economics etymology and terminology the term anarchism is compound word composed from the word anarchy and the suffix ism themselves derived respectively from the greek anarchy from anarchos meaning one without rulers from the privative prefix ἀν an without and archos leader ruler cf archon or arkhē authority sovereignty realm magistracy and the suffix or ismos isma from the verbal infinitive suffix...
+
+这些无标签语料将作为词向量训练模型的输入，下面介绍CBOW模型：
 
 CBOW模型结构如下图，包含三层：输入层、投影层和输出层。
 
 ![cbow.gif-5.3kB][7]
 
-- **输入层**：包含当前词$$w$$的上下文$$Context(w)$$中$2c$个词的词向量$$v(Context(w)_1),v(Context(w)_2),\dots,v(Context(w)_{2c}) \in \mathbb {R}^m$$，这里$$m$$即为词向量长度；
+- **输入层**：包含当前词$$w$$的上下文$$Context(w)$$中$$2c$$个词的词向量$$v(Context(w)_1),v(Context(w)_2),\dots,v(Context(w)_{2c}) \in \mathbb {R}^m$$，这里$$m$$即为词向量长度；
 - **投影层**：将输入层的$$2c$$个向量做求和累加，即$$x_w=\sum_{i=1}^{2c}v(Context(w)_i) \in \mathbb {R}^m$$；
-- **输出层**：输出层对应一棵二叉树——一棵以语料中出现过的词当叶子节点、以各词在语料中出现的次数当权值构造出来的Huffman树。在这棵Huffman树中，叶子节点共$$N$$个，分别对应词典$$\mathcal D$$中的词，非叶子节点$N-1$个。
+- **输出层**：输出层对应一棵二叉树——一棵以语料中出现过的词当叶子节点、以各词在语料中出现的次数当权值构造出来的**Huffman**树。在这棵树中，叶子节点共$$N$$个，分别对应词典$$\mathcal D$$中的词，非叶子节点$$N-1$$个。
 
-sigmoid函数是神经网络中常用的激活函数之一，其定义为
+首先补充一些预备知识：
+
+- **sigmoid函数**是神经网络中常用的激活函数之一，其定义为
 
 $$
 \sigma(x)=\frac 1{1+e^{-x}}
@@ -96,9 +184,11 @@ y(x)=\cases
 }
 $$
 
-确定一个整体损失函数，然后对其进行优化，从而得到最优的参数$$\theta$$。
+确定一个整体损失函数，并对其进行优化，从而得到最优参数$$\theta$$。
 
-需要利用$$x_w \in \mathbb {R}^m$$以及**Huffman树**来定义函数$$p(w|Context(w))$$。Huffman树的每一次分支都可视为进行了一次二分类，这样就需要为每一个非叶子节点的左右孩子结点指定一个取值为0或1的Huffman编码。word2vec将编码为0的结点定义为正类，编码为1的点定义为负类。根据二分类的预测函数，一个结点被分为正类的概率为：
+- 需要利用$$x_w \in \mathbb {R}^m$$以及**Huffman树**来定义函数$$p(w|Context(w))$$。Huffman树的每一次分支都可视为进行了一次二分类，这样就需要为每一个非叶子节点的左右孩子结点指定一个取值为**0**或**1**的Huffman编码。
+
+word2vec将编码为0的结点定义为正类，编码为1的点定义为负类。根据二分类的预测函数，一个结点被分为正类的概率为：
 
 $$
 \sigma (x_w^\mathrm{T} \theta)=\frac 1{1+e^{-x_w^\mathrm{T} \theta}}
