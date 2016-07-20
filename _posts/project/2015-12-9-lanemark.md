@@ -19,14 +19,13 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 
 ## 环境
 
-<ul>
- <li>安装numpy、scipy、PIL（Pillow）、matplotlib</li>
- <li>安装openCV <li>		
-    * 进入OpenCV的安装目录下找到：\build\python\2.7\cv2.pyd
-    * 将cv2.pyd复制到Python的子目录下：\Lib\site-packages\
- <li>安装pyQt4</li>
- <li>安装pydev(Eclipse)</li>
-</ul>
+- 安装numpy、scipy、PIL（Pillow）、matplotlib</li>
+- 安装openCV <li>		
+    - 进入OpenCV的安装目录下找到：\build\python\2.7\cv2.pyd
+    - 将cv2.pyd复制到Python的子目录下：\Lib\site-packages\
+- 安装pyQt4</li>
+- 安装pydev(Eclipse)</li>
+
 
 ## 操作
 
@@ -36,42 +35,42 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
 
 #### 1. 读入、输出jpg
 
-~~~python
+```python
     for infile in  glob.glob('../photos/test/*.jpg'):
          out=processImage(infile)
          outfile=str(infile).split('\\')[1]
          outfile=outfile.split('.')[0]
          cv2.imwrite('../result/normlaneresult/'+outfile+'.jpg',out)
-~~~
+```
 
 #### 2. **trackbar**实时调节参数
 
 创建trackbar
 
-~~~python
+```python
     cv2.createTrackbar('thrs1', 'fill', 2000, 10000, nothing)
-~~~
+```
 
 从trackbar获取参数
 
-~~~python
+```python
     while True 
         thrs1 = cv2.getTrackbarPos('thrs1', 'fill')
         cv2.imshow('fill', image)
         cv2.waitKey(0)
     cv2.destroyAllWindows()
-~~~
+```
 
 #### 3. Scharr操作
 
 没用到，因为标识线不清晰的情况下只能突出密密麻麻的裂缝，但能有效区别开没有污损的标识线（平滑）和路面上的白色印记（粗糙）。
 
-~~~python
+```python
     gradX = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = 1, dy = 0, ksize = -1)
     gradY = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = 0, dy = 1, ksize = -1)
     gradient = cv2.subtract(gradX, gradY)
     gradient = cv2.convertScaleAbs(gradient)
-~~~
+```
 
 ### 平滑化处理
 
@@ -90,9 +89,9 @@ cv2.bilateralFilter(img,d,’p1’,’p2’)函数有四个参数需要，d是�
 
 - [ ] 必须是奇数，可以trackbar*2+1啊
 
-~~~python
+```python
     img = cv2.GaussianBlur(image,(7,7),0)
-~~~
+```
 
 ### 对比度
 
@@ -100,10 +99,10 @@ OpenCV的[Histograms][2]
 
 - [ ] 用trackbar调节参数
 
-~~~python
+```python
     img2 = cdf[img]
     res = np.hstack((img,equ)) #stacking images side-by-side
-~~~
+```
 
 ![Image.png-7.9kB][3]
 
@@ -123,27 +122,25 @@ OpenCV的[Histograms][2]
 		`binImg = cv2.adaptiveThreshold( img , 1 , cv2.ADAPTIVE_THRESH_MEAN_C , cv2.THRESH_BINARY, 11 , 2 ) `
 该函数需要填6个参数：
 
-<ol>
-<li>原始图像</li>
-<li>像素值上限</li>
-<li>自适应方法Adaptive Method: </li>
-  * cv2.ADAPTIVE_THRESH_MEAN_C ：领域内均值
-  * cv2.ADAPTIVE_THRESH_GAUSSIAN_C ：领域内像素点加权和，权 重为一个高斯窗口
-<li>值的赋值方法：只有cv2.THRESH_BINARY 和cv2.THRESH_BINARY_INV</li>
-<li>Block size:规定领域大小（一个正方形的领域）</li>
-<li>常数C，阈值等于均值或者加权值减去这个常数（为0相当于阈值 就是求得领域内均值或者加权值） </li>
-</ol>
+- 原始图像
+- 像素值上限
+- 自适应方法Adaptive Method: 
+    - cv2.ADAPTIVE_THRESH_MEAN_C ：领域内均值
+    - cv2.ADAPTIVE_THRESH_GAUSSIAN_C ：领域内像素点加权和，权 重为一个高斯窗口
+- 值的赋值方法：只有cv2.THRESH_BINARY 和cv2.THRESH_BINARY_INV
+- Block size:规定领域大小（一个正方形的领域）
+- 常数C，阈值等于均值或者加权值减去这个常数（为0相当于阈值 就是求得领域内均值或者加权值） 
 
 这种方法理论上得到的效果更好，相当于在动态自适应的调整属于自己像素点的阈值，而不是整幅图像都用一个阈值。
     
-~~~python
+```python
     cv2.THRESH_BINARY # 黑白二值
     binImg = cv2.adaptiveThreshold(img, 1, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 55, -3)#cv2.bilateralFilter(binImg, 9, 90,16)
     #binImg = cv2.GaussianBlur(binImg, (3,3), 0)
     #ret, binImg = cv2.threshold(img, 35000, 1, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     plt.imshow(binImg, cmap = 'gray', interpolation = 'bicubic')
     plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
-~~~
+```
 
 ----------
 
@@ -155,7 +152,8 @@ OpenCV的[Histograms][2]
 
 ![gui.png-6.8kB][6]
 
-···python
+```python
+
     # -*- coding: utf-8 -*-
     
     import sys
@@ -242,13 +240,13 @@ OpenCV的[Histograms][2]
         Dialog.show()
         sys.exit(app.exec_())
         #应用程序的主事件循环，事件处理从这里开始
-···
+```
 
 - exec是Python的关键字，因此，用 exec_() 来取代它。
 
 #### 2. 自定义槽
 
-···python
+```python
         # -*- coding: utf-8 -*-
  
 import sys
@@ -304,7 +302,7 @@ if __name__ == "__main__":
     dlg.show()
     sys.exit(app.exec_())
  
-···
+```
 
 ### 3. 核心函数文件
 
