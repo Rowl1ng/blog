@@ -43,6 +43,7 @@ description: 识别车道线，输出黑白图片：车道线纯白（255），�
          outfile=outfile.split('.')[0]
          cv2.imwrite('../result/normlaneresult/'+outfile+'.jpg',out)
 ~~~
+
 #### 2. **trackbar**实时调节参数
 
 创建trackbar
@@ -92,6 +93,7 @@ cv2.bilateralFilter(img,d,’p1’,’p2’)函数有四个参数需要，d是�
 ~~~python
     img = cv2.GaussianBlur(image,(7,7),0)
 ~~~
+
 ### 对比度
 
 OpenCV的[Histograms][2]
@@ -153,7 +155,7 @@ OpenCV的[Histograms][2]
 
 ![gui.png-6.8kB][6]
 
-~~~python
+···python
     # -*- coding: utf-8 -*-
     
     import sys
@@ -240,13 +242,13 @@ OpenCV的[Histograms][2]
         Dialog.show()
         sys.exit(app.exec_())
         #应用程序的主事件循环，事件处理从这里开始
-~~~
+···
 
 - exec是Python的关键字，因此，用 exec_() 来取代它。
 
 #### 2. 自定义槽
 
-~~~python
+···python
         # -*- coding: utf-8 -*-
  
 import sys
@@ -302,13 +304,10 @@ if __name__ == "__main__":
     dlg.show()
     sys.exit(app.exec_())
  
-~~~
+···
 
 ### 3. 核心函数文件
 
-~~~python
-
-~~~
 
 ## 打包成EXE
 
