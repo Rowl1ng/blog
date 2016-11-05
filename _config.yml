@@ -7,7 +7,7 @@ highlighter: rouge
 pygments: true
 paginate: 8
 permalink: /:title
-
+excerpt_separator: "<!-- more -->"
 title: Rowl1ng.com
 url: http://rowl1ng.com
 feed: /atom.xml
