@@ -1,8 +1,9 @@
+gems:
+  - jekyll-pandoc
 auto: true
 
-markdown: kramdown
-kramdown:
-  input: GFM
+markdown: Pandoc
+
 highlighter: rouge
 pygments: true
 paginate: 8
