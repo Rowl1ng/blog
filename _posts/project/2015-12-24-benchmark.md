@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      word2vec Benchmark
-category: blog
+category: project
 description: 暑假9月到12月实习就在做这个，现在适当总结一下吧，主要也就是technical report的内容。总觉得写的不好，一边整理一边改改。
 ---
 
@@ -31,6 +31,9 @@ Bengio et al. \cite{nnlm} first proposed a Neural Network Language Model (NNLM) 
 The Log-Bilinear Language Model(LBL) proposed by Mnih and Hinton combines Bengio's Hierachical NNLM and Log Bi-Linear.It uses a log-bilinear energy function that is almost equal to that of the NNLM and removes the non-linear activation function tanh. 
 
 A previous study \cite{lbl} proposed a widely used model architecture for estimating neural network language model.
+
+### NER
+
 
 
   [1]: http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf

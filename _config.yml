@@ -1,15 +1,29 @@
-gems:
-  - jekyll-pandoc
-auto: true
+url: http://rowl1ng.com
+
+watch: true
 
 markdown: Pandoc
+pandoc:
+  extensions:
+    - normalize
+    - smart
+    - mathjax
+    - csl: _styles/apa.csl
+#    - bibliography: bibliography/references.bib
+
+jekyll-archives:
+  enabled: []
+  layout: 'archive'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 highlighter: rouge
-pygments: true
 paginate: 8
 permalink: /:title
 excerpt_separator: "<!-- more -->"
 title: Rowl1ng.com
-url: http://rowl1ng.com
-feed: /atom.xml
 author_info: <a href="http://rowl1ng.com/">Rowl1ng</a>
