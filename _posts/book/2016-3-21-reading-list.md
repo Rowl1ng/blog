@@ -1,8 +1,9 @@
 ---
 layout: blog
+background-image: http://static.zybuluo.com/sixijinling/l74yefqlwkefzm1xbpjovr9g/memoir.jpg
 book: true
 title:      2016 Reading List
-category: book
+category: 读书
 tags:
 - 书籍
 - book

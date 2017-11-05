@@ -26,7 +26,7 @@ share:            true
 paginate: 15
 paginate_path: "rowl1ngpage:num"
 # Build settings
-#markdown: kramdown
+markdown: kramdown
 #theme: minima
 plugins:
   - jekyll-paginate
@@ -42,7 +42,7 @@ links:
   - name:         艺术
     url:          /art
     external:     false
-  - name:         我读
+  - name:         读书
     url:          /book
     external:     false
   - name:         归档

@@ -10,7 +10,7 @@
     <body class="" gtools_scp_screen_capture_injected="true">
         <header id="header" class="header bg-white">
             <div class="navbar-container">
-                <a href="/?liberxue" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo-liberxue.png" alt="{{ site.title }}"> </a>
+                <a href="/?rowl1ng" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo-rowl1ng.png" alt="{{ site.title }}"> </a>
                 <div class="navbar-menu">
                     {% for link in site.links %}
                         <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
@@ -203,5 +203,10 @@
         </script>
         <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
         <script >lang=hljs.initHighlightingOnLoad();</script>
+        {% if page.mathjax %}
+        <script type="text/javascript" async
+                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        {% endif %}
     </body>
 </html>

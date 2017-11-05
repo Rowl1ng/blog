@@ -7,8 +7,26 @@
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>基于Rasa_NLU的微信chatbot</title>
+            <category>技术</category>
+            <description>参考浅谈垂直领域的chatbot：  老式chatbot基于大量规则库，不好维护。  主流架构为”NLU自然语言理解+DM对话管理+NLG自然语言生成”。          NLU负责基础自然语...</description>
+            <pubDate>2017-11-05 00:00:00 </pubDate>
+            <link>http://localhost:4000/2017/11/05/chatbot.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/11/05/chatbot.html</guid>
+        </item>
+        
+        <item>
+            <title>何事秋风空画扇</title>
+            <category>艺术</category>
+            <description>流云江陵明月孤龙山荷塘</description>
+            <pubDate>2017-10-31 00:00:00 </pubDate>
+            <link>http://localhost:4000/2017/10/31/fan.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/10/31/fan.html</guid>
+        </item>
+        
+        <item>
             <title>裂缝识别</title>
-            <category>project</category>
+            <category>技术</category>
             <description>公路在使用过程中，总会因为行车、自然因素出现裂缝，这些裂缝如果不及时维护（填沥青）的话，可能会影响到车辆的正常通行。可是真是环境总是变化多样的，光照、磨损会带来各种干扰或是消弭调裂缝本身的可见性...</description>
             <pubDate>2016-10-18 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/10/18/RoadNN.html</link>
@@ -17,7 +35,7 @@
         
         <item>
             <title>明信片</title>
-            <category>opinion</category>
+            <category>艺术</category>
             <description></description>
             <pubDate>2016-09-15 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/09/15/postcard.html</link>
@@ -26,7 +44,7 @@
         
         <item>
             <title>2016 Reading List</title>
-            <category>book</category>
+            <category>读书</category>
             <description>文学  文学回忆录——木心艺术  Living With Art语言  On Writing Well  Merriam-Webster’s Vocabulary Builder科学  The ...</description>
             <pubDate>2016-03-21 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/03/21/reading-list.html</link>

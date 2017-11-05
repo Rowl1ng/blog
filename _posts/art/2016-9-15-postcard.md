@@ -1,8 +1,9 @@
 ---
 layout: blog
+background-image: http://img03.deviantart.net/6cff/i/2016/168/f/a/untitled_by_sixijinling-da6ngsx.jpg
 art: true
 title:  明信片
-category: opinion
+category: 艺术
 description:  一年啦
 tags:
 - 明信片
@@ -11,14 +12,23 @@ tags:
 
 
 ![母亲节][1]
+
 ![父亲节][2]
+
 ![Annie][3]
+
 ![果酱][4]
+
 ![文静][5]
+
 ![儿童节][6]
+
 ![母亲节][7]
+
 ![粱蜜姐][8]
+
 ![中秋节][9]
+
 
 
   [1]: http://pre09.deviantart.net/e17b/th/pre/i/2016/258/e/d/mother_by_sixijinling-dahs0ri.jpg
