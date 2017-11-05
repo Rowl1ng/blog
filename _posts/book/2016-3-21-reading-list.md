@@ -6,13 +6,9 @@ title:      2016 Reading List
 category: 读书
 tags:
 - 书籍
-- book
 description: 写下来就一定要看完哟
 ---
 
-
-
----
 
 ## 文学
 
