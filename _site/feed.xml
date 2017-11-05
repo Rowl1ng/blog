@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Rowl1ng|黑客与画家</title>
+        <description>沉迷代码，热爱绘画</description>
+        <link>http://localhost:4000</link>
+        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>裂缝识别</title>
+            <category>project</category>
+            <description>公路在使用过程中，总会因为行车、自然因素出现裂缝，这些裂缝如果不及时维护（填沥青）的话，可能会影响到车辆的正常通行。可是真是环境总是变化多样的，光照、磨损会带来各种干扰或是消弭调裂缝本身的可见性...</description>
+            <pubDate>2016-10-18 00:00:00 </pubDate>
+            <link>http://localhost:4000/2016/10/18/RoadNN.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/10/18/RoadNN.html</guid>
+        </item>
+        
+        <item>
+            <title>明信片</title>
+            <category>opinion</category>
+            <description></description>
+            <pubDate>2016-09-15 00:00:00 </pubDate>
+            <link>http://localhost:4000/2016/09/15/postcard.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/09/15/postcard.html</guid>
+        </item>
+        
+        <item>
+            <title>2016 Reading List</title>
+            <category>book</category>
+            <description>文学  文学回忆录——木心艺术  Living With Art语言  On Writing Well  Merriam-Webster’s Vocabulary Builder科学  The ...</description>
+            <pubDate>2016-03-21 00:00:00 </pubDate>
+            <link>http://localhost:4000/2016/03/21/reading-list.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/03/21/reading-list.html</guid>
+        </item>
+        
+    </channel>
+</rss>
