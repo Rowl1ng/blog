@@ -49,12 +49,12 @@
                         {% unless page.tags == empty %}
                             {% assign tags_list = page.tags %}
                             {% if tags_list.first[0] == null %}
-                            {% for tag in tags_list %}
-                            <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
-                                {{ tag }} <span>({{ site.tags[tag].size }})</span>
-                                {% unless forloop.last %}{% endunless %}
-                            </a>
-                            {% endfor %}
+                                {% for tag in tags_list %}
+                                <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
+                                    {{ tag }} <span>({{ site.tags[tag].size }})</span>
+                                    {% unless forloop.last %}{% endunless %}
+                                </a>
+                                {% endfor %}
                             {% else %}
                                 {% for tag in tags_list %}
                             <a href="/tags#{{ tag[0] }}" title="访问 {{ tag[0] }}" data-hover="{{tag[0]}}">

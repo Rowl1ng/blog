@@ -21,6 +21,7 @@ url: "http://rowl1ng.com" # the base hostname & protocol for your site, e.g. htt
 #twitter_username: jekyllrb
 github_username:  "Rowl1ng"
 signoff:          "Rowl1ng" # Your name
+google_analytics: UA-71226909-1
 share:            true
 # 分页
 paginate: 15
@@ -33,9 +34,9 @@ plugins:
 #  - jekyll-feed
 
 links:
-  - name:         首页
-    url:          /
-    external:     false
+#  - name:         首页
+#    url:          /
+#    external:     false
   - name:         技术
     url:          /tech
     external:     false
@@ -44,6 +45,9 @@ links:
     external:     false
   - name:         读书
     url:          /book
+    external:     false
+  - name:         写作
+    url:          /write
     external:     false
   - name:         归档
     url:          /archives

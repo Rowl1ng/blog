@@ -19,6 +19,14 @@
 
 
 {
+"title" : "仰望星空 - ",
+"url" : "/2017/10/18/star.html"
+}
+
+,
+
+
+{
 "title" : "裂缝识别 - ",
 "url" : "/2016/10/18/RoadNN.html"
 }
@@ -35,8 +43,24 @@
 
 
 {
+"title" : "四川之行 - ",
+"url" : "/2016/09/12/Sichuan.html"
+}
+
+,
+
+
+{
 "title" : "2016 Reading List - ",
 "url" : "/2016/03/21/reading-list.html"
+}
+
+,
+
+
+{
+"title" : "How to learn word2vec - ",
+"url" : "/2015/12/25/word2vec.html"
 }
 
 

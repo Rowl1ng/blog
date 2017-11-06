@@ -25,6 +25,15 @@
         </item>
         
         <item>
+            <title>仰望星空</title>
+            <category>写作</category>
+            <description>——“我的青春我的梦”主题征文身处人生的迷宫，没有人可以告诉你出路何在，当我们在庸常中渐渐迷失、找不到出路时，总不自觉跌入喟叹“人生意义何在”的深渊中，这时不妨抬头，看那满天的星斗从遥远的地方发...</description>
+            <pubDate>2017-10-18 10:26:00 </pubDate>
+            <link>http://localhost:4000/2017/10/18/star.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/10/18/star.html</guid>
+        </item>
+        
+        <item>
             <title>裂缝识别</title>
             <category>技术</category>
             <description>公路在使用过程中，总会因为行车、自然因素出现裂缝，这些裂缝如果不及时维护（填沥青）的话，可能会影响到车辆的正常通行。可是真是环境总是变化多样的，光照、磨损会带来各种干扰或是消弭调裂缝本身的可见性...</description>
@@ -43,12 +52,30 @@
         </item>
         
         <item>
+            <title>四川之行</title>
+            <category>艺术</category>
+            <description>路边龙洞湖水云边境湖光山色雾隐天光云影竹色高庙峨眉南无阿弥佗佛金顶一苇以航我佛</description>
+            <pubDate>2016-09-12 00:00:00 </pubDate>
+            <link>http://localhost:4000/2016/09/12/Sichuan.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/09/12/Sichuan.html</guid>
+        </item>
+        
+        <item>
             <title>2016 Reading List</title>
             <category>读书</category>
             <description>文学  文学回忆录——木心艺术  Living With Art语言  On Writing Well  Merriam-Webster’s Vocabulary Builder科学  The ...</description>
             <pubDate>2016-03-21 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/03/21/reading-list.html</link>
             <guid isPermaLink="true">http://localhost:4000/2016/03/21/reading-list.html</guid>
+        </item>
+        
+        <item>
+            <title>How to learn word2vec</title>
+            <category></category>
+            <description>Multi-Layer Neural NetworkA. 3-layer network:Input Layer,Hidden Lyer,Output layer.Except input un...</description>
+            <pubDate>2015-12-25 11:12:00 </pubDate>
+            <link>http://localhost:4000/2015/12/25/word2vec.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2015/12/25/word2vec.html</guid>
         </item>
         
     </channel>
