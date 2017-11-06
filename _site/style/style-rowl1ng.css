@@ -8,7 +8,16 @@
 html{overflow-x:hidden;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 ::-moz-selection{color:#fff;background-color:#eb5055;}
 ::selection{color:#fff;background-color:#eb5055;}
-body{font-family:-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:14px;line-height:1.8;margin:0 auto;color:#313131;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+/*
+@import url(https://fonts.googleapis.com/earlyaccess/notosanssc.css);
+*/
+body {
+   font-family: Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, sans-serif;
+}
+body {
+   font-family: Noto Serif CJK SC, Source Han Serif SC, Source Han Serif CN, serif;
+}
+/*body{font-family:-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:14px;line-height:1.8;margin:0 auto;color:#313131;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}*/
 body>*:first-child{margin-top:0!important;}
 body>*:last-child{margin-bottom:0!important;}
 p,blockquote,ul,ol,dl,table,pre{margin:20px 0;vertical-align:baseline;}
