@@ -17,9 +17,11 @@ redirect_from:
 
 ## Rowl1ng
 
-中文名的英文音译，中间的"1"大概是对专业的念念不忘：设置密码为了安全起见可以把字母"i"改成数字"1"。
+中文名的英文音译，中间的"1"大概是~~抢不到rowling的域名~~对专业的念念不忘：设置密码时为了安全起见可以把字母"i"改成数字"1"。
 
 ## 黑客与画家
+
+By day a programmer | illustrator, photographer, writer, guqin player by night.
 
 喜欢钻研技术，热爱画画，偶尔弹琴写字。
 
