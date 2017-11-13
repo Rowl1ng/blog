@@ -9,7 +9,7 @@
         <item>
             <title>基于Rasa_NLU的微信chatbot</title>
             <category>技术</category>
-            <description>参考浅谈垂直领域的chatbot：  老式chatbot基于大量规则库，不好维护。  主流架构为”NLU自然语言理解+DM对话管理+NLG自然语言生成”。          NLU负责基础自然语...</description>
+            <description>[TOC]重要资料  本项目的github地址：Rasa_wechat  wxpy文档  Rasa_NLU官方文档  Rasa_Core官方文档研究背景  老式chatbot基于大量规则库，不好...</description>
             <pubDate>2017-11-05 00:00:00 </pubDate>
             <link>http://localhost:4000/2017/11/05/chatbot.html</link>
             <guid isPermaLink="true">http://localhost:4000/2017/11/05/chatbot.html</guid>
@@ -31,6 +31,42 @@
             <pubDate>2017-10-18 10:26:00 </pubDate>
             <link>http://localhost:4000/2017/10/18/star.html</link>
             <guid isPermaLink="true">http://localhost:4000/2017/10/18/star.html</guid>
+        </item>
+        
+        <item>
+            <title>动画笔记</title>
+            <category></category>
+            <description>20132017</description>
+            <pubDate>2017-10-05 18:32:00 </pubDate>
+            <link>http://localhost:4000/2017/10/05/animation.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/10/05/animation.html</guid>
+        </item>
+        
+        <item>
+            <title>《观念的水位》+《柏林墙》</title>
+            <category></category>
+            <description>《观念的水位》“观念的水位”指的是中国社会的民主自由观念的水位，作者看到它在逐渐上升，因此对中国的未来“审慎乐观”。她认为，只有我們在观念上有所改变，实际才会有改变。在看这本书之前，政治于我而言...</description>
+            <pubDate>2017-01-03 17:08:00 </pubDate>
+            <link>http://localhost:4000/2017/01/03/Socilaism.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/01/03/Socilaism.html</guid>
+        </item>
+        
+        <item>
+            <title>请回答 2016</title>
+            <category></category>
+            <description>认识的人：  小红  小黄  小蓝  小青  小白学校：  毕设：review labeling          开题报告、任务书      论文：Latex        图像识别：    ...</description>
+            <pubDate>2017-01-01 17:34:00 </pubDate>
+            <link>http://localhost:4000/2017/01/01/Reply_2016.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/01/01/Reply_2016.html</guid>
+        </item>
+        
+        <item>
+            <title>爱好：看电视</title>
+            <category></category>
+            <description>记单词时间～20172016十月  小戏骨          补锅      白毛女        校阅女孩六月  Person of Interest          共五季，诺兰弟弟担当编...</description>
+            <pubDate>2016-10-20 17:50:00 </pubDate>
+            <link>http://localhost:4000/2016/10/20/watch_TV.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/10/20/watch_TV.html</guid>
         </item>
         
         <item>
@@ -61,9 +97,9 @@
         </item>
         
         <item>
-            <title>2016 Reading List</title>
+            <title>Reading List</title>
             <category>读书</category>
-            <description>文学  文学回忆录——木心艺术  Living With Art语言  On Writing Well  Merriam-Webster’s Vocabulary Builder科学  The ...</description>
+            <description>Loading…  人类简史 80%  简爱a minister who loves to preach.  编码/Code 50%2016Finished  最好的告别/Being Morta...</description>
             <pubDate>2016-03-21 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/03/21/reading-list.html</link>
             <guid isPermaLink="true">http://localhost:4000/2016/03/21/reading-list.html</guid>
@@ -72,10 +108,19 @@
         <item>
             <title>How to learn word2vec</title>
             <category></category>
-            <description>Multi-Layer Neural NetworkA. 3-layer network:Input Layer,Hidden Lyer,Output layer.Except input un...</description>
+            <description>1. NNLM这里看的是Bengio的论文Bengio et al. \cite{nnlm} first proposed a Neural Network Language Model (NN...</description>
             <pubDate>2015-12-25 11:12:00 </pubDate>
             <link>http://localhost:4000/2015/12/25/word2vec.html</link>
             <guid isPermaLink="true">http://localhost:4000/2015/12/25/word2vec.html</guid>
+        </item>
+        
+        <item>
+            <title>鹤鸣</title>
+            <category>写作</category>
+            <description>  他独独爱上了数学。不是因为被压，他只是因为爱好数学。他，陈景润，《哥德巴赫猜想》里的陈景润  他不相信科学能救国。但是救国却不可以没有科学，尤其不可以没有数学。天注定三个字因为他变得字字千钧...</description>
+            <pubDate>2014-04-04 10:26:00 </pubDate>
+            <link>http://localhost:4000/2014/04/04/Goldbach-conjecture.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2014/04/04/Goldbach-conjecture.html</guid>
         </item>
         
     </channel>

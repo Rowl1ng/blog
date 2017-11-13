@@ -1,59 +1,96 @@
 ---
+title: Reading List
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/l74yefqlwkefzm1xbpjovr9g/memoir.jpg
 book: true
-title:      2016 Reading List
 category: 读书
 tags:
 - 书籍
 description: 写下来就一定要看完哟
 ---
 
+## Loading…
 
-## 文学
+- 人类简史 80%
+- 简爱
+a minister who loves to preach.
+- 编码/Code 50%
+
+---
+## 2016
+
+### Finished
+
+- 最好的告别/Being Mortal
+
+### 文学
 
 
  1. [文学回忆录][1]——木心
-
 ![memoir.jpg-25.6kB][2]
 
-## 艺术
+### 艺术
 
  2. [Living With Art][3]
-
 ![licving-with-art.jpg-43.1kB][4]
-
-## 语言
-
-
+### 语言
  1. [On Writing Well][5]
-
 ![on-writing-well.jpg-29.1kB][6]
  2. [Merriam-Webster's Vocabulary Builder][7]
-
 ![webster1.jpg-42.9kB][8]
 
- 
 
-## 科学
 
+### 科学
 
  1. [The Grand Design][9]
-
 ![the-grand-design.jpg-49.1kB][10]
  2. [Neural Networks and Learning Machine][11]
-
 ![neural-networks-and-learnig-machine.jpg-38.7kB][12]
  3. [The MIT Encyvlopedia of the Cognitive Sciences][13]
-
 ![the-mit-encyclopedia-of-the-cognitive-sciences.jpg-19.3kB][14]
  4. [统计自然语言处理][15]——宗成庆
-
 ![statistical-nlp.jpg-30.3kB][16]
  5. [Speech and Language Processing][17]
-
 ![speech-and -language-processing.jpg-30.3kB][18]
 
+## 2015
+
+- 黑客与画家
+- 当我跑步时我谈论什么
+writer's literary travail.
+running a marathon is a formidable undertaking.
+
+## 更早……
+
+- 石头书---池莉
+
+性最压抑的年代人口却激增。
+直白直接，难道是习惯看散文?
+
+- 沈奇岚
+
+走一段弯路，看一段风景
+学会表现自己，国内国外
+
+- 退步集---陈丹青
+
+- 看见---柴静
+There's a notable want of teachers in rural areas.
+
+### 小说
+
+- 国家一级注册驱魔师上岗通知书---非天夜翔
+
+desecrate the shrine.
+
+- 金牌助理---非天夜翔
+
+an imbroglio involvig some big names in the entertainment industry.
+
+- 灰塔笔记---空灯流远
+
+The intelligence staff had been infiltrated by spies.
 
   [1]: http://www.amazon.cn/gp/product/B00AM9PLVC?keywords=%E6%96%87%E5%AD%A6%E5%9B%9E%E5%BF%86%E5%BD%95&qid=1458547671&ref_=sr_1_1&s=books&sr=1-1
   [2]: http://static.zybuluo.com/sixijinling/l74yefqlwkefzm1xbpjovr9g/memoir.jpg
