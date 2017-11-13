@@ -17,8 +17,8 @@
         
         <item>
             <title>何事秋风空画扇</title>
-            <category>艺术</category>
-            <description>流云江陵明月孤龙山荷塘</description>
+            <category>绘画</category>
+            <description>流云b站绘制过程：BGM：《流云》by 西皮士江陵明月孤龙山烟雨荷柔</description>
             <pubDate>2017-10-31 00:00:00 </pubDate>
             <link>http://localhost:4000/2017/10/31/fan.html</link>
             <guid isPermaLink="true">http://localhost:4000/2017/10/31/fan.html</guid>
@@ -35,7 +35,7 @@
         
         <item>
             <title>动画笔记</title>
-            <category></category>
+            <category>艺术</category>
             <description>20132017</description>
             <pubDate>2017-10-05 18:32:00 </pubDate>
             <link>http://localhost:4000/2017/10/05/animation.html</link>
@@ -53,7 +53,7 @@
         
         <item>
             <title>请回答 2016</title>
-            <category></category>
+            <category>自我管理</category>
             <description>认识的人：  小红  小黄  小蓝  小青  小白学校：  毕设：review labeling          开题报告、任务书      论文：Latex        图像识别：    ...</description>
             <pubDate>2017-01-01 17:34:00 </pubDate>
             <link>http://localhost:4000/2017/01/01/Reply_2016.html</link>
@@ -76,6 +76,15 @@
             <pubDate>2016-10-18 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/10/18/RoadNN.html</link>
             <guid isPermaLink="true">http://localhost:4000/2016/10/18/RoadNN.html</guid>
+        </item>
+        
+        <item>
+            <title>摄影笔记</title>
+            <category>摄影</category>
+            <description>装备索尼微单a7  变焦镜头  定焦镜头fe 50mm f1.8 1999盒子比价网  框架构图，利用建筑美学  逆光，丁达尔效应，小光圈，快门变快  剪影，日出前的半小时  夕阳，日落后的半小...</description>
+            <pubDate>2016-09-25 21:23:00 </pubDate>
+            <link>http://localhost:4000/2016/09/25/Photography.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/09/25/Photography.html</guid>
         </item>
         
         <item>
@@ -112,15 +121,6 @@
             <pubDate>2015-12-25 11:12:00 </pubDate>
             <link>http://localhost:4000/2015/12/25/word2vec.html</link>
             <guid isPermaLink="true">http://localhost:4000/2015/12/25/word2vec.html</guid>
-        </item>
-        
-        <item>
-            <title>鹤鸣</title>
-            <category>写作</category>
-            <description>  他独独爱上了数学。不是因为被压，他只是因为爱好数学。他，陈景润，《哥德巴赫猜想》里的陈景润  他不相信科学能救国。但是救国却不可以没有科学，尤其不可以没有数学。天注定三个字因为他变得字字千钧...</description>
-            <pubDate>2014-04-04 10:26:00 </pubDate>
-            <link>http://localhost:4000/2014/04/04/Goldbach-conjecture.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2014/04/04/Goldbach-conjecture.html</guid>
         </item>
         
     </channel>
