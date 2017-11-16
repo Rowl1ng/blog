@@ -1,19 +1,18 @@
 ---
 layout: blog
 title: 关于Rowl1ng
-description: "关于Rowl1ng博客角落自述"
+description: "关于Rowl1ng博客的自述"
 tags:
 - Rowl1ng
 - 简述
-- 关于
-- 黑客与画家
+- 建站
 redirect_from:
   - /about/
 ---
 
 # Hi
 
-第二版的博客啦，这次终于一行一行代码认真跑了。参考[LiberXue的博客][1]。
+第二版的博客啦，这次终于一行一行代码认真跑了。
 
 ## Rowl1ng
 
@@ -24,5 +23,14 @@ redirect_from:
 By day a programmer | illustrator, photographer, writer, guqin player by night.
 
 喜欢钻研技术，热爱画画，偶尔弹琴写字。
+
+Contact me: ling.rowling.luo@gmail.com
+
+# 本站
+
+- 使用Jekyll
+- 架设于Github Pages
+- 编程工具是Webstorm（可以很方便地本地调试Jekyll）
+- 模板参考[LiberXue的博客][1]。
 
   [1]: https://liberxue.github.io/?liberxue
