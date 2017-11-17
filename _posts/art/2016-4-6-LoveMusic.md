@@ -21,8 +21,7 @@ tags:
 
 - 《中国歌集》（歌词采用我国唐宋诗）
 
-<iframe id="b" class="b video_pc" src="https://www.bilibili.com/html/html5player.html?cid=5632907&aid=3537439&pre_ad=0" frameborder="0" allowfullscreen="true">
-</iframe>
+<iframe src="https://www.bilibili.com/blackboard/player.html?aid=3537439&as_wide=1" width="640px" height="430px" frameborder="no" scrolling="no"></iframe>
 
 - 圣·桑 法国 《天鹅》——《动物狂欢节》《引子与回旋随想曲》《第三交响曲（管风琴）》
 
@@ -32,7 +31,7 @@ tags:
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=29709881&auto=0&height=66"></iframe>
 
-## 俄罗斯五人强力集团“五人团”
+俄罗斯五人强力集团“五人团”
 
 - 柴可夫斯基 俄国历史上最伟大的作曲家 钢琴套曲《四季》音乐会序曲《1812序曲》
 
@@ -54,6 +53,7 @@ tags:
 - 印象主义 阿西尔·克劳德·德彪西 法《大海》拉威尔《波莱罗舞曲》
 - 老）约翰·施特劳斯〔圆舞曲之父〕
 - （小）约翰·施特劳斯〔圆舞曲之王〕
+
 圆舞曲《蓝色多瑙河》〔奥地利第二国歌〕
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=28908585&auto=0&height=66"></iframe>
 《维也纳森林的故事》｛奥地利国宝级乐器 基塔尔琴Zither｝
@@ -84,28 +84,16 @@ tags:
 
 # 歌手
 
-## 中岛美嘉
-
-- 胧月夜~祈り
-
+- 胧月夜~祈り——中岛美嘉
 - Heartbeats - Amy Diamond
 - Traveling Light - Joel Hanson ; Sara Groves
 ![e3c0d890-4148-4e36-8892-a7f542fffd57.png-74.3kB][1]
 - Let her go- Passenger
-
 - カイコ - RADWIMPS
 ![c913daa6-b90e-44d4-a133-05ad970acaaf.png-41.6kB][2]
 - 夜空---SMAP
-
 - 夏雪冬花---Aimer
-
-法语：
-
 - Le Papillion--- Nicolas Errèra
-
-中文：
-
-- 为我好好的---韩雨芹
 
 # 纯音乐
 
@@ -121,9 +109,7 @@ tags:
 
 # 电音
 
-## 徐梦圆
-
-买了人生中第一张专辑，还有签名，好醉，~~就等着人红了~~已经红了。
+徐梦圆：买了人生中第一张专辑，还有签名，好醉，~~就等着人红了~~已经红了。
 
 # 影视
 

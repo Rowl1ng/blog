@@ -9,19 +9,30 @@ tags:
 description: 写下来就一定要看完哟
 ---
 
+# Recommendation
+
+- 银河系漫游指南/银河系搭车客指南
+
+# 2017
+
 ## Loading…
 
-- 人类简史 80%
-- 简爱
+谁说看书一定要看完的。
+
+- 《古诗源》 by 沈德潜（清）55%
+- 《人类简史》 80%
+- 《简爱》
 a minister who loves to preach.
-- 编码/Code 50%
+- 《编码》/Code 50%
 
----
-## 2016
+# 2016
 
-### Finished
+## Finishied
 
 - 最好的告别/Being Mortal
+- 观念的水位
+
+## Loading…
 
 ### 文学
 
@@ -39,8 +50,6 @@ a minister who loves to preach.
  2. [Merriam-Webster's Vocabulary Builder][7]
 ![webster1.jpg-42.9kB][8]
 
-
-
 ### 科学
 
  1. [The Grand Design][9]
@@ -54,7 +63,7 @@ a minister who loves to preach.
  5. [Speech and Language Processing][17]
 ![speech-and -language-processing.jpg-30.3kB][18]
 
-## 2015
+# 2015
 
 - 黑客与画家
 - 当我跑步时我谈论什么
