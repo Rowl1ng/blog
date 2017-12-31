@@ -7,6 +7,15 @@
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>再见啦 2017</title>
+            <category>自我管理</category>
+            <description>干的活  电信诈骗识别          主题模型、CNN无监督段短文本分类      《解析深度学习语音识别实践》      dejavu：audio fingerprint      Aud...</description>
+            <pubDate>2017-12-31 14:24:00 </pubDate>
+            <link>http://localhost:4000/2017/12/31/Bye_2017.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/12/31/Bye_2017.html</guid>
+        </item>
+        
+        <item>
             <title>基于Rasa_NLU的微信chatbot</title>
             <category>技术</category>
             <description>重要资料  本项目的github地址：Rasa_wechat  视频讲解（正文+编程+QA）：bilibili  Rasa_NLU官方文档  Rasa_Core官方文档  wxpy文档  关于机...</description>
@@ -52,6 +61,15 @@
         </item>
         
         <item>
+            <title>肺部结节检测</title>
+            <category>技术</category>
+            <description>前情提要阿里云天池医疗AI大赛[第一季]：肺部结节智能诊断：由大赛官方提供真实场景下患者肺部CT图像，目标是设计了两个网络，分别负责检测肺部结节的候选区域和判断候选区域是否为真结节，总排名64/...</description>
+            <pubDate>2017-04-25 19:04:00 </pubDate>
+            <link>http://localhost:4000/2017/04/25/luna.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2017/04/25/luna.html</guid>
+        </item>
+        
+        <item>
             <title>《观念的水位》+《柏林墙》</title>
             <category></category>
             <description>《观念的水位》“观念的水位”指的是中国社会的民主自由观念的水位，作者看到它在逐渐上升，因此对中国的未来“审慎乐观”。她认为，只有我們在观念上有所改变，实际才会有改变。在看这本书之前，政治于我而言...</description>
@@ -70,6 +88,24 @@
         </item>
         
         <item>
+            <title>愉快地画头像</title>
+            <category>艺术</category>
+            <description>20162014~ 2012</description>
+            <pubDate>2016-12-20 22:56:00 </pubDate>
+            <link>http://localhost:4000/2016/12/20/avatar.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/12/20/avatar.html</guid>
+        </item>
+        
+        <item>
+            <title>English</title>
+            <category>学习</category>
+            <description>托福待更新……雅思：听力：      精听：连读、口音        熟悉场景常用词  阅读：这种方法比较投机，利用雅思按文章顺序出题的窍门，真正提高阅读能力还是得花大功夫—做到不回视、不默读 ...</description>
+            <pubDate>2016-10-20 18:13:00 </pubDate>
+            <link>http://localhost:4000/2016/10/20/English.html</link>
+            <guid isPermaLink="true">http://localhost:4000/2016/10/20/English.html</guid>
+        </item>
+        
+        <item>
             <title>爱好：看电视</title>
             <category></category>
             <description>记单词时间～20172016十月  小戏骨          补锅      白毛女        校阅女孩六月  Person of Interest          共五季，诺兰弟弟担当编...</description>
@@ -85,42 +121,6 @@
             <pubDate>2016-10-18 00:00:00 </pubDate>
             <link>http://localhost:4000/2016/10/18/RoadNN.html</link>
             <guid isPermaLink="true">http://localhost:4000/2016/10/18/RoadNN.html</guid>
-        </item>
-        
-        <item>
-            <title>摄影笔记</title>
-            <category>摄影</category>
-            <description>装备索尼微单a7  变焦镜头  定焦镜头fe 50mm f1.8 1999盒子比价网  框架构图，利用建筑美学  逆光，丁达尔效应，小光圈，快门变快  剪影，日出前的半小时  夕阳，日落后的半小...</description>
-            <pubDate>2016-09-25 21:23:00 </pubDate>
-            <link>http://localhost:4000/2016/09/25/Photography.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/09/25/Photography.html</guid>
-        </item>
-        
-        <item>
-            <title>明信片</title>
-            <category>艺术</category>
-            <description></description>
-            <pubDate>2016-09-15 00:00:00 </pubDate>
-            <link>http://localhost:4000/2016/09/15/postcard.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/09/15/postcard.html</guid>
-        </item>
-        
-        <item>
-            <title>四川之行</title>
-            <category>艺术</category>
-            <description>路边龙洞湖水云边境湖光山色雾隐天光云影竹色高庙峨眉南无阿弥佗佛金顶一苇以航我佛</description>
-            <pubDate>2016-09-12 21:23:00 </pubDate>
-            <link>http://localhost:4000/2016/09/12/Sichuan.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/09/12/Sichuan.html</guid>
-        </item>
-        
-        <item>
-            <title>Reading List</title>
-            <category>读书</category>
-            <description>Recommendation  银河系漫游指南/银河系搭车客指南2017Loading…谁说看书一定要看完的。  《古诗源》 by 沈德潜（清）55%  《人类简史》 80%  《简爱》a mi...</description>
-            <pubDate>2016-03-21 00:00:00 </pubDate>
-            <link>http://localhost:4000/2016/03/21/reading-list.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/03/21/reading-list.html</guid>
         </item>
         
     </channel>
