@@ -1,7 +1,7 @@
 ---
 title:  摄影笔记
 layout: blog
-background-image: 
+background-image: http://static.zybuluo.com/sixijinling/3opya4puje49vokpta8jbcuc/IMG_3279.JPG
 art: true
 date: 2016-9-25 21:23
 category: 摄影
@@ -78,7 +78,7 @@ fe 50mm f1.8 1999
 
 ## 安德烈・柯特兹
 
-> - 我从未跑大老远寻找素材，他们时常就在我家门口的台阶上。
+> 我从未跑大老远寻找素材，他们时常就在我家门口的台阶上。
 
 ![IMG_3274.JPG-72.9kB][7]
 
@@ -111,7 +111,7 @@ fe 50mm f1.8 1999
 
 ## 安赛尔・亚当斯（Ansel Adams）
 
-> - 我们不只是用相机拍照。我们带到摄影中去的是所有我们读过的书，看过的电影，听过的音乐，爱过的人。
+> 我们不只是用相机拍照。我们带到摄影中去的是所有我们读过的书，看过的电影，听过的音乐，爱过的人。
 
 - 1902-1984
 - F64小组
