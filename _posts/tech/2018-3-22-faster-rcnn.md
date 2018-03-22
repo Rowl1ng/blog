@@ -2,7 +2,6 @@
 title:  Faster R-CNN 检测微小物体
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2/image_1c8u6de3r12s5oeog9i1ij6d1g9.png
-
 tech: true
 date: 2018-3-22 18:26
 category: 技术
