@@ -3,9 +3,13 @@ title:  Faster R-CNN 检测微小物体
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2/image_1c8u6de3r12s5oeog9i1ij6d1g9.png
 tech: true
+mathjax: true
 date: 2018-3-22 18:26
 category: 技术
 description:  Faster R-CNN用来识别大件物体效果好，但是小物体效果较差，因此想了一些改进的方法。
+published: true
+comment: true
+github_comments_issueid: "1"
 tags:
 - object detection
 ---
@@ -15,6 +19,7 @@ tags:
 ```
 pip install easydict
 ```
+
 ## 数据输入：使用自己的数据设计yourdata.py
 
 参考dataset目录下的其他数据集的类进行修改：

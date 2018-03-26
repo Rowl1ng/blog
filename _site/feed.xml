@@ -2,17 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Rowl1ng|黑客与画家</title>
-        <description>沉迷代码，热爱绘画</description>
+        <description>Tech & Art</description>
         <link>http://localhost:4000</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Faster R-CNN 检测微小物体</title>
+            <category>技术</category>
+            <description>本文基于Faster R-CNN的pytorch实现，原始论文，需要安装：pip install easydict数据输入：使用自己的数据设计yourdata.py参考dataset目录下的其他...</description>
+            <pubDate>2018-03-22 18:26:00 </pubDate>
+            <link>http://localhost:4000/%E6%8A%80%E6%9C%AF/faster-rcnn.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E6%8A%80%E6%9C%AF/faster-rcnn.html</guid>
+        </item>
+        
+        <item>
+            <title>愉快地画头像</title>
+            <category>艺术</category>
+            <description>201820162014~ 2012</description>
+            <pubDate>2018-03-19 22:56:00 </pubDate>
+            <link>http://localhost:4000/%E8%89%BA%E6%9C%AF/avatar.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E8%89%BA%E6%9C%AF/avatar.html</guid>
+        </item>
         
         <item>
             <title>各种英语考试的经验</title>
             <category>学习</category>
             <description>托福 : 104阅读 + 听力计时刷tpo  网易云的托福词以类记，午睡也能“听单词”了。托福是3264个单词，不多不多。口语推荐app“爱托福”，据说是基于AI评估语音语义来打分，不过重点是花...</description>
             <pubDate>2018-03-19 16:10:00 </pubDate>
-            <link>http://localhost:4000/2018/03/19/English.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2018/03/19/English.html</guid>
+            <link>http://localhost:4000/%E5%AD%A6%E4%B9%A0/English.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E5%AD%A6%E4%B9%A0/English.html</guid>
         </item>
         
         <item>
@@ -20,8 +38,8 @@
             <category>自我管理</category>
             <description>干的活  May your choices reflect your hopes, not your fears.  电信诈骗识别          主题模型、CNN无监督段短文本分类     ...</description>
             <pubDate>2017-12-31 14:24:00 </pubDate>
-            <link>http://localhost:4000/2017/12/31/Bye_2017.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/12/31/Bye_2017.html</guid>
+            <link>http://localhost:4000/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86/Bye_2017.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86/Bye_2017.html</guid>
         </item>
         
         <item>
@@ -29,8 +47,8 @@
             <category>技术</category>
             <description>重要资料  本项目的github地址：Rasa_wechat  视频讲解（正文+编程+QA）：bilibili  Rasa_NLU官方文档  Rasa_Core官方文档  wxpy文档  关于机...</description>
             <pubDate>2017-11-05 00:00:00 </pubDate>
-            <link>http://localhost:4000/2017/11/05/chatbot.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/11/05/chatbot.html</guid>
+            <link>http://localhost:4000/%E6%8A%80%E6%9C%AF/chatbot.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E6%8A%80%E6%9C%AF/chatbot.html</guid>
         </item>
         
         <item>
@@ -38,8 +56,8 @@
             <category>绘画</category>
             <description>流云b站绘制过程江陵明月孤龙山烟雨荷柔</description>
             <pubDate>2017-10-31 00:00:00 </pubDate>
-            <link>http://localhost:4000/2017/10/31/fan.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/10/31/fan.html</guid>
+            <link>http://localhost:4000/%E7%BB%98%E7%94%BB/fan.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E7%BB%98%E7%94%BB/fan.html</guid>
         </item>
         
         <item>
@@ -47,8 +65,8 @@
             <category>写作</category>
             <description>——“我的青春我的梦”主题征文身处人生的迷宫，没有人可以告诉你出路何在，当我们在庸常中渐渐迷失、找不到出路时，总不自觉跌入喟叹“人生意义何在”的深渊中，这时不妨抬头，看那满天的星斗从遥远的地方发...</description>
             <pubDate>2017-10-18 10:26:00 </pubDate>
-            <link>http://localhost:4000/2017/10/18/star.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/10/18/star.html</guid>
+            <link>http://localhost:4000/%E5%86%99%E4%BD%9C/star.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E5%86%99%E4%BD%9C/star.html</guid>
         </item>
         
         <item>
@@ -56,8 +74,8 @@
             <category>艺术</category>
             <description>20132017</description>
             <pubDate>2017-10-05 18:32:00 </pubDate>
-            <link>http://localhost:4000/2017/10/05/animation.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/10/05/animation.html</guid>
+            <link>http://localhost:4000/%E8%89%BA%E6%9C%AF/animation.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E8%89%BA%E6%9C%AF/animation.html</guid>
         </item>
         
         <item>
@@ -65,8 +83,8 @@
             <category>技术</category>
             <description>应用场景通话录音内容审核功能：关键词检索，实现内容审核。  首先要进行音频预处理，包括音频格式转码、语音降噪等，然后存储处理后的文件；  把结果反馈给业务网关，由音频比对对已知录音片段进行检测，...</description>
             <pubDate>2017-08-01 13:27:00 </pubDate>
-            <link>http://localhost:4000/2017/08/01/phoneme.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/08/01/phoneme.html</guid>
+            <link>http://localhost:4000/%E6%8A%80%E6%9C%AF/phoneme.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E6%8A%80%E6%9C%AF/phoneme.html</guid>
         </item>
         
         <item>
@@ -74,8 +92,8 @@
             <category>技术</category>
             <description>前情提要阿里云天池医疗AI大赛[第一季]：肺部结节智能诊断：由大赛官方提供真实场景下患者肺部CT图像，目标是设计了两个网络，分别负责检测肺部结节的候选区域和判断候选区域是否为真结节，总排名64/...</description>
             <pubDate>2017-04-25 19:04:00 </pubDate>
-            <link>http://localhost:4000/2017/04/25/luna.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/04/25/luna.html</guid>
+            <link>http://localhost:4000/%E6%8A%80%E6%9C%AF/luna.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E6%8A%80%E6%9C%AF/luna.html</guid>
         </item>
         
         <item>
@@ -83,8 +101,8 @@
             <category>读书</category>
             <description>《观念的水位》“观念的水位”指的是中国社会的民主自由观念的水位，作者看到它在逐渐上升，因此对中国的未来“审慎乐观”。她认为，只有我們在观念上有所改变，实际才会有改变。在看这本书之前，政治于我而言...</description>
             <pubDate>2017-01-03 17:08:00 </pubDate>
-            <link>http://localhost:4000/2017/01/03/Socialism.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/01/03/Socialism.html</guid>
+            <link>http://localhost:4000/%E8%AF%BB%E4%B9%A6/Socialism.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E8%AF%BB%E4%B9%A6/Socialism.html</guid>
         </item>
         
         <item>
@@ -92,17 +110,8 @@
             <category>自我管理</category>
             <description>认识的人：  小红  小黄  小蓝  小青  小白学校：  毕设：review labeling          开题报告、任务书      论文：Latex        图像识别：    ...</description>
             <pubDate>2017-01-01 17:34:00 </pubDate>
-            <link>http://localhost:4000/2017/01/01/Reply_2016.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2017/01/01/Reply_2016.html</guid>
-        </item>
-        
-        <item>
-            <title>愉快地画头像</title>
-            <category>艺术</category>
-            <description>201820162014~ 2012</description>
-            <pubDate>2016-12-20 22:56:00 </pubDate>
-            <link>http://localhost:4000/2016/12/20/avatar.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/12/20/avatar.html</guid>
+            <link>http://localhost:4000/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86/Reply_2016.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86/Reply_2016.html</guid>
         </item>
         
         <item>
@@ -110,17 +119,8 @@
             <category>读书</category>
             <description>记单词时间～20172016十月  小戏骨          补锅      白毛女        校阅女孩六月  Person of Interest          共五季，诺兰弟弟担当编...</description>
             <pubDate>2016-10-20 17:50:00 </pubDate>
-            <link>http://localhost:4000/2016/10/20/watch_TV.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/10/20/watch_TV.html</guid>
-        </item>
-        
-        <item>
-            <title>裂缝识别</title>
-            <category>技术</category>
-            <description>公路在使用过程中，总会因为行车、自然因素出现裂缝，这些裂缝如果不及时维护（填沥青）的话，可能会影响到车辆的正常通行。可是真是环境总是变化多样的，光照、磨损会带来各种干扰或是消弭调裂缝本身的可见性...</description>
-            <pubDate>2016-10-18 00:00:00 </pubDate>
-            <link>http://localhost:4000/2016/10/18/RoadNN.html</link>
-            <guid isPermaLink="true">http://localhost:4000/2016/10/18/RoadNN.html</guid>
+            <link>http://localhost:4000/%E8%AF%BB%E4%B9%A6/watch_TV.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E8%AF%BB%E4%B9%A6/watch_TV.html</guid>
         </item>
         
     </channel>
