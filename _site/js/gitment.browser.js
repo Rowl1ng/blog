@@ -2852,7 +2852,7 @@ var Gitment =
                 return reaction.content === 'heart' && reaction.user.login === user.login;
             });
             likeButton.className = 'gitment-header-like-btn';
-            likeButton.innerHTML = '\n    ' + _icons.heart + '\n    ' + (likedReaction ? '取消' : '点赞') + '\n    ' + (meta.reactions && meta.reactions.heart ? ' \u2022 <strong>' + meta.reactions.heart + '</strong> 個讚' : '') + '\n  ';
+            likeButton.innerHTML = '\n    ' + _icons.heart + '\n    ' + (likedReaction ? '取消' : '点赞') + '\n    ' + (meta.reactions && meta.reactions.heart ? ' \u2022 <strong>' + meta.reactions.heart + '</strong> 个赞' : '') + '\n  ';
 
             if (likedReaction) {
                 likeButton.classList.add('liked');
@@ -2868,7 +2868,7 @@ var Gitment =
             container.appendChild(likeButton);
 
             var commentsCount = document.createElement('span');
-            commentsCount.innerHTML = '\n    ' + (meta.comments ? ' \u2022 <strong>' + meta.comments + '</strong> 條評論' : '') + '\n  ';
+            commentsCount.innerHTML = '\n    ' + (meta.comments ? ' \u2022 <strong>' + meta.comments + '</strong> 条评论' : '') + '\n  ';
             container.appendChild(commentsCount);
 
             var issueLink = document.createElement('a');
@@ -2908,7 +2908,7 @@ var Gitment =
                             alert(e);
                         });
                     };
-                    initButton.innerText = '初始化評論';
+                    initButton.innerText = '初始化评论';
                     initHint.appendChild(initButton);
                     errorBlock.appendChild(initHint);
                 } else {
@@ -2918,14 +2918,14 @@ var Gitment =
                 return container;
             } else if (comments === undefined) {
                 var loading = document.createElement('div');
-                loading.innerText = '加載中……';
+                loading.innerText = '加载中……';
                 loading.className = 'gitment-comments-loading';
                 container.appendChild(loading);
                 return container;
             } else if (!comments.length) {
                 var emptyBlock = document.createElement('div');
                 emptyBlock.className = 'gitment-comments-empty';
-                emptyBlock.innerText = '尚無評論，快來搶沙發吧~';
+                emptyBlock.innerText = '尚无评论，快来抢沙发吧~';
                 container.appendChild(emptyBlock);
                 return container;
             }
@@ -3015,7 +3015,7 @@ var Gitment =
                     if (currentPage < pageCount) {
                         var nextButton = document.createElement('li');
                         nextButton.className = 'gitment-comments-page-item';
-                        nextButton.innerText = '往後翻';
+                        nextButton.innerText = '往后翻';
                         nextButton.onclick = function () {
                             return instance.goto(currentPage + 1);
                         };
@@ -3083,11 +3083,11 @@ var Gitment =
                 var preview = previewField.querySelector('.gitment-editor-preview');
                 var content = textarea.value.trim();
                 if (!content) {
-                    preview.innerText = '（什麼都沒有）';
+                    preview.innerText = '（什么都没有）';
                     return;
                 }
 
-                preview.innerText = '預覽加載中……';
+                preview.innerText = '预览加载中……';
                 instance.markdown(content).then(function (html) {
                     return preview.innerHTML = html;
                 });
@@ -3360,7 +3360,8 @@ var Gitment =
                 this.useTheme(_default2.default);
 
                 Object.assign(this, {
-                    id: window.location.href,
+                    // id: window.location.href,
+                    id: '<%= page.title %>',
                     title: window.document.title,
                     link: window.location.href,
                     desc: '',
