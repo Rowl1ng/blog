@@ -4,7 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/18fzvcrq4zmyyibbcdxgl0hh/17396394-E29D-48B0-BE1C-5894FCFC573F.png
 art: true
 date: 2013-6-4 18:59
-category: 音乐
+category: art
 description:  音乐鉴赏选修课作业 ：关于印象主义音乐的印象
 tags:
 ---

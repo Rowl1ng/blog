@@ -3,7 +3,7 @@ title: Reading List
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/l74yefqlwkefzm1xbpjovr9g/memoir.jpg
 book: true
-category: 读书
+category: book
 tags:
 - 书籍
 description: 写下来就一定要看完哟

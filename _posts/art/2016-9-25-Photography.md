@@ -4,7 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/3opya4puje49vokpta8jbcuc/IMG_3279.JPG
 art: true
 date: 2016-9-25 21:23
-category: 摄影
+category: art
 description:  摄影学习路上的小笔记
 tags:
 - 摄影

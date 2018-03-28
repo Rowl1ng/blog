@@ -3,7 +3,7 @@ layout: blog
 background-image: http://img03.deviantart.net/6cff/i/2016/168/f/a/untitled_by_sixijinling-da6ngsx.jpg
 art: true
 title:  明信片
-category: 艺术
+category: art
 description:  一年啦
 tags:
 - 明信片

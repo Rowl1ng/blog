@@ -4,7 +4,7 @@ write: true
 background-image: http://static.zybuluo.com/sixijinling/7helpf9wtdn1n2db9mc5mgn6/%E6%8F%929.jpg
 date: 2014-4-4 10:26
 title:  鹤鸣
-category: 写作
+category: write
 description: 《哥德巴赫猜想》读后感
 tags:
 ---

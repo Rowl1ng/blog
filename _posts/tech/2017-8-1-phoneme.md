@@ -7,7 +7,7 @@ mathjax: true
 background-image: http://static.zybuluo.com/sixijinling/o6i3xw4f4qgsc3j1pf4x33ir/%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C.png
 tech: true
 date: 2017-8-1 13:27
-category: 技术
+category: tech
 tags:
 - 语音处理
 - 深度学习

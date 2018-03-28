@@ -5,11 +5,8 @@ background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2
 tech: true
 mathjax: true
 date: 2018-3-22 18:26
-category: 技术
+category: tech
 description:  Faster R-CNN用来识别大件物体效果好，但是小物体效果较差，因此想了一些改进的方法。
-published: true
-comment: true
-github_comments_issueid: "1"
 tags:
 - object detection
 ---
