@@ -233,8 +233,11 @@
         <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
         <script >lang=hljs.initHighlightingOnLoad();</script>
         {% if page.mathjax %}
+        <!--<script type="text/javascript" async-->
+                <!--src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">-->
+        <!--</script>-->
         <script type="text/javascript" async
-                src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
         {% endif %}
         <!--<script type='text/javascript' -->

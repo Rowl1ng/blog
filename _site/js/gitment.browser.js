@@ -3361,7 +3361,7 @@ var Gitment =
 
                 Object.assign(this, {
                     // id: window.location.href,
-                    id: '<%= page.title %>',
+                    id: window.document.title,
                     title: window.document.title,
                     link: window.location.href,
                     desc: '',
