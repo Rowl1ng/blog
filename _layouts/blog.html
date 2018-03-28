@@ -105,9 +105,9 @@
                 </p>
 
             </div>
-            <div id="gitmentContainer"></div>
-            <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-            <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+            <div id="container"></div>
+            <link rel="stylesheet" href="/css/gitment.css">
+            <script src="/js/gitment.browser.js"></script>
             <script>
                 var gitment = new Gitment({
                     owner: 'Rowl1ng',
@@ -116,9 +116,23 @@
                         client_id: 'd3a4fe07f0e275a814af',
                         client_secret: '568c448355abf329a831ea9e1cbcaf94dab7ce8b',
                     },
-                });
-                gitment.render('gitmentContainer');
+                })
+                gitment.render('container')
             </script>
+            <!--<div id="gitmentContainer"></div>-->
+            <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+            <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
+            <!--<script>-->
+                <!--var gitment = new Gitment({-->
+                    <!--owner: 'Rowl1ng',-->
+                    <!--repo: 'rowl1ng.github.io',-->
+                    <!--oauth: {-->
+                        <!--client_id: 'd3a4fe07f0e275a814af',-->
+                        <!--client_secret: '568c448355abf329a831ea9e1cbcaf94dab7ce8b',-->
+                    <!--},-->
+                <!--});-->
+                <!--gitment.render('gitmentContainer');-->
+            <!--</script>-->
 
         </article>
         {% include foot.html %}
