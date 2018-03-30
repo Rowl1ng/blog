@@ -9,7 +9,7 @@
         <item>
             <title>Faster R-CNN 检测微小物体</title>
             <category>tech</category>
-            <description>本文基于Faster R-CNN的pytorch实现，原始论文，需要安装：pip install easydict数据输入：使用自己的数据设计yourdata.py参考dataset目录下的其他...</description>
+            <description>Choose your language :简体中文English本文基于Faster R-CNN的pytorch实现，原始论文，需要安装：pip install easydict数据输入：使用...</description>
             <pubDate>2018-03-22 18:26:00 </pubDate>
             <link>http://localhost:4000/tech/faster-rcnn.html</link>
             <guid isPermaLink="true">http://localhost:4000/tech/faster-rcnn.html</guid>

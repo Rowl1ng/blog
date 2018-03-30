@@ -3,6 +3,7 @@ description:  为了诈骗识别任务探索如何不经过ASR找出相似内容
 title:  基于音素识别的语音相似度研究
 layout: blog
 tech: true
+istop: true
 mathjax: true
 background-image: http://static.zybuluo.com/sixijinling/o6i3xw4f4qgsc3j1pf4x33ir/%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C.png
 tech: true

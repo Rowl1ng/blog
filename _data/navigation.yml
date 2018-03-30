@@ -1,0 +1,51 @@
+languages:
+  - language: "cn"
+    links:
+    - title:         "技术"
+      url:          /tech
+      external:     false
+    - title:         "艺术"
+      url:          /art
+      external:     false
+    - title:         "读书"
+      url:          /book
+      external:     false
+    - title:         "写作"
+      url:          /write
+      external:     false
+    - title:         "归档"
+      url:          /archives
+      external:     false
+    - title:         "标签"
+      url:          /tags
+      external:     false
+    - title:         "关于"
+      url:          /about
+      external:     false
+    - title:         "English"
+      url: /en/
+  - language: "en"
+    links:
+    - title:         "Tech"
+      url:          /tech
+      external:     false
+    - title:         "Art"
+      url:          /art
+      external:     false
+    - title:         "Book"
+      url:          /book
+      external:     false
+    - title:         "Write"
+      url:          /write
+      external:     false
+    - title:         "Archive"
+      url:          /archives
+      external:     false
+    - title:         "Tag"
+      url:          /tags
+      external:     false
+    - title:         "About"
+      url:          /about
+      external:     false
+    - title:         "中文"
+      url: /

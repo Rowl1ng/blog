@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-cn" data-scribe-reduced-action-queue="true">
+<html lang="cn" data-scribe-reduced-action-queue="true">
+<!--<html lang="zh-cn" data-scribe-reduced-action-queue="true">-->
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
@@ -14,7 +15,8 @@
 <meta name="twitter:title" content="关于技术的一切 - Rowl1ng|黑客与画家">
 <meta name="twitter:keywords"  content="                        {% for posts in site.posts %}            {% if posts.tech%}                                  ..." property='og:description' />
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于技术的一切 - Rowl1ng|黑客与画家">
+<meta property="og:title" content="关于技术的一切">
+<!--<meta property="og:title" content="关于技术的一切 - Rowl1ng|黑客与画家">-->
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="og:keywords"  content="                        {% for posts in site.posts %}            {% if posts.tech%}                                  ..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
@@ -45,59 +47,62 @@
         ga('send', 'pageview');
     </script>
 
+
+<header id="header" class="header bg-white">
+    <div class="navbar-container">
+        <a href="/?rowl1ng" title="访问 Rowl1ng|黑客与画家" class="navbar-logo"> <img src="http://localhost:4000/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家"> </a>
+        <div class="navbar-menu">
+            
+            <a href="http://localhost:4000/tech">TECH</a>
+            
+            <a href="http://localhost:4000/art">ART</a>
+            
+            <a href="http://localhost:4000/book">BOOK</a>
+            
+            <a href="http://localhost:4000/write">WRITE</a>
+            
+            <a href="http://localhost:4000/archives">ARCHIVE</a>
+            
+            <a href="http://localhost:4000/tags">TAGS</a>
+            
+            <a href="http://localhost:4000/about">ABOUT</a>
+            
+        </div>
+        <div class="navbar-search" onclick="">
+            <span class="icon-search"></span>
+            <form id="cb-search-btn" role="search">
+                        <span class="search-box">
+                             <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
+                        </span>
+            </form>
+        </div>
+        <div class="navbar-mobile-menu" onclick="">
+            <span class="icon-menu cross"><span class="middle"></span></span>
+            <ul>
+                
+                <li><a href="http://localhost:4000/tech">TECH</a></li>
+                
+                <li><a href="http://localhost:4000/art">ART</a></li>
+                
+                <li><a href="http://localhost:4000/book">BOOK</a></li>
+                
+                <li><a href="http://localhost:4000/write">WRITE</a></li>
+                
+                <li><a href="http://localhost:4000/archives">ARCHIVE</a></li>
+                
+                <li><a href="http://localhost:4000/tags">TAGS</a></li>
+                
+                <li><a href="http://localhost:4000/about">ABOUT</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</header>
+
     </head>
     <body class="bg-grey" gtools_scp_screen_capture_injected="true"><div id="MathJax_Message" style="display: none;"></div>
-        <header id="header" class="header bg-white">
-            <div class="navbar-container">
-                <a href="/?rowl1ng" title="访问 Rowl1ng|黑客与画家" class="navbar-logo"> <img src="http://localhost:4000/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家"> </a>
-                <div class="navbar-menu">
-                    
-                        <a href="/tech?rowl1ng"  title="访问 技术" data-hover="技术">技术</a>
-                    
-                        <a href="/art?rowl1ng"  title="访问 艺术" data-hover="艺术">艺术</a>
-                    
-                        <a href="/book?rowl1ng"  title="访问 读书" data-hover="读书">读书</a>
-                    
-                        <a href="/write?rowl1ng"  title="访问 写作" data-hover="写作">写作</a>
-                    
-                        <a href="/archives?rowl1ng"  title="访问 归档" data-hover="归档">归档</a>
-                    
-                        <a href="/tags?rowl1ng"  title="访问 标签" data-hover="标签">标签</a>
-                    
-                        <a href="/about?rowl1ng"  title="访问 关于" data-hover="关于">关于</a>
-                    
-                </div>
-                <div class="navbar-search" onclick="">
-                    <span class="icon-search"></span>
-                    <form method="post" action="/404.html" role="search">
-                        <span class="search-box">
-                            <input type="text" class="input" id="cb-search-content" required="true" placeholder="标题 标签..." maxlength="30" autocomplete="off">
-                        </span>
-                    </form>
-                </div>
-                <div class="navbar-mobile-menu" onclick="">
-                    <span class="icon-menu cross"><span class="middle"></span></span>
-                    <ul>
-                        
-                            <li><a href="/tech?rowl1ng" title="访问 技术" data-hover="技术">技术</a></li>
-                        
-                            <li><a href="/art?rowl1ng" title="访问 艺术" data-hover="艺术">艺术</a></li>
-                        
-                            <li><a href="/book?rowl1ng" title="访问 读书" data-hover="读书">读书</a></li>
-                        
-                            <li><a href="/write?rowl1ng" title="访问 写作" data-hover="写作">写作</a></li>
-                        
-                            <li><a href="/archives?rowl1ng" title="访问 归档" data-hover="归档">归档</a></li>
-                        
-                            <li><a href="/tags?rowl1ng" title="访问 标签" data-hover="标签">标签</a></li>
-                        
-                            <li><a href="/about?rowl1ng" title="访问 关于" data-hover="关于">关于</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </header>
         <main class="tl f6 relative pa4 pa5-ns overflow-hidden">
+
         
             <div class="mb4">
                 
@@ -123,7 +128,9 @@
                         </div>
                     </a>
                     <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"></div>
+                    <div class="item-slant"><div class="rowl1ng-title">
+
+                </div></div>
                     <div class="item-label">
                         <div class="item-title"><a href="/tech/faster-rcnn.html">Faster R-CNN 检测微小物体</a></div>
                         <div class="item-meta clearfix">
@@ -147,14 +154,16 @@
             
             <div class="post-list-item">
                 <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/an3ms22v79lqj34nkolbbihi/chatbot.png');"></div>
+                    <div class="item-thumb  bg-blue" style="background-image:url('http://static.zybuluo.com/sixijinling/an3ms22v79lqj34nkolbbihi/chatbot.png');"></div>
                     <a href="/tech/chatbot.html">
                         <div class="item-desc">
                             <p>Rasa_NLU + Rasa_Core + wxpy = 微信智能聊天机器人</p>
                         </div>
                     </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"></div>
+                    <div class="item-slant reverse-slant  bg-blue"></div>
+                    <div class="item-slant"><div class="rowl1ng-title">
+
+                </div></div>
                     <div class="item-label">
                         <div class="item-title"><a href="/tech/chatbot.html">基于Rasa_NLU的微信chatbot</a></div>
                         <div class="item-meta clearfix">
@@ -185,7 +194,9 @@
                         </div>
                     </a>
                     <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"></div>
+                    <div class="item-slant"><div class="rowl1ng-title">
+
+                </div></div>
                     <div class="item-label">
                         <div class="item-title"><a href="/tech/phoneme.html">基于音素识别的语音相似度研究</a></div>
                         <div class="item-meta clearfix">
@@ -210,7 +221,9 @@
                         </div>
                     </a>
                     <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"></div>
+                    <div class="item-slant"><div class="rowl1ng-title">
+
+                </div></div>
                     <div class="item-label">
                         <div class="item-title"><a href="/tech/luna.html">肺部结节检测</a></div>
                         <div class="item-meta clearfix">
@@ -241,7 +254,9 @@
                         </div>
                     </a>
                     <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"></div>
+                    <div class="item-slant"><div class="rowl1ng-title">
+
+                </div></div>
                     <div class="item-label">
                         <div class="item-title"><a href="/tech/RoadNN.html">裂缝识别</a></div>
                         <div class="item-meta clearfix">
@@ -274,7 +289,9 @@
                         </div>
                     </a>
                     <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"></div>
+                    <div class="item-slant"><div class="rowl1ng-title">
+
+                </div></div>
                     <div class="item-label">
                         <div class="item-title"><a href="/tech/word2vec.html">How to learn word2vec</a></div>
                         <div class="item-meta clearfix">
@@ -382,6 +399,8 @@
                 <!--置顶-->
                 
                 
+                <li><a href="/tech/faster-rcnn.html" title="访问 Faster R-CNN 检测微小物体" data-hover="Faster R-CNN 检测微小物体">Faster R-CNN 检测微小物体</a></li>
+                
                 
                 
                 
@@ -399,6 +418,8 @@
                 
                 
                 
+                
+                <li><a href="/tech/phoneme.html" title="访问 基于音素识别的语音相似度研究" data-hover="基于音素识别的语音相似度研究">基于音素识别的语音相似度研究</a></li>
                 
                 
                 

@@ -5,7 +5,7 @@ background-image: http://static.zybuluo.com/sixijinling/195gt9ihi0rqc1x6ix6609v8
 art: true
 date: 2017-10-5 18:32
 category: art
-description:  
+description:  Animation experiments. Update every year~
 tags:
 - 动画
 ---

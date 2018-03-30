@@ -4,36 +4,11 @@
     <head>
         <meta content='{{ page.title }} - {{ site.title }}' name='title' />
         <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
-        <title>{{ page.title }} - {{ site.title }}</title>
+        <title>{{ page.title }}</title>
+        <!--<title>{{ page.title }} - {{ site.title }}</title>-->
         {% include head.html %}
     </head>
     <body class="" gtools_scp_screen_capture_injected="true">
-        <header id="header" class="header bg-white">
-            <div class="navbar-container">
-                <a href="/?rowl1ng" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo-rowl1ng.png" alt="{{ site.title }}"> </a>
-                <div class="navbar-menu">
-                    {% for link in site.links %}
-                        <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
-                    {% endfor %}
-                </div>
-                <div class="navbar-search" onclick="">
-                    <span class="icon-search"></span>
-                    <form id="cb-search-btn" role="search">
-                        <span class="search-box">
-                             <input type="text" class="input" id="cb-search-content" required="true" placeholder="标题 标签..." maxlength="30" autocomplete="off">
-                        </span>
-                    </form>
-                </div>
-                <div class="navbar-mobile-menu" onclick="">
-                    <span class="icon-menu cross"><span class="middle"></span></span>
-                    <ul>
-                        {% for link in site.links %}
-                            <li><a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </header>
         <div class="post-header-thumb bg-white}">
             <div class="post-header-thumb-op"></div>
             <div class="post-header-thumb">
@@ -107,7 +82,7 @@
                 </p>
                 {{ content }}
                 <p class="post-info">
-                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:{{ page.date | date: "%F %H:%M:%S"}}
+                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:{{ page.date | date: "%F %H:%M:%S"}}
                 </p>
 
             </div>
@@ -125,21 +100,6 @@
                 })
                 gitment.render('container')
             </script>
-            <!--<div id="gitmentContainer"></div>-->
-            <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
-            <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
-            <!--<script>-->
-                <!--var gitment = new Gitment({-->
-                    <!--owner: 'Rowl1ng',-->
-                    <!--repo: 'rowl1ng.github.io',-->
-                    <!--oauth: {-->
-                        <!--client_id: 'd3a4fe07f0e275a814af',-->
-                        <!--client_secret: '568c448355abf329a831ea9e1cbcaf94dab7ce8b',-->
-                    <!--},-->
-                <!--});-->
-                <!--gitment.render('gitmentContainer');-->
-            <!--</script>-->
-
         </article>
         {% include foot.html %}
         <div id="directory-content" class="directory-content">

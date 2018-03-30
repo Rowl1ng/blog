@@ -5,9 +5,11 @@ background-image: http://static.zybuluo.com/sixijinling/18fzvcrq4zmyyibbcdxgl0hh
 art: true
 date: 2013-6-4 18:59
 category: art
-description:  音乐鉴赏选修课作业 ：关于印象主义音乐的印象
+description:  Music is what feeling sound like.
 tags:
 ---
+
+> 音乐鉴赏选修课作业 ：关于印象主义音乐的印象
 
 # 古典音乐鉴赏
 

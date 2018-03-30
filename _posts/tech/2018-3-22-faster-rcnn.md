@@ -3,13 +3,22 @@ title:  Faster R-CNN 检测微小物体
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2/image_1c8u6de3r12s5oeog9i1ij6d1g9.png
 tech: true
+istop: true
 mathjax: true
 date: 2018-3-22 18:26
 category: tech
 description:  Faster R-CNN用来识别大件物体效果好，但是小物体效果较差，因此想了一些改进的方法。
 tags:
 - object detection
+version:
+  current: 简体中文
+versions:
+  - 简体中文: #
+  - English: #
 ---
+
+{% include post-version-selector.html %}
+
 
 本文基于[Faster R-CNN的pytorch实现][1]，[原始论文][2]，需要安装：
 

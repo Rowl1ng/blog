@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-locale: zh-CN
+lang: cn
+languages: ["en", "cn"]
 title: "Rowl1ng|黑客与画家"
 email: "ling.rowling.luo@gmail.com"
 description: "Tech & Art"
@@ -21,8 +22,6 @@ baseurl: / # the subpath of your site, e.g. /blog
 url: "http://rowl1ng.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: "Rowl1ng"
 github_username:  "Rowl1ng"
-# Set this to a github repository to be used to host comments.
-github_comments_repository:  Rowl1ng/rowl1ng.github.io
 signoff:          "Rowl1ng" # Your name
 google_analytics: UA-71226909-1
 share:            true
@@ -36,29 +35,27 @@ plugins:
   - jekyll-paginate
 #  - jekyll-feed
 
+
 links:
-#  - name:         首页
-#    url:          /
-#    external:     false
-  - name:         技术
+  - name:         TECH
     url:          /tech
     external:     false
-  - name:         艺术
+  - name:         ART
     url:          /art
     external:     false
-  - name:         读书
+  - name:         BOOK
     url:          /book
     external:     false
-  - name:         写作
+  - name:         WRITE
     url:          /write
     external:     false
-  - name:         归档
+  - name:         ARCHIVE
     url:          /archives
     external:     false
-  - name:         标签
+  - name:         TAGS
     url:          /tags
     external:     false
-  - name:         关于
+  - name:         ABOUT
     url:          /about
     external:     false
 

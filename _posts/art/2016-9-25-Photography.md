@@ -3,9 +3,10 @@ title:  摄影笔记
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/3opya4puje49vokpta8jbcuc/IMG_3279.JPG
 art: true
+background: blue
 date: 2016-9-25 21:23
 category: art
-description:  摄影学习路上的小笔记
+description:  Photography notes
 tags:
 - 摄影
 ---

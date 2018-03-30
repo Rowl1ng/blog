@@ -2,10 +2,7 @@
 layout: blog
 title: 关于Rowl1ng
 description: "关于Rowl1ng博客的自述"
-tags:
-- Rowl1ng
-- 简述
-- 建站
+lang: cn
 redirect_from:
   - /about/
 ---
@@ -32,5 +29,6 @@ Contact me: ling.rowling.luo@gmail.com
 - 架设于Github Pages
 - 编程工具是Webstorm（可以很方便地本地调试Jekyll）
 - 模板参考[LiberXue的博客][1]。
+
 
   [1]: https://liberxue.github.io/?liberxue
