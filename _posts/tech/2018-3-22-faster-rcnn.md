@@ -28,8 +28,6 @@ versions:
 pip install easydict cython
 ```
 
-
-
 # 代码结构
 
 
@@ -151,10 +149,14 @@ self._classes = ('__background__',  # always index 0
             - 总数 = `TRAIN.BATCH_SIZE_PER_IM` - 正样本总数
             - 条件:[`BG_THRESH_LO`, `BG_THRESH_HI`)
 - bbox regression loss:loss(x) = weight_outside * L(weight_inside * x)
-    - bbox_inside_weights: bbox regression只用positive example来训，所以只需把positive的weight设为1.0，其他设为0即可
+    - bbox_inside_weights: bbox regression只用positive example来训，所以只需把positive的weight设为1.0，其他设为0即可（只有那些分类正确了的box才能参与，分类错误的直接不考虑了）
     - bbox_outside_weights: bbox regression loss是对minibatch中的图片数取平均，
 
 ![此处输入图片的描述][8]
+
+这里是针对各个类别的。也就是说，
+
+> 代码实现上：使用了mask array将for循环操作转化成了矩阵乘法。mask array标注了每个anchor的正确物体类别。
 
 ## 正负采样
 
@@ -438,7 +440,12 @@ layer（head_to_tail）.
 
 ![此处输入图片的描述][32]
 
-Pytorch的**torch.nn.functional.affine_grid** 和torch.nn.functional.grid_sample
+不同的pooling模式：
+
+- crop
+- align
+
+主要用到Pytorch的**torch.nn.functional.affine_grid** 和torch.nn.functional.grid_sample
 
 crop pooling的步骤：
 
@@ -448,25 +455,20 @@ crop pooling的步骤：
 
 ![此处输入图片的描述][33]
 
-不同的pooling模式：
-
-- crop
-- align
-
 ### Classification Layer
 
 ![此处输入图片的描述][34]
 
 fc之后得到的一维特征向量被送到两个全连接网络中：
+
 ![此处输入图片的描述][35]
 
 - `cls_score_net`：生成roi每个类别的score（softmax之后就是概率了）
 - `bbox_pred_net`：结合两者得到最终的bbox坐标
     - class specific bounding box regression coefficients
     - 原来proposal target layer生成的 bbox 坐标
-![此处输入图片的描述][36]
 
-### Classification Layer
+![此处输入图片的描述][36]
 
 这个阶段要把不同物体的标签考虑进来了，所以是一个多分类问题。使用交叉熵计算分类Loss：
 
@@ -481,27 +483,19 @@ fc之后得到的一维特征向量被送到两个全连接网络中：
 
 有意思的是，训练classification layer得到的loss也会反向传播给RPN。这是因为用来做crop pooling的ROI box坐标不仅是RPN产生的 regression coefficients应用到anchor box上的结果，其本身也是网络输出。因此，在反传的时候，误差会通过roi pooling layer传播到RPN layer。好在crop pooling在Pytorch中有内部实现，省去了计算梯度的麻烦。
 
-## Inference
+### Mask-RCNN
+[Mask RCNN的Pytorch实现][37]，[原始论文][38]。
 
-![此处输入图片的描述][37]
-，这里是针对各个类别的。也就是说，只有那些分类正确了的box才能参与，分类错误的直接不考虑了。
-
-> 代码实现上：使用了mask array将for循环操作转化成了矩阵乘法。mask array标注了每个anchor的正确物体类别。
-
-
-
-
-### Mask RCNN
-
-[Mask RCNN的Pytorch实现][38]，[原始论文][39]。
-
-mask rcnn里默认的mask head是conv层，也可以通过MRCNN.USE_FC_OUTPUT设置使用FC层。
+mask rcnn里默认的mask head是conv层，也可以通过MRCNN.`USE_FC_OUTPUT`设置使用FC层。
 
 - 做分割的话，关键是roi pooling时候的对齐问题，mask rcnn提出roi align
 face++提出precise roi pooling，使用$x/16$而不是$[x/16]$，使用bilinear interpolation
 - 分隔开分割和分类两个任务，mask rcnn中对每个类别都会生成一个mask，或者是class-agnostic的实验中，不管类别直接生成mask，效果都不错
-- [关于mask rcnn实现的讨论][40]，kaggle上也有一个做医疗图像的demo
+- [关于mask rcnn实现的讨论][241]，kaggle上也有一个做医疗图像的demo
 
+## Inference
+
+![此处输入图片的描述][40]
 
 # Appendix
 
@@ -536,7 +530,7 @@ $$
 
 ## 针对小物体
 
-每个小红点之间就是16像素的间隔了，如果要检测特别细小的物体，这么大的下采样就很危险了。于是，为了尽量不破坏细小物体的清晰度，参考[github上关于检测微小物体的讨论][241]，我尝试了两种方案：
+每个小红点之间就是16像素的间隔了，如果要检测特别细小的物体，这么大的下采样就很危险了。于是，为了尽量不破坏细小物体的清晰度，参考[github上关于检测微小物体的讨论][39]，我尝试了两种方案：
 
 ### 1. 降低下采样倍数
 
@@ -618,12 +612,12 @@ my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear l
   [32]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa402baba3a1.png
   [33]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa4255fdacb6.png
   [34]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa55c81eac0a.png
-  [35]: https://github.com/rbgirshick/py-faster-rcnn/issues/86
+  [35]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa55c97f3287-1024x607.png
   [36]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa4255fdacb6.png
-  [37]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa70ff399c57.png
-  [38]: https://github.com/multimodallearning/pytorch-mask-rcnn
-  [39]: https://arxiv.org/pdf/1703.06870.pdf
-  [40]: http://forums.fast.ai/t/implementing-mask-r-cnn/2234
+  [37]: https://github.com/multimodallearning/pytorch-mask-rcnn
+  [38]: https://arxiv.org/pdf/1703.06870.pdf
+  [39]: https://github.com/rbgirshick/py-faster-rcnn/issues/86
+  [40]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa70ff399c57.png
   [41]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa7c84451f81.png
   [42]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa7c828703ab.png
   [43]: https://zhuanlan.zhihu.com/p/31427728
