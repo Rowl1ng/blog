@@ -5,9 +5,9 @@ background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2
 tech: true
 istop: true
 mathjax: true
-date: 2018-5-7 18:26
+date: 2018-6-4 20:15
 category: tech
-description:  在pytorch版Detectron
+description:  基于pytorch版Detectron
 tags:
 - object detection
 version:
@@ -19,7 +19,9 @@ versions:
 
 {% include post-version-selector.html %}
 
-本文基于mask rcnn的部分基于[Detectron.pytorch][1]，[Detectron][2]是face book开源的基于caffe2的各种目标检测算法的打包（比如mask rcnn、FPN神马的），可以学习一下。亦参考了[Faster R-CNN的pytorch实现][3]，需要安装：
+本文mask rcnn的部分基于[Detectron.pytorch][1]（参考了[Faster R-CNN的pytorch实现][3]），[Detectron][2]（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN神马的），可以学习一下。
+
+需要安装：
 
 - pytorch > 0.3.0
 - pycocotools
@@ -154,9 +156,17 @@ self._classes = ('__background__',  # always index 0
 
 ![此处输入图片的描述][8]
 
-这里是针对各个类别的。也就是说，
+这里是针对各个类别的。也就是说，在后面的classification layer中，这个bbox_inside_weights起一个mask的作用，这样就只计算fg的，不管bg的，但是算分类loss的时候还是都考虑。
+
+> Bbox regression loss has the form:
+    # Inside weights allow us to set zero loss on an element-wise basis
+    # Bbox regression is only trained on positive examples so we set their
+    # weights to 1.0 (or otherwise if config is different) and 0 otherwise
 
 > 代码实现上：使用了mask array将for循环操作转化成了矩阵乘法。mask array标注了每个anchor的正确物体类别。
+
+
+
 
 ## 正负采样
 
@@ -175,11 +185,6 @@ Rescale的基本逻辑如下图：
 ![此处输入图片的描述][11]
 
 这一步在**决定使用的anchor size**时一定要考虑进去，github上有人写过基于自己数据的分析脚本，基本思路是还原rescale的过程，分析rescale factor，估计一下roi的大小，从而决定anchor size。
-
-Bbox regression loss has the form:
-    # Inside weights allow us to set zero loss on an element-wise basis
-    # Bbox regression is only trained on positive examples so we set their
-    # weights to 1.0 (or otherwise if config is different) and 0 otherwise
 
 计算所有ROI和所有ground truth的max overlap，从而判断是fg还是bg。这里用到了两个参数：
 
@@ -204,12 +209,6 @@ Parameters:
 
 - `TRAIN.BATCH_SIZE`: (default 128) 所选fg和bg box的最大数量.
 - `TRAIN.FG_FRACTION`: (default 0.25). fg box 不能超过 BATCH_SIZE*FG_FRACTION
-
-bbox_inside_weights，原理如下图。
-
-
-
-在后面的classification layer中，这个bbox_inside_weights起一个mask的作用，这样就只计算fg的，不管bg的，但是算分类loss的时候还是都考虑。
 
 # Backbone
 
@@ -295,7 +294,7 @@ __C.FPN.EXTRA_CONV_LEVELS = False
 
 其他[FPN的Pytorch实现][17]。
 
-#Generalized RCNN结构
+# Generalized RCNN结构
 
 R-CNN包括三种主要网络：
 
@@ -347,7 +346,7 @@ MODEL:
 
 ![此处输入图片的描述][23]
 
-### 1. Anchor Generation Layer
+## 1. Anchor Generation Layer
 
 第一步就是生成anchor，这里的anchor亦可理解为bounding box。rpn的任务是对上上图的每个小红点都计算若干anchor（默认是9个）：
 
@@ -373,7 +372,7 @@ args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]'
 
 所以，在使用自己的数据的时候，统计一下gorund truth框的大小（注意考虑预处理rescale的系数），确定大小范围还是很有必要的。
 
-### 2. Region Proposal Layer
+## 2. Region Proposal Layer
 
 先明确foreground和background的概念：前景`fg`（foreground）代表有物体（不管是哪个类别），背景`bg`（background）就是没有任何物体。
 
@@ -388,13 +387,13 @@ Region Proposal Layer的两个任务就是：
 
 值得注意的是，这里的anchor是以降采样16倍得到的feature map为基础的，所以总共是$\frac w {16} * \frac h {16} * 9$个anchor。每个anchor唯一对应着一个class score和bounding box regressor。
 
-#### Proposal Layer
+### Proposal Layer
 
 基于fg的score，使用nms来筛除多余的anchor
 
 ![此处输入图片的描述][26]
 
-#### Anchor Target Layer
+### Anchor Target Layer
 
 计算RPN loss：
 
@@ -427,14 +426,14 @@ Region Proposal Layer的两个任务就是：
 - Good foreground/background boxes and associated class labels
 - Target regression coefficients
 
-#### Proposal Target Layer
+### Proposal Target Layer
 
 proposal layer产生ROI list，而Proposal Target Layer负责从这个list中选出可信的ROI。这些ROI经过 crop pooling从feature map中crop出相应区域，传给后面的classification
 layer（head_to_tail）.
 
 
 
-### 3.ROI Pooling Layer
+## 3.ROI Pooling Layer
 
 简言之就是负责从feature map中提取ROI对应区域。
 
@@ -455,7 +454,7 @@ crop pooling的步骤：
 
 ![此处输入图片的描述][33]
 
-### Classification Layer
+## 4.Classification Layer
 
 ![此处输入图片的描述][34]
 
@@ -483,7 +482,7 @@ fc之后得到的一维特征向量被送到两个全连接网络中：
 
 有意思的是，训练classification layer得到的loss也会反向传播给RPN。这是因为用来做crop pooling的ROI box坐标不仅是RPN产生的 regression coefficients应用到anchor box上的结果，其本身也是网络输出。因此，在反传的时候，误差会通过roi pooling layer传播到RPN layer。好在crop pooling在Pytorch中有内部实现，省去了计算梯度的麻烦。
 
-### Mask-RCNN
+# Mask-RCNN
 [Mask RCNN的Pytorch实现][37]，[原始论文][38]。
 
 mask rcnn里默认的mask head是conv层，也可以通过MRCNN.`USE_FC_OUTPUT`设置使用FC层。
@@ -493,7 +492,7 @@ face++提出precise roi pooling，使用$x/16$而不是$[x/16]$，使用bilinear
 - 分隔开分割和分类两个任务，mask rcnn中对每个类别都会生成一个mask，或者是class-agnostic的实验中，不管类别直接生成mask，效果都不错
 - [关于mask rcnn实现的讨论][241]，kaggle上也有一个做医疗图像的demo
 
-## Inference
+# Inference
 
 ![此处输入图片的描述][40]
 
@@ -513,7 +512,7 @@ face++提出precise roi pooling，使用$x/16$而不是$[x/16]$，使用bilinear
 
 [讲nms（non-maximum suppression）的文章][43]
 
-### Focal loss
+## Focal loss
 
 看ICCV那篇focal loss的论文《Focal Loss for Dense Object Detection》.
 
@@ -542,6 +541,8 @@ parser.add_argument('--downsample', dest='downsample_rate',
                   default=16, type=int) # 原网络默认16倍
 ```
 
+
+
 需要注意的是：
 
 * 一旦改变下采样，同时还要改变feature_stride和spatial_scale。否则预测框框就变成了边缘的线条（同时loss_rpn_cls奇高）。比如VGG16（降采样8倍）：
@@ -549,14 +550,6 @@ parser.add_argument('--downsample', dest='downsample_rate',
     * self.spatial_scale to (1/8)
 *  vgg16尝试4倍下采样：去掉了stage5的卷积，保障输入图像最短边在1200
 
-#### 剪裁网络
-
-[把卷积层变成全连接层][45]
-
-```
-list(model.modules()) # to inspect the modules of your model
-my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear layer
-```
 
 ### 2. 切割原图
 
@@ -622,7 +615,6 @@ my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear l
   [42]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa7c828703ab.png
   [43]: https://zhuanlan.zhihu.com/p/31427728
   [44]: https://github.com/marvis/pytorch-yolo2/blob/master/FocalLoss.py
-  [45]: https://stackoverflow.com/questions/44146655/how-to-convert-pretrained-fc-layers-to-conv-layers-in-pytorch
   [46]: https://arxiv.org/pdf/1506.01497.pdf
   [47]: https://tryolabs.com/blog/2017/08/30/object-detection-an-overview-in-the-age-of-deep-learning/
   [48]: https://tryolabs.com/blog/2018/01/18/faster-r-cnn-down-the-rabbit-hole-of-modern-object-detection/
