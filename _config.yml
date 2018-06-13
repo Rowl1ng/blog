@@ -49,6 +49,9 @@ links:
   - name:         WRITE
     url:          /write
     external:     false
+  - name:         GITBOOK
+    url:          /gitbook/_book
+    external:     false
   - name:         ARCHIVE
     url:          /archives
     external:     false
