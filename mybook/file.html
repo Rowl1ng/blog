@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>文件 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="log.html" />
     
+    
+    <link rel="prev" href="functional.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -194,7 +196,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.8" data-path="file.html">
+        <li class="chapter active" data-level="1.1.8" data-path="file.html">
             
                 <a href="file.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >文件</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x6587;&#x4EF6;">&#x6587;&#x4EF6;</h1>
+<ul>
+<li><p>&#x5220;&#x9664;&#x6587;&#x4EF6;:  os.remove()</p>
+</li>
+<li><p>&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;&#xFF1A;</p>
+</li>
+</ul>
+<pre><code>import os
+path = &apos;D:\\&#x56FE;&#x7247;\\&apos;
+for file in os.listdir(path):
+    if os.path.isfile(os.path.join(path,file))==True:
+        if file.find(&apos;.&apos;)&lt;0:
+            newname=file+&apos;rsfdjndk.jpg&apos;
+            os.rename(os.path.join(path,file),os.path.join(path,newname))
+            print file,&apos;ok&apos;
+#        print file.split(&apos;.&apos;)[-1]
+</code></pre><ul>
+<li>&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x5939;&#xFF1A;os.makedirs(ret_dir)
+&#x7528;&#x53D8;&#x91CF;&#x547D;&#x540D;&#xFF1A;
+ouput=open(str1+&quot;.txt&quot;,&apos;w&apos;)</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment">#write(string)</span>
+f = open(<span class="hljs-string">&quot;readwrite.txt&quot;</span>,<span class="hljs-string">&apos;w&apos;</span>)
+f.write(<span class="hljs-string">&quot;Welcome to this file\nThere is nothing here except\nThis stupid haiku\n&quot;</span>)
+f.close()
+
+<span class="hljs-comment">#writelines(list)</span>
+f = open(<span class="hljs-string">&quot;readwrite.txt&quot;</span>)<span class="hljs-comment">#&#x9ED8;&#x8BA4;&#x4E3A;&#x8BFB;</span>
+lines = f.readlines()
+f.close()
+
+lines[<span class="hljs-number">0</span>] = <span class="hljs-string">&quot;#-----writelines(list)-------#\nWelcome to this file\n&quot;</span>
+f = open(<span class="hljs-string">&quot;readwrite.txt&quot;</span>,<span class="hljs-string">&apos;a&apos;</span>)<span class="hljs-comment">#a&#x6A21;&#x5F0F;&#x5728;&#x539F;&#x6587;&#x4EF6;&#x4E0A;&#x7EE7;&#x7EED;&#x6DFB;&#x52A0;</span>
+f.writelines(lines)
+f.close()
+
+<span class="hljs-comment">#read(n)&#x8BFB;&#x53D6;&#x524D;n&#x4E2A;&#x5B57;&#x7B26;</span>
+f = open(<span class="hljs-string">&quot;readwrite.txt&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>)
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;#-------------------------read(n)----------------------------#&quot;</span>
+<span class="hljs-keyword">print</span> f.read(<span class="hljs-number">4</span>)
+f.close()
+
+<span class="hljs-comment">#readline()&#x6309;&#x884C;&#x8BFB;&#x53D6;</span>
+f = open(<span class="hljs-string">&quot;readwrite.txt&quot;</span>)
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;#-------------------------readline()----------------------------#&quot;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    <span class="hljs-keyword">print</span> str(i) + <span class="hljs-string">&quot;: &quot;</span> + f.readline() <span class="hljs-comment">#str(i)&#x5C06;object&#x8F6C;&#x4E3A;string</span>
+f.close()
+
+<span class="hljs-comment">#readlines()&#x8FD4;&#x56DE;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x9879;&#x4E3A;&#x4E00;&#x884C;</span>
+<span class="hljs-keyword">import</span> pprint
+f = open(<span class="hljs-string">&quot;readwrite.txt&quot;</span>)
+l = f.readlines()<span class="hljs-comment">#&#x8FD4;&#x56DE;&#x5217;&#x8868;</span>
+<span class="hljs-keyword">print</span> l<span class="hljs-comment">#&#x8F93;&#x51FA;&#x5217;&#x8868;</span>
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;---------------------------------------&quot;</span>
+pprint.pprint(l)<span class="hljs-comment">#&#x6BCF;&#x9879;&#x4E3A;&#x4E00;&#x884C;&#x663E;&#x793A;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;f.close()</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1477,8 +1534,12 @@
 
             
                 
+                <a href="functional.html" class="navigation navigation-prev " aria-label="Previous page: 函数式编程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="log.html" class="navigation navigation-next " aria-label="Next page: 日志">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1550,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文件","level":"1.1.8","depth":2,"next":{"title":"日志","level":"1.1.9","depth":2,"path":"log.md","ref":"log.md","articles":[]},"previous":{"title":"函数式编程","level":"1.1.7","depth":2,"path":"functional.md","ref":"functional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"file.md","mtime":"2018-05-29T13:27:59.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>调试 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="functional.html" />
     
+    
+    <link rel="prev" href="code.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -168,7 +170,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6" data-path="debug.html">
+        <li class="chapter active" data-level="1.1.6" data-path="debug.html">
             
                 <a href="debug.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >调试</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x8C03;&#x8BD5;">&#x8C03;&#x8BD5;</h1>
+<p>pdb &#xFF1A; python debugger&#xFF0C;c&#x662F;&#x4E0B;&#x4E00;&#x6B65;</p>
+<p>python&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x7B97;&#x6570;&#x9519;&#x8BEF;</p>
+<pre><code>&gt;&gt;&gt; 1.1 + 2.2
+3.3000000000000003
+</code></pre><p>&#x4F7F;&#x7528;pdb.set_trace()&#x4E0B;&#x65AD;&#x70B9;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pdb
+pdb.set_trace()
+</code></pre>
 
                                 
                                 </section>
@@ -1477,8 +1486,12 @@
 
             
                 
+                <a href="code.html" class="navigation navigation-prev " aria-label="Previous page: 编码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="functional.html" class="navigation navigation-next " aria-label="Next page: 函数式编程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1502,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"调试","level":"1.1.6","depth":2,"next":{"title":"函数式编程","level":"1.1.7","depth":2,"path":"functional.md","ref":"functional.md","articles":[]},"previous":{"title":"编码","level":"1.1.5","depth":2,"path":"code.md","ref":"code.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"debug.md","mtime":"2018-06-08T01:48:13.391Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

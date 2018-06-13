@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>距离 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="term.md.html" />
     
+    
+    <link rel="prev" href="metrics.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -447,7 +449,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.8" data-path="distance.html">
+        <li class="chapter active" data-level="2.3.8" data-path="distance.html">
             
                 <a href="distance.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >距离</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x8DDD;&#x79BB;">&#x8DDD;&#x79BB;</h1>
+<p>&#x5728;&#x57FA;&#x4E8E;&#x8BB0;&#x5FC6;&#x7684;&#x5B66;&#x4E60;&#x4E2D;&#xFF0C;&#x786E;&#x5B9A;&#x90BB;&#x57DF;&#x662F;&#x7B97;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x3002;&#x90BB;&#x57DF;&#x7684;&#x786E;&#x5B9A;&#x9700;&#x8981;&#x501F;&#x52A9;&#x8DDD;&#x79BB;&#x51FD;&#x6570;&#x3002;&#x5E38;&#x7528;&#x7684;&#x8DDD;&#x79BB;&#x6709;&#x591A;&#x79CD;&#x5F62;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#x66FC;&#x54C8;&#x987F;&#x8857;&#x533A;&#x8DDD;&#x79BB;&#x3001;&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;&#x3001;&#x95F5;&#x53EF;&#x592B;&#x65AF;&#x57FA;&#x8DDD;&#x79BB;(Minkovski)&#x3001;&#x5207;&#x6BD4;&#x96EA; &#x592B;&#x8DDD;&#x79BB;&#x3001;&#x4EE5;&#x53CA;&#x9A6C;&#x6C0F;(Mahalanobis)&#x8DDD;&#x79BB;&#x7B49;&#x3002;</p>
+<h3 id="1-&#x95F5;&#x53EF;&#x592B;&#x65AF;&#x57FA;&#x8DDD;&#x79BB;minkovski">1. &#x95F5;&#x53EF;&#x592B;&#x65AF;&#x57FA;&#x8DDD;&#x79BB;(Minkovski)</h3>
+<p><script type="math/tex; ">x=(x_1,x_2,\dots,x_m),y=(y_1,y_2,\dots,y_m)</script>
+&#x90A3;&#x4E48;&#xFF0C;&#x95F5;&#x53EF;&#x592B;&#x65AF;&#x57FA;&#x8DDD;&#x79BB;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;
+<script type="math/tex; ">(\sum_{i=1}^m|x_i-y_i|^p)^{1/p}</script>
+&#x8BE5;&#x8DDD;&#x79BB;&#x6700;&#x5E38;&#x7528;&#x7684; <script type="math/tex; ">p</script> &#x662F; 2 &#x548C; 1,&#x524D;&#x8005;&#x662F;&#x6B27;&#x51E0;&#x91CC;&#x5F97;&#x8DDD;&#x79BB;&#xFF0C;&#x540E;&#x8005;&#x662F;&#x66FC;&#x54C8;&#x987F;&#x8DDD;&#x79BB;&#x3002;</p>
+<h3 id="2&#x66FC;&#x54C8;&#x987F;&#x8DDD;&#x79BB;&#xFF08;manhattan-distance&#xFF09;">2.&#x66FC;&#x54C8;&#x987F;&#x8DDD;&#x79BB;&#xFF08;Manhattan distance&#xFF09;</h3>
+<p>&#x5F53;<script type="math/tex; ">p=1</script>&#x65F6;&#xFF1A;<script type="math/tex; ">\sum_{i=1}^m|x_i-y_i|</script>
+&#x5047;&#x8BBE;&#x5728;&#x66FC;&#x54C8;&#x987F;&#x8857;&#x533A;&#x4E58;&#x5750;&#x51FA;&#x79DF;&#x8F66;&#x4ECE; P &#x70B9;&#x5230; Q &#x70B9;&#xFF0C;&#x767D;&#x8272;&#x8868;&#x793A;&#x9AD8;&#x697C;&#x5927;&#x53A6;&#xFF0C;&#x7070;&#x8272;&#x8868;&#x793A;&#x8857;&#x9053;&#xFF1A;</p>
+<p><img src="http://images.cnitblog.com/blog/533521/201308/07220530-1c87c470c5984305932cb5f5fc91656f.png" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></p>
+<p>&#x7EFF;&#x8272;&#x7684;&#x659C;&#x7EBF;&#x8868;&#x793A;&#x6B27;&#x51E0;&#x91CC;&#x5F97;&#x8DDD;&#x79BB;&#xFF0C;&#x5728;&#x73B0;&#x5B9E;&#x4E2D;&#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#x3002;&#x5176;&#x4ED6;&#x4E09;&#x6761;&#x6298;&#x7EBF;&#x8868;&#x793A;&#x4E86;&#x66FC;&#x54C8;&#x987F;&#x8DDD;&#x79BB;&#xFF0C;&#x8FD9;&#x4E09;&#x6761;&#x6298;&#x7EBF;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x76F8;&#x7B49;&#x7684;&#x3002;</p>
+<h3 id="3&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x8DDD;&#x79BB;&#xFF08;chebyshev-distance&#xFF09;">3.&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x8DDD;&#x79BB;&#xFF08;Chebyshev distance&#xFF09;</h3>
+<p>&#x5F53; <script type="math/tex; ">p</script> &#x8D8B;&#x8FD1;&#x4E8E;&#x65E0;&#x7A77;&#x5927;&#x65F6;&#xFF0C;&#x95F5;&#x53EF;&#x592B;&#x65AF;&#x57FA;&#x8DDD;&#x79BB;&#x8F6C;&#x5316;&#x6210;&#x5207;&#x6BD4;&#x96EA;&#x592B;&#x8DDD;&#x79BB;&#xFF1A;
+<script type="math/tex; ">(\sum_{i=1}^m|x_i-y_i|^p)^{1/p}= max_{i=1}^m|x_i-y_i|</script></p>
+<h3 id="b-&#x5E73;&#x9762;&#x56FE;&#x50CF;">b) &#x5E73;&#x9762;&#x56FE;&#x50CF;</h3>
+<p>&#x82E5;<script type="math/tex; ">m=2</script>&#xFF0C;&#x5F53;<script type="math/tex; ">p</script>&#x53D6;&#x4E0D;&#x540C;&#x6570;&#x503C;&#x65F6;&#xFF0C;<script type="math/tex; ">d(x,0) = ||x||= 1</script>&#x7684;&#x56FE;&#x50CF;&#xFF1A;</p>
+<p><img src="http://images.cnitblog.com/blog/533521/201308/07220559-ae662025d1394f90bfd62f7c21c3d895.png" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></p>
+<h3 id="c-&#x6700;&#x53E6;&#x7C7B;">c) &#x6700;&#x201C;&#x53E6;&#x7C7B;&#x201D;</h3>
+<h4 id="&#x9A6C;&#x6C0F;&#x8DDD;&#x79BB;">&#x9A6C;&#x6C0F;&#x8DDD;&#x79BB;</h4>
+<p>a)&#x4E2D;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x6570;&#x636E;&#x5404;&#x4E2A;&#x7EF4;&#x5EA6;&#x4E0D;&#x76F8;&#x5173;&#x7684;&#x5047;&#x8BBE;&#x4E0B;&#xFF0C;&#x5229;&#x7528;&#x6570;&#x636E;&#x5206;&#x5E03;&#x7279;&#x6027;&#x8BA1;&#x7B97;&#x8DDD;&#x79BB;&#x3002;&#x5982;&#x679C;&#x7EF4;&#x5EA6;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x76F8;&#x5173;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x8EAB;&#x9AD8;&#x8F83;&#x9AD8;&#x7684;&#x4FE1;&#x606F;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x5E26;&#x6765;&#x4F53;&#x91CD;&#x8F83;&#x91CD;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x4E3A;&#x4E24;&#x8005;&#x662F;&#x6709;&#x5173;&#x8054;&#x7684;&#xFF09;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x8981;&#x7528;&#x5230;&#x9A6C;&#x6C0F;&#x8DDD;&#x79BB;&#xFF08;Mahalanobis distance&#xFF09;&#x3002;</p>
+<p>&#x9A6C;&#x6C0F;&#x8DDD;&#x79BB;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5229;&#x7528; Cholesky transformation &#x6765;&#x6D88;&#x9664;&#x4E0D;&#x540C;&#x7EF4;&#x5EA6;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x548C;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x7684;&#x6027;&#x8D28;&#x3002;
+&#x6BD4;&#x5982;&#x4E0B;&#x56FE;&#x4E2D;&#xFF0C;&#x692D;&#x5706;&#x8868;&#x793A;&#x7B49;&#x9AD8;&#x7EBF;&#xFF0C;&#x4ECE;&#x6B27;&#x51E0;&#x91CC;&#x5F97;&#x7684;&#x8DDD;&#x79BB;&#x6765;&#x7B97;&#xFF0C;&#x7EFF;&#x9ED1;&#x8DDD;&#x79BB;&#x5927;&#x4E8E;&#x7EA2;&#x9ED1;&#x8DDD;&#x79BB;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;&#x9A6C;&#x6C0F;&#x8DDD;&#x79BB;&#xFF0C;&#x7ED3;&#x679C;&#x6070;&#x597D;&#x76F8;&#x53CD;&#xFF1A;</p>
+<p><img src="http://images.cnitblog.com/blog/533521/201308/07220637-f472bb13a779481bbfa45a9d79bd2175.png" alt="&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;"></p>
+<h3 id="&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;">&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;</h3>
+<p>&#x5B9A;&#x4E49;&#xFF1A; &#x6B27;&#x6C0F;&#x8DDD;&#x79BB;&#xFF08; Euclidean distance&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x5E38;&#x91C7;&#x7528;&#x7684;&#x8DDD;&#x79BB;&#x5B9A;&#x4E49;&#xFF0C;&#x5B83;&#x662F;&#x5728;m&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#x4E24;&#x4E2A;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x771F;&#x5B9E;&#x8DDD;&#x79BB;&#x3002;</p>
+<p>&#x5728;&#x4E8C;&#x7EF4;&#x548C;&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;&#x7684;&#x5C31;&#x662F;&#x4E24;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x4E8C;&#x7EF4;&#x7684;&#x516C;&#x5F0F;&#x662F; 
+<script type="math/tex; ">d = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2}</script>
+&#x4E09;&#x7EF4;&#x7684;&#x516C;&#x5F0F;&#x662F; 
+<script type="math/tex; ">d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}</script> 
+&#x63A8;&#x5E7F;&#x5230;<script type="math/tex; ">n</script>&#x7EF4;&#x7A7A;&#x95F4;&#xFF0C;&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;&#x7684;&#x516C;&#x5F0F;&#x662F; 
+<script type="math/tex; ">d=\sqrt{ \sum(x_{i1}-x_{i2})^2 }</script> &#x8FD9;&#x91CC;i=1,2..n 
+<script type="math/tex; ">x_{i1}</script>&#x8868;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x70B9;&#x7684;&#x7B2C;<script type="math/tex; ">i</script>&#x7EF4;&#x5750;&#x6807;,<script type="math/tex; ">x_{i2}</script>&#x8868;&#x793A;&#x7B2C;&#x4E8C;&#x4E2A;&#x70B9;&#x7684;&#x7B2C;<script type="math/tex; ">i</script>&#x7EF4;&#x5750;&#x6807;.
+<script type="math/tex; ">n</script>&#x7EF4;&#x6B27;&#x6C0F;&#x7A7A;&#x95F4;&#x662F;&#x4E00;&#x4E2A;&#x70B9;&#x96C6;,&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x70B9;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;<script type="math/tex; ">(x_1,x_2,\dots ,x_n)</script>,&#x5176;&#x4E2D;<script type="math/tex; ">x_i,(i=1,2\dots,n)</script>&#x662F;&#x5B9E;&#x6570;,&#x79F0;&#x4E3A;<script type="math/tex; ">x</script>&#x7684;&#x7B2C;<script type="math/tex; ">i</script>&#x4E2A;&#x5750;&#x6807;,&#x4E24;&#x4E2A;&#x70B9;<script type="math/tex; ">x</script>&#x548C;<script type="math/tex; ">y=(y_1,y_2,\dots ,y_n)</script>&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;<script type="math/tex; ">d(x,y)</script>&#x5B9A;&#x4E49;&#x4E3A;&#x4E0A;&#x9762;&#x7684;&#x516C;&#x5F0F;. </p>
+<p>&#x6B27;&#x6C0F;&#x8DDD;&#x79BB;&#x770B;&#x4F5C;&#x4FE1;&#x53F7;&#x7684;&#x76F8;&#x4F3C;&#x7A0B;&#x5EA6;&#x3002; &#x8DDD;&#x79BB;&#x8D8A;&#x8FD1;&#x5C31;&#x8D8A;&#x76F8;&#x4F3C;&#xFF0C;&#x5C31;&#x8D8A;&#x5BB9;&#x6613;&#x76F8;&#x4E92;&#x5E72;&#x6270;&#xFF0C;&#x8BEF;&#x7801;&#x7387;&#x5C31;&#x8D8A;&#x9AD8;&#x3002;</p>
 
                                 
                                 </section>
@@ -1477,8 +1512,12 @@
 
             
                 
+                <a href="metrics.html" class="navigation navigation-prev " aria-label="Previous page: Metrics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="term.md.html" class="navigation navigation-next " aria-label="Next page: 术语">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1528,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"距离","level":"2.3.8","depth":2,"next":{"title":"术语","level":"2.3.9","depth":2,"path":"term.md.md","ref":"term.md.md","articles":[]},"previous":{"title":"Metrics","level":"2.3.7","depth":2,"path":"metrics.md","ref":"metrics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"distance.md","mtime":"2017-08-03T08:37:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

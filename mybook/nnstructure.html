@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>神经网络结构 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="regulizer.html" />
     
+    
+    <link rel="prev" href="nnfunction.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -615,7 +617,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="nnstructure.html">
+        <li class="chapter active" data-level="2.5.2" data-path="nnstructure.html">
             
                 <a href="nnstructure.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >神经网络结构</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,104 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7ED3;&#x6784;">&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7ED3;&#x6784;</h1>
+<hr>
+<h2 id="&#x4EFF;&#x5C04;&#x5C42;&#xFF08;affine-layer&#xFF09;">&#x4EFF;&#x5C04;&#x5C42;&#xFF08;Affine Layer&#xFF09;</h2>
+<p>&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x3002;&#x4EFF;&#x5C04;&#xFF08;Affine&#xFF09;&#x7684;&#x610F;&#x601D;&#x662F;&#x524D;&#x9762;&#x4E00;&#x5C42;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x90FD;&#x8FDE;&#x63A5;&#x5230;&#x5F53;&#x524D;&#x5C42;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x3002;&#x5728;&#x8BB8;&#x591A;&#x65B9;&#x9762;&#xFF0C;&#x8FD9;&#x662F;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x300C;&#x6807;&#x51C6;&#x300D;&#x5C42;&#x3002;&#x4EFF;&#x5C04;&#x5C42;&#x901A;&#x5E38;&#x88AB;&#x52A0;&#x5728;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6216;&#x5FAA;&#x73AF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x505A;&#x51FA;&#x6700;&#x7EC8;&#x9884;&#x6D4B;&#x524D;&#x7684;&#x8F93;&#x51FA;&#x7684;&#x9876;&#x5C42;&#x3002;&#x4EFF;&#x5C04;&#x5C42;&#x7684;&#x4E00;&#x822C;&#x5F62;&#x5F0F;&#x4E3A; y = f(Wx + b)&#xFF0C;&#x5176;&#x4E2D; x &#x662F;&#x5C42;&#x8F93;&#x5165;&#xFF0C;w &#x662F;&#x53C2;&#x6570;&#xFF0C;b &#x662F;&#x4E00;&#x4E2A;&#x504F;&#x5DEE;&#x77E2;&#x91CF;&#xFF0C;f &#x662F;&#x4E00;&#x4E2A;&#x975E;&#x7EBF;&#x6027;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;</p>
+<h2 id="&#x591A;&#x5C42;&#x611F;&#x77E5;&#x5668;&#xFF08;mlp&#xFF1A;multilayer-perceptron&#xFF09;">&#x591A;&#x5C42;&#x611F;&#x77E5;&#x5668;&#xFF08;MLP&#xFF1A;Multilayer Perceptron&#xFF09;</h2>
+<p>&#x591A;&#x5C42;&#x611F;&#x77E5;&#x5668;&#x662F;&#x4E00;&#x79CD;&#x5E26;&#x6709;&#x591A;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x7684;&#x524D;&#x9988;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF0C;&#x8FD9;&#x4E9B;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x4F7F;&#x7528;&#x975E;&#x7EBF;&#x6027;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation function&#xFF09;&#x5904;&#x7406;&#x975E;&#x7EBF;&#x6027;&#x53EF;&#x5206;&#x7684;&#x6570;&#x636E;&#x3002;MLP &#x662F;&#x591A;&#x5C42;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6216;&#x6709;&#x4E24;&#x5C42;&#x4EE5;&#x4E0A;&#x7684;&#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x6700;&#x57FA;&#x672C;&#x5F62;&#x5F0F;&#x3002;</p>
+<h2 id="&#x53CD;&#x5411;&#x4F20;&#x64AD;&#xFF08;backpropagation&#xFF09;">&#x53CD;&#x5411;&#x4F20;&#x64AD;&#xFF08;Backpropagation&#xFF09;</h2>
+<p>&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x662F;&#x4E00;&#x79CD;&#x5728;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x7528;&#x6765;&#x6709;&#x6548;&#x5730;&#x8BA1;&#x7B97;&#x68AF;&#x5EA6;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x6216;&#x66F4;&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x524D;&#x9988;&#x8BA1;&#x7B97;&#x56FE;&#xFF08;feedforward computational graph&#xFF09;&#x3002;&#x5176;&#x53EF;&#x4EE5;&#x5F52;&#x7ED3;&#x6210;&#x4ECE;&#x7F51;&#x7EDC;&#x8F93;&#x51FA;&#x5F00;&#x59CB;&#x5E94;&#x7528;&#x5206;&#x5316;&#x7684;&#x94FE;&#x5F0F;&#x6CD5;&#x5219;&#xFF0C;&#x7136;&#x540E;&#x5411;&#x540E;&#x4F20;&#x64AD;&#x68AF;&#x5EA6;&#x3002;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x53EF;&#x4EE5;&#x8FFD;&#x6EAF;&#x5230; 1960 &#x5E74;&#x4EE3;&#x7684; Vapnik &#x7B49;&#x4EBA;&#xFF0C;&#x4F46;&#x8BBA;&#x6587; Learning representations by back-propagating errors&#x5E38;&#x5E38;&#x88AB;&#x4F5C;&#x4E3A;&#x5F15;&#x7528;&#x6E90;&#x3002;</p>
+<p>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x8BA1;&#x7B97;&#x56FE;&#x4E0A;&#x7684;&#x5FAE;&#x79EF;&#x5206;&#x5B66;&#xFF1A;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#xFF08;<a href="http://colah.github.io/posts/2015-08-Backprop/&#xFF09;" target="_blank">http://colah.github.io/posts/2015-08-Backprop/&#xFF09;</a></p>
+<h2 id="&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x7684;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#xFF08;bptt&#xFF1A;backpropagation-through-time&#xFF09;">&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x7684;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#xFF08;BPTT&#xFF1A;Backpropagation Through Time&#xFF09;</h2>
+<p>&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x7684;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x662F;&#x5E94;&#x7528;&#x4E8E;&#x5FAA;&#x73AF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF08;RNN&#xFF09;&#x7684;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x7B97;&#x6CD5;&#x3002;BPTT &#x53EF;&#x88AB;&#x770B;&#x4F5C;&#x662F;&#x5E94;&#x7528;&#x4E8E; RNN &#x7684;&#x6807;&#x51C6;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x7B97;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6B65;&#x9AA4;&#xFF08;time step&#xFF09;&#x90FD;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x5C42;&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x7684;&#x53C2;&#x6570;&#x662F;&#x8DE8;&#x8BA1;&#x7B97;&#x5C42;&#x5171;&#x4EAB;&#x7684;&#x3002;&#x56E0;&#x4E3A; RNN &#x5728;&#x6240;&#x6709;&#x7684;&#x65F6;&#x95F4;&#x6B65;&#x9AA4;&#x4E2D;&#x90FD;&#x5171;&#x4EAB;&#x4E86;&#x540C;&#x6837;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6B65;&#x9AA4;&#x7684;&#x9519;&#x8BEF;&#x5FC5;&#x7136;&#x80FD;&#x300C;&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x300D;&#x53CD;&#x5411;&#x5230;&#x4E4B;&#x524D;&#x6240;&#x6709;&#x7684;&#x65F6;&#x95F4;&#x6B65;&#x9AA4;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x4E5F;&#x56E0;&#x800C;&#x5F97;&#x540D;&#x3002;&#x5F53;&#x5904;&#x7406;&#x957F;&#x5E8F;&#x5217;&#xFF08;&#x6570;&#x767E;&#x4E2A;&#x8F93;&#x5165;&#xFF09;&#x65F6;&#xFF0C;&#x4E3A;&#x964D;&#x4F4E;&#x8BA1;&#x7B97;&#x6210;&#x672C;&#x5E38;&#x5E38;&#x4F7F;&#x7528;&#x4E00;&#x79CD;&#x5220;&#x8282;&#x7248;&#x7684; BPTT&#x3002;&#x5220;&#x8282;&#x7684; BPTT &#x4F1A;&#x5728;&#x56FA;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6B65;&#x9AA4;&#x4E4B;&#x540E;&#x505C;&#x6B62;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x8BBA;&#x6587;&#xFF1A;Backpropagation Through Time: What It Does and How to Do It</p>
+<p>&#x7ED9;&#x5B9A;&#x8BAD;&#x7EC3;&#x96C6;<script type="math/tex; ">D=\{(x_1,y_1)，(x_2,y_2)，\dots,(x_m,y_m)\}</script>,<script type="math/tex; ">x_i \in \mathbb R^d</script>,<script type="math/tex; ">y_i \in \mathbb R^c</script>&#xFF0C;&#x5373;&#x8F93;&#x5165;&#x5B9E;&#x4F8B;&#x7531;d&#x4E2A;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#xFF0C;&#x8F93;&#x51FA;$c$&#x7EF4;&#x5B9E;&#x503C;&#x5411;&#x91CF;.</p>
+<p>&#x4E0B;&#x56FE;&#x7ED9;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x62E5;&#x6709;<script type="math/tex; ">d</script>&#x4E2A;&#x8F93;&#x5165;&#x795E;&#x7ECF;&#x5143;&#x3001;<script type="math/tex; ">m</script>&#x4E2A;&#x9690;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#x3001;<script type="math/tex; ">c</script>&#x4E2A;&#x8F93;&#x51FA;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x591A;&#x5C42;&#x524D;&#x9988;&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p><img src="http://static.zybuluo.com/sixijinling/g6tyjdmia5ggil07421lr6k2/ann.png" alt="ann.png-36.3kB"></p>
+<ul>
+<li>&#x9690;&#x5C42;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x9608;&#x503C;&#x7528;<script type="math/tex; ">\gamma _h</script>&#x8868;&#x793A;&#xFF0C;</li>
+<li>&#x8F93;&#x51FA;&#x5C42;&#x7B2C;<script type="math/tex; ">j</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x9608;&#x503C;&#x7528;<script type="math/tex; ">\theta_j</script>&#x8868;&#x793A;&#x3002;</li>
+<li>&#x8F93;&#x5165;&#x5C42;&#x7B2C;<script type="math/tex; ">i</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x4E0E;&#x9690;&#x5C42;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#x6743;&#x4E3A;<script type="math/tex; ">v_{ih}</script>;</li>
+<li>&#x9690;&#x5C42;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x4E0E;&#x8F93;&#x51FA;&#x5C42;&#x7B2C;<script type="math/tex; ">j</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#x6743;&#x4E3A;<script type="math/tex; ">w_{hj}</script>;</li>
+<li>&#x8BB0;&#x9690;&#x5C42;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8F93;&#x5165;&#x4E3A;<script type="math/tex; ">\alpha_h=\sum_{i=1}^dv_{ih}x_i</script>;</li>
+<li>&#x8F93;&#x51FA;&#x5C42;&#x7B2C;<script type="math/tex; ">j</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8F93;&#x5165;&#x4E3A;<script type="math/tex; ">\beta_j=\sum_{h=1}^mw_{hj}b_h</script>, &#x5176;&#x4E2D;<script type="math/tex; ">b_h</script>&#x4E3A;&#x9690;&#x5C42;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x8F93;&#x51FA;;</li>
+<li>&#x5047;&#x8BBE;&#x9690;&#x5C42;&#x548C;&#x8F93;&#x51FA;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#x90FD;&#x4F7F;&#x7528;Logistic&#x51FD;&#x6570;&#xFF1A;
+<script type="math/tex; mode=display">
+P(t)=\frac 1{1+e^{-t}}
+</script></li>
+</ul>
+<p>&#x4EE5;&#x4E32;&#x884C;&#x4E3A;&#x4F8B;&#xFF0C;&#x5BF9;&#x8BAD;&#x7EC3;&#x6837;&#x672C;<script type="math/tex; ">（x_k,y_k）</script>,&#x5047;&#x5B9A;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x8F93;&#x51FA;&#x4E3A;<script type="math/tex; ">\hat y_k=（\hat y_1^k,\hat y_2^k,\dots,\hat y_c^k）</script>,&#x5373;
+<script type="math/tex; mode=display">
+\hat y_j^k=f(\beta_j-\theta_j),
+</script>
+&#x5219;&#x7F51;&#x7EDC;&#x5728;<script type="math/tex; ">（x_k,y_k）</script>&#x4E0A;&#x7684;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#xFF08;LMS&#x7B97;&#x6CD5;&#xFF09;&#x4E3A;
+<script type="math/tex; mode=display">
+E_k=\frac 12\sum_{j=1}^c(\hat y_j^k-y_j^k)^2.
+</script>
+&#x6839;&#x636E;&#x5E7F;&#x4E49;&#x7684;&#x611F;&#x77E5;&#x673A;&#x5B66;&#x4E60;&#x89C4;&#x5219;&#x5BF9;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x4EFB;&#x610F;&#x53C2;&#x6570;<script type="math/tex; ">v</script>&#x7684;&#x66F4;&#x65B0;&#x4F30;&#x8BA1;&#x5F0F;&#x4E3A;
+<script type="math/tex; mode=display">
+v \leftarrow v+\Delta v
+</script>
+BP&#x7B97;&#x6CD5;&#x57FA;&#x4E8E;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7B56;&#x7565;&#xFF0C;&#x5BF9;&#x8BEF;&#x5DEE;<script type="math/tex; ">E_k</script>,&#x7ED9;&#x5B9A;&#x5B66;&#x4E60;&#x7387;<script type="math/tex; ">\eta</script>,&#x6709;
+<script type="math/tex; mode=display">
+\Delta w_{hj}=-\eta \frac {\partial E_k}{\partial w_{hj}}
+</script>
+&#x8003;&#x8651;&#x5230;<script type="math/tex; ">w_{hj}</script>&#x5148;&#x5F71;&#x54CD;&#x5230;&#x7B2C;<script type="math/tex; ">j</script>&#x4E2A;&#x8F93;&#x51FA;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x8F93;&#x5165;&#x503C;<script type="math/tex; ">\beta_j</script>&#xFF0C;&#x518D;&#x5F71;&#x54CD;&#x5230;&#x5176;&#x8F93;&#x51FA;&#x503C;<script type="math/tex; ">\hat y_j^k</script>,&#x6700;&#x540E;&#x5F71;&#x54CD;&#x5230;<script type="math/tex; ">E_k</script>,&#x6709;
+<script type="math/tex; mode=display">
+\frac {\partial E_k}{\partial w_{hj}}=\frac {\partial E_k}{\partial \hat y_j^k}\frac {\partial \hat y_j^k}{\partial \beta _j}\frac {\partial \beta _j}{\partial w_{hj}}
+</script>
+&#x6839;&#x636E;<script type="math/tex; ">\beta_j</script>&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x663E;&#x7136;&#x6709;
+<script type="math/tex; mode=display">
+\frac {\partial \beta _j}{\partial w_{hj}}=b_h
+</script>
+&#x800C;Logistic&#x51FD;&#x6570;&#x6709;&#x4E00;&#x4E2A;&#x6027;&#x8D28;&#xFF1A;
+<script type="math/tex; mode=display">
+f'(x)=f(x)(1-f(x))
+</script>
+&#x4E8E;&#x662F;&#x6709;
+<script type="math/tex; mode=display">
+g_j=-\frac {\partial E_k}{\partial \hat y_j^k}\frac {\partial \hat y_j^k}{\partial \beta _j} =-(\hat y_j^k-y_j^k)f'(\beta _j-\theta _j)=\hat y_j^k(1-\hat y_j^k)(y_j^k-\hat y_j^k).
+</script>
+&#x4E8E;&#x662F;&#x5F97;&#x5230;&#x4E86;BP&#x7B97;&#x6CD5;&#x4E2D;&#x5173;&#x4E8E;<script type="math/tex; ">w_{hj}</script>&#x7684;&#x66F4;&#x65B0;&#x516C;&#x5F0F;
+<script type="math/tex; mode=display">
+\Delta w_{hj}=\eta g_j b_h
+</script></p>
+<p>&#x6839;&#x636E;&#x524D;&#x9762;&#x7684;&#x63A8;&#x5BFC;
+<script type="math/tex; mode=display">
+\begin{aligned}
+\Delta \theta_j&=-\eta\frac {\partial E_k}{\partial \hat y_j^k}\cdot\frac {\partial \hat y_j^k}{\partial \theta_j}\\
+&=\eta(\hat y_j^k-y_j^k)f'(\beta _j-\theta _j)\\
+&=-\eta g_j
+\end{aligned}
+</script>
+<script type="math/tex; ">b_h</script>&#x4E3A;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x9690;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5373;
+<script type="math/tex; mode=display">
+b_h=f(\alpha _h-\gamma _h)
+</script>
+&#x8003;&#x8651;&#x5230;<script type="math/tex; ">v_{ih}</script>&#x5148;&#x5F71;&#x54CD;&#x5230;&#x7B2C;<script type="math/tex; ">h</script>&#x4E2A;&#x9690;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x8F93;&#x5165;&#x503C;<script type="math/tex; ">\alpha_h</script>&#xFF0C;&#x518D;&#x5F71;&#x54CD;&#x5230;&#x5176;&#x8F93;&#x51FA;&#x503C;<script type="math/tex; ">b_h</script>,&#x6700;&#x540E;&#x5F71;&#x54CD;&#x5230;<script type="math/tex; ">E_k</script>,&#x6709;
+<script type="math/tex; mode=display">
+\frac {\partial E_k}{\partial v_{ih}}=\frac {\partial E_k}{\partial b_h}\cdot\frac {\partial b_h}{\partial \alpha _h}\cdot\frac {\partial \alpha_h}{\partial v_{ih}}
+</script>
+&#x7C7B;&#x4F3C;&#xFF08;2&#xFF09;&#x4E2D;&#x7684;<script type="math/tex; ">g_j</script>&#xFF0C;&#x6709;
+<script type="math/tex; mode=display">
+\begin{aligned}
+e_h&=-\frac {\partial E_k}{\partial b_h}\cdot\frac {\partial b_h}{\partial \alpha _h}\\
+&=-\sum _{j=1}^c\frac {\partial E_k}{\partial \beta _j}\cdot \frac {\partial \beta _j}{\partial b_h}f'(\alpha_h-\gamma_h)\\
+&=\sum _{j=1}^cw_{hj}g_jf'(\alpha_h-\gamma_h)\\
+&=b_h(1-b_h)\sum_{j=1}^cw_{hj}g_j
+\end{aligned}
+</script>
+&#x6240;&#x4EE5;
+<script type="math/tex; mode=display">
+\Delta v_{ih}=\eta e_h x_i
+</script>
+&#x53E6;&#x5916;,&#x7C7B;&#x4F3C;<script type="math/tex; ">\Delta \theta _j</script>
+<script type="math/tex; mode=display">
+\Delta \gamma_h=-\eta e_h
+</script></p>
+<p>&#x4FE1;&#x53F7;&#x6D41;&#x56FE;&#xFF1A;
+<img src="http://hahack.com/images/ann2/32a2x.png" alt="BP&#x7B97;&#x6CD5;&#x4FE1;&#x53F7;&#x6D41;&#x5411;&#x56FE;"></p>
 
                                 
                                 </section>
@@ -1477,8 +1575,12 @@
 
             
                 
+                <a href="nnfunction.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="regulizer.html" class="navigation navigation-next " aria-label="Next page: 正则化网络">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1591,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"神经网络结构","level":"2.5.2","depth":2,"next":{"title":"正则化网络","level":"2.5.3","depth":2,"path":"regulizer.md","ref":"regulizer.md","articles":[]},"previous":{"title":"函数","level":"2.5.1","depth":2,"path":"nnfunction.md","ref":"nnfunction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nnstructure.md","mtime":"2017-08-03T08:37:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

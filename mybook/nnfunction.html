@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>函数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="nnstructure.html" />
     
+    
+    <link rel="prev" href="nnintro.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -602,7 +604,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="nnfunction.html">
+        <li class="chapter active" data-level="2.5.1" data-path="nnfunction.html">
             
                 <a href="nnfunction.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >函数</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,147 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x51FD;&#x6570;&#x5BB6;&#x65CF;">&#x51FD;&#x6570;&#x5BB6;&#x65CF;</h1>
+<hr>
+<h2 id="&#x795E;&#x7ECF;&#x5143;&#x6A21;&#x578B;">&#x795E;&#x7ECF;&#x5143;&#x6A21;&#x578B;</h2>
+<p>&#x4ECE;&#x6700;&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x8D77;&#xFF1A;&#x7EBF;&#x6027;&#x795E;&#x7ECF;&#x5143;</p>
+<p><script type="math/tex; mode=display">
+ { y }=b +\sum_i { x}_{ i }{ w }_{ i }
+</script></p>
+<p>McCulloch-Pitts&#x63A5;&#x7740;&#x63D0;&#x51FA;&#x4E86;&#x4E8C;&#x503C;&#x7684;&#xFF0C;&#x5FC5;&#x987B;&#x8FBE;&#x5230;&#x9608;&#x503C;&#x624D;&#x53D1;&#x9001;&#x4E00;&#x5B9A;&#x91CF;&#x7684;&#x51B2;&#x6FC0;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#x7684;Rectified Linear Neurons(Linear threshold neuron)&#x8D85;&#x51FA;&#x9608;&#x503C;&#x7684;&#x90E8;&#x5206;&#x4ECD;&#x662F;&#x7EBF;&#x6027;&#x7684;&#x3002;</p>
+<p>Simoid neurons&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x7528;&#x8FDE;&#x7EED;&#x51FD;&#x6570;&#x7248;&#x7684;&#x4E8C;&#x503C;&#xFF0C;&#x901A;&#x5E38;&#x4F7F;&#x7528;Logistic&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x6765;&#x6C42;&#x5BFC;&#x65B9;&#x4FBF;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x53C8;&#x6709;&#x4E86;Stochastic&#x7684;&#x5904;&#x7406;&#xFF0C;&#x8F93;&#x51FA;&#xFF08;0~1&#xFF09;&#x4F5C;&#x4E3A;&#x4EA7;&#x751F;&#x51B2;&#x6FC0;&#xFF08;1&#xFF09;&#x7684;&#x6982;&#x7387;</p>
+<h3 id="&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;">&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;Activation Function&#xFF09;</h3>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x80FD;&#x591F;&#x5B66;&#x4E60;&#x590D;&#x6742;&#x7684;&#x51B3;&#x7B56;&#x8FB9;&#x754C;&#xFF08;decision boundary&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5176;&#x4E00;&#x4E9B;&#x5C42;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x975E;&#x7EBF;&#x6027;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#x5305;&#x62EC;  sigmoid&#x3001;tanh&#x3001;ReLU&#xFF08;Rectified Linear Unit &#x7EBF;&#x6027;&#x4FEE;&#x6B63;&#x5355;&#x5143;&#xFF09; &#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x4F53;&#x3002;</p>
+<ul>
+<li><strong>motivation</strong>: to compose <em>simple transformations</em> in order to obtain 
+<em>highly non-linear</em> ones</li>
+<li>(MLPs compose affine transformations and element-wise non-linearities)</li>
+<li><p>hyperbolic tangent activation functions:</p>
+<p><script type="math/tex; mode=display">
+  { h }^{ k }=tanh({ b }^{ k }+{ W }^{ k }{ h }^{ k-1 })
+  </script>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sinh_cosh_tanh.svg/256px-Sinh_cosh_tanh.svg.png" alt=""></p>
+</li>
+<li><p>the input of the neural net: <script type="math/tex; ">{ h }^{ 0 }=x</script></p>
+</li>
+<li><p>theoutputofthe k-th hidden layer: <script type="math/tex; ">{ h }^{ k }</script></p>
+</li>
+<li><p>affine transformation <script type="math/tex; ">a = b+Wx</script>, elementwise</p>
+</li>
+</ul>
+<p>  <script type="math/tex; mode=display">
+  h=\phi (a)⇔{ h }_{ i }=\phi ({ a }_{ i })=\phi ({ b }_{ i }+{ W }_{ i,: }x)
+  </script></p>
+<ul>
+<li><p>non-linear neural network activation functions:</p>
+<h6 id="rectifier-or-rectified-linear-unit-relu-or-positive-part">Rectifier or rectified linear unit (ReLU) or positive part</h6>
+<h6 id="hyperbolic-tangent">Hyperbolic tangent</h6>
+<h6 id="sigmoid">Sigmoid</h6>
+<h6 id="softmax">Softmax</h6>
+<h6 id="radial-basis-function-or-rbf">Radial basis function or RBF</h6>
+<h6 id="softplus">Softplus</h6>
+<h6 id="hard-tanh">Hard tanh</h6>
+<h6 id="absolute-value-rectification">Absolute value rectification</h6>
+<h6 id="maxout">Maxout</h6>
+</li>
+<li><p>the structure (also called architecture) of the family of input-output functions can be varied in many ways: 
+<em>convolutional networks</em>, 
+<em>recurrent networks</em></p>
+</li>
+</ul>
+<h3 id="softmax">Softmax</h3>
+<p>Softmax &#x51FD;&#x6570;&#x901A;&#x5E38;&#x88AB;&#x7528;&#x4E8E;&#x5C06;&#x539F;&#x59CB;&#x5206;&#x6570;&#xFF08;raw score&#xFF09;&#x7684;&#x77E2;&#x91CF;&#x8F6C;&#x6362;&#x6210;&#x7528;&#x4E8E;&#x5206;&#x7C7B;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x8F93;&#x51FA;&#x5C42;&#x4E0A;&#x7684;&#x7C7B;&#x6982;&#x7387;&#xFF08;class probability&#xFF09;&#x3002;&#x5B83;&#x901A;&#x8FC7;&#x5BF9;&#x5F52;&#x4E00;&#x5316;&#x5E38;&#x6570;&#xFF08;normalization constant&#xFF09;&#x8FDB;&#x884C;&#x6307;&#x6570;&#x5316;&#x548C;&#x76F8;&#x9664;&#x8FD0;&#x7B97;&#x800C;&#x5BF9;&#x5206;&#x6570;&#x8FDB;&#x884C;&#x89C4;&#x8303;&#x5316;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x5904;&#x7406;&#x5927;&#x91CF;&#x7684;&#x7C7B;&#xFF0C;&#x4F8B;&#x5982;&#x673A;&#x5668;&#x7FFB;&#x8BD1;&#x4E2D;&#x7684;&#x5927;&#x91CF;&#x8BCD;&#x6C47;&#xFF0C;&#x8BA1;&#x7B97;&#x5F52;&#x4E00;&#x5316;&#x5E38;&#x6570;&#x662F;&#x5F88;&#x6602;&#x8D35;&#x7684;&#x3002;&#x6709;&#x8BB8;&#x591A;&#x79CD;&#x53EF;&#x4EE5;&#x8BA9;&#x8BA1;&#x7B97;&#x66F4;&#x9AD8;&#x6548;&#x7684;&#x66FF;&#x4EE3;&#x9009;&#x62E9;&#xFF0C;&#x5305;&#x62EC;&#x5206;&#x5C42; Softmax&#xFF08;Hierarchical Softmax&#xFF09;&#x6216;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x53D6;&#x6837;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x5982; NCE&#x3002;</p>
+<ul>
+<li><p>designed for the purpose of specifying <strong>multinoulli distributions</strong>:</p>
+<p><script type="math/tex; mode=display">
+  p=softmax(a)\Longleftrightarrow { p }_{ i }=\frac { { e }^{ { a }_{ i } } }{ \sum { _{ j }^{  }{ { e }^{ { a }_{ j } } } }  }
+  </script></p>
+</li>
+<li><p>consider the gradient with respect to the scores <script type="math/tex; ">a</script>.</p>
+<p><script type="math/tex; mode=display">
+  \frac { ∂ }{ ∂{ a }_{ k } } { L }_{ NLL }(p,y)=\frac { ∂ }{ ∂{ a }_{ k } } (−log{ p }_{ y })=\frac { ∂ }{ ∂{ a }_{ k } } ({ −a }_{ y }+log\sum _{ j }^{  }{ { e }^{ { a }_{ j } } } )\\ ={ −1 }_{ y=k }+\frac { { e }^{ { a }_{ k } } }{ \sum _{ j }^{  }{ { e }^{ { a }_{ j } } }  } ={ p }_{ k }-{1}_{y=k}
+  </script></p>
+</li>
+</ul>
+<p>  or</p>
+<p>  <script type="math/tex; mode=display">
+  \frac { ∂ }{ ∂{ a }_{ k } } { L }_{ NLL }(p,y)=(p-{e}_{y})
+  </script></p>
+<p>&#x5728;&#x5B9E;&#x73B0;softmax&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E3A;&#x4E86;&#x9632;&#x6EA2;&#x51FA;&#x6709;&#x4E00;&#x4E2A;&#x5C0F;trick&#xFF1A;&#x51CF;&#x53BB;&#x6700;&#x5927;&#x503C;&#x3002;softmax&#x51FD;&#x6570;&#x5982;&#x4E0B;&#xFF1A;
+<script type="math/tex; mode=display">
+f(x)_i=\frac{e^{x_i}}{\sum_{j=1}^ne^{x_j}},j=1,2,\dots,n
+</script></p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BA1;&#x7B97;softmax&#x51FD;&#x6570;&#x503C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="assets/softmax.jpg" alt=""></p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5F53;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x503C;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#xFF1A;</p>
+<ul>
+<li>$c$&#x6781;&#x5176;&#x5927;&#xFF0C;&#x5BFC;&#x81F4;&#x5206;&#x5B50;&#x8BA1;&#x7B97;$e^c$&#x65F6;&#x4E0A;&#x6EA2;&#x51FA;</li>
+<li>$c$ &#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x4E14;$|c|$&#x5F88;&#x5927;&#xFF0C;&#x6B64;&#x65F6;&#x5206;&#x6BCD;&#x662F;&#x4E00;&#x4E2A;&#x6781;&#x5C0F;&#x7684;&#x6B63;&#x6570;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x56DB;&#x820D;&#x4E94;&#x5165;&#x4E3A;0&#xFF0C;&#x5BFC;&#x81F4;&#x4E0B;&#x6EA2;&#x51FA;</li>
+</ul>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x662F;&#xFF0C;&#x4EE4;$M=max(x_i),i=1,2,&#x22EF;,n$&#xFF0C;&#x5373;$ M$ &#x4E3A;&#x6240;&#x6709; $x_i$ &#x4E2D;&#x6700;&#x5927;&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x628A;&#x7B97; $f(x)_i$&#x7684;&#x503C;&#xFF0C;&#x6539;&#x4E3A;&#x8BA1;&#x7B97;$f(x_i&#x2212;M)$&#x7684;&#x503C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x4E0A;&#x6EA2;&#x51FA;&#x3001;&#x4E0B;&#x6EA2;&#x51FA;&#x7684;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x5E76;&#x4E14;&#xFF0C;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x7406;&#x8BBA;&#x4E0A;&#x4ECD;&#x7136;&#x548C; $f(x)_i$&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x73B0;&#x65F6;&#x4E5F;&#x72AF;&#x4E86;&#x4E00;&#x4E2A;&#x4F4E;&#x7EA7;&#x9519;&#x8BEF;&#xFF1A;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x4E00;&#x5F00;&#x59CB;&#x5F04;&#x9519;&#x6210;&#x4E86;$1&#xFF0F;1-e^{-x}$&#xFF0C;&#x53D1;&#x73B0;&#x4EA4;&#x53C9;&#x71B5;&#x662F;26&#x4E0A;&#x4E0B;&#xFF0C;&#x5FFD;&#x7565;&#x4E86;&#x5168;&#x8499;&#xFF08;weight&#x3001;bias&#x5168;&#x96F6;&#xFF09;&#x60C5;&#x51B5;&#x662F;$\log(250)\approx 5$&#x3002;</p>
+<h3 id="relu">ReLU</h3>
+<p>&#x5373;&#x7EBF;&#x6027;&#x4FEE;&#x6B63;&#x5355;&#x5143;&#xFF08;Rectified Linear Unit&#xFF09;&#x3002;ReLU &#x5E38;&#x5728;&#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x88AB;&#x7528;&#x4F5C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x4EEC;&#x7684;&#x5B9A;&#x4E49;&#x662F; <script type="math/tex; ">f(x) = \max(0, x)</script> &#x3002;ReLU &#x76F8;&#x5BF9;&#x4E8E; tanh &#x7B49;&#x51FD;&#x6570;&#x7684;&#x4F18;&#x52BF;&#x5305;&#x62EC;&#x5B83;&#x4EEC;&#x5F80;&#x5F80;&#x5F88;&#x7A00;&#x758F;&#xFF08;&#x5B83;&#x4EEC;&#x7684;&#x6D3B;&#x5316;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x8BBE;&#x7F6E;&#x4E3A; 0&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x4EEC;&#x53D7;&#x5230;&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#x7684;&#x5F71;&#x54CD;&#x4E5F;&#x66F4;&#x5C0F;&#x3002;ReLU &#x4E3B;&#x8981;&#x88AB;&#x7528;&#x5728;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x7528;&#x4F5C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;ReLU &#x5B58;&#x5728;&#x51E0;&#x79CD;&#x53D8;&#x4F53;&#xFF0C;&#x5982;Leaky ReLUs&#x3001;Parametric ReLU (PReLU) &#x6216;&#x66F4;&#x4E3A;&#x6D41;&#x7545;&#x7684; softplus&#x8FD1;&#x4F3C;&#x3002;</p>
+<p>&#x8BBA;&#x6587;&#xFF1A;&#x6DF1;&#x5165;&#x7814;&#x7A76;&#x4FEE;&#x6B63;&#x5668;&#xFF08;Rectifiers&#xFF09;&#xFF1A;&#x5728; ImageNet &#x5206;&#x7C7B;&#x4E0A;&#x8D85;&#x8D8A;&#x4EBA;&#x7C7B;&#x6C34;&#x5E73;&#x7684;&#x6027;&#x80FD;&#xFF08;Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification&#xFF09;<br>&#x8BBA;&#x6587;&#xFF1A;&#x4FEE;&#x6B63;&#x975E;&#x7EBF;&#x6027;&#x6539;&#x8FDB;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x58F0;&#x5B66;&#x6A21;&#x578B;&#xFF08;Rectifier Nonlinearities Improve Neural Network Acoustic Models &#xFF09;<br>&#x8BBA;&#x6587;&#xFF1A;&#x7EBF;&#x6027;&#x4FEE;&#x6B63;&#x5355;&#x5143;&#x6539;&#x8FDB;&#x53D7;&#x9650;&#x73BB;&#x5C14;&#x5179;&#x66FC;&#x673A;&#xFF08;Rectified Linear Units Improve Restricted Boltzmann Machines  &#xFF09;</p>
+<h2 id="cost-functions">Cost Functions</h2>
+<ul>
+<li>a good choice for the criterion is maximum likelihood regularized with dropout, possibly also with weight decay.</li>
+</ul>
+<h3 id="&#x5206;&#x7C7B;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#xFF08;categorical-cross-entropy-loss&#xFF09;">&#x5206;&#x7C7B;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#xFF08;Categorical Cross-Entropy Loss&#xFF09;</h3>
+<p>&#x5206;&#x7C7B;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x8D1F;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#xFF08;negative log likelihood&#xFF09;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x7528;&#x4E8E;&#x89E3;&#x51B3;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x7684;&#x6D41;&#x884C;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x6D4B;&#x91CF;&#x4E24;&#x79CD;&#x6982;&#x7387;&#x5206;&#x5E03;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x771F;&#x5B9E;&#x6807;&#x7B7E;&#x548C;&#x9884;&#x6D4B;&#x6807;&#x7B7E;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4F3C;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x7528; <script type="math/tex; ">L = -\sum(y * \log(y_{prediction}))</script> &#x8868;&#x793A;&#xFF0C;&#x5176;&#x4E2D; y &#x662F;&#x771F;&#x5B9E;&#x6807;&#x7B7E;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A;one-hot vector&#xFF09;&#xFF0C;<script type="math/tex; ">y_{prediction} </script>&#x662F;&#x9884;&#x6D4B;&#x6807;&#x7B7E;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#xFF0C;&#x901A;&#x5E38;&#x6765;&#x81EA;&#x4E8E;&#x4E00;&#x4E2A; softmax&#x3002;</p>
+<h3 id="&#x8D1F;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#xFF08;nll&#xFF1A;negative-log-likelihood&#xFF09;">&#x8D1F;&#x5BF9;&#x6570;&#x4F3C;&#x7136;&#xFF08;NLL&#xFF1A;Negative Log Likelihood&#xFF09;</h3>
+<p>&#x53C2;&#x89C1;&#x5206;&#x7C7B;&#x4EA4;&#x53C9;&#x71B5;&#x635F;&#x5931;&#xFF08;Categorical Cross-Entropy Loss&#xFF09;&#x3002;</p>
+<h4 id="optimization-procedure">Optimization Procedure</h4>
+<ul>
+<li>a good choice for the optimization algorithm for a feed-forward network is usually stochastic gradient descent with momentum.</li>
+</ul>
+<h4 id="632-loss-function-and-conditional-log-likelihood">6.3.2 Loss Function and Conditional Log-Likelihood</h4>
+<ul>
+<li><p>In the 80&#x2019;s and 90&#x2019;s the most commonly used loss function was the squared error</p>
+<p><script type="math/tex; mode=display">
+  L({ f }_{ θ }(x),y)={ ||fθ(x)−y|| }^{ 2 }
+  </script></p>
+</li>
+<li><p>if f is unrestricted (non- parametric),</p>
+</li>
+</ul>
+<p>  <script type="math/tex; mode=display">
+  f(x) = E[y | x = x]
+  </script></p>
+<ul>
+<li><p>Replacing the squared error by an absolute value makes the neural network try to estimate not the conditional expectation but the conditional median</p>
+</li>
+<li><p><strong>&#x4EA4;&#x53C9;&#x71B5;&#xFF08;cross entropy&#xFF09;&#x76EE;&#x6807;&#x51FD;&#x6570; </strong>: when y is a discrete label, i.e., for classification problems, other loss functions such as the Bernoulli negative log-likelihood4 have been found to be more appropriate than the squared error. (<script type="math/tex; ">y∈{ \left\{ 0,1 \right\}  }</script>)</p>
+</li>
+</ul>
+<p><script type="math/tex; mode=display">
+L({ f }_{ θ }(x),y)=−ylog{ f }_{ θ }(x)−(1−y)log(1−{ f }_{ θ }(x))
+</script></p>
+<ul>
+<li><script type="math/tex; ">{f}_{\theta}(x)</script> to be strictly between 0 to 1: use the sigmoid as non-linearity for the output layer(matches well with the binomial negative log-likelihood cost function)</li>
+</ul>
+<h5 id="learning-a-conditional-probability-model">Learning a Conditional Probability Model</h5>
+<ul>
+<li><p>loss function as corresponding to a conditional log-likelihood, i.e., the negative log-likelihood (NLL) cost function</p>
+<p><script type="math/tex; mode=display">
+  { L }_{ NLL }({ f }_{ \theta  }(x),y)=−logP(y=y|x=x;θ)
+  </script></p>
+</li>
+<li><p>example) if y is a continuous random variable and we assume that, given x, it has a Gaussian distribution with mean ${f}_{&#x3B8;}$(x) and variance ${\sigma}^{2}$</p>
+<p><script type="math/tex; mode=display">
+  −logP(y|x;θ)=\frac { 1 }{ 2 } { ({ f }_{ \theta  }(x)−y) }^{ 1 }/{ σ }^{ 2 }+log(2π{ σ }^{ 2 })
+  </script></p>
+</li>
+<li><p>minimizing this negative log-likelihood is therefore equivalent to minimizing the squared error loss.</p>
+</li>
+<li><p>for discrete variables, the binomial negative log-likelihood cost func- tion corresponds to the conditional log-likelihood associated with the Bernoulli distribution (also known as cross entropy) with probability $p = {f}_{&#x3B8;}(x)$ of generating y = 1 given x =<script type="math/tex; "> x</script></p>
+</li>
+</ul>
+<p>  <script type="math/tex; mode=display">
+  {L}_{NLL}=−logP(y|x;θ)={−1}_{y=1}{logp−1}_{y=0}log(1−p)\\ =−ylog{f}_{θ}(x)−(1−y)log(1−{f}_{θ}(x))
+  </script></p>
 
                                 
                                 </section>
@@ -1477,8 +1618,12 @@
 
             
                 
+                <a href="nnintro.html" class="navigation navigation-prev " aria-label="Previous page: 第2章 神经网络入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="nnstructure.html" class="navigation navigation-next " aria-label="Next page: 神经网络结构">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1634,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"函数","level":"2.5.1","depth":2,"next":{"title":"神经网络结构","level":"2.5.2","depth":2,"path":"nnstructure.md","ref":"nnstructure.md","articles":[]},"previous":{"title":"第2章 神经网络入门","level":"2.5","depth":1,"path":"nnintro.md","ref":"nnintro.md","articles":[{"title":"函数","level":"2.5.1","depth":2,"path":"nnfunction.md","ref":"nnfunction.md","articles":[]},{"title":"神经网络结构","level":"2.5.2","depth":2,"path":"nnstructure.md","ref":"nnstructure.md","articles":[]},{"title":"正则化网络","level":"2.5.3","depth":2,"path":"regulizer.md","ref":"regulizer.md","articles":[]},{"title":"循环神经网络","level":"2.5.4","depth":2,"path":"rnn.md","ref":"rnn.md","articles":[]},{"title":"卷积神经网络","level":"2.5.5","depth":2,"path":"cnn.md","ref":"cnn.md","articles":[]},{"title":"无监督学习","level":"2.5.6","depth":2,"path":"wu-jian-du-xue-xi.md","ref":"wu-jian-du-xue-xi.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nnfunction.md","mtime":"2017-11-15T10:13:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

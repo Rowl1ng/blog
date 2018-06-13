@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>无监督学习 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="nnpractice.html" />
     
+    
+    <link rel="prev" href="cnn.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -667,7 +669,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.6" data-path="wu-jian-du-xue-xi.html">
+        <li class="chapter active" data-level="2.5.6" data-path="wu-jian-du-xue-xi.html">
             
                 <a href="wu-jian-du-xue-xi.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >无监督学习</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,72 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x65E0;&#x76D1;&#x7763;&#x5B66;&#x4E60;">&#x65E0;&#x76D1;&#x7763;&#x5B66;&#x4E60;</h1>
+<blockquote>
+<p>&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x5185;&#x5BB9;&#x6765;&#x81EA;NNML&#x7B2C;&#x5341;&#x4E00;&#x5468;&#x53CA;&#x63A5;&#x4E0B;&#x6765;&#x597D;&#x51E0;&#x5468;&#x7684;&#x8BFE;&#x7A0B;&#xFF0C;&#x7531;&#x4E8E;&#x5E73;&#x5E38;&#x5BF9;Hopfield&#x7F51;&#x7EDC;&#x548C;&#x53D7;&#x9650;&#x6CE2;&#x5C14;&#x5179;&#x66FC;&#x673A;&#x63A5;&#x89E6;&#x5F97;&#x5C31;&#x8F83;&#x5C11;&#xFF0C;&#x7406;&#x89E3;&#x8D77;&#x6765;&#x603B;&#x662F;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x5F04;&#x4E0D;&#x660E;&#x767D;&#xFF0C;&#x5FC5;&#x987B;&#x5F97;&#x67E5;&#x9605;&#x4E2D;&#x6587;&#x8F85;&#x52A9;&#x8D44;&#x6599;&#x624D;&#x80FD;&#x7565;&#x901A;&#x4E00;&#x4E8C;&#x3002;&#x524D;&#x9762;&#x8BFE;&#x7A0B;&#x7684;&#x5185;&#x5BB9;&#x591A;&#x591A;&#x5C11;&#x5C11;&#x90FD;&#x5728;&#x5176;&#x4ED6;&#x8D44;&#x6599;&#x4E2D;&#x53CD;&#x590D;&#x89C1;&#x5230;&#xFF0C;&#x552F;&#x72EC;&#x8FD9;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x96F6;&#x8D77;&#x70B9;&#xFF0C;&#x4E5F;&#x7B97;&#x662F;&#x770B;&#x5230;&#x4E86;&#x201C;&#x65B0;&#x4E16;&#x754C;&#x201D;&#x3002;</p>
+</blockquote>
+<ul>
+<li>Hopfield Network&#xFF1A;&#x5355;&#x5143;&#x7684;&#x503C;&#x662F;&#x4E8C;&#x5143;&#x7684;<ul>
+<li>global energy function
+<script type="math/tex; mode=display">
+E = -\sum_i s_i b_i - \sum_{i < j} s_i s_j w_{ij}
+</script></li>
+<li>&#x9010;&#x4E2A;&#x5730;&#x8C03;&#x6574;&#x4E8C;&#x5143;&#x503C;&#xFF0C;&#x53EA;&#x4E3A;&#x4E86;&#x627E;&#x5230;energy minimum</li>
+</ul>
+</li>
+<li>Hopfield Network with hidden units<ul>
+<li>energy&#x53CD;&#x6620;interpretation&#x7684;&#x597D;&#x574F;</li>
+<li>search&#xFF1A;escape from local minimum<ul>
+<li>noise</li>
+<li>&#x201C;simulated annealing&#x201D; </li>
+<li>thermal equilibrium &#xFF1A;configuration&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;settle down</li>
+</ul>
+</li>
+<li>learn<ul>
+<li>&#x57FA;&#x4E8E;&#x6700;&#x5927;&#x4F3C;&#x7136;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Restricted Boltzmann Machine<ul>
+<li>&#x65E0;&#x5411;&#x6982;&#x7387;&#x56FE;&#x6A21;&#x578B;</li>
+<li>deep belief network&#xFF1A;<ul>
+<li>&#x6DF7;&#x5408;&#x56FE;&#x6A21;&#x578B;&#xFF0C;&#x65E2;&#x6709;&#x6709;&#x5411;&#x8FDE;&#x63A5;&#xFF0C;&#x4E5F;&#x6709;&#x65E0;&#x5411;&#x8FDE;&#x63A5;</li>
+<li>&#x591A;&#x4E2A;&#x9690;&#x85CF;&#x5C42;</li>
+</ul>
+</li>
+<li>deep Boltzman machine<ul>
+<li>&#x6709;&#x591A;&#x5C42;&#x9690;&#x53D8;&#x91CF;&#x7684;&#x65E0;&#x5411;&#x56FE;&#x6A21;&#x578B;
+<script type="math/tex; mode=display">
+P(\mathrm v =v,\mathrm h=h)=\frac1Z\exp(-E(v,h))\\
+E(v,h)=-b^\top v-c^\top h-v^\top wh
+</script></li>
+</ul>
+</li>
+<li>&#x4ECE;&#x6982;&#x7387;&#x8BA1;&#x7B97;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8FD9;&#x4E2A;&#x7528;&#x6765;&#x5F52;&#x4E00;&#x5316;&#x7684;&#x5E38;&#x91CF;<script type="math/tex; ">Z</script>&#x662F;&#x65E0;&#x6CD5;&#x8BA1;&#x7B97;&#x7684;&#x3002;&#x8FD9;&#x6837;&#x5F52;&#x4E00;&#x5316;&#x540E;&#x7684;&#x8054;&#x5408;&#x6982;&#x7387;&#x5206;&#x5E03;<script type="math/tex; ">P(v)</script>&#x4E5F;&#x65E0;&#x6CD5;&#x8BA1;&#x7B97;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>RBM&#x4E5F;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x7F16;&#x89E3;&#x7801;&#x5668; :
+&#x7F16;&#x7801;&#xFF1A; </p>
+<ol>
+<li>&#x8F93;&#x5165;&#x7F16;&#x7801;&#x524D;&#x7684;&#x6837;&#x672C;x&#xFF1B; </li>
+<li>&#x6839;&#x636E;x&#x7684;&#x503C;&#x8BA1;&#x7B97;&#x6982;&#x7387;<script type="math/tex; ">p(h=1|v)</script>&#xFF0C;&#x5176;&#x4E2D;v&#x7684;&#x53D6;&#x503C;&#x5C31;&#x662F;x&#x7684;&#x503C;&#xFF1B; </li>
+<li>&#x6309;&#x7167;&#x5747;&#x5300;&#x5206;&#x5E03;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;0&#x5230;1&#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x5C0F;&#x4E8E;<script type="math/tex; ">p(h=1|v)</script>&#xFF0C;y&#x7684;&#x53D6;&#x503C;&#x5C31;&#x662F;1&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x662F;0&#xFF1B; </li>
+<li>&#x5F97;&#x5230;&#x7F16;&#x7801;&#x540E;&#x7684;&#x6837;&#x672C;y&#x3002; </li>
+</ol>
+<p>&#x89E3;&#x7801;&#xFF1A; </p>
+<ol>
+<li>&#x8F93;&#x5165;&#x89E3;&#x7801;&#x524D;&#x7684;&#x6837;&#x672C;y&#xFF1B; </li>
+<li>&#x6839;&#x636E;y&#x7684;&#x503C;&#x8BA1;&#x7B97;&#x6982;&#x7387;<script type="math/tex; ">p(v=1|h)</script>&#xFF0C;&#x5176;&#x4E2D;h&#x7684;&#x53D6;&#x503C;&#x5C31;&#x662F;y&#x7684;&#x503C;&#xFF1B; </li>
+<li>&#x6309;&#x7167;&#x5747;&#x5300;&#x5206;&#x5E03;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;0&#x5230;1&#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x5C0F;&#x4E8E;<script type="math/tex; ">p(v=1|h)</script>&#xFF0C;v&#x7684;&#x53D6;&#x503C;&#x5C31;&#x662F;1&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x662F;0&#xFF1B; </li>
+<li>&#x5F97;&#x5230;&#x89E3;&#x7801;&#x540E;&#x7684;&#x6837;&#x672C;x&#x3002; </li>
+</ol>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>Hopfield Network&#xFF1A;[ <a href="http://page.mi.fu-berlin.de/rojas/neural/chapter/K13.pdf" target="_blank">http://page.mi.fu-berlin.de/rojas/neural/chapter/K13.pdf</a> ]</li>
+<li>[ <a href="http://www.scholarpedia.org/article/Boltzmann_machine" target="_blank">http://www.scholarpedia.org/article/Boltzmann_machine</a> ]</li>
+</ul>
 
                                 
                                 </section>
@@ -1477,8 +1543,12 @@
 
             
                 
+                <a href="cnn.html" class="navigation navigation-prev " aria-label="Previous page: 卷积神经网络">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="nnpractice.html" class="navigation navigation-next " aria-label="Next page: 第3章 神经网络编程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1559,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"无监督学习","level":"2.5.6","depth":2,"next":{"title":"第3章 神经网络编程","level":"2.6","depth":1,"path":"nnpractice.md","ref":"nnpractice.md","articles":[{"title":"keras","level":"2.6.1","depth":2,"path":"keras.md","ref":"keras.md","articles":[]},{"title":"Theano","level":"2.6.2","depth":2,"path":"theano.md","ref":"theano.md","articles":[]},{"title":"Tensorflow","level":"2.6.3","depth":2,"path":"tensorflow.md","ref":"tensorflow.md","articles":[]},{"title":"caffe","level":"2.6.4","depth":2,"path":"caffe.md","ref":"caffe.md","articles":[]},{"title":"layer","level":"2.6.5","depth":2,"path":"layer.md","ref":"layer.md","articles":[]},{"title":"matlab","level":"2.6.6","depth":2,"path":"matlab.md","ref":"matlab.md","articles":[]},{"title":"Pytorch","level":"2.6.7","depth":2,"path":"pytorch.md","ref":"pytorch.md","articles":[]}]},"previous":{"title":"卷积神经网络","level":"2.5.5","depth":2,"path":"cnn.md","ref":"cnn.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"wu-jian-du-xue-xi.md","mtime":"2017-11-15T10:43:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

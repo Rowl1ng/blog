@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>卷积 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="practice.html" />
     
+    
+    <link rel="prev" href="chapter1.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -1061,7 +1063,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="convolution.html">
+        <li class="chapter active" data-level="3.2.1" data-path="convolution.html">
             
                 <a href="convolution.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >卷积</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x5377;&#x79EF;">&#x5377;&#x79EF;</h1>
+<p>&#x56FE;&#x50CF;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x505A;&#x4E00;&#x4E2A;<strong>&#x4E8C;&#x7EF4;&#x4FE1;&#x53F7;</strong>&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x79FB;&#x4E0D;&#x53D8;&#x7CFB;&#x7EDF;&#xFF0C;&#x5176;&#x8F93;&#x51FA;&#x4E0E;&#x8F93;&#x5165;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;<strong>&#x5377;&#x79EF;</strong>&#x3002;</p>
+<p><strong>&#x70B9;&#x6269;&#x6563;&#x51FD;&#x6570;</strong>&#x8868;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x79FB;&#x4E0D;&#x53D8;&#x7CFB;&#x7EDF;&#x7684;&#x5168;&#x90E8;&#x7279;&#x5F81;&#x3002;</p>
+<p>&#x7A7A;&#x95F4;&#x57DF;&#x7684;&#x5377;&#x79EF;&#x5BF9;&#x5E94;&#x4E8E;&#x9891;&#x7387;&#x57DF;&#x7684;&#x4E58;&#x79EF;&#x3002;</p>
+<h2 id="fourier&#x53D8;&#x6362;&#x548C;&#x6EE4;&#x6CE2;">Fourier&#x53D8;&#x6362;&#x548C;&#x6EE4;&#x6CE2;</h2>
 
                                 
                                 </section>
@@ -1477,8 +1483,12 @@
 
             
                 
+                <a href="chapter1.html" class="navigation navigation-prev " aria-label="Previous page: 第0章 数学准备">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="practice.html" class="navigation navigation-next " aria-label="Next page: 实践">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1499,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"卷积","level":"3.2.1","depth":2,"next":{"title":"实践","level":"3.3","depth":1,"path":"practice.md","ref":"practice.md","articles":[{"title":"车道线识别","level":"3.3.1","depth":2,"path":"lane.md","ref":"lane.md","articles":[]},{"title":"RoadNN","level":"3.3.2","depth":2,"path":"roadnn.md","ref":"roadnn.md","articles":[]}]},"previous":{"title":"第0章 数学准备","level":"3.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[{"title":"卷积","level":"3.2.1","depth":2,"path":"convolution.md","ref":"convolution.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"convolution.md","mtime":"2018-06-13T06:59:41.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

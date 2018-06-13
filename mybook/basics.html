@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>基础 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="multiproccessing.html" />
     
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -103,7 +105,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.1" data-path="basics.html">
+        <li class="chapter active" data-level="1.1.1" data-path="basics.html">
             
                 <a href="basics.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >基础</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h2 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h2>
+<hr>
+<ul>
+<li><code>pass</code> &#xFF1A;&#x5360;&#x4F4D;&#x7684;&#xFF0C;&#x5565;&#x4E5F;&#x4E0D;&#x5E72;</li>
+<li><code>&#xFF1A;</code> &#x5207;&#x7247;&#x7528;&#xFF0C;&#x6BD4;&#x5982;<code>[:-1]</code>&#x5C31;&#x662F;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5230;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;</li>
+</ul>
+<h3 id="&#x8D4B;&#x503C;&#x3001;&#x5F15;&#x7528;&#x3001;&#x62F7;&#x8D1D;&#x3001;&#x4F5C;&#x7528;&#x57DF;">&#x8D4B;&#x503C;&#x3001;&#x5F15;&#x7528;&#x3001;&#x62F7;&#x8D1D;&#x3001;&#x4F5C;&#x7528;&#x57DF;</h3>
+<h4 id="&#x8D4B;&#x503C;-&#x5F15;&#x7528;">&#x8D4B;&#x503C; &#x5F15;&#x7528;</h4>
+<p>![&#x8D4B;&#x503C;][2]
+![&#x5FAA;&#x73AF;][3]</p>
+<h4 id="&#x62F7;&#x8D1D;">&#x62F7;&#x8D1D;</h4>
+<p>&#x8981;&#x5F97;&#x5230; <code>[0, [0, 1, 2], 2]</code> &#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5C06;<code>values[1]</code> &#x6307;&#x5411; <code>values</code> &#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#xFF0C;&#x800C;&#x662F;&#x9700;&#x8981;&#x5427; <code>[0, 1, 2]</code> &#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x300C;&#x590D;&#x5236;&#x300D;&#x4E00;&#x904D;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#xFF0C;&#x518D;&#x5C06;<code>values[1]</code> &#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x590D;&#x5236;&#x540E;&#x7684;&#x5BF9;&#x8C61;&#x3002;Python &#x91CC;&#x9762;&#x590D;&#x5236;&#x5BF9;&#x8C61;&#x7684;&#x64CD;&#x4F5C;&#x56E0;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x800C;&#x5F02;&#xFF0C;&#x590D;&#x5236;&#x5217;&#x8868; <code>values</code>&#x7684;&#x64CD;&#x4F5C;&#x662F;</p>
+<pre><code>values[:] #&#x751F;&#x6210;&#x5BF9;&#x8C61;&#x7684;&#x62F7;&#x8D1D;&#x6216;&#x8005;&#x662F;&#x590D;&#x5236;&#x5E8F;&#x5217;&#xFF0C;&#x4E0D;&#x518D;&#x662F;&#x5F15;&#x7528;&#x548C;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x6B64;&#x6CD5;&#x53EA;&#x80FD;&#x9876;&#x5C42;&#x590D;&#x5236;
+</code></pre><p>&#x6240;&#x4EE5;&#x4F60;&#x9700;&#x8981;&#x6267;&#x884C;</p>
+<pre><code>values[1] = values[:]
+</code></pre><p>Python &#x505A;&#x7684;&#x4E8B;&#x60C5;&#x662F;&#xFF0C;&#x5148; dereference &#x5F97;&#x5230; values &#x6240;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;<code>[0, 1, 2]</code>&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C; <code>[0, 1, 2][:]</code>&#x590D;&#x5236;&#x64CD;&#x4F5C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5185;&#x5BB9;&#x4E5F;&#x662F; [0, 1, 2]&#xFF0C;&#x7136;&#x540E;&#x5C06; <code>values</code> &#x6240;&#x6307;&#x5411;&#x7684;&#x5217;&#x8868;&#x5BF9;&#x8C61;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x590D;&#x5236;&#x4E8C;&#x6765;&#x7684;&#x5217;&#x8868;&#x5BF9;&#x8C61;&#xFF0C;&#x6700;&#x7EC8; values &#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x662F;<code>[0, [0, 1, 2], 2]</code>&#x3002;&#x8FC7;&#x7A0B;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+![&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;][4]</p>
+<h4 id="&#x590D;&#x5236;&#x5D4C;&#x5957;&#x5143;&#x7D20;">&#x590D;&#x5236;&#x5D4C;&#x5957;&#x5143;&#x7D20;</h4>
+<p>&#x6D45;&#x590D;&#x5236;
+![&#x6D45;&#x590D;&#x5236;][5]
+&#x6DF1;&#x590D;&#x5236;
+![&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;][6]</p>
+<h3 id="&#x51FD;&#x6570;&#x503C;&#x4F20;&#x9012;">&#x51FD;&#x6570;&#x503C;&#x4F20;&#x9012;</h3>
+<p>&#x5BF9;&#x4E8E;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;&#x64CD;&#x4F5C;&#x4E0D;&#x4F1A;&#x91CD;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#x5C31;&#x91CD;&#x5EFA;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code>def func_int(a):
+    print id(a) # output: 44787728 
+    a += 4
+    print id(a) # output: 44787632
+
+t = 0
+print id(t) # output: 44787728
+func_int(t)
+print t # output: 0
+</code></pre><h3 id="&#x5B57;&#x7B26;&#x4E32;">&#x5B57;&#x7B26;&#x4E32;</h3>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#xFF08;&#xFF09;
+[&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;][7]
+&#x5B57;&#x7B26;&#x4E32;&#x8FDE;&#x63A5;
+Python: TypeError: cannot concatenate &apos;str&apos; and &apos;int&apos; objects</p>
+<ul>
+<li>str()</li>
+</ul>
+<h3 id="&#x5143;&#x7EC4;">&#x5143;&#x7EC4;</h3>
+<p>&#x4E0D;&#x53EF;&#x53D8;&#xFF08;&#x53EA;&#x8BFB;&#xFF09;</p>
+<h3 id="&#x5217;&#x8868;-list">&#x5217;&#x8868; list</h3>
+<p>&#x4F7F;&#x7528;&#x5207;&#x7247;&#x64CD;&#x4F5C;&#x66F4;&#x65B0;&#x4E00;&#x90E8;&#x5206;&#x5143;&#x7D20;
+&#x4E0D;&#x5B9A;&#x957F;append&#xFF1A;&#x56FA;&#x5B9A;size&#x7684;numpy&#x6BD4;&#x7075;&#x6D3B;list&#x5B58;&#x53D6;&#x5FEB;&#x5F97;&#x591A;
+zip&#x8F6C;list&#x624D;&#x80FD;&#x6B63;&#x5E38;sort</p>
+<pre><code>## &#x4E32;&#x8054;list
+list_ = []
+list_.extend(a_list)
+</code></pre><h3 id="&#x5B57;&#x5178;">&#x5B57;&#x5178;</h3>
+<p>&#x8FD9;&#x91CC;&#x7684;defaultdict(function_factory)&#x6784;&#x5EFA;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;dictionary&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;keys&#x7684;&#x503C;&#xFF0C;&#x81EA;&#x884C;&#x786E;&#x5B9A;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x662F;values&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x662F;function_factory&#x7684;&#x7C7B;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C;&#x4E14;&#x5177;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x6BD4;&#x5982;default(int)&#x5219;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;dictionary&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x4EFB;&#x4F55;&#x7684;values&#x90FD;&#x662F;int&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C;&#x4E14;&#x5C31;&#x7B97;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;key, d[key] &#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#x662F;int()&#x7684;&#x9ED8;&#x8BA4;&#x503C;0.</p>
 
                                 
                                 </section>
@@ -1477,8 +1529,12 @@
 
             
                 
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Python笔记本">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="multiproccessing.html" class="navigation navigation-next " aria-label="Next page: 多线程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1545,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基础","level":"1.1.1","depth":2,"next":{"title":"多线程","level":"1.1.2","depth":2,"path":"multiproccessing.md","ref":"multiproccessing.md","articles":[]},"previous":{"title":"Python笔记本","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},{"title":"多线程","level":"1.1.2","depth":2,"path":"multiproccessing.md","ref":"multiproccessing.md","articles":[]},{"title":"高级特性","level":"1.1.3","depth":2,"path":"superior.md","ref":"superior.md","articles":[]},{"title":"数据库","level":"1.1.4","depth":2,"path":"database.md","ref":"database.md","articles":[]},{"title":"编码","level":"1.1.5","depth":2,"path":"code.md","ref":"code.md","articles":[]},{"title":"调试","level":"1.1.6","depth":2,"path":"debug.md","ref":"debug.md","articles":[]},{"title":"函数式编程","level":"1.1.7","depth":2,"path":"functional.md","ref":"functional.md","articles":[]},{"title":"文件","level":"1.1.8","depth":2,"path":"file.md","ref":"file.md","articles":[]},{"title":"日志","level":"1.1.9","depth":2,"path":"log.md","ref":"log.md","articles":[]},{"title":"模块","level":"1.1.10","depth":2,"path":"module.md","ref":"module.md","articles":[]},{"title":"面向对象编程","level":"1.1.11","depth":2,"path":"OOP.md","ref":"OOP.md","articles":[]},{"title":"错误和异常","level":"1.1.12","depth":2,"path":"error.md","ref":"error.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics.md","mtime":"2018-05-29T13:15:35.646Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

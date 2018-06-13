@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>平滑化 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="tu-xiang-jun-heng-hua.html" />
     
+    
+    <link rel="prev" href="tu-xiang-chu-li-ji-chu.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -1183,7 +1185,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.5.1" data-path="ping-hua-hua.html">
+        <li class="chapter active" data-level="3.5.1" data-path="ping-hua-hua.html">
             
                 <a href="ping-hua-hua.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >平滑化</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;">&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;</h1>
+<h4 id="1-&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;">1. &#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;</h4>
+<blockquote>
+<p>&#x8BE5;&#x6EE4;&#x6CE2;&#x5668;&#x53EF;&#x4EE5;&#x5728;&#x4FDD;&#x8BC1;<strong>&#x8FB9;&#x754C;&#x6E05;&#x6670;</strong>&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6709;&#x6548;&#x7684;<strong>&#x53BB;&#x6389;&#x566A;&#x58F0;</strong>&#x3002;&#x5B83;&#x7684;&#x6784;&#x9020;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5373;&#x8003;&#x8651;&#x4E86;&#x56FE;&#x50CF;&#x7684;<strong>&#x7A7A;&#x95F4;&#x5173;&#x7CFB;</strong>&#xFF0C;&#x4E5F;&#x8003;&#x8651;&#x56FE;&#x50CF;&#x7684;<strong>&#x7070;&#x5EA6;&#x5173;&#x7CFB;</strong>&#x3002;&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;&#x7A7A;&#x95F4;&#x9AD8;&#x65AF;&#x6743;&#x91CD;&#x548C;&#x7070;&#x5EA6;&#x76F8;&#x4F3C;&#x6027;&#x9AD8;&#x65AF;&#x6743;&#x91CD;&#xFF0C;&#x786E;&#x4FDD;&#x4E86;&#x8FB9;&#x754C;&#x4E0D;&#x4F1A;&#x88AB;&#x6A21;&#x7CCA;&#x6389;&#x3002;</p>
+</blockquote>
+<pre><code> `cv2.bilateralFilter(src, d, sigmaColor, sigmaSpace[, dst[, borderType]])`
+ `cv2.bilateralFilter(image, 9, 90,16)`
+</code></pre><p>cv2.bilateralFilter(img,d,&#x2019;p1&#x2019;,&#x2019;p2&#x2019;)&#x51FD;&#x6570;&#x6709;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x9700;&#x8981;&#xFF0C;d&#x662F;&#x9886;&#x57DF;&#x7684;&#x76F4;&#x5F84;&#xFF0C;&#x540E;&#x9762;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7A7A;&#x95F4;&#x9AD8;&#x65AF;&#x51FD;&#x6570;&#x6807;&#x51C6;&#x5DEE;&#x548C;&#x7070;&#x5EA6;&#x503C;&#x76F8;&#x4F3C;&#x6027;&#x9AD8;&#x65AF;&#x51FD;&#x6570;&#x6807;&#x51C6;&#x5DEE;&#x3002;</p>
+<p><code>cv2.bilateralFilter(img, 9, 90,16)</code></p>
+<h4 id="2-&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;">2. &#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;</h4>
+<ul>
+<li>[ ] &#x5FC5;&#x987B;&#x662F;&#x5947;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;trackbar*2+1&#x554A;</li>
+</ul>
+<pre><code class="lang-python">   img = cv2.GaussianBlur(image,(<span class="hljs-number">7</span>,<span class="hljs-number">7</span>),<span class="hljs-number">0</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -1477,8 +1492,12 @@
 
             
                 
+                <a href="tu-xiang-chu-li-ji-chu.html" class="navigation navigation-prev " aria-label="Previous page: 图像处理基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="tu-xiang-jun-heng-hua.html" class="navigation navigation-next " aria-label="Next page: 对比度">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1508,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"平滑化","level":"3.5.1","depth":2,"next":{"title":"对比度","level":"3.5.2","depth":2,"path":"tu-xiang-jun-heng-hua.md","ref":"tu-xiang-jun-heng-hua.md","articles":[]},"previous":{"title":"图像处理基础","level":"3.5","depth":1,"path":"tu-xiang-chu-li-ji-chu.md","ref":"tu-xiang-chu-li-ji-chu.md","articles":[{"title":"平滑化","level":"3.5.1","depth":2,"path":"ping-hua-hua.md","ref":"ping-hua-hua.md","articles":[]},{"title":"对比度","level":"3.5.2","depth":2,"path":"tu-xiang-jun-heng-hua.md","ref":"tu-xiang-jun-heng-hua.md","articles":[]},{"title":"阈值","level":"3.5.3","depth":2,"path":"yu-zhi.md","ref":"yu-zhi.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ping-hua-hua.md","mtime":"2018-06-13T06:59:41.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

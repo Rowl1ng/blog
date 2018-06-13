@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>积分 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="matrix.html" />
     
+    
+    <link rel="prev" href="differential.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -395,7 +397,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.4" data-path="integral.html">
+        <li class="chapter active" data-level="2.3.4" data-path="integral.html">
             
                 <a href="integral.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >积分</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x79EF;&#x5206;">&#x79EF;&#x5206;</h1>
+<h3 id="031-&#x5B9A;&#x7A4D;&#x5206;">0.3.1 &#x5B9A;&#x7A4D;&#x5206;</h3>
+<p>&#x7A4D;&#x5206;&#x306F;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3068;&#x3057;&#x3066;&#x300C;&#x95A2;&#x6570;&#x306E;&#x5024;&#x3092;&#x8DB3;&#x3057;&#x307E;&#x304F;&#x3063;&#x305F;&#x3082;&#x306E;&#x300D;&#x3067;&#x3059;&#x3002;</p>
+<p><script type="math/tex; ">x</script>&#x304C;<script type="math/tex; ">a</script>&#x304B;&#x3089;<script type="math/tex; ">b</script>&#x307E;&#x3067;&#x52D5;&#x304F;&#x6642;&#x3001;&#x3053;&#x306E;&#x533A;&#x9593;&#x3092;<script type="math/tex; ">N</script>&#x7B49;&#x5206;&#x3057;&#x3066;&#x8DB3;&#x3057;&#x305F;&#x3082;&#x306E;
+<script type="math/tex; "> \sum_{i=0}^N f\left(a+(b-a)\frac{i}{N}\right)\frac{b-a}{N} </script>
+&#x3092;&#x8003;&#x3048;&#x308B;&#x3068;&#x6B21;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x306E;&#x9762;&#x7A4D;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x6B63;&#x78BA;&#x306B;&#x306F;x&#x8EF8;&#x3088;&#x308A;&#x4E0A;&#x306E;&#x68D2;&#x30B0;&#x30E9;&#x30D5;&#x306E;&#x9762;&#x7A4D;&#x306F;&#x6B63;&#x3001;x&#x8EF8;&#x3088;&#x308A;&#x4E0B;&#x306B;&#x3042;&#x308B;&#x68D2;&#x30B0;&#x30E9;&#x30D5;&#x306E;&#x9762;&#x7A4D;&#x306F;&#x8CA0;&#x3068;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x300C;&#x7B26;&#x53F7;&#x4ED8;&#x304D;&#x9762;&#x7A4D;&#x300D;&#x5024;&#x304C;&#x4E0A;&#x306E;&#x5F0F;&#x306E;&#x5024;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x3042;&#x307E;&#x308A;&#x5909;&#x306A;&#x95A2;&#x6570;&#x3067;&#x306A;&#x3051;&#x308C;&#x3070;<script type="math/tex; ">N \to \infty</script>&#x3068;&#x3059;&#x308B;&#x3068;&#x4E0A;&#x306E;&#x5F0F;&#x306E;&#x5024;&#x306F;&#x4E00;&#x5B9A;&#x5024;&#x306B;&#x8FD1;&#x3065;&#x3044;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x5024;&#x3092;
+<script type="math/tex; "> \int_a^b f(x)dx </script>
+&#x3068;&#x66F8;&#x304D;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x5B9A;&#x7A4D;&#x5206;&#x3068;&#x547C;&#x3073;&#x307E;&#x3059;&#x3002;
+&#x3053;&#x308C;&#x306F;&#x30B0;&#x30E9;&#x30D5;&#x3067;&#x3044;&#x3046;&#x3068;&#x659C;&#x7DDA;&#x90E8;&#x306E;&#x300C;&#x7B26;&#x53F7;&#x4ED8;&#x304D;&#x9762;&#x7A4D;&#x300D;&#x306B;&#x3042;&#x305F;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>--- &#x3053;&#x3053;&#x306B;&#x30B0;&#x30E9;&#x30D5;&#x3092;&#x66F8;&#x304F;---</p>
+<h3 id="032-&#x5FAE;&#x7A4D;&#x5206;&#x5B66;&#x306E;&#x57FA;&#x672C;&#x5B9A;&#x7406;">0.3.2 &#x5FAE;&#x7A4D;&#x5206;&#x5B66;&#x306E;&#x57FA;&#x672C;&#x5B9A;&#x7406;</h3>
+<p>&#x4E0A;&#x306E;&#x5B9A;&#x7FA9;&#x304B;&#x3089;&#x3082;&#x5206;&#x304B;&#x308B;&#x3088;&#x3046;&#x306B;&#x7A4D;&#x5206;&#x306F;&#x57FA;&#x672C;&#x7684;&#x306B;&#x96E3;&#x3057;&#x3044;&#x6F14;&#x7B97;&#x306A;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x5FAE;&#x7A4D;&#x5206;&#x5B66;&#x306E;&#x57FA;&#x672C;&#x5B9A;&#x7406;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;&#x304C;&#x305D;&#x3053;&#x305D;&#x3053;&#x7C21;&#x5358;&#x306B;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x5B9A;&#x7A4D;&#x5206;&#x306E;&#x533A;&#x9593;&#x3092;<script type="math/tex; ">a</script>&#x304B;&#x3089;<script type="math/tex; ">x</script>&#x307E;&#x3067;&#x3068;&#x8003;&#x3048;&#x308B;&#x3068;<script type="math/tex; ">x</script>&#x306E;&#x5024;&#x3092;&#x6C7A;&#x3081;&#x308B;&#x3068;&#x5B9A;&#x7A4D;&#x5206;&#x306E;&#x5024;&#x304C;&#x4E00;&#x3064;&#x306B;&#x6C7A;&#x307E;&#x308B;&#x306E;&#x3067; <script type="math/tex; ">\int_a^x f(t)dt</script>&#x306F;<script type="math/tex; ">x</script>&#x306E;&#x95A2;&#x6570;&#x3067;&#x3042;&#x308B;&#x3068;&#x8003;&#x3048;&#x3089;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x3001;
+<script type="math/tex; ">\left(\int_a^x f(t)dt\right)' = f(x)</script>
+&#x304C;&#x6210;&#x7ACB;&#x3057;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;&#x7A4D;&#x5206;&#x3057;&#x3066;&#x304B;&#x3089;&#x5FAE;&#x5206;&#x3059;&#x308B;&#x3068;&#x5143;&#x306E;&#x95A2;&#x6570;&#x304C;&#x73FE;&#x308C;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x5FAE;&#x5206;&#x306E;&#x5B9A;&#x7FA9;&#x306B;&#x623B;&#x3063;&#x3066;&#x8003;&#x3048;&#x3066;&#x307F;&#x307E;&#x3059;&#x3002;
+<script type="math/tex; ">\left(\int_a^x f(t)dt\right)' = \lim_{h \to 0} \frac{\int_a^x f(t)dt - \int_a^{x+h} f(t)dt }{h}</script>
+&#x3053;&#x306E;&#x5DEE;&#x3092;&#x30B0;&#x30E9;&#x30D5;&#x4E0A;&#x3067;&#x8868;&#x3059;&#x3068;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>--- &#x3053;&#x3053;&#x306B;&#x30B0;&#x30E9;&#x30D5;&#x3092;&#x66F8;&#x304F;---</p>
+<p><script type="math/tex; ">h</script>&#x304C;&#x5341;&#x5206;&#x5C0F;&#x3055;&#x3044;&#x306E;&#x3067;&#x3053;&#x306E;&#x7BC4;&#x56F2;&#x3067;&#x306F;&#x5909;&#x5316;&#x304C;&#x306A;&#x3044;&#x3068;&#x8003;&#x3048;&#x308B;&#x3068;&#x5206;&#x5B50;&#x306B;&#x3042;&#x305F;&#x308B;&#x5DEE;&#x306E;&#x9762;&#x7A4D;&#x306F;<script type="math/tex; ">f(x) \cdot h</script>&#x3068;&#x8868;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x3066;&#x8A08;&#x7B97;&#x3059;&#x308C;&#x3070;&#x5FAE;&#x7A4D;&#x5206;&#x5B66;&#x306E;&#x57FA;&#x672C;&#x5B9A;&#x7406;&#x306E;&#x516C;&#x5F0F;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<h3 id="033-&#x4E0D;&#x5B9A;&#x7A4D;&#x5206;">0.3.3 &#x4E0D;&#x5B9A;&#x7A4D;&#x5206;</h3>
+<p><script type="math/tex; ">f(x)</script> &#x306B;&#x5BFE;&#x3057;&#x3066; <script type="math/tex; ">F'(x) = f(x)</script> &#x3068;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A;&#x95A2;&#x6570;&#x306E;&#x3053;&#x3068;&#x3092; <script type="math/tex; ">f(x)</script> &#x306E;&#x539F;&#x59CB;&#x95A2;&#x6570;&#x3068;&#x3044;&#x3044;&#x3001;&#x539F;&#x59CB;&#x95A2;&#x6570;&#x3092;&#x6C42;&#x3081;&#x308B;&#x3053;&#x3068;&#x3092;&#x4E0D;&#x5B9A;&#x7A4D;&#x5206;&#x3068;&#x8A00;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><script type="math/tex; ">F(x)=\int_0^xf(t)dt</script>&#x3068;&#x3059;&#x308B;&#x3068; <script type="math/tex; ">\int_a^b f(t)dt = \int_0^b f(t)dt - \int_0^a f(t)dt = F(b)-F(a)</script> &#x304C;&#x6210;&#x308A;&#x7ACB;&#x3061;&#x307E;&#x3059;&#x3002;&#x5F93;&#x3063;&#x3066;&#x5B9A;&#x7A4D;&#x5206;&#x3092;&#x6C42;&#x3081;&#x308B;&#x306B;&#x306F;&#x539F;&#x59CB;&#x95A2;&#x6570;&#x3092;&#x6C42;&#x3081;&#x3066;&#x7BC4;&#x56F2;&#x306E;&#x5883;&#x754C;&#x540C;&#x58EB;&#x3067;&#x306E;&#x5024;&#x306E;&#x5DEE;&#x3092;&#x53D6;&#x308C;&#x3070;&#x3088;&#x3044;&#x3053;&#x3068;&#x304C;&#x5206;&#x304B;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p><script type="math/tex; ">F(x)=\int_0^xf(t)dt</script> &#x3082; <script type="math/tex; ">F(x)=\int_1^xf(t)dt</script><script type="math/tex; "> も微分すれば </script>f(x)<script type="math/tex; "> になるためどちらも</script><script type="math/tex; ">f(x)</script> &#x306E;&#x539F;&#x59CB;&#x95A2;&#x6570;&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x539F;&#x59CB;&#x95A2;&#x6570;&#x306B;&#x306F;&#x5B9A;&#x6570;&#x5206;&#x3060;&#x3051;&#x7121;&#x9650;&#x306E;&#x53EF;&#x80FD;&#x6027;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x3069;&#x308C;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3082;&#x5F15;&#x304D;&#x7B97;&#x3059;&#x308B;&#x969B;&#x306B;&#x76F8;&#x6BBA;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x5B9A;&#x7A4D;&#x5206;&#x3092;&#x6C42;&#x3081;&#x308B;&#x969B;&#x306B;&#x306F;&#x4E00;&#x756A;&#x7C21;&#x5358;&#x306A;&#x539F;&#x59CB;&#x95A2;&#x6570;&#x3092;&#x4F7F;&#x3046;&#x306E;&#x304C;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>&#x4F8B;: <script type="math/tex; ">(\frac{1}{3}x^3)' = x^2</script> &#x3088;&#x308A;&#x3001;<script type="math/tex; ">\frac{1}{3}x^3</script> &#x306F;<script type="math/tex; ">f(x)=x^2</script><script type="math/tex; "> の不定積分の一つであることが分かります。
+同様にして </script><script type="math/tex; ">\frac{1}{3}x^3+5</script><script type="math/tex; "> も</script><script type="math/tex; ">f(x)</script> &#x306E;&#x4E0D;&#x5B9A;&#x7A4D;&#x5206;&#x3067;&#x3059;&#x3002;&#x3053;&#x306E;&#x5B9A;&#x6570;&#x3076;&#x3093;&#x306E;&#x9055;&#x3044;&#x3092;&#x542B;&#x3081;&#x3066;&#x5168;&#x3066;&#x306E;&#x4E0D;&#x5B9A;&#x7A4D;&#x5206;&#x3092;&#x8868;&#x3059;&#x305F;&#x3081;&#x306B;&#x7A4D;&#x5206;&#x5B9A;&#x6570;<script type="math/tex; ">C</script>&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x8A18;&#x53F7;&#x3092;&#x4F7F;&#x3063;&#x3066; <script type="math/tex; ">\frac{1}{3} x^3+C</script> &#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<h3 id="034-&#x7A4D;&#x5206;&#x306E;&#x516C;&#x5F0F;">0.3.4 &#x7A4D;&#x5206;&#x306E;&#x516C;&#x5F0F;</h3>
+<h4 id="&#x548C;&#x30FB;&#x5DEE;&#x306E;&#x516C;&#x5F0F;">&#x548C;&#x30FB;&#x5DEE;&#x306E;&#x516C;&#x5F0F;</h4>
+<p><script type="math/tex; ">\int f(x)\pm g(x)dx = \int f(x)dx\pm \int g(x)dx</script></p>
+<p>&#x4F8B;:
+<script type="math/tex; "> \int 3x^2+2x-1 = \int 3x^2 + \int 2x - \int x \\
+= x^3+x^2-x+C</script></p>
+<h4 id="&#x7F6E;&#x63DB;&#x7A4D;&#x5206;&#x306E;&#x516C;&#x5F0F;">&#x7F6E;&#x63DB;&#x7A4D;&#x5206;&#x306E;&#x516C;&#x5F0F;</h4>
+<p><script type="math/tex; ">x=g(t)</script>, <script type="math/tex; ">a=g(\alpha)</script>, <script type="math/tex; ">b=g(\beta)</script> &#x306E;&#x3068;&#x304D;&#x3001;
+<script type="math/tex; ">\int_a^b f(x)dx = \int_{\alpha}^{\beta}f(g(t))g'(t)dt</script></p>
+<p>&#x4F8B;:
+<script type="math/tex; ">x = \sqrt{t+1}</script> &#x3068;&#x304A;&#x304F;&#x3068;&#x3001;<script type="math/tex; ">x=t^2-1</script>&#x3068;&#x306A;&#x308B;&#x3053;&#x3068;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x3001;
+<script type="math/tex; ">\int_0^1\frac{x}{\sqrt{x+1}}dx = \int_1^{\sqrt{2}} \frac{t^2-1}{t}\cdot 2t dt \\
+= \int_1^{\sqrt{2}} 2(t^2-1)dt</script></p>
+<h4 id="&#x90E8;&#x5206;&#x7A4D;&#x5206;&#x306E;&#x516C;&#x5F0F;">&#x90E8;&#x5206;&#x7A4D;&#x5206;&#x306E;&#x516C;&#x5F0F;</h4>
+<p><script type="math/tex; ">\int f(x)g'(x)dx = f(x)g(x)-\int f'(x)g(x)dx</script></p>
+<p>---&#x305D;&#x3082;&#x305D;&#x3082;&#x4F7F;&#x308F;&#x306A;&#x3044;&#x6C17;&#x304C;&#x3059;&#x308B;&#x304B;&#x3089;&#x5F8C;&#x3067;&#x691C;&#x8A0E;&#x3059;&#x308B;---</p>
+<h3 id="035-&#x591A;&#x5909;&#x6570;&#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;">0.3.5 &#x591A;&#x5909;&#x6570;&#x95A2;&#x6570;&#x306E;&#x7A4D;&#x5206;</h3>
+<p>&#x95A2;&#x6570;&#x3092;&#x7A4D;&#x5206;&#x3057;&#x3066;&#x5F97;&#x305F;&#x95A2;&#x6570;&#x3092;&#x3055;&#x3089;&#x306B;&#x7A4D;&#x5206;&#x3059;&#x308B;&#x5834;&#x5408;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x306E;&#x3068;&#x304D;&#x306F;
+<script type="math/tex; ">\int \int f(x, y) dx dy</script>
+&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 
                                 
                                 </section>
@@ -1477,8 +1524,12 @@
 
             
                 
+                <a href="differential.html" class="navigation navigation-prev " aria-label="Previous page: 微分">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="matrix.html" class="navigation navigation-next " aria-label="Next page: 矩阵">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1540,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"积分","level":"2.3.4","depth":2,"next":{"title":"矩阵","level":"2.3.5","depth":2,"path":"matrix.md","ref":"matrix.md","articles":[]},"previous":{"title":"微分","level":"2.3.3","depth":2,"path":"differential.md","ref":"differential.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"integral.md","mtime":"2017-08-03T08:37:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

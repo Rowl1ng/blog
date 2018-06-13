@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>正则化网络 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="rnn.html" />
     
+    
+    <link rel="prev" href="nnstructure.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -628,7 +630,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.3" data-path="regulizer.html">
+        <li class="chapter active" data-level="2.5.3" data-path="regulizer.html">
             
                 <a href="regulizer.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >正则化网络</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;">&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;</h1>
+<p>2.&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x611F;&#x77E5;&#x5668;&#x7F51;&#x7EDC;<script type="math/tex; mode=display">
+f(\mathbf x)=\sum _{i=0}^n w_i \varphi _i(\mathbf w_i ^\mathrm{T}\mathbf x)</script>&#xFF0C;&#x5176;&#x4E2D;<script type="math/tex; ">\varphi_i(\cdot)</script>&#x4E3A;Logistic &#x578B;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;
+&#x548C;&#x4E00;&#x4E2A;&#x5E7F;&#x4E49;&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;<script type="math/tex; ">f_\lambda(x)=\sum _{i=1}^n w_iG(\mathbf x,\mathbf  x_i)</script>&#xFF0C;&#x5176;&#x4E2D;<script type="math/tex; ">G(\mathbf x,\mathbf x_i)</script>&#x4E3A;&#x4EE5;&#x6570;&#x636E;&#x70B9;<script type="math/tex; ">\mathbf x_i</script>&#x4E3A;&#x4E2D;&#x5FC3;&#x7684;&#x5F84;&#x5411;&#x57FA;&#x51FD;&#x6570;&#x3002;&#x8BF7;: 
+(1) &#x753B;&#x51FA;&#x8BE5;&#x611F;&#x77E5;&#x5668;&#x7F51;&#x7EDC;&#x548C;&#x5E7F;&#x4E49;&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;&#x7684;&#x7ED3;&#x6784;&#x56FE;; 
+(2) &#x5206;&#x6790;&#x4E24;&#x4E2A;&#x6A21;&#x578B;&#x5728;&#x4E0D;&#x540C;&#x65B9;&#x9762;&#x7684;&#x5F02;&#x540C;;
+(3) &#x5C1D;&#x8BD5;&#x4F30;&#x8BA1;&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;&#x7684;VC&#x7EF4;&#x3002;</p>
+<h3 id="&#xFF08;1&#xFF09;">&#xFF08;1&#xFF09;</h3>
+<p>&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#xFF1A;$\mathbf x_i \in \mathbb R^m, i=1,2,\dots ,N$
+&#x9884;&#x671F;&#x8F93;&#x51FA;&#xFF1A;$d_i \in \mathbb R ,i=1,2,\dots ,N$</p>
+<h4 id="&#x611F;&#x77E5;&#x5668;&#x7F51;&#x7EDC;">&#x611F;&#x77E5;&#x5668;&#x7F51;&#x7EDC;:</h4>
+<p><img src="http://static.zybuluo.com/sixijinling/gpjtud0u0otjxdqk6eof7ymx/image_1akks50c01qel9hmrs8rb1192sp.png" alt="image_1akks50c01qel9hmrs8rb1192sp.png-205kB"></p>
+<h4 id="&#x5E7F;&#x4E49;&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;">&#x5E7F;&#x4E49;&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;:</h4>
+<p><img src="http://static.zybuluo.com/sixijinling/oe8laxsr1vumyoujqkz6895o/image_1akkrfrb7ksfa9b12bn19jk1agm1j.png" alt="image_1akkrfrb7ksfa9b12bn19jk1agm1j.png-212kB"></p>
+<ul>
+<li>&#x8F93;&#x5165;&#x5C42;&#xFF1A;&#x5171;$m$&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;$m$&#x4E3A;&#x8F93;&#x5165;&#x5411;&#x91CF;$\mathbf x$&#x7684;&#x7EF4;&#x6570;&#x3002;</li>
+<li>&#x9690;&#x85CF;&#x5C42;&#xFF1A;&#x5171;$N$&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x70B9;$\mathbf x_i$&#xFF0C;$i=1,2,\dots ,N$&#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x5C42;&#x7ED3;&#x70B9;&#xFF0C;$N$&#x4E3A;&#x6837;&#x672C;&#x6570;&#x91CF;&#x3002;&#x7B2C;$i$&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x8F93;&#x51FA;&#x4E3A;$G(\mathbf x,\mathbf x_i)$&#x3002;</li>
+<li>&#x8F93;&#x51FA;&#x5C42;&#xFF1A;&#x548C;&#x9690;&#x85CF;&#x5C42;&#x5168;&#x8FDE;&#x63A5;&#x7684;&#x5355;&#x4E2A;&#x7EBF;&#x6027;&#x5355;&#x5143;&#x3002;</li>
+</ul>
+<h3 id="&#xFF08;2&#xFF09;">&#xFF08;2&#xFF09;</h3>
+<ul>
+<li>&#x62DF;&#x5408;&#x80FD;&#x529B;&#xFF1A;&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;&#x53EA;&#x8981;&#x6709;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x9690;&#x85CF;&#x5355;&#x5143;&#xFF0C;&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x610F;&#x7CBE;&#x5EA6;&#x903C;&#x8FD1;&#x5B9A;&#x4E49;&#x5728;$\mathbb R^m$&#x7684;compact subset&#x4E0A;&#x7684;&#x4EFB;&#x610F;&#x591A;&#x5143;&#x8FDE;&#x7EED;&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<h3 id="&#xFF08;3&#xFF09;">&#xFF08;3&#xFF09;</h3>
+<p>&#x6B63;&#x5219;&#x5316;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x4E2A;&#x6570;&#x4E3A;$(m+1)N$&#xFF0C;&#x56E0;&#x6B64;&#x4F30;&#x8BA1;&#x5176;VC&#x7EF4;&#x4E3A;$(m+1)N$&#x3002;</p>
 
                                 
                                 </section>
@@ -1477,8 +1502,12 @@
 
             
                 
+                <a href="nnstructure.html" class="navigation navigation-prev " aria-label="Previous page: 神经网络结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="rnn.html" class="navigation navigation-next " aria-label="Next page: 循环神经网络">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1518,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"正则化网络","level":"2.5.3","depth":2,"next":{"title":"循环神经网络","level":"2.5.4","depth":2,"path":"rnn.md","ref":"rnn.md","articles":[]},"previous":{"title":"神经网络结构","level":"2.5.2","depth":2,"path":"nnstructure.md","ref":"nnstructure.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"regulizer.md","mtime":"2018-05-22T05:32:29.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

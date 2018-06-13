@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python笔记本 · GitBook</title>
+        <title>预处理 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="basics.html" />
+    <link rel="next" href="bayesian.html" />
     
+    
+    <link rel="prev" href="generality.html" />
     
 
     </head>
@@ -89,7 +91,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -505,7 +507,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.2" data-path="preprocess.html">
+        <li class="chapter active" data-level="2.4.2" data-path="preprocess.html">
             
                 <a href="preprocess.html">
             
@@ -1433,7 +1435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python笔记本</a>
+        <a href="." >预处理</a>
     </h1>
 </div>
 
@@ -1448,8 +1450,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="my">My</h1>
-<p>&#x4EBA;&#x751F;&#x4E4B;&#x4E66;</p>
+                                <h1 id="&#x9884;&#x5904;&#x7406;">&#x9884;&#x5904;&#x7406;</h1>
+<p>NNML&#x7B2C;&#x516D;&#x5468;&#x5370;&#x8C61;&#x6700;&#x6DF1;&#x7684;&#x662F;&#x4ECE;&#x8BEF;&#x5DEE;&#x66F2;&#x9762;&#x7684;&#x89D2;&#x5EA6;&#x7406;&#x89E3;&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;&#xFF0C;&#x751A;&#x81F3;&#x662F;PCA&#x3002;&#x5982;&#x679C;&#x8BEF;&#x5DEE;&#x66F2;&#x9762;&#x662F;&#x692D;&#x5706;&#x7684;&#x8BDD;&#xFF0C;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x65B9;&#x5411;&#x5F80;&#x5F80;&#x4E0D;&#x6307;&#x5411;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x5728;&#x504F;&#x79BB;&#x5F88;&#x5927;&#x7684;&#x65B9;&#x5411;&#x8D70;&#x4E86;&#x5F88;&#x5927;&#x4E00;&#x6B65;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x8F83;&#x5927;&#x7684;&#x5B66;&#x4E60;&#x7387;&#x8FD8;&#x4F1A;&#x5BFC;&#x81F4;&#x9707;&#x8361;&#x3002;
+&#x5728;&#x4F7F;&#x7528;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x65F6;&#xFF0C;&#x5BF9;&#x8F93;&#x5165;&#x8FDB;&#x884C;transfer&#x548C;scale&#xFF1A;</p>
+<ul>
+<li>transfer&#xFF1A;&#x8BAD;&#x7EC3;&#x96C6;&#x7684;&#x8F93;&#x5165;&#x5411;&#x91CF;&#x5747;&#x503C;&#x4E3A;0</li>
+<li><img src="http://static.zybuluo.com/sixijinling/rj5lx1v3zojfa5ezdueye0no/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-06-20%2016.35.18.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2017-06-20 16.35.18.png-350.1kB"></li>
+<li>scale&#xFF1A;
+<img src="http://static.zybuluo.com/sixijinling/rbn7pnyl3ib9en3xv86i0tqj/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-06-20%2021.04.47.png" alt="&#x5C4F;&#x5E55;&#x5FEB;&#x7167; 2017-06-20 21.04.47.png-292.5kB"></li>
+<li>Decorrelate the input(PCA)&#xFF1A;&#x53BB;&#x6389;&#x7279;&#x5F81;&#x503C;&#x8F83;&#x5C0F;&#x7684;&#x4E3B;&#x6210;&#x5206;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x9664;&#x4EE5;&#x5BF9;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x503C;&#x7684;&#x5E73;&#x65B9;&#x6839;&#xFF0C;&#x5BF9;&#x4E8E;&#x7EBF;&#x6027;&#x5355;&#x5143;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x628A;&#x692D;&#x5706;&#x7684;&#x8BEF;&#x5DEE;&#x66F2;&#x9762;&#x8F6C;&#x53D8;&#x6210;&#x4E86;&#x5706;&#x5F62;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x5706;&#x5F62;&#x7684;&#x8BEF;&#x5DEE;&#x66F2;&#x9762;&#xFF0C;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x65B9;&#x5411;&#x6307;&#x5411;&#x6700;&#x5C0F;&#x503C;&#x3002;</li>
+</ul>
 
                                 
                                 </section>
@@ -1477,8 +1487,12 @@
 
             
                 
+                <a href="generality.html" class="navigation navigation-prev " aria-label="Previous page: 方法概论">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基础">
+                
+                <a href="bayesian.html" class="navigation navigation-next " aria-label="Next page: 贝叶斯">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1489,7 +1503,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python笔记本","level":"1.1","depth":1,"next":{"title":"基础","level":"1.1.1","depth":2,"path":"basics.md","ref":"basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-06-13T12:38:45.648Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"预处理","level":"2.4.2","depth":2,"next":{"title":"贝叶斯","level":"2.4.3","depth":2,"path":"bayesian.md","ref":"bayesian.md","articles":[]},"previous":{"title":"方法概论","level":"2.4.1","depth":2,"path":"generality.md","ref":"generality.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"preprocess.md","mtime":"2017-11-15T10:13:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
