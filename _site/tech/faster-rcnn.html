@@ -2,21 +2,21 @@
 <!DOCTYPE>
 <html lang="zh-cn" data-scribe-reduced-action-queue="true">
     <head>
-        <meta content='Faster R-CNN 检测微小物体 - Rowl1ng|黑客与画家' name='title' />
-        <meta content='Faster R-CNN 检测微小物体 - Rowl1ng|黑客与画家' name='og:title' />
-        <title>Faster R-CNN 检测微小物体</title>
-        <!--<title>Faster R-CNN 检测微小物体 - Rowl1ng|黑客与画家</title>-->
+        <meta content='Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家' name='title' />
+        <meta content='Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家' name='og:title' />
+        <title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</title>
+        <!--<title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家</title>-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Faster R-CNN 检测微小物体 - Rowl1ng|黑客与画家</title>
+<title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家</title>
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Faster R-CNN 检测微小物体 - Rowl1ng|黑客与画家">
-<meta name="twitter:keywords"  content="Choose your language :简体中文English本文基于Faster R-CNN的pytorch实现，原始论文，需要安装：pip install easydict数据输入：使用自己的数据设计yourdata.py参考..." property='og:description' />
+<meta name="twitter:title" content="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家">
+<meta name="twitter:keywords"  content="Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Detectron（使用caffe2）是fac..." property='og:description' />
 <meta property="og:type" content="article">
-<meta property="og:title" content="Faster R-CNN 检测微小物体">
-<!--<meta property="og:title" content="Faster R-CNN 检测微小物体 - Rowl1ng|黑客与画家">-->
+<meta property="og:title" content="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">
+<!--<meta property="og:title" content="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家">-->
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="og:keywords"  content="Choose your language :简体中文English本文基于Faster R-CNN的pytorch实现，原始论文，需要安装：pip install easydict数据输入：使用自己的数据设计yourdata.py参考..." property='og:description' />
+<meta name="og:keywords"  content="Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Detectron（使用caffe2）是fac..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
 <link rel="icon" type="image/png" href="http://localhost:4000/style/favicons/favicon.ico" />
 <link href="http://localhost:4000/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
@@ -25,14 +25,14 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="/manifest.json">
 <link rel="shortcut icon" href="http://localhost:4000/style/favicons/favicon.ico" type="image/x-icon">
-<meta name="keywords"  content="Choose your language :简体中文English本文基于Faster R-CNN的pytorch实现，原始论文，需要安装：pip install easydict数据输入：使用自己的数据设计yourdata.py参考..." property='og:description' />
+<meta name="keywords"  content="Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Detectron（使用caffe2）是fac..." property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
 <link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
 <link href="http://localhost:4000/style/style-rowl1ng.css" rel="stylesheet">
 
     <meta content='http://localhost:4000/tech/faster-rcnn.html' property='og:url' />
-    <meta content="Faster R-CNN用来识别大件物体效果好，但是小物体效果较差，因此想了一些改进的方法。" property='og:description' />
+    <meta content="基于pytorch版Detectron" property='og:description' />
     <meta content="article" property="og:type" />
 
 
@@ -58,6 +58,8 @@
             <a href="http://localhost:4000/book">BOOK</a>
             
             <a href="http://localhost:4000/write">WRITE</a>
+            
+            <a href="http://localhost:4000/mybook">GITBOOK</a>
             
             <a href="http://localhost:4000/archives">ARCHIVE</a>
             
@@ -86,6 +88,8 @@
                 
                 <li><a href="http://localhost:4000/write">WRITE</a></li>
                 
+                <li><a href="http://localhost:4000/mybook">GITBOOK</a></li>
+                
                 <li><a href="http://localhost:4000/archives">ARCHIVE</a></li>
                 
                 <li><a href="http://localhost:4000/tags">TAGS</a></li>
@@ -104,9 +108,9 @@
             <div class="post-header-thumb">
                 <div class="post-header-thumb-container">
                     <h1 class="post-title" itemprop="name headline">
-                        Faster R-CNN 检测微小物体</h1>
+                        Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</h1>
                     <div class="post-data">
-                        <time datetime="2018-03-22 18:26:00" itemprop="datePublished">发布时间：2018-03-22 18:26:00</time>
+                        <time datetime="2018-06-04 20:15:00" itemprop="datePublished">发布时间：2018-06-04 20:15:00</time>
                         <a href="/tags#tech" title="访问 tech" data-hover="博客分类: tech">博客分类: tech</a>
                         <!--busuanzi-->
                         <script async src="/js/busuanzi.pure.mini.js">
@@ -136,9 +140,9 @@
         <article class="main-content post-page" itemscope itemtype="http://schema.org/Article">
             <div class="post-header">
                 <h1 class="post-title" itemprop="name headline">
-                    Faster R-CNN 检测微小物体</h1>
+                    Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</h1>
                 <div class="post-data">
-                    <time datetime="2018-03-22 18:26:00" itemprop="datePublished">2018-03-22 18:26:00</time>
+                    <time datetime="2018-06-04 20:15:00" itemprop="datePublished">2018-06-04 20:15:00</time>
                 </div>
             </div>
             <div id="post-content" class="post-content" itemprop="articleBody">
@@ -158,14 +162,51 @@
                 </p>
                 <p>Choose your language :<select onchange="self.location.href=options[selectedIndex].value"><option value="//tech/faster-rcnn.html" selected="selected">简体中文</option><option value="">English</option></select></p>
 
-<p>本文基于<a href="https://github.com/jwyang/faster-rcnn.pytorch">Faster R-CNN的pytorch实现</a>，<a href="https://arxiv.org/pdf/1506.01497.pdf">原始论文</a>，需要安装：</p>
+<p>本文mask rcnn的部分基于<a href="https://github.com/roytseng-tw/Detectron.pytorch">Detectron.pytorch</a>（参考了<a href="https://github.com/jwyang/faster-rcnn.pytorch">Faster R-CNN的pytorch实现</a>），<a href="https://github.com/facebookresearch/Detectron">Detectron</a>（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN神马的），可以学习一下。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install easydict
+<p>需要安装：</p>
+
+<ul>
+  <li>pytorch &gt; 0.3.0</li>
+  <li>pycocotools</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install easydict cython
 </code></pre></div></div>
 
-<h2 id="数据输入使用自己的数据设计yourdatapy">数据输入：使用自己的数据设计yourdata.py</h2>
+<h1 id="代码结构">代码结构</h1>
 
-<p>参考dataset目录下的其他数据集的类进行修改：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- configs
+    - 各种网络的配置文件.yml
+- lib
+    - core：
+        - config.py: 定义了通用型rcnn可能用到的所有超参
+        - test_engine.py: 整个测试流程的控制器
+        - test.py
+    - dataset: 原始数据IO、预处理
+        - your_data.py：在这里定义你自己的数据、标注读取方式
+        - roidb.py
+    - roi_data：数据工厂，根据config的网络配置生成需要的各种roi、anchor等
+        - loader.py
+        - rpn.py: 生成RPN需要的blob
+        - data_utils.py: 生成anchor
+    - modeling: 各种网络插件，rpn、mask、fpn等
+        - model_builder.py：构造generalized rcnn
+        - ResNet.py: Resnet backbone相关
+        - FPN.py：RPN with an FPN backbone
+        - rpn_heads.py：RPN and Faster R-CNN outputs and losses
+        - mask_rcnn_heads：Mask R-CNN outputs and losses
+    - utils：小工具
+- tools
+    - train_net.py: 训练
+    - test_net.py: 测试
+</code></pre></div></div>
+
+<h1 id="数据输入">数据输入</h1>
+
+<h2 id="图像预处理">图像预处理</h2>
+
+<p>原项目的<code class="highlighter-rouge">lib/datasets</code>中提供了imagenet、COCO等通用数据集的调用类，如果想使用自己的数据的话就需要仿照着设计yourdata.py。几个要注意的点：</p>
 
 <ul>
   <li><code class="highlighter-rouge">_classes</code>：所有框的类别，比较特殊的就是<code class="highlighter-rouge">__background__</code></li>
@@ -182,52 +223,266 @@ self._classes = ('__background__',  # always index 0
 <ul>
   <li>关键要修改的函数就是<code class="highlighter-rouge">_load_XXX_annotation(self, index)</code>（XXX是你的数据集的名字），要实现的功能就是给定image的index，返回所有的bounding box标注。
     <ul>
-      <li>返回的东西长这样：
+      <li>返回的roidb长这样：
         <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  return {'width': width,
       'height': height,
       'boxes': np.array(boxes),
       'gt_classes': np.array(gt_classes),
       'gt_overlaps': overlaps,
-      'flipped': False,
+      'flipped': False, # 用于data augmentation
       'seg_areas': np.array(seg_areas)}
+ # 得到roidb之后还会计算：
+ 'max_classes' # 和哪个class重合最大？
+ 'max_overlaps' # 和该class重合率[0,1]
+ # 后面的采样环节会用到
 </code></pre></div>        </div>
       </li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">flipped</code>：默认是horizontal flip，我自己加了vertical flip。
-    <ul>
-      <li>源代码将image_id * 2作为翻转后的图像的index，因此还是要把数据集的index单独存数字id，通过id索引path</li>
-      <li>同时修改<code class="highlighter-rouge">dataset/minibatch.py</code>来支持上下翻转</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">gt_overlaps</code>:Crowd instances are
-  handled by marking their overlaps (with all categories) to -1. This overlap value means that crowd “instances” are excluded from training.</li>
-  <li><code class="highlighter-rouge">seg_areas</code>:</li>
+  <li><code class="highlighter-rouge">gt_overlaps</code>：有些数据集（比如COCO）中一个bbox囊括了好几个对象，称之为<code class="highlighter-rouge">crowd box</code>，训练时需要把他们移除，移除的手段就是把它们的overlap (with all categories)设为负值（比如-1）。</li>
+  <li><code class="highlighter-rouge">seg_areas</code>: mask rcnn根据segment的区域大小排序</li>
 </ul>
 
-<h3 id="图像预处理">图像预处理</h3>
+<p>说一下<a href="https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/datasets/roidb.py">dataset/roidb.py</a>这个文件，里面最重要的就是<code class="highlighter-rouge">combined_roidb_for_training</code>，它是训练数据的“组装车间”，当需要同时训练多个数据集时尤为方便。通过调用每个数据集的get_roidb()方法获得各个数据集的roidb，并对相应数据集进行augmentation，这里主要是横向翻转（flipped），最后返回的是augmentation后打包在一起的roidb（前半部分是原始图像+标注，后半部分是原始图像+翻转后的标注）。</p>
 
 <ul>
-  <li>减去的均值是固定的$3 \times 1$向量；</li>
-  <li>图像rescale到显存支持的一定大小。 <code class="highlighter-rouge">targetSize</code> 和 <code class="highlighter-rouge">maxSize</code> 默认是 600 和 1000 ，根据显存大小和图片大小来设计就好（比如最长边限制在2100或者短边是1700的时候一块gpu只能跑一个sample）。
+  <li>减去的均值是固定的<script type="math/tex">3 \times 1</script>向量（对train和test都是一样）；</li>
+  <li>Agmentation: 默认是Horizontal Flip（可以仿照加Vertically Flip）</li>
+  <li>控制训练时每块GPU上每个minibatch的ratio都相同:TRAIN.<code class="highlighter-rouge">ASPECT_GROUPING</code> = True</li>
+  <li>计算bbox regrssion <script type="math/tex">\delta</script>。需要的关键文件：<a href="https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/utils/boxes.py">utils/boxes.py</a>
     <ul>
-      <li>代码里用<code class="highlighter-rouge">need_crop</code>来标识是否需要rescale</li>
+      <li>bbox_transform_inv：通过proposal box和groundtruth box 计算bbox regrssion <script type="math/tex">\delta</script></li>
+      <li>MODEL.<code class="highlighter-rouge">BBOX_REG_WEIGHTS</code> :加权用，默认是(10., 10., 5., 5.)</li>
     </ul>
   </li>
 </ul>
+
+<p><a href="https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/roi_data/loader.py">roi_data/loader.py</a>中的RoiDataLoader对上面处理完的roidb“加工”成 data，主要通过get_minibatch获得某张图的一个minibatch。可以看minibatch.py的实现。首先会初始化所需blob的name list，比如FPN对应的list如下：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['roidb',
+'data', # （1，3，2464，2016）
+'im_info',
+
+'rpn_labels_int32_wide_fpn2', # （1，3，752，752）
+'rpn_labels_int32_wide_fpn3', # （1，3，376，376）
+'rpn_labels_int32_wide_fpn4',  # （1，3，188，188）
+'rpn_labels_int32_wide_fpn5', # （1，3，94，94）
+'rpn_labels_int32_wide_fpn6', # （1，3，47，47）
+
+'rpn_bbox_targets_wide_fpn2', # （1，12，752，752）
+'rpn_bbox_targets_wide_fpn3',
+'rpn_bbox_targets_wide_fpn6',
+'rpn_bbox_targets_wide_fpn4',
+'rpn_bbox_targets_wide_fpn5',
+
+'rpn_bbox_outside_weights_wide_fpn2', # （1，12，752，752）
+'rpn_bbox_outside_weights_wide_fpn3',
+'rpn_bbox_outside_weights_wide_fpn4',
+'rpn_bbox_outside_weights_wide_fpn5',
+'rpn_bbox_outside_weights_wide_fpn6',
+
+'rpn_bbox_inside_weights_wide_fpn6',
+'rpn_bbox_inside_weights_wide_fpn5',
+'rpn_bbox_inside_weights_wide_fpn4',
+'rpn_bbox_inside_weights_wide_fpn3',
+'rpn_bbox_inside_weights_wide_fpn2'] # （1，12，752，752）
+</code></pre></div></div>
+
+<p>在获得list后，使用<a href="https://github.com/facebookresearch/Detectron/blob/e5bb3a8ff0b9caf59c76037726f49465d6b9678b/detectron/roi_data/rpn.py">roi_data/rpn.py</a>的add_rpn_blobs来填上对应的blob。<code class="highlighter-rouge">_get_rpn_blobs</code>的流程：</p>
+
+<ul>
+  <li>生成anchor</li>
+  <li>TRAIN.<code class="highlighter-rouge">RPN_STRADDLE_THRESH</code>：筛除超出image范围的RPN anchor，默认是0.</li>
+  <li>计算anchor label： positive：label=1； negative：label=0；don’t care: label=-1
+    <ul>
+      <li>计算anchor和gt box的overlap
+        <ul>
+          <li>Fg label（positive）：和每个gt重合率最大的那个anchor；超过TRAIN.<code class="highlighter-rouge">RPN_POSITIVE_OVERLAP</code>的anchor</li>
+        </ul>
+      </li>
+      <li>控制数量，采样positive 和 nagative label，超过的将label设为-1
+        <ul>
+          <li>fg/正样本：
+            <ul>
+              <li>总数 = <code class="highlighter-rouge">TRAIN.FG_FRACTION</code> * <code class="highlighter-rouge">TRAIN.BATCH_SIZE_PER_IM</code></li>
+              <li>条件：&gt; <code class="highlighter-rouge">TRAIN.FG_THRESH</code>，随机选择达到条件的fg，数量&lt;=总数：fg_inds = np.where(<code class="highlighter-rouge">max_overlaps</code> &gt;= cfg.<code class="highlighter-rouge">TRAIN.FG_THRESH</code>)[0]</li>
+            </ul>
+          </li>
+          <li>bg/负样本：
+            <ul>
+              <li>总数 = <code class="highlighter-rouge">TRAIN.BATCH_SIZE_PER_IM</code> - 正样本总数</li>
+              <li>条件:[<code class="highlighter-rouge">BG_THRESH_LO</code>, <code class="highlighter-rouge">BG_THRESH_HI</code>)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>bbox regression loss:loss(x) = weight_outside * L(weight_inside * x)
+    <ul>
+      <li>bbox_inside_weights: bbox regression只用positive example来训，所以只需把positive的weight设为1.0，其他设为0即可（只有那些分类正确了的box才能参与，分类错误的直接不考虑了）</li>
+      <li>bbox_outside_weights: bbox regression loss是对minibatch中的图片数取平均，</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa32302afc0b.png" alt="此处输入图片的描述" /></p>
+
+<p>这里是针对各个类别的。也就是说，在后面的classification layer中，这个bbox_inside_weights起一个mask的作用，这样就只计算fg的，不管bg的，但是算分类loss的时候还是都考虑。</p>
+
+<blockquote>
+  <p>Bbox regression loss has the form:
+    # Inside weights allow us to set zero loss on an element-wise basis
+    # Bbox regression is only trained on positive examples so we set their
+    # weights to 1.0 (or otherwise if config is different) and 0 otherwise</p>
+</blockquote>
+
+<blockquote>
+  <p>代码实现上：使用了mask array将for循环操作转化成了矩阵乘法。mask array标注了每个anchor的正确物体类别。</p>
+</blockquote>
+
+<h2 id="正负采样">正负采样</h2>
+
+<p>关键文件：<a href="https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/roi_data/minibatch.py">roi_data/minibatch.py</a></p>
+
+<ul>
+  <li>考虑到一块gpu的显存有限，我们往往需要将图像rescale的一定大小。 <code class="highlighter-rouge">targetSize</code> 和 <code class="highlighter-rouge">maxSize</code> 默认是 600 和 1000 ，根据显存大小和图片大小来设计就好（比如最长边限制在2100或者短边是1700的时候一块gpu只能跑一个sample）。
+    <ul>
+      <li><code class="highlighter-rouge">TRAIN.SCALES</code>：一个list，默认是[600,]，如果有多个值，在采样的时候是随机分配给image的：<code class="highlighter-rouge">np.random.randint(0, high=len(cfg.TRAIN.SCALES), size=num_images)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>关键文件： <a href="https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/roi_data/fast_rcnn.py">roi_data/fast_rcnn.py</a></p>
+
+<ul>
+  <li>_sample_rois：随机采样fg/bg examples，控制数量的方法和之前一样</li>
+</ul>
+
+<p>Rescale的基本逻辑如下图：</p>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa46e9e0bbd7.png" alt="此处输入图片的描述" /></p>
 
-<p>#网络结构</p>
+<p>这一步在<strong>决定使用的anchor size</strong>时一定要考虑进去，github上有人写过基于自己数据的分析脚本，基本思路是还原rescale的过程，分析rescale factor，估计一下roi的大小，从而决定anchor size。</p>
+
+<p>计算所有ROI和所有ground truth的max overlap，从而判断是fg还是bg。这里用到了两个参数：</p>
+
+<ul>
+  <li><code class="highlighter-rouge">TRAIN.FG_THRESH</code>：用来判断fg ROI（default：0.5）</li>
+  <li><code class="highlighter-rouge">TRAIN.BG_THRESH_LO</code> ~ <code class="highlighter-rouge">TRAIN.BG_THRESH_HI</code>：这个区间的是bg ROI。(default 0.1, 0.5 respectively)</li>
+</ul>
+
+<p>这样的设计可以看作是 “hard negative mining” ，用来给classifier投喂更难的bg样本。</p>
+
+<p>输入:</p>
+
+<ul>
+  <li>ROIs produced by the proposal layer</li>
+  <li>ground truth information</li>
+</ul>
+
+<p>输出:</p>
+
+<ul>
+  <li>Selected foreground and background ROIs that meet overlap criteria.</li>
+  <li>Class specific target regression coefficients for the ROIs</li>
+</ul>
+
+<p>Parameters:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">TRAIN.BATCH_SIZE</code>: (default 128) 所选fg和bg box的最大数量.</li>
+  <li><code class="highlighter-rouge">TRAIN.FG_FRACTION</code>: (default 0.25). fg box 不能超过 BATCH_SIZE*FG_FRACTION</li>
+</ul>
+
+<h1 id="backbone">Backbone</h1>
+
+<p>在初始化generalized rcnn时，首先要选择backbone（也许可以意译为“骨干网”）。通过cfg.MODEL.<code class="highlighter-rouge">CONV_BODY</code>即可选择backbone：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>self.Conv_Body = get_func(cfg.MODEL.CONV_BODY)() # 如果是FPN，会在这一步直接基于backbone完成FPN的构造
+</code></pre></div></div>
+
+<h2 id="resnet">Resnet</h2>
+
+<p>Resnet.py打包了各种resnet的backbone，比如ResNet50_conv5_body：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def ResNet50_conv5_body():
+    return ResNet_convX_body((3, 4, 6, 3)) # block_counts: 分别对应res2、res3、res4、res5
+</code></pre></div></div>
+<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa59c8da4c4b.png" alt="此处输入图片的描述" /></p>
+
+<p>Resnet中的Bottleneck：</p>
+
+<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa59d170c750.png" alt="此处输入图片的描述" /></p>
+
+<h2 id="fpn">FPN</h2>
+
+<p><a href="https://arxiv.org/pdf/1612.03144.pdf">原始论文</a></p>
+
+<p>可以选择是否用于RoI transform，是否用于RPN：</p>
+
+<ol>
+  <li><strong>feature extraction</strong>：fpn.py中的fpn类将backbone“加工”为FPN。比如当config里的CONV_BODY: FPN.fpn_ResNet50_conv5_body，实际要做的就是先初始化Resnet.ResNet50_conv5_body，再交给fpn得到fpn_ResNet50_conv5_body。</li>
+  <li><strong>RPN with FPN backbone</strong>: 如果rpn使用FPN，那么FPN的每个level都会做RPN，生成相应大小的anchor，返回相应的cls_score和bbox_pred。rpn_heads,FPN.fpn_rpn_outputs</li>
+</ol>
+
+<p><img src="http://static.zybuluo.com/sixijinling/cv2l758k7dyj022k0iinwsm1/image_1c8u6egich3e1ha41d3o1m22s3g16.png" alt="image_1c8u6egich3e1ha41d3o1m22s3g16.png-228.8kB" /></p>
+
+<p><img src="http://static.zybuluo.com/sixijinling/elabj076z56xa1xsfbwqyy50/image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png" alt="image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png-30.8kB" /></p>
+
+<p>还提供了一个选择：OnlyP6</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># FPN is enabled if True
+__C.FPN.FPN_ON = False
+
+# Channel dimension of the FPN feature levels
+__C.FPN.DIM = 256
+
+# Initialize the lateral connections to output zero if True
+__C.FPN.ZERO_INIT_LATERAL = False
+
+# Stride of the coarsest FPN level
+# This is needed so the input can be padded properly
+__C.FPN.COARSEST_STRIDE = 32
+
+#
+# FPN may be used for just RPN, just object detection, or both
+#
+
+# Use FPN for RoI transform for object detection if True
+__C.FPN.MULTILEVEL_ROIS = False
+# Hyperparameters for the RoI-to-FPN level mapping heuristic
+__C.FPN.ROI_CANONICAL_SCALE = 224  # s0
+__C.FPN.ROI_CANONICAL_LEVEL = 4  # k0: where s0 maps to
+# Coarsest level of the FPN pyramid
+__C.FPN.ROI_MAX_LEVEL = 5
+# Finest level of the FPN pyramid
+__C.FPN.ROI_MIN_LEVEL = 2
+
+# Use FPN for RPN if True
+__C.FPN.MULTILEVEL_RPN = False
+# Coarsest level of the FPN pyramid
+__C.FPN.RPN_MAX_LEVEL = 6
+# Finest level of the FPN pyramid
+__C.FPN.RPN_MIN_LEVEL = 2
+# FPN RPN anchor aspect ratios
+__C.FPN.RPN_ASPECT_RATIOS = (0.5, 1, 2)
+# RPN anchors start at this size on RPN_MIN_LEVEL
+# The anchor size doubled each level after that
+# With a default of 32 and levels 2 to 6, we get anchor sizes of 32 to 512
+__C.FPN.RPN_ANCHOR_START_SIZE = 32
+# Use extra FPN levels, as done in the RetinaNet paper
+__C.FPN.EXTRA_CONV_LEVELS = False
+
+</code></pre></div></div>
+
+<p>其他<a href="https://github.com/jwyang/fpn.pytorch">FPN的Pytorch实现</a>。</p>
+
+<h1 id="generalized-rcnn结构">Generalized RCNN结构</h1>
 
 <p>R-CNN包括三种主要网络：</p>
 
 <ol>
-  <li>Head：输入(w,h,3)生成feature map，降采样了16倍；
-    <ul>
-      <li>w和h是预处理以后的图片大小哦</li>
-    </ul>
-  </li>
+  <li>Head：输入(w,h,3)生成feature map，降采样了16倍； w和h是预处理以后的图片大小哦</li>
   <li>Region Proposal Network (RPN)：基于feature map，预测ROI；
     <ul>
       <li><code class="highlighter-rouge">Crop Pooling</code>：从feature map中crop相应位置</li>
@@ -235,6 +490,29 @@ self._classes = ('__background__',  # always index 0
   </li>
   <li>Classification Network：对crop出的区域进行分类。</li>
 </ol>
+
+<p>在pytorch版Detectron中，<a href="https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/modeling/model_builder.py">medeling/model_builder.py</a>中的<code class="highlighter-rouge">generalized_rcnn</code>将FPN、fast rcnn、mask rcnn作为“插件”，通过config文件中控制“插拔”。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MODEL:
+  TYPE: generalized_rcnn
+  CONV_BODY: FPN.fpn_ResNet50_conv5_body # backbone
+  FASTER_RCNN: True # RPN ON
+  MASK_ON: True # 使用mask支线：mask rcnn除了box head，还有一个mask head。
+</code></pre></div></div>
+
+<p>在Detectron的实现里，可以像上面这样在config文件中灵活选择使用的backbone（比如conv body使用Res50_conv4,roi_mask_head和box head共同使用fcn_head）。代码模块划分：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Conv_Body 对应下图中的head# 输入im_data，返回blob_conv
+- RPN 对应下图中的Region Proposal Network: loss_rpn_cls + loss_rpn_bbox # 输入blob_conv，返回rpn_ret;
+- BBOX_Branch：loss_rcnn_cls + loss_rcnn_bbox
+    - Box_Head 对应下图中的Generate Grid Points Sample Feature Maps + Layer4 # 输入conv_body, rpn_ret返回box_feat
+        - 通过FAST_RCNN.ROI_BOX_HEAD设置
+    - Box_Outs 对应下图中的cls_score_net + bbx_pred_net# 输入box_feat, 返回cls_score, bbox_pred, 计算loss_cls, loss_bbox
+- Mask_Branch: loss_rcnn_mask
+    - Mask_Head# 输入blob_conv, rpn_net, 返回mask_feat
+        - 通过MRCNN.ROI_MASK_HEAD设置
+    - Mask_Outs# 输入mask_feat，返回mask_pred
+</code></pre></div></div>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5a9ffec911c19.png" alt="此处输入图片的描述" /></p>
 
@@ -254,7 +532,7 @@ self._classes = ('__background__',  # always index 0
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa0053323ac5.png" alt="此处输入图片的描述" /></p>
 
-<h3 id="1-anchor-generation-layer">1. Anchor Generation Layer</h3>
+<h2 id="1-anchor-generation-layer">1. Anchor Generation Layer</h2>
 
 <p>第一步就是生成anchor，这里的anchor亦可理解为bounding box。rpn的任务是对上上图的每个小红点都计算若干anchor（默认是9个）：</p>
 
@@ -269,7 +547,14 @@ self._classes = ('__background__',  # always index 0
   <p>anchor是RPN的windows的大小，在feature map的每一个位置使用不同尺度和长宽比的window提取特征。原论文描述为“a pyramid of regression references”。</p>
 </blockquote>
 
-<p>对应到代码上：在trainval_net.py中，imagenet的<code class="highlighter-rouge">ANCHOR_SCALES</code>的默认是[4, 8, 16, 32]，<code class="highlighter-rouge">ANCHOR_RATIOS</code>默认是[0.5,1,2]。但是并不是越多越好，要控制在一定的数量，理由是：</p>
+<p>对应到代码上：在trainval_net.py中，imagenet的<code class="highlighter-rouge">ANCHOR_SCALES</code>的默认是[4, 8, 16, 32]，<code class="highlighter-rouge">ANCHOR_RATIOS</code>默认是[0.5,1,2]。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#imagenet
+args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]', 'MAX_NUM_GT_BOXES', '30']
+
+</code></pre></div></div>
+
+<p>但是并不是越多越好，要控制在一定的数量，理由是：</p>
 
 <ol>
   <li>anchors多了就会造成faster RCNN的时间复杂度提高，anchors多的最极端情况就是overfeats中sliding windows。</li>
@@ -278,7 +563,7 @@ self._classes = ('__background__',  # always index 0
 
 <p>所以，在使用自己的数据的时候，统计一下gorund truth框的大小（注意考虑预处理rescale的系数），确定大小范围还是很有必要的。</p>
 
-<h3 id="2-region-proposal-layer">2. Region Proposal Layer</h3>
+<h2 id="2-region-proposal-layer">2. Region Proposal Layer</h2>
 
 <p>先明确foreground和background的概念：前景<code class="highlighter-rouge">fg</code>（foreground）代表有物体（不管是哪个类别），背景<code class="highlighter-rouge">bg</code>（background）就是没有任何物体。</p>
 
@@ -295,13 +580,13 @@ self._classes = ('__background__',  # always index 0
 
 <p>值得注意的是，这里的anchor是以降采样16倍得到的feature map为基础的，所以总共是$\frac w {16} * \frac h {16} * 9$个anchor。每个anchor唯一对应着一个class score和bounding box regressor。</p>
 
-<h4 id="proposal-layer">Proposal Layer</h4>
+<h3 id="proposal-layer">Proposal Layer</h3>
 
 <p>基于fg的score，使用nms来筛除多余的anchor</p>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa5766d53b63.png" alt="此处输入图片的描述" /></p>
 
-<h4 id="anchor-target-layer">Anchor Target Layer</h4>
+<h3 id="anchor-target-layer">Anchor Target Layer</h3>
 
 <p>计算RPN loss：</p>
 
@@ -342,56 +627,25 @@ self._classes = ('__background__',  # always index 0
   <li>Target regression coefficients</li>
 </ul>
 
-<h4 id="proposal-target-layer">Proposal Target Layer</h4>
+<h3 id="proposal-target-layer">Proposal Target Layer</h3>
 
 <p>proposal layer产生ROI list，而Proposal Target Layer负责从这个list中选出可信的ROI。这些ROI经过 crop pooling从feature map中crop出相应区域，传给后面的classification
 layer（head_to_tail）.</p>
 
-<p>计算所有ROI和所有ground truth的max overlap，从而判断是fg还是bg。这里用到了两个参数：</p>
-
-<ul>
-  <li><code class="highlighter-rouge">TRAIN.FG_THRESH</code>：用来判断fg ROI（default：0.5）</li>
-  <li><code class="highlighter-rouge">TRAIN.BG_THRESH_LO</code> ~ <code class="highlighter-rouge">TRAIN.BG_THRESH_HI</code>：这个区间的是bg ROI。(default 0.1, 0.5 respectively)</li>
-</ul>
-
-<p>这样的设计可以看作是 “hard negative mining” ，用来给classifier投喂更难的bg样本。</p>
-
-<blockquote>
-  <p>为了保证fg和bg的总数是恒定的（N），如果bg太少了，就会随机重复一些bg样本来弥补差额。</p>
-</blockquote>
-
-<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa32302afc0b.png" alt="此处输入图片的描述" /></p>
-
-<p>神奇的一点：在后面的classification layer中，这个bbox_inside_weights起一个mask的作用，这样就只计算fg的，不管bg的，但是算分类loss的时候还是都考虑。</p>
-
-<p>输入:</p>
-
-<ul>
-  <li>ROIs produced by the proposal layer</li>
-  <li>ground truth information</li>
-</ul>
-
-<p>输出:</p>
-
-<ul>
-  <li>Selected foreground and background ROIs that meet overlap criteria.</li>
-  <li>Class specific target regression coefficients for the ROIs</li>
-</ul>
-
-<p>Parameters:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">TRAIN.BATCH_SIZE</code>: (default 128) 所选fg和bg box的最大数量.</li>
-  <li><code class="highlighter-rouge">TRAIN.FG_FRACTION</code>: (default 0.25). fg box 不能超过 BATCH_SIZE*FG_FRACTION</li>
-</ul>
-
-<h3 id="roi-pooling-layer">ROI Pooling Layer</h3>
+<h2 id="3roi-pooling-layer">3.ROI Pooling Layer</h2>
 
 <p>简言之就是负责从feature map中提取ROI对应区域。</p>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa402baba3a1.png" alt="此处输入图片的描述" /></p>
 
-<p>Pytorch的<strong>torch.nn.functional.affine_grid</strong> 和torch.nn.functional.grid_sample</p>
+<p>不同的pooling模式：</p>
+
+<ul>
+  <li>crop</li>
+  <li>align</li>
+</ul>
+
+<p>主要用到Pytorch的<strong>torch.nn.functional.affine_grid</strong> 和torch.nn.functional.grid_sample</p>
 
 <p>crop pooling的步骤：</p>
 
@@ -403,12 +657,13 @@ layer（head_to_tail）.</p>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa4255fdacb6.png" alt="此处输入图片的描述" /></p>
 
-<h3 id="classification-layer">Classification Layer</h3>
+<h2 id="4classification-layer">4.Classification Layer</h2>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa55c81eac0a.png" alt="此处输入图片的描述" /></p>
 
-<p>fc之后得到的一维特征向量被送到两个全连接网络中：
-<img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa55c97f3287.png" alt="此处输入图片的描述" /></p>
+<p>fc之后得到的一维特征向量被送到两个全连接网络中：</p>
+
+<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa55c97f3287-1024x607.png" alt="此处输入图片的描述" /></p>
 
 <ul>
   <li><code class="highlighter-rouge">cls_score_net</code>：生成roi每个类别的score（softmax之后就是概率了）</li>
@@ -420,9 +675,11 @@ layer（head_to_tail）.</p>
   </li>
 </ul>
 
+<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa4255fdacb6.png" alt="此处输入图片的描述" /></p>
+
 <p>这个阶段要把不同物体的标签考虑进来了，所以是一个多分类问题。使用交叉熵计算分类Loss：</p>
 
-<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa1cd250f265.png" alt="此处输入图片的描述" /></p>
+<p>![此处输入图片的描述][220]</p>
 
 <p>这个阶段依然要计算bounding box regression loss，和前面的R区别PN的区别在于：</p>
 
@@ -437,45 +694,21 @@ layer（head_to_tail）.</p>
 
 <p>有意思的是，训练classification layer得到的loss也会反向传播给RPN。这是因为用来做crop pooling的ROI box坐标不仅是RPN产生的 regression coefficients应用到anchor box上的结果，其本身也是网络输出。因此，在反传的时候，误差会通过roi pooling layer传播到RPN layer。好在crop pooling在Pytorch中有内部实现，省去了计算梯度的麻烦。</p>
 
-<h2 id="inference">Inference</h2>
+<h1 id="mask-rcnn">Mask-RCNN</h1>
+<p><a href="https://github.com/multimodallearning/pytorch-mask-rcnn">Mask RCNN的Pytorch实现</a>，<a href="https://arxiv.org/pdf/1703.06870.pdf">原始论文</a>。</p>
+
+<p>mask rcnn里默认的mask head是conv层，也可以通过MRCNN.<code class="highlighter-rouge">USE_FC_OUTPUT</code>设置使用FC层。</p>
+
+<ul>
+  <li>做分割的话，关键是roi pooling时候的对齐问题，mask rcnn提出roi align
+face++提出precise roi pooling，使用$x/16$而不是$[x/16]$，使用bilinear interpolation</li>
+  <li>分隔开分割和分类两个任务，mask rcnn中对每个类别都会生成一个mask，或者是class-agnostic的实验中，不管类别直接生成mask，效果都不错</li>
+  <li>[关于mask rcnn实现的讨论][241]，kaggle上也有一个做医疗图像的demo</li>
+</ul>
+
+<h1 id="inference">Inference</h1>
 
 <p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa70ff399c57.png" alt="此处输入图片的描述" /></p>
-
-<h2 id="针对小物体">针对小物体</h2>
-
-<p>每个小红点之间就是16像素的间隔了，如果要检测特别细小的物体，这么大的下采样就很危险了。于是，为了尽量不破坏细小物体的清晰度，参考<a href="https://github.com/rbgirshick/py-faster-rcnn/issues/86">github上关于检测微小物体的讨论</a>，我尝试了两种方案：</p>
-
-<h3 id="1-降低下采样">1. 降低下采样</h3>
-
-<ul>
-  <li>一旦改变下采样，同时还要改变feature_stride和spatial_scale。否则预测框框就变成了边缘的线条（同时loss_rpn_cls奇高）。比如VGG16（降采样8倍）：
-    <ul>
-      <li>__C.feat_stride’: 8”</li>
-      <li>self.spatial_scale to (1/8)</li>
-    </ul>
-  </li>
-  <li>vgg16尝试4倍下采样：去掉了stage5的卷积，保障输入图像最短边在1200</li>
-</ul>
-
-<h4 id="剪裁网络">剪裁网络</h4>
-
-<p><a href="https://stackoverflow.com/questions/44146655/how-to-convert-pretrained-fc-layers-to-conv-layers-in-pytorch">把卷积层变成全连接层</a></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list(model.modules()) # to inspect the modules of your model
-my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear layer
-</code></pre></div></div>
-
-<h3 id="2-切割原图">2. 切割原图</h3>
-
-<ul>
-  <li>训练数据切patch：将原图切分为四等份再训练，保障大部分图的清晰度不被压缩。这样一来，标注也要做调整：
-    <ul>
-      <li>一种方式是重新生成新的子图标注，新写一个yourdata.py；</li>
-      <li>另一种偷懒方式则是修改 yourdata.py的<code class="highlighter-rouge">_load_XXX_anotation(self, index)</code>，使得读入每个子图，返回的也是每个子图的所有标注框。</li>
-    </ul>
-  </li>
-  <li>测试数据为原图，沿用原来的数据读入方式即可。</li>
-</ul>
 
 <h1 id="appendix">Appendix</h1>
 
@@ -497,57 +730,78 @@ my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear l
 
 <p><a href="https://zhuanlan.zhihu.com/p/31427728">讲nms（non-maximum suppression）的文章</a></p>
 
-<h2 id="resnet50">Resnet50</h2>
+<h2 id="focal-loss">Focal loss</h2>
 
-<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa59c8da4c4b.png" alt="此处输入图片的描述" /></p>
+<p>看ICCV那篇focal loss的论文《Focal Loss for Dense Object Detection》.</p>
 
-<p><img src="http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa59d170c750.png" alt="此处输入图片的描述" /></p>
+<p>不过这个pytorch版detectron还没实现，官方Detectron是集成在Caffe2里。可参考<a href="https://github.com/marvis/pytorch-yolo2/blob/master/FocalLoss.py">Pytorch实现</a>。</p>
+
+<script type="math/tex; mode=display">Loss(x, class) = - \alpha (1-softmax(x)_{[class]})^\gamma \log(softmax(x)_{[class]})</script>
+
 <ul>
-  <li>resnet的downsample：第一个卷积层就降采样了2倍</li>
-  <li>Resnet18，降低下采样，增加卷积层
-<img src="http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2/image_1c8u6de3r12s5oeog9i1ij6d1g9.png" alt="image_1c8u6de3r12s5oeog9i1ij6d1g9.png-183.1kB" />
-检查网络输出</li>
+  <li><script type="math/tex">\alpha</script>(1D Tensor, Variable) : the scalar factor for this criterion</li>
+  <li><script type="math/tex">\gamma</script>(float, double) : gamma &gt; 0; reduces the relative loss for well-classiﬁed examples (p &gt; .5), putting more focus on hard, misclassiﬁed examples</li>
+  <li>size_average(bool): By default, the losses are averaged over observations for each minibatch. However, if the field size_average is set to False, the losses are instead summed for each minibatch.</li>
 </ul>
 
-<h2 id="fpn">FPN</h2>
-<p><img src="http://static.zybuluo.com/sixijinling/cv2l758k7dyj022k0iinwsm1/image_1c8u6egich3e1ha41d3o1m22s3g16.png" alt="image_1c8u6egich3e1ha41d3o1m22s3g16.png-228.8kB" />
-<img src="http://static.zybuluo.com/sixijinling/elabj076z56xa1xsfbwqyy50/image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png" alt="image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png-30.8kB" />
-<a href="https://arxiv.org/pdf/1612.03144.pdf">原始论文</a>
-<a href="https://github.com/jwyang/fpn.pytorch">FPN的Pytorch实现</a></p>
+<h2 id="针对小物体">针对小物体</h2>
 
-<h3 id="focal-loss">Focal loss</h3>
+<p>每个小红点之间就是16像素的间隔了，如果要检测特别细小的物体，这么大的下采样就很危险了。于是，为了尽量不破坏细小物体的清晰度，参考<a href="https://github.com/rbgirshick/py-faster-rcnn/issues/86">github上关于检测微小物体的讨论</a>，我尝试了两种方案：</p>
 
-<p>看ICCV那篇focal loss的论文</p>
+<h3 id="1-降低下采样倍数">1. 降低下采样倍数</h3>
 
-<p><a href="https://github.com/marvis/pytorch-yolo2/blob/master/FocalLoss.py">Pytorch实现参考</a></p>
+<p>为了方便实验，我给网络增加了一个参数<code class="highlighter-rouge">downsample</code>，用来控制下采样倍数，相应地调整网络结构：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>parser.add_argument('--downsample', dest='downsample_rate',
+                  help='downsample',
+                  default=16, type=int) # 原网络默认16倍
+</code></pre></div></div>
+
+<p>需要注意的是：</p>
+
+<ul>
+  <li>一旦改变下采样，同时还要改变feature_stride和spatial_scale。否则预测框框就变成了边缘的线条（同时loss_rpn_cls奇高）。比如VGG16（降采样8倍）：
+    <ul>
+      <li>__C.feat_stride’: 8”</li>
+      <li>self.spatial_scale to (1/8)</li>
+    </ul>
+  </li>
+  <li>vgg16尝试4倍下采样：去掉了stage5的卷积，保障输入图像最短边在1200</li>
+</ul>
+
+<h3 id="2-切割原图">2. 切割原图</h3>
+
+<ul>
+  <li>训练数据切patch：将原图切分为四等份再训练，保障大部分图的清晰度不被压缩。这样一来，标注也要做调整：
+    <ul>
+      <li>一种方式是重新生成新的子图标注，新写一个yourdata.py；</li>
+      <li>另一种偷懒方式则是修改 yourdata.py的<code class="highlighter-rouge">_load_XXX_anotation(self, index)</code>，使得读入每个子图，返回的也是每个子图的所有标注框。</li>
+    </ul>
+  </li>
+  <li>测试数据为原图，沿用原来的数据读入方式即可。</li>
+</ul>
 
 <h2 id="todo-list">Todo List</h2>
 
 <ul>
-  <li>[ ] face book开源的基于caffe2的detectron，也可以学习一下，里面有各种检测的算法，有mask rcnn神马的</li>
-  <li><a href="http://forums.fast.ai/t/implementing-mask-r-cnn/2234">关于mask rcnn实现的讨论</a>，kaggle上也有一个做医疗图像的demo</li>
-  <li>[ ] 可能是resnet的bn_train设置为False，回头改一下</li>
   <li>加入valid过程，确认是否有过拟合:爆显存了</li>
-  <li>[ ] roibatchloader的问题：trim</li>
-  <li>遇到的bug
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>random.choice()
-</code></pre></div>    </div>
-  </li>
   <li>negative sampling：selective search</li>
 </ul>
 
 <h2 id="reference">Reference</h2>
 
 <ul>
+  <li><a href="https://arxiv.org/pdf/1506.01497.pdf">faster rcnn原始论文</a></li>
   <li>如果想了解object detection的发展史，可以看<a href="https://tryolabs.com/blog/2017/08/30/object-detection-an-overview-in-the-age-of-deep-learning/">Object Detection</a></li>
+  <li>推荐阅读<a href="https://tryolabs.com/blog/2018/01/18/faster-r-cnn-down-the-rabbit-hole-of-modern-object-detection/">Faster R-CNN: Down the rabbit hole of modern object detection</a></li>
   <li>
-    <p>推荐阅读<a href="https://tryolabs.com/blog/2018/01/18/faster-r-cnn-down-the-rabbit-hole-of-modern-object-detection/">Faster R-CNN: Down the rabbit hole of modern object detection</a></p>
+    <p><a href="http://www.telesens.co/2018/03/11/object-detection-and-classification-using-r-cnns/">Object Detection and Classification using R-CNNs</a></p>
 
   </li>
 </ul>
 
                 <p class="post-info">
-                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:2018-03-22 18:26:00
+                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:2018-06-04 20:15:00
                 </p>
 
             </div>
@@ -607,7 +861,9 @@ my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear l
                 <!--置顶-->
                 
                 
-                <li><a href="/tech/faster-rcnn.html" title="访问 Faster R-CNN 检测微小物体" data-hover="Faster R-CNN 检测微小物体">Faster R-CNN 检测微小物体</a></li>
+                <li><a href="/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
+                
+                
                 
                 
                 
@@ -640,8 +896,6 @@ my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear l
                 
                 
                 
-                
-                
                 <!--置顶-->
             </div>
             <div class="meta-item meta-comments">
@@ -652,9 +906,9 @@ my_model = nn.Sequential(*list(model.modules())[:-1]) # strips off last linear l
                 <!---->
                 
                 <!---->
-                    <li><a href="/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
-                <!---->
                 
+                <!---->
+                    <li><a href="/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
                 <!---->
                 
                 <!---->

@@ -11,12 +11,12 @@
 <title>肺部结节检测 - Rowl1ng|黑客与画家</title>
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="肺部结节检测 - Rowl1ng|黑客与画家">
-<meta name="twitter:keywords"  content="前情提要阿里云天池医疗AI大赛[第一季]：肺部结节智能诊断：由大赛官方提供真实场景下患者肺部CT图像，目标是设计了两个网络，分别负责检测肺部结节的候选区域和判断候选区域是否为真结节，总排名64/2887。Basics  origin：..." property='og:description' />
+<meta name="twitter:keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentation import clear_bord..." property='og:description' />
 <meta property="og:type" content="article">
 <meta property="og:title" content="肺部结节检测">
 <!--<meta property="og:title" content="肺部结节检测 - Rowl1ng|黑客与画家">-->
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="og:keywords"  content="前情提要阿里云天池医疗AI大赛[第一季]：肺部结节智能诊断：由大赛官方提供真实场景下患者肺部CT图像，目标是设计了两个网络，分别负责检测肺部结节的候选区域和判断候选区域是否为真结节，总排名64/2887。Basics  origin：..." property='og:description' />
+<meta name="og:keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentation import clear_bord..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
 <link rel="icon" type="image/png" href="http://localhost:4000/style/favicons/favicon.ico" />
 <link href="http://localhost:4000/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
@@ -25,7 +25,7 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="/manifest.json">
 <link rel="shortcut icon" href="http://localhost:4000/style/favicons/favicon.ico" type="image/x-icon">
-<meta name="keywords"  content="前情提要阿里云天池医疗AI大赛[第一季]：肺部结节智能诊断：由大赛官方提供真实场景下患者肺部CT图像，目标是设计了两个网络，分别负责检测肺部结节的候选区域和判断候选区域是否为真结节，总排名64/2887。Basics  origin：..." property='og:description' />
+<meta name="keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentation import clear_bord..." property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
 <link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
@@ -59,6 +59,8 @@
             
             <a href="http://localhost:4000/write">WRITE</a>
             
+            <a href="http://localhost:4000/mybook">GITBOOK</a>
+            
             <a href="http://localhost:4000/archives">ARCHIVE</a>
             
             <a href="http://localhost:4000/tags">TAGS</a>
@@ -86,6 +88,8 @@
                 
                 <li><a href="http://localhost:4000/write">WRITE</a></li>
                 
+                <li><a href="http://localhost:4000/mybook">GITBOOK</a></li>
+                
                 <li><a href="http://localhost:4000/archives">ARCHIVE</a></li>
                 
                 <li><a href="http://localhost:4000/tags">TAGS</a></li>
@@ -106,7 +110,7 @@
                     <h1 class="post-title" itemprop="name headline">
                         肺部结节检测</h1>
                     <div class="post-data">
-                        <time datetime="2017-04-25 19:04:00" itemprop="datePublished">发布时间：2017-04-25 19:04:00</time>
+                        <time datetime="2018-05-29 21:38:00" itemprop="datePublished">发布时间：2018-05-29 21:38:00</time>
                         <a href="/tags#tech" title="访问 tech" data-hover="博客分类: tech">博客分类: tech</a>
                         <!--busuanzi-->
                         <script async src="/js/busuanzi.pure.mini.js">
@@ -138,7 +142,7 @@
                 <h1 class="post-title" itemprop="name headline">
                     肺部结节检测</h1>
                 <div class="post-data">
-                    <time datetime="2017-04-25 19:04:00" itemprop="datePublished">2017-04-25 19:04:00</time>
+                    <time datetime="2018-05-29 21:38:00" itemprop="datePublished">2018-05-29 21:38:00</time>
                 </div>
             </div>
             <div id="post-content" class="post-content" itemprop="articleBody">
@@ -156,11 +160,7 @@
                         
                     
                 </p>
-                <h2 id="前情提要">前情提要</h2>
-
-<p>阿里云天池医疗AI大赛[第一季]：肺部结节智能诊断：由大赛官方提供真实场景下患者肺部CT图像，目标是设计了两个网络，分别负责检测肺部结节的候选区域和判断候选区域是否为真结节，总排名64/2887。</p>
-
-<h2 id="basics">Basics</h2>
+                <h1 id="图像处理基础">图像处理基础</h1>
 
 <ul>
   <li><code class="highlighter-rouge">origin</code>：表示CT图像最边缘的坐标</li>
@@ -169,17 +169,161 @@
 
 <p><img src="http://upload-images.jianshu.io/upload_images/1156558-a483ffcb4ca3d4ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述" /></p>
 
-<h2 id="segmentation">Segmentation</h2>
+<h2 id="preprocessing">Preprocessing</h2>
 
-<h2 id="classification-stagefalse-positive--reduction">Classification Stage(False Positive  Reduction)</h2>
-<p>找結節中心
-maximum divergence normalized gradient
-data augmentation: zoom, rotation, translation</p>
+<p>预处理阶段可能用到的包：</p>
 
-<h3 id="merge-candidates">Merge Candidates</h3>
-<p>先腐蚀，再算连通性，再取label，每个label代表一个candidate，取mass中心，存储为csv
-对照annotations.csv得到每个candidate的是TP还是FP的label，得到新的csv（最后一列为true/false的标记）
-欧式距离</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from skimage.segmentation import clear_border
+from skimage.measure import label, regionprops
+from skimage.filters import roberts, sobel
+from scipy import ndimage as ndi
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection # 用于可视化3d图像
+from skimage.morphology import ball, disk, dilation, binary_erosion, remove_small_objects, erosion, closing, reconstruction, binary_closing
+</code></pre></div></div>
+<h3 id="肺部区域分割">肺部区域分割</h3>
+
+<p>参考<a href="https://www.kaggle.com/arnavkj95/candidate-generation-and-luna16-preprocessing/code">Candidate Generation and LUNA16 preprocessing
+</a>可实现肺部区域的分割，从而为下一步提取3d cube做准备。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def segment_lung_from_ct_scan(ct_scan):
+    return np.asarray([get_segmented_lungs(slice) for slice in ct_scan])
+
+def get_segmented_lungs(im, plot=False):
+
+    '''
+    This funtion segments the lungs from the given 2D slice.
+    '''
+    if plot == True:
+        f, plots = plt.subplots(8, 1, figsize=(5, 40))
+    '''
+    Step 1: Convert into a binary image.
+    '''
+    binary = im &lt; 200
+    if plot == True:
+        plots[0].axis('off')
+        plots[0].imshow(binary, cmap=plt.cm.bone)
+    '''
+    Step 2: Remove the blobs connected to the border of the image.
+    '''
+    cleared = clear_border(binary)
+    if plot == True:
+        plots[1].axis('off')
+        plots[1].imshow(cleared, cmap=plt.cm.bone)
+    '''
+    Step 3: Label the image.
+    '''
+    label_image = label(cleared)
+    if plot == True:
+        plots[2].axis('off')
+        plots[2].imshow(label_image, cmap=plt.cm.bone)
+    '''
+    Step 4: Keep the labels with 2 largest areas.
+    '''
+    areas = [r.area for r in regionprops(label_image)]
+    areas.sort()
+    if len(areas) &gt; 2:
+        for region in regionprops(label_image):
+            if region.area &lt; areas[-2]:
+                for coordinates in region.coords:
+                       label_image[coordinates[0], coordinates[1]] = 0
+    binary = label_image &gt; 0
+    if plot == True:
+        plots[3].axis('off')
+        plots[3].imshow(binary, cmap=plt.cm.bone)
+    '''
+    Step 5: Erosion operation with a disk of radius 2. This operation is
+    seperate the lung nodules attached to the blood vessels.
+    '''
+    selem = disk(2)
+    binary = binary_erosion(binary, selem)
+    if plot == True:
+        plots[4].axis('off')
+        plots[4].imshow(binary, cmap=plt.cm.bone)
+    '''
+    Step 6: Closure operation with a disk of radius 10. This operation is
+    to keep nodules attached to the lung wall.
+    '''
+    selem = disk(10)
+    binary = binary_closing(binary, selem)
+    if plot == True:
+        plots[5].axis('off')
+        plots[5].imshow(binary, cmap=plt.cm.bone)
+    '''
+    Step 7: Fill in the small holes inside the binary mask of lungs.
+    '''
+    edges = roberts(binary)
+    binary = ndi.binary_fill_holes(edges)
+    if plot == True:
+        plots[6].axis('off')
+        plots[6].imshow(binary, cmap=plt.cm.bone)
+    '''
+    Step 8: Superimpose the binary mask on the input image.
+    '''
+#     get_high_vals = binary == 0
+#     im[get_high_vals] = 0
+#     if plot == True:
+#         plots[7].axis('off')
+#         plots[7].imshow(im, cmap=plt.cm.bone)
+
+    return binary
+</code></pre></div></div>
+<p><img src="http://static.zybuluo.com/sixijinling/gl9og6z21zzipkk90fsjitdy/image_1cdrhtvlq1v291i8a1ah217faiu89.png" alt="image_1cdrhtvlq1v291i8a1ah217faiu89.png-83kB" /></p>
+
+<p>可视化3d肺部分割</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def plot_3d(image, threshold=-300):
+    from skimage import measure, feature
+
+    # Position the scan upright,
+    # so the head of the patient would be at the top facing the camera
+    p = image.transpose(2,1,0)
+    p = p[:,:,::-1]
+
+#     print measure.marching_cubes(p, threshold)
+    verts, faces, _, _= measure.marching_cubes(p, threshold)
+
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Fancy indexing: `verts[faces]` to generate a collection of triangles
+    mesh = Poly3DCollection(verts[faces], alpha=0.1)
+    face_color = [0.5, 0.5, 1]
+    mesh.set_facecolor(face_color)
+    ax.add_collection3d(mesh)
+
+    ax.set_xlim(0, p.shape[0])
+    ax.set_ylim(0, p.shape[1])
+    ax.set_zlim(0, p.shape[2])
+
+    plt.show()
+</code></pre></div></div>
+
+<p><img src="http://static.zybuluo.com/sixijinling/e5wzvf8xqvmdu9hl73xkh0b0/image_1cdri1e721nbp1c7k1ve5nu2tpd1m.png" alt="image_1cdri1e721nbp1c7k1ve5nu2tpd1m.png-134.4kB" /></p>
+
+<p>去除假阳性</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>selem = ball(10)
+binary = binary_opening(segmented_ct_scan, selem)
+
+label_scan = label(binary)
+
+areas = [r.area for r in regionprops(label_scan)] # 找连通区域
+areas.sort()
+print areas
+</code></pre></div></div>
+<p><img src="http://static.zybuluo.com/sixijinling/qbtrueqt9qagfxkd0opwblcc/image_1cdri1qfm19g6t1e1bbg13441a3e23.png" alt="image_1cdri1qfm19g6t1e1bbg13441a3e23.png-128kB" /></p>
+
+<p>提取3d cube作为inference输入，所有cube的可视化：</p>
+
+<p><img src="http://static.zybuluo.com/sixijinling/tqmuwhoyh6eu3sszw55ckjfi/image_1cdrljm251gjg108t17fj1eit1bb92g.png" alt="image_1cdrljm251gjg108t17fj1eit1bb92g.png-149.5kB" /></p>
+
+<p>差一步normalize到相同pixel spacing的过程：</p>
+
+<p><img src="http://static.zybuluo.com/sixijinling/tdqvxjb59e1p5jfxo2dykw88/image_1ce5gjlu619aq325k941e6o14p29.png" alt="image_1ce5gjlu619aq325k941e6o14p29.png-142.7kB" /></p>
+
+<p>检查：</p>
+
+<p><img src="http://static.zybuluo.com/sixijinling/cv3ice16g6d1cir64spqbjum/image_1ce6iegtia0mjhs46f1q3n1e1e9.png" alt="image_1ce6iegtia0mjhs46f1q3n1e1e9.png-16.5kB" /></p>
+
 <h3 id="预处理">预处理</h3>
 
 <ul>
@@ -194,7 +338,86 @@ data augmentation: zoom, rotation, translation</p>
   <li>10-foldcross validation：划分为10个</li>
 </ul>
 
-<h2 id="评价指标froc曲线">评价指标：FROC曲线</h2>
+<h1 id="模型">模型</h1>
+
+<p>通常分两个阶段：</p>
+
+<h2 id="stage-1candidates-proposal">Stage 1：Candidates Proposal</h2>
+<p>这个阶段的任务是尽可能找出所有可能是结节的候选（candidate）</p>
+<h3 id="思路1segmentation">思路1：Segmentation</h3>
+
+<p>例如U-net，</p>
+
+<h3 id="思路2-object-detection">思路2: Object Detection</h3>
+
+<p>例如Faster RCNN，使用2D模型处理3D检测问题，例如每个通道代表z轴的一个slice，这样就有3个slice组成的3通道二维图像，即形如<script type="math/tex">600\times 600 \times 3</script>的image。每个tong通道可以是相邻的slice。</p>
+
+<h4 id="rpn">RPN</h4>
+
+<ul>
+  <li>input：image;</li>
+  <li>output：一系列矩形框，代表ROI，每个框都有一个objectness score，代表是物体的概率。</li>
+</ul>
+
+<h2 id="stage2false-positive--reduction">Stage2：False Positive  Reduction</h2>
+
+<h3 id="classification-stage">Classification Stage</h3>
+
+<p>找結節中心
+maximum divergence normalized gradient
+data augmentation: zoom, rotation, translation</p>
+
+<p>由于ct是三维的，考虑使用常见的2d U-net的3d版本。</p>
+
+<h4 id="3d-conv">3d conv</h4>
+
+<p>可参考：</p>
+
+<ul>
+  <li><a href="https://www.kaggle.com/c/data-science-bowl-2017/details/tutorial">U-Net Segmentation Approach to Cancer Diagnosis</a></li>
+  <li>在luna上的3dconv的unet实现：<a href="https://github.com/Wrosinski/Kaggle-DSB/blob/master/LUNA/models/U-Net%203D/3DUNet_train_generator.py">Kaggle U-net</a></li>
+  <li>keras 提供的<a href="https://keras-cn.readthedocs.io/en/latest/layers/convolutional_layer/">conv3d</a>：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keras.layers.convolutional.Conv3D(
+    filters, # 卷积核的数目（即输出的维度）
+    kernel_size, # 单个整数或由3个整数构成的list/tuple，卷积核的宽度和长度。如为单个整数，则表示在各个空间维度的相同长度。
+    strides=(1, 1, 1),
+    padding='valid',
+    data_format=None,
+    dilation_rate=(1, 1, 1),
+    activation=None,
+    use_bias=True,
+    kernel_initializer='glorot_uniform',
+    bias_initializer='zeros',
+    kernel_regularizer=None,
+    bias_regularizer=None,
+    activity_regularizer=None,
+    kernel_constraint=None,
+    bias_constraint=None)
+</code></pre></div></div>
+
+<p>三维卷积对三维的输入进行滑动窗卷积，当使用该层作为第一层时，应提供input_shape参数。例如input_shape = (3,10,128,128)代表对10帧128*128的彩色RGB图像进行卷积。数据的通道位置仍然有data_format参数指定。</p>
+
+<p>输入shape</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">‘channels_first’</code>模式下，输入应为形如<code class="highlighter-rouge">（samples，channels，input_dim1，input_dim2, input_dim3）</code>的5D张量</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">‘channels_last’</code>模式下，输入应为形如<code class="highlighter-rouge">（samples，input_dim1，input_dim2, input_dim3，channels）</code>的5D张量</p>
+  </li>
+</ul>
+
+<p>这里的输入shape指的是函数内部实现的输入shape，而非函数接口应指定的input_shape。</p>
+
+<h3 id="merge-candidates">Merge Candidates</h3>
+<p>先腐蚀，再算连通性，再取label，每个label代表一个candidate，取mass中心，存储为csv
+对照annotations.csv得到每个candidate的是TP还是FP的label，得到新的csv（最后一列为true/false的标记）
+欧式距离</p>
+
+<h1 id="评价指标froc曲线">评价指标：FROC曲线</h1>
 
 <p>先来回顾一下精确率（precision）和召回率（recall）：</p>
 
@@ -266,48 +489,9 @@ LKDS_00005,98.0667072477,-46.4666486536,-141.421980179,0.000256219
 
 <p>It has to be noted that for the ‘false positive reduction’ challenge track, 551,065 findings (the amount of given candidates) are expected. The order of the lines is irrelevant.</p>
 
-<h2 id="3d-conv">3d conv</h2>
-
-<p><a href="https://www.kaggle.com/c/data-science-bowl-2017/details/tutorial">U-Net Segmentation Approach to Cancer Diagnosis</a>
-在luna上的3dconv的unet实现：<a href="https://github.com/Wrosinski/Kaggle-DSB/blob/master/LUNA/models/U-Net%203D/3DUNet_train_generator.py">Kaggle U-net</a>
-keras 提供的<a href="https://keras-cn.readthedocs.io/en/latest/layers/convolutional_layer/">conv3d</a>：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keras.layers.convolutional.Conv3D(
-    filters, # 卷积核的数目（即输出的维度）
-    kernel_size, # 单个整数或由3个整数构成的list/tuple，卷积核的宽度和长度。如为单个整数，则表示在各个空间维度的相同长度。
-    strides=(1, 1, 1),
-    padding='valid',
-    data_format=None,
-    dilation_rate=(1, 1, 1),
-    activation=None,
-    use_bias=True,
-    kernel_initializer='glorot_uniform',
-    bias_initializer='zeros',
-    kernel_regularizer=None,
-    bias_regularizer=None,
-    activity_regularizer=None,
-    kernel_constraint=None,
-    bias_constraint=None)
-</code></pre></div></div>
-
-<p>三维卷积对三维的输入进行滑动窗卷积，当使用该层作为第一层时，应提供input_shape参数。例如input_shape = (3,10,128,128)代表对10帧128*128的彩色RGB图像进行卷积。数据的通道位置仍然有data_format参数指定。</p>
-
-<p>输入shape</p>
-
-<ul>
-  <li>
-    <p><code class="highlighter-rouge">‘channels_first’</code>模式下，输入应为形如<code class="highlighter-rouge">（samples，channels，input_dim1，input_dim2, input_dim3）</code>的5D张量</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">‘channels_last’</code>模式下，输入应为形如<code class="highlighter-rouge">（samples，input_dim1，input_dim2, input_dim3，channels）</code>的5D张量</p>
-  </li>
-</ul>
-
-<p>这里的输入shape指的是函数内部实现的输入shape，而非函数接口应指定的input_shape。</p>
-
 
                 <p class="post-info">
-                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:2017-04-25 19:04:00
+                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:2018-05-29 21:38:00
                 </p>
 
             </div>
@@ -367,7 +551,9 @@ keras 提供的<a href="https://keras-cn.readthedocs.io/en/latest/layers/convolu
                 <!--置顶-->
                 
                 
-                <li><a href="/tech/faster-rcnn.html" title="访问 Faster R-CNN 检测微小物体" data-hover="Faster R-CNN 检测微小物体">Faster R-CNN 检测微小物体</a></li>
+                <li><a href="/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
+                
+                
                 
                 
                 
@@ -400,8 +586,6 @@ keras 提供的<a href="https://keras-cn.readthedocs.io/en/latest/layers/convolu
                 
                 
                 
-                
-                
                 <!--置顶-->
             </div>
             <div class="meta-item meta-comments">
@@ -412,9 +596,9 @@ keras 提供的<a href="https://keras-cn.readthedocs.io/en/latest/layers/convolu
                 <!---->
                 
                 <!---->
-                    <li><a href="/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
-                <!---->
                 
+                <!---->
+                    <li><a href="/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
                 <!---->
                 
                 <!---->

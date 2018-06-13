@@ -3,8 +3,16 @@
 "data" : [
 
 {
-"title" : "Faster R-CNN 检测微小物体 - ",
+"title" : "Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - ",
 "url" : "/tech/faster-rcnn.html"
+}
+
+,
+
+
+{
+"title" : "肺部结节检测 - ",
+"url" : "/tech/luna.html"
 }
 
 ,
@@ -69,14 +77,6 @@
 {
 "title" : "基于音素识别的语音相似度研究 - ",
 "url" : "/tech/phoneme.html"
-}
-
-,
-
-
-{
-"title" : "肺部结节检测 - ",
-"url" : "/tech/luna.html"
 }
 
 ,
