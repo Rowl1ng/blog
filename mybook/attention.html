@@ -12,9 +12,30 @@
         
         
     
+    
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -44,6 +65,9 @@
         
     
         
+    
+
+
     
 
         
@@ -82,7 +106,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="http://rowl1ng.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -300,9 +333,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="7b2c-1-zhang-shu-ju-fen-xi/scikit-learn.md">
+        <li class="chapter " data-level="2.2.1" data-path="7b2c-1-zhang-shu-ju-fen-xi/scikit-learn.html">
             
-                <span>
+                <a href="7b2c-1-zhang-shu-ju-fen-xi/scikit-learn.html">
             
                     
                     scikit-learn
@@ -313,9 +346,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="7b2c-1-zhang-shu-ju-fen-xi/pandas.md">
+        <li class="chapter " data-level="2.2.2" data-path="7b2c-1-zhang-shu-ju-fen-xi/pandas.html">
             
-                <span>
+                <a href="7b2c-1-zhang-shu-ju-fen-xi/pandas.html">
             
                     
                     pandas
@@ -326,9 +359,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="7b2c-1-zhang-shu-ju-fen-xi/numpy.md">
+        <li class="chapter " data-level="2.2.3" data-path="7b2c-1-zhang-shu-ju-fen-xi/numpy.html">
             
-                <span>
+                <a href="7b2c-1-zhang-shu-ju-fen-xi/numpy.html">
             
                     
                     numpy
@@ -1450,25 +1483,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;">&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;Attention Mechanism&#xFF09;</h1>
-<h2 id="neural-turing-machines">Neural Turing Machines</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;">1. &#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;Attention Mechanism&#xFF09;</a></li><ul><li><a href="#neural-turing-machines">1.1. Neural Turing Machines</a></li><li><a href="#attentional-interfaces">1.2. Attentional Interfaces</a></li><li><a href="#&#x5E94;&#x7528;">1.3. &#x5E94;&#x7528;</a></li><ul><li><a href="#1-machine-translation">1.3.1. 1. Machine Translation</a></li><li><a href="#motivation">1.3.2. Motivation</a></li><li><a href="#approach">1.3.3. Approach</a></li><li><a href="#2-image-caption">1.3.4. 2. Image Caption</a></li></ul><li><a href="#encoder--bidirectional-rnn-birnn-for-annotation">1.4. Encoder : Bidirectional RNN (BiRNN) for Annotation</a></li><li><a href="#decoder-">1.5. Decoder :</a></li><ul><li><a href="#seq2seq">1.5.1. seq2seq</a></li></ul><li><a href="#adaptive-computation-time">1.6. Adaptive Computation Time</a></li><li><a href="#neural-programmer">1.7. Neural Programmer</a></li><li><a href="#reference">1.8. Reference</a></li></ul></ul></div><a href="#&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;"><a name="&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;" class="plugin-anchor" href="#&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;attention-mechanism&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6CE8;&#x610F;&#x673A;&#x5236;&#xFF08;Attention Mechanism&#xFF09;</h1>
+<h2 id="neural-turing-machines"><a name="neural-turing-machines" class="plugin-anchor" href="#neural-turing-machines"><i class="fa fa-link" aria-hidden="true"></i></a><a name="neural-turing-machines" class="anchor-navigation-ex-anchor" href="#neural-turing-machines"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Neural Turing Machines</h2>
 <p>Instead of specifying a single location, the RNN gives &#x201C;attention distribution&#x201D; which describe how we spread out the amount we care about different memory positions. As such, the result of the read operation is a weighted sum.</p>
-<h2 id="attentional-interfaces">Attentional Interfaces</h2>
+<h2 id="attentional-interfaces"><a name="attentional-interfaces" class="plugin-anchor" href="#attentional-interfaces"><i class="fa fa-link" aria-hidden="true"></i></a><a name="attentional-interfaces" class="anchor-navigation-ex-anchor" href="#attentional-interfaces"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Attentional Interfaces</h2>
 <p>We&#x2019;d like attention to be differentiable, so that we can learn where to focus. To do this, we use the same trick Neural Turing Machines use: we focus everywhere, just to different extents.</p>
 <p>Attention can also be used on the interface between a convolutional neural network and an RNN. This allows the RNN to look at different position of an image every step. One popular use of this kind of attention is for image captioning. First, a conv net processes the image, extracting high-level features. Then an RNN runs, generating a description of the image. As it generates each word in the description, the RNN focuses on the conv nets interpretation of the relevant parts of the image. We can explicitly visualize this:</p>
 <p><img src="http://distill.pub/2016/augmented-rnns/assets/show-attend-tell.png" alt=""></p>
 <p>&#x6CE8;&#x610F;&#x673A;&#x5236;&#x662F;&#x7531;&#x4EBA;&#x7C7B;&#x89C6;&#x89C9;&#x6CE8;&#x610F;&#x6240;&#x542F;&#x53D1;&#x7684;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x5173;&#x6CE8;&#x56FE;&#x50CF;&#x4E2D;&#x7279;&#x5B9A;&#x90E8;&#x5206;&#x7684;&#x80FD;&#x529B;&#x3002;&#x6CE8;&#x610F;&#x673A;&#x5236;&#x53EF;&#x88AB;&#x6574;&#x5408;&#x5230;&#x8BED;&#x8A00;&#x5904;&#x7406;&#x548C;&#x56FE;&#x50CF;&#x8BC6;&#x522B;&#x7684;&#x67B6;&#x6784;&#x4E2D;&#x4EE5;&#x5E2E;&#x52A9;&#x7F51;&#x7EDC;&#x5B66;&#x4E60;&#x5728;&#x505A;&#x51FA;&#x9884;&#x6D4B;&#x65F6;&#x5E94;&#x8BE5;&#x300C;&#x5173;&#x6CE8;&#x300D;&#x4EC0;&#x4E48;&#x3002;</p>
 <p>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x548C;&#x81EA;&#x7136;&#x8BED;&#x8A00;&#x5904;&#x7406;&#x4E2D;&#x7684;&#x6CE8;&#x610F;&#x548C;&#x8BB0;&#x5FC6;<a href="http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/" target="_blank">&#x94FE;&#x63A5;</a></p>
 <p>Attention&#x662F;&#x9009;&#x62E9;&#x663E;&#x8457;&#x533A;&#x57DF;&#x7684;&#x4EBA;&#x773C;&#x89C6;&#x89C9;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x7B97;&#x6CD5;&#x6A21;&#x578B;&#x6CE8;&#x91CD;&#x7ED9;&#x51FA;fixation-prediction&#xFF0C;&#x5178;&#x578B;&#x7684;&#x6709;Itti&#x548C;Koch 1998&#x5E74;&#x7ED9;&#x51FA;&#x7684;<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=730558" target="_blank">&#x89C6;&#x89C9;&#x6CE8;&#x610F;&#x673A;&#x5236;&#x6A21;&#x578B;</a>&#xFF0C;attention&#x4E3B;&#x8981;&#x662F;&#x4ECE;&#x4EBA;&#x773C;&#x4EA7;&#x751F;&#x6CE8;&#x610F;&#x7684;&#x8FC7;&#x7A0B;&#x548C;&#x89C6;&#x89C9;&#x7CFB;&#x7EDF;&#x7684;&#x7279;&#x5F81;&#x7814;&#x7A76;&#x7B97;&#x6CD5;&#x6A21;&#x578B;&#x3002;</p>
-<h2 id="&#x5E94;&#x7528;">&#x5E94;&#x7528;</h2>
-<h3 id="1-machine-translation">1. Machine Translation</h3>
+<h2 id="&#x5E94;&#x7528;"><a name="&#x5E94;&#x7528;" class="plugin-anchor" href="#&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5E94;&#x7528;</h2>
+<h3 id="1-machine-translation"><a name="1-machine-translation" class="plugin-anchor" href="#1-machine-translation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-machine-translation" class="anchor-navigation-ex-anchor" href="#1-machine-translation"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. 1. Machine Translation</h3>
 <p>&#x6700;&#x65E9;&#x5C06;Attention-based model&#x5F15;&#x5165;NLP&#x7684;&#x5C31;&#x662F;2015&#x5E74;ICLR&#xFF0C;Bahdanau&#x7684;[&#x300A;Neural machine translation by jointly learning to align and translate&#x300B;][2]&#x3002;</p>
 <blockquote>
 <p>The decoder decides parts of the source sentence to pay <strong>attention</strong> to. By letting the decoder have an <strong>attention mechanism</strong>, we relieve the encoder from the burden of having to encode all information in the source sentence into a fixedlength vector.</p>
 </blockquote>
-<h3 id="motivation">Motivation</h3>
+<h3 id="motivation"><a name="motivation" class="plugin-anchor" href="#motivation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="motivation" class="anchor-navigation-ex-anchor" href="#motivation"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. Motivation</h3>
 <p>&#x4F20;&#x7EDF;&#x7FFB;&#x8BD1;&#x6A21;&#x578B;&#x5C06;&#x6574;&#x53E5;&#x7684;&#x4FE1;&#x606F;&#x538B;&#x7F29;&#x81F3;&#x5B9A;&#x957F;&#x5411;&#x91CF;&#xFF0C;&#x4F7F;&#x5F97;&#x957F;&#x53E5;&#x4E0A;&#x7684;&#x7FFB;&#x8BD1;&#x6548;&#x679C;&#x5DEE;&#x3002;<br>soft-align&#xFF1A;&#x5728;&#x8FDB;&#x884C;&#x7FFB;&#x8BD1;&#x65F6;&#xFF0C;&#x867D;&#x7136;&#x8BED;&#x5E8F;&#x4F1A;&#x53D8;&#xFF0C;&#x4F46;&#x5927;&#x4F53;&#x7684;&#x8BED;&#x4E49;&#x90E8;&#x5206;&#x662F;&#x6709;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x5173;&#x7CFB;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x6574;&#x53E5;&#x6574;&#x53E5;encode&#x3002;</p>
-<h3 id="approach">Approach</h3>
+<h3 id="approach"><a name="approach" class="plugin-anchor" href="#approach"><i class="fa fa-link" aria-hidden="true"></i></a><a name="approach" class="anchor-navigation-ex-anchor" href="#approach"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. Approach</h3>
 <p>&#x65B0;&#x6A21;&#x578B;<strong>RNNsearch</strong>&#xFF1A;<br>&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;target word <script type="math/tex; ">y_i</script>,&#x90FD;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;context vector <script type="math/tex; ">c_i</script>&#x2014;&#x2014;&#x7528;softmax&#x523B;&#x753B;&#x201C;expected annotation&#x201D;&#x3002;<script type="math/tex; ">y_i</script>&#x7A76;&#x7ADF;&#x5BF9;&#x5E94;&#x54EA;&#x4E00;&#x4E2A;annotation&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x4E00;&#x79CD;&#x5206;&#x5E03;&#xFF08;&#x591A;&#x5206;&#x7C7B;&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x6743;&#x91CD;/&#x6982;&#x7387;&#x7684;&#x671F;&#x671B;&#x6765;&#x523B;&#x753B;&#x3002;</p>
 <p><script type="math/tex; mode=display">
 \alpha_{ij}=\frac{\exp(e_{ij})}{\sum_{k=1}^{T_x}\exp(e_{ik})}
@@ -1476,7 +1509,7 @@
 <ul>
 <li>&#x5BF9;&#x9F50;&#xFF08;Align&#xFF09;&#x4E0E;&#x7FFB;&#x8BD1;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x3002;</li>
 </ul>
-<h3 id="2-image-caption">2. Image Caption</h3>
+<h3 id="2-image-caption"><a name="2-image-caption" class="plugin-anchor" href="#2-image-caption"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-image-caption" class="anchor-navigation-ex-anchor" href="#2-image-caption"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. 2. Image Caption</h3>
 <p><img src="http://static.zybuluo.com/sixijinling/pu4yhiw0im7t8fj30ruxvkpv/image_1aocgvgqt1hn5l5k6jt1rbiei411.png" alt=""><br><strong>&#x300A;Show, Attend and Tell: Neural Image Caption Generation with Visual Attention* &#x300B;</strong><br>&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x8FD8;&#x662F;&#x548C;&#x4E0A;&#x6B21;&#x8BB2;&#x7684;&#x673A;&#x5668;&#x7FFB;&#x8BD1;&#x7C7B;&#x4F3C;&#xFF1A;</p>
 <p><script type="math/tex; mode=display">
 \alpha _{ti}=\frac {\exp(e_{ti})}{\sum _{k-1}^L \exp(e_{tk})}
@@ -1487,7 +1520,7 @@
 <ul>
 <li>attention&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x5728;sequence to sequence&#x4E2D;&#x3002;&#x800C;&#x8FD9;&#x91CC;&#x8FD8;&#x662F;&#x89E3;&#x51B3;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x8F93;&#x51FA;&#x4E0D;&#x662F;sequence&#x800C;&#x662F;vector</li>
 </ul>
-<h2 id="encoder--bidirectional-rnn-birnn-for-annotation">Encoder : Bidirectional RNN (BiRNN) for Annotation</h2>
+<h2 id="encoder--bidirectional-rnn-birnn-for-annotation"><a name="encoder--bidirectional-rnn-birnn-for-annotation" class="plugin-anchor" href="#encoder--bidirectional-rnn-birnn-for-annotation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="encoder--bidirectional-rnn-birnn-for-annotation" class="anchor-navigation-ex-anchor" href="#encoder--bidirectional-rnn-birnn-for-annotation"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Encoder : Bidirectional RNN (BiRNN) for Annotation</h2>
 <p><script type="math/tex; mode=display">
 \mathbf x= \left(
   \begin{array}{cccc}
@@ -1563,7 +1596,7 @@ pre_encoder\_inputs, output\_state\_fw, output\_state\_bw = tf.nn.bidirectional\
 <pre><code>initial\_state = concate\(output\_state\_fw, output\_state\_bw\)
 
 \#-&amp;gt; 2 x num\_hidden
-</code></pre><h2 id="decoder-">Decoder :</h2>
+</code></pre><h2 id="decoder-"><a name="decoder-" class="plugin-anchor" href="#decoder-"><i class="fa fa-link" aria-hidden="true"></i></a><a name="decoder-" class="anchor-navigation-ex-anchor" href="#decoder-"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Decoder :</h2>
 <p>&#x521D;&#x59CB;&#x5316;&#xFF1A;</p>
 <ul>
 <li>memory state </li>
@@ -1635,7 +1668,7 @@ p(y_t|a,y^{t-1}_1)\propto\exp(\mathbf L_0(\mathbf E y_{t-1}+\mathbf L_h h_{t-1}+
 
 </script></p>
 <p>&#x6309;&#x9053;&#x7406;&#x6765;&#x8BF4;&#x3002;&#x8FD9;&#x91CC;&#x4E0D;&#x5E94;&#x8BE5;&#x662F;<script type="math/tex; ">y_{t-1}</script>,&#x5982;&#x679C;&#x662F;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x9010;&#x884C;&#x626B;&#x63CF;&#x5C0F;&#x65B9;&#x683C;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x5F88;&#x663E;&#x7136;&#x5728;&#x6362;&#x884C;&#x7684;&#x65F6;&#x5019;&#x524D;&#x540E;&#x4E24;&#x4E2A;&#x65B9;&#x683C;&#x6CA1;&#x4EC0;&#x4E48;&#x903B;&#x8F91;&#x8054;&#x7CFB;&#xFF0C;&#x53CD;&#x800C;&#x8FD8;&#x662F;&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;4&#x4E2A;&#x6216;8&#x4E2A;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x66F4;&#x503C;&#x5F97;&#x53C2;&#x8003;&#x3002;&#x76F8;&#x5F53;&#x4E8E;<script type="math/tex; ">y</script>{&#x5468;&#x56F4;&#x683C;}&#x8D1F;&#x8D23;&#x672C;&#x5730;&#x7279;&#x5F81;&#xFF0C;<script type="math/tex; ">\hat z_t</script>&#x8D1F;&#x8D23;&#x5168;&#x5C40;&#x7279;&#x5F81;&#x6295;&#x7968;&#xFF0C;<script type="math/tex; ">h_{t-1}</script>&#x7684;&#x8003;&#x9A8C;&#x5219;&#x5728;&#x4E8E;&#x53CA;&#x65F6;&#x66F4;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x9009;&#x62E9;&#x9057;&#x5FD8;/&#x8BB0;&#x5FC6;&#x3002;</p>
-<h3 id="seq2seq">seq2seq</h3>
+<h3 id="seq2seq"><a name="seq2seq" class="plugin-anchor" href="#seq2seq"><i class="fa fa-link" aria-hidden="true"></i></a><a name="seq2seq" class="anchor-navigation-ex-anchor" href="#seq2seq"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. seq2seq</h3>
 <p>&#x8FD9;&#x91CC;&#x7528;&#x7684;&#x662F;Tensorflow&#x81EA;&#x4EA7;&#x7684;`Seq2seq_model`,&#x672C;&#x6765;&#x5E94;&#x8BE5;&#x662F;&#x7528;&#x4E8E;&#x673A;&#x5668;&#x7FFB;&#x8BD1;&#x8FD9;&#x79CD;&#x5E8F;&#x5217;&#x5230;&#x5E8F;&#x5217;&#x7684;&#x7F16;&#x89E3;&#x7801;&#x6A21;&#x578B;&#xFF0C;&#x8F93;&#x51FA;&#x5B9E;&#x9645;&#x4E0A;&#x662F;`target_vocab_size`&#x76F8;&#x5173;&#x7684;&#x3002;&#x8FD9;&#x91CC;&#x505A;&#x4E9B;&#x6539;&#x52A8;&#x7528;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x4E8C;&#x5206;&#x7C7B;&#x6A21;&#x578B;&#x4E0A;&#x3002;</p>
 <p>&#x9996;&#x5148;&#x6784;&#x9020;&#x5185;&#x90E8;&#x7684;&#x591A;&#x5C42;RNN&#x7F51;&#x7EDC;&#xFF1A;</p>
 <ul>
@@ -1660,9 +1693,9 @@ num\_hidden = attn\_num\_layers \* attn\_num\_hidden
 <p>  especially good results in a number of sequence-to-sequence tasks. This</p>
 <p>  implementation is based on <a href="http://arxiv.org/abs/1412.7449" target="_blank">http://arxiv.org/abs/1412.7449</a> (see below for</p>
 <p>  details). It is recommended for complex sequence-to-sequence tasks.</p>
-<h2 id="adaptive-computation-time">Adaptive Computation Time</h2>
-<h2 id="neural-programmer">Neural Programmer</h2>
-<h2 id="reference">Reference</h2>
+<h2 id="adaptive-computation-time"><a name="adaptive-computation-time" class="plugin-anchor" href="#adaptive-computation-time"><i class="fa fa-link" aria-hidden="true"></i></a><a name="adaptive-computation-time" class="anchor-navigation-ex-anchor" href="#adaptive-computation-time"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Adaptive Computation Time</h2>
+<h2 id="neural-programmer"><a name="neural-programmer" class="plugin-anchor" href="#neural-programmer"><i class="fa fa-link" aria-hidden="true"></i></a><a name="neural-programmer" class="anchor-navigation-ex-anchor" href="#neural-programmer"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Neural Programmer</h2>
+<h2 id="reference"><a name="reference" class="plugin-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a><a name="reference" class="anchor-navigation-ex-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. Reference</h2>
 <hr>
 <ul>
 <li><a href="http://distill.pub/2016/augmented-rnns/#neural-turing-machines" target="_blank">Augmented-RNNs</a></li>
@@ -1711,21 +1744,38 @@ num\_hidden = attn\_num\_layers \* attn\_num\_hidden
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Attention","level":"2.7.1","depth":2,"next":{"title":"word2vec","level":"2.7.2","depth":2,"path":"word2vec.md","ref":"word2vec.md","articles":[]},"previous":{"title":"第4章 深度学习探索","level":"2.7","depth":1,"path":"deeplearning.md","ref":"deeplearning.md","articles":[{"title":"Attention","level":"2.7.1","depth":2,"path":"attention.md","ref":"attention.md","articles":[]},{"title":"word2vec","level":"2.7.2","depth":2,"path":"word2vec.md","ref":"word2vec.md","articles":[]},{"title":"AlphaGo","level":"2.7.3","depth":2,"path":"alphago.md","ref":"alphago.md","articles":[]},{"title":"Terms","level":"2.7.4","depth":2,"path":"termsmd.md","ref":"termsmd.md","articles":[]},{"title":"boost","level":"2.7.5","depth":2,"path":"boost.md","ref":"boost.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"attention.md","mtime":"2017-08-03T09:06:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T13:39:22.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Attention","level":"2.7.1","depth":2,"next":{"title":"word2vec","level":"2.7.2","depth":2,"path":"word2vec.md","ref":"word2vec.md","articles":[]},"previous":{"title":"第4章 深度学习探索","level":"2.7","depth":1,"path":"deeplearning.md","ref":"deeplearning.md","articles":[{"title":"Attention","level":"2.7.1","depth":2,"path":"attention.md","ref":"attention.md","articles":[]},{"title":"word2vec","level":"2.7.2","depth":2,"path":"word2vec.md","ref":"word2vec.md","articles":[]},{"title":"AlphaGo","level":"2.7.3","depth":2,"path":"alphago.md","ref":"alphago.md","articles":[]},{"title":"Terms","level":"2.7.4","depth":2,"path":"termsmd.md","ref":"termsmd.md","articles":[]},{"title":"boost","level":"2.7.5","depth":2,"path":"boost.md","ref":"boost.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","copy-code-button","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"attention.md","mtime":"2017-08-03T09:06:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T12:35:17.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
         
-        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        <script src="gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
         
     
         
@@ -1752,6 +1802,8 @@ num\_hidden = attn\_num\_layers \* attn\_num\_hidden
         <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
