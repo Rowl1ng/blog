@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>AlphaGo · GitBook</title>
+        <title>cython · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="termsmd.html" />
+    <link rel="next" href="gong-cheng-hua.html" />
     
     
-    <link rel="prev" href="word2vec.html" />
+    <link rel="prev" href="error.html" />
     
 
     </head>
@@ -312,7 +312,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.13" data-path="cython.html">
+        <li class="chapter active" data-level="2.1.13" data-path="cython.html">
             
                 <a href="cython.html">
             
@@ -914,7 +914,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.7.3" data-path="alphago.html">
+        <li class="chapter " data-level="3.7.3" data-path="alphago.html">
             
                 <a href="alphago.html">
             
@@ -1512,7 +1512,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >AlphaGo</a>
+        <a href="." >cython</a>
     </h1>
 </div>
 
@@ -1527,101 +1527,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#alphago">1. AlphaGo</a></li><ul><li><a href="#monte-carlo-tree-search">1.1. Monte Carlo Tree Search</a></li><ul><li><a href="#4&#x6708;9&#x53F7;&#x66F4;&#x65B0;">1.1.1. 4&#x6708;9&#x53F7;&#x66F4;&#x65B0;</a></li></ul><li><a href="#&#x73AF;&#x5883;">1.2. &#x73AF;&#x5883;</a></li><ul><li><a href="#cython0234">1.2.1. Cython==0.23.4</a></li><li><a href="#scipy0170-numpy1104">1.2.2. scipy==0.17.0 numpy==1.10.4</a></li><li><a href="#six1100">1.2.3. six==1.10.0</a></li><li><a href="#wheel0290">1.2.4. wheel==0.29.0</a></li><li><a href="#&#x5B89;&#x88C5;theano&#x548C;keras">1.2.5. &#x5B89;&#x88C5;Theano&#x548C;keras</a></li></ul><li><a href="#&#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;">1.3. &#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;</a></li><li><a href="#gopy">1.4. go.py</a></li><ul><li><a href="#&#x754C;&#x9762;">1.4.1. &#x754C;&#x9762;</a></li><li><a href="#alphgo">1.4.2. Alphgo/</a></li></ul></ul></ul></div><a href="#alphago" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="alphago"><a name="alphago" class="plugin-anchor" href="#alphago"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alphago" class="anchor-navigation-ex-anchor" href="#alphago"><i class="fa fa-link" aria-hidden="true"></i></a>1. AlphaGo</h1>
-<p>&#x5F00;&#x6E90;
-&#x7F29;&#x51CF;</p>
-<ul>
-<li>&#x5E7F;&#x5EA6;&#xFF1A;&#x51CF;&#x5C11;&#x9700;&#x8981;&#x6A21;&#x62DF;&#x7684;&#x843D;&#x5B50;&#x9009;&#x9879; <ul>
-<li>imitating expert moves(supervised learning)</li>
-<li>&#x5F3A;&#x5316;&#x5B66;&#x4E60;&#xFF08;self-plays&#xFF09;</li>
-</ul>
-</li>
-</ul>
-<p>&#x3001;</p>
-<ul>
-<li>&#x6DF1;&#x5EA6;&#xFF1A;Board Evaluation</li>
-</ul>
-<blockquote>
-<p>&#x641C;&#x7D22;&#x7684;&#x672C;&#x4E49;&#xFF0C;&#x662F;&#x5BFB;&#x627E;&#x7F57;&#x9A6C;&#x7684;&#x8FC7;&#x7A0B;&#x800C;&#x975E;&#x7F57;&#x9A6C;&#x672C;&#x8EAB;&#xFF01;
-&#x2026;&#x2026;
-&#x4ECE;&#x6570;&#x5B66;&#x4E0A;&#x8BB2;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x8FF7;&#x5BAB;&#x7684;&#x5F00;&#x59CB;&#x53EB;&#x505A;&#x201C;&#x6839;&#x201D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x8DEF;&#x53E3;&#x53EB;&#x505A;&#x201C;&#x7ED3;&#x70B9;&#x201D;&#xFF0C;&#x8DEF;&#x53E3;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8DEF;&#x53EB;&#x505A;&#x201C;&#x5206;&#x652F;&#x201D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x65E0;&#x8DEF;&#x53EF;&#x8D70;&#x7684;&#x72B6;&#x6001;&#x53EB;&#x505A;&#x201C;&#x53F6;&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x8D70;&#x8FF7;&#x5BAB;&#x6240;&#x6709;&#x7684;&#x53D8;&#x5316;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x68F5;&#x201C;&#x6811;&#x201D;&#x3002;&#x641C;&#x7D22;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5C31;&#x662F;&#x6309;&#x7167;&#x67D0;&#x4E2A;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x8FD9;&#x68F5;&#x6811;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x51FA;&#x53E3;&#x7684;&#x53F6;&#x5B50;&#x6216;&#x8005;&#x627E;&#x904D;&#x6240;&#x6709;&#x7684;&#x53F6;&#x5B50;&#x3002;
-&#x2026;&#x2026;
-&#x5728;&#x6709;&#x9650;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x9009;&#x62E9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x80FD;&#x627E;&#x5230;&#x7F57;&#x9A6C;&#x5417;&#xFF1F;
-&#x2014;&#x2014;&#x6885;&#x4FCF;&#x7AF9;</p>
-</blockquote>
-<p>&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;/&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;
-A*search
-minmax algorithm
-Alpha-beta&#x526A;&#x679D;
-&#x7CBE;&#x786E;&#x7684;&#x5C40;&#x52BF;&#x8BC4;&#x4F30;:&#x9759;&#x6001;-&gt;&#x52A8;&#x6001;&#x641C;&#x7D22;
-Crazy Stone &#x3001;Zen</p>
-<h2 id="monte-carlo-tree-search"><a name="monte-carlo-tree-search" class="plugin-anchor" href="#monte-carlo-tree-search"><i class="fa fa-link" aria-hidden="true"></i></a><a name="monte-carlo-tree-search" class="anchor-navigation-ex-anchor" href="#monte-carlo-tree-search"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Monte Carlo Tree Search</h2>
-<blockquote>
-<p>&#x50CF;&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x786E;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x5B8C;&#x6210;&#x7684;&#x968F;&#x673A;&#x7B97;&#x6CD5;&#xFF0C;&#x5C31;&#x53EB;&#x505A;&#x8499;&#x7279;&#x5361;&#x6D1B;&#x3002;
-&#x2026;&#x2026;
-&#x7528;&#x6A21;&#x62DF;&#x5BF9;&#x5C40;&#x7684;&#x6700;&#x7EC8;&#x80DC;&#x7387;&#x800C;&#x4E0D;&#x662F;&#x8BC4;&#x5206;&#x503C;&#xFF0C;&#x6765;&#x8BC4;&#x4EF7;&#x5F53;&#x524D;&#x5C40;&#x9762;&#x7684;&#x597D;&#x574F;&#x3002;</p>
-</blockquote>
-<p>&#x95EE;&#x9898;&#xFF1A;</p>
-<blockquote>
-<p>exploration vs. exploitation</p>
-</blockquote>
-<p><strong>multi-armed bandit</strong>,UCB&#x7B56;&#x7565;-&gt;UCT(UCB applied to trees)</p>
-<h3 id="4&#x6708;9&#x53F7;&#x66F4;&#x65B0;"><a name="4&#x6708;9&#x53F7;&#x66F4;&#x65B0;" class="plugin-anchor" href="#4&#x6708;9&#x53F7;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="4&#x6708;9&#x53F7;&#x66F4;&#x65B0;" class="anchor-navigation-ex-anchor" href="#4&#x6708;9&#x53F7;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 4&#x6708;9&#x53F7;&#x66F4;&#x65B0;</h3>
-<p>&#x7528;Pycharm&#x76F4;&#x63A5;&#x4ECE;</p>
-<h2 id="&#x73AF;&#x5883;"><a name="&#x73AF;&#x5883;" class="plugin-anchor" href="#&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x73AF;&#x5883;</h2>
-<h3 id="cython0234"><a name="cython0234" class="plugin-anchor" href="#cython0234"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cython0234" class="anchor-navigation-ex-anchor" href="#cython0234"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. Cython==0.23.4</h3>
-<p>Cython&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#xFF1A; &#x7B80;&#x5316;python&#x8C03;&#x7528;c&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x7684;&#x7E41;&#x7410;&#x5C01;&#x88C5;&#x8FC7;&#x7A0B;&#xFF0C;&#x63D0;&#x9AD8;python&#x4EE3;&#x7801;&#x6267;&#x884C;&#x901F;&#x5EA6;&#xFF08;C&#x8BED;&#x8A00;&#x7684;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x6BD4;python&#x5FEB;&#xFF09;</p>
-<pre><code>sudo apt-get install cython
-</code></pre><h3 id="scipy0170-numpy1104"><a name="scipy0170-numpy1104" class="plugin-anchor" href="#scipy0170-numpy1104"><i class="fa fa-link" aria-hidden="true"></i></a><a name="scipy0170-numpy1104" class="anchor-navigation-ex-anchor" href="#scipy0170-numpy1104"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. scipy==0.17.0 numpy==1.10.4</h3>
-<pre><code>sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
-</code></pre><h4 id="&#x5B89;&#x88C5;keras032"><a name="&#x5B89;&#x88C5;keras032" class="plugin-anchor" href="#&#x5B89;&#x88C5;keras032"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B89;&#x88C5;keras032" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;keras032"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;Keras==0.3.2</h4>
-<p>&#x8FD9;&#x5C31;&#x6CA1;&#x4EC0;&#x4E48;&#x597D;&#x8BF4;&#x7684;&#x4E86;&#xFF0C;&#x81EA;&#x5DF1;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x5C31;&#x884C;&#x4E86;&#xFF0C;keras Github&#x5730;&#x5740;&#xFF08;<a href="https://github.com/fchollet/keras&#xFF09;&#x3002;" target="_blank">https://github.com/fchollet/keras&#xFF09;&#x3002;</a></p>
-<pre><code>python setup.py develop --user
-
-
-
-pip install pyyaml
-</code></pre><h3 id="six1100"><a name="six1100" class="plugin-anchor" href="#six1100"><i class="fa fa-link" aria-hidden="true"></i></a><a name="six1100" class="anchor-navigation-ex-anchor" href="#six1100"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. six==1.10.0</h3>
-<p>Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions. 
-    pip install six</p>
-<h3 id="wheel0290"><a name="wheel0290" class="plugin-anchor" href="#wheel0290"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wheel0290" class="anchor-navigation-ex-anchor" href="#wheel0290"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. wheel==0.29.0</h3>
-<pre><code>sudo apt-get install python-pip
-pip install wheel
-</code></pre><h3 id="&#x5B89;&#x88C5;theano&#x548C;keras"><a name="&#x5B89;&#x88C5;theano&#x548C;keras" class="plugin-anchor" href="#&#x5B89;&#x88C5;theano&#x548C;keras"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B89;&#x88C5;theano&#x548C;keras" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;theano&#x548C;keras"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. &#x5B89;&#x88C5;Theano&#x548C;keras</h3>
-<p>-e git://github.com/Theano/Theano.git@eab9cf5d594bac251df57885509394d2c52ccd1a#egg=Theano
-    git clone git://github.com/Theano/Theano.git
-    cd Theano
-    python setup.py develop --user
-    cd ..</p>
-<p>&#x6267;&#x884C;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;Theano&#x76EE;&#x5F55;&#x4E0B;&#x7684;theano&#x76EE;&#x5F55;&#x62F7;&#x8D1D;&#x5230;python&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x7684;dist-package&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x6211;&#x7684;&#x673A;&#x5668;&#x662F;/usr/lib/python2.7/dist-packages</p>
-<h4 id="&#x5B89;&#x88C5;sublime"><a name="&#x5B89;&#x88C5;sublime" class="plugin-anchor" href="#&#x5B89;&#x88C5;sublime"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B89;&#x88C5;sublime" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;sublime"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;sublime</h4>
-<p>&#x8FD0;&#x884C;&#xFF1A;</p>
-<pre><code>subl
-</code></pre><h2 id="&#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;"><a name="&#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;" class="plugin-anchor" href="#&#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5F00;&#x59CB;&#x4E0B;&#x68CB;&#x8FA3;</h2>
-<p>&#x4ECA;&#x5929;&#xFF08;2016.3.16&#xFF09;&#x770B;&#x7EAA;&#x5F55;&#x7247;&#x300A;&#x56F4;&#x68CB;&#x300B;&#x7B2C;&#x4E94;&#x96C6;&#x624D;&#x77E5;&#x9053;&quot;&#x6C14;&quot;&#x7684;&#x82F1;&#x6587;&#x662F;&#x201C;liberty&#x201D;</p>
-<h2 id="gopy"><a name="gopy" class="plugin-anchor" href="#gopy"><i class="fa fa-link" aria-hidden="true"></i></a><a name="gopy" class="anchor-navigation-ex-anchor" href="#gopy"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. go.py</h2>
-<p>&#x57FA;&#x672C;&#x7684;&#x8BBE;&#x7F6E;
-    WHITE = -1
-    BLACK = +1
-    EMPTY = 0
-    PASS_MOVE = None</p>
-<p><code>self.liberty_sets</code> is a 2D array with the same indexes as <code>board</code> each entry points to a set of tuples - the liberties of a stone&apos;s connected block. By caching liberties in this way, we can directly optimize update functions (e.g. do_move) and in doing so indirectly speed up any function that queries liberties
-neighbors and diagnals</p>
-<ul>
-<li>&#x77E9;&#x9635;liberty_count&#x7528;-1&#x521D;&#x59CB;&#x5316;&#xFF1B;</li>
-<li>group_sets&#x4FDD;&#x5B58;&#x548C;&#xFF08;x,y&#xFF09;&#x76F8;&#x8FDE;&#x7684;&#x6240;&#x6709;&#x843D;&#x5B50;&#xFF1B;</li>
-</ul>
-<p>&#x65B9;&#x6CD5;&#xFF1A;</p>
-<ul>
-<li>get_group&#x7ED9;&#x51FA;&#x67D0;&#x4E2A;&#x5B50;&#x76F8;&#x8FDE;&#x7684;&#x6240;&#x6709;&#x540C;&#x8272;&#x68CB;&#x5B50;</li>
-<li>get_groups_around&#x8FD4;&#x56DE;&#x67D0;&#x5B50;&#x5468;&#x56F4;&#x5B64;&#x7ACB;&#x7684;&#x5B50;&#x7FA4;<h3 id="&#x754C;&#x9762;"><a name="&#x754C;&#x9762;" class="plugin-anchor" href="#&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x754C;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. &#x754C;&#x9762;</h3>
-<code>/interface/server</code><h3 id="alphgo"><a name="alphgo" class="plugin-anchor" href="#alphgo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="alphgo" class="anchor-navigation-ex-anchor" href="#alphgo"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. Alphgo/</h3>
-<h4 id="models"><a name="models" class="plugin-anchor" href="#models"><i class="fa fa-link" aria-hidden="true"></i></a><a name="models" class="anchor-navigation-ex-anchor" href="#models"><i class="fa fa-link" aria-hidden="true"></i></a>models/</h4>
-</li>
-</ul>
-<p><code>preprocessing.py</code>
-a class to convert from AlphaGo GameState objects to tensors of <strong>one-hot</strong> features for NN inputs
-<code>game_converter.py</code></p>
+                                <p><a href="http://jacobz.top/2017-12/CythonIntro/" target="_blank">&#x53C2;&#x8003;</a></p>
 
                                 
                                 </section>
@@ -1649,12 +1555,12 @@ a class to convert from AlphaGo GameState objects to tensors of <strong>one-hot<
 
             
                 
-                <a href="word2vec.html" class="navigation navigation-prev " aria-label="Previous page: word2vec">
+                <a href="error.html" class="navigation navigation-prev " aria-label="Previous page: 错误和异常">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="termsmd.html" class="navigation navigation-next " aria-label="Next page: Terms">
+                <a href="gong-cheng-hua.html" class="navigation navigation-next " aria-label="Next page: 工程化">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1665,7 +1571,7 @@ a class to convert from AlphaGo GameState objects to tensors of <strong>one-hot<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AlphaGo","level":"3.7.3","depth":2,"next":{"title":"Terms","level":"3.7.4","depth":2,"path":"termsmd.md","ref":"termsmd.md","articles":[]},"previous":{"title":"word2vec","level":"3.7.2","depth":2,"path":"word2vec.md","ref":"word2vec.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"alphago.md","mtime":"2017-08-03T08:37:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-30T13:51:34.909Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cython","level":"2.1.13","depth":2,"next":{"title":"工程化","level":"2.2","depth":1,"path":"gong-cheng-hua.md","ref":"gong-cheng-hua.md","articles":[]},"previous":{"title":"错误和异常","level":"2.1.12","depth":2,"path":"error.md","ref":"error.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"cython.md","mtime":"2018-06-21T08:30:22.019Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-30T13:51:34.909Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
