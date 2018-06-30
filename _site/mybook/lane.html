@@ -1,0 +1,1929 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>车道线识别 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="roadnn.html" />
+    
+    
+    <link rel="prev" href="practice.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://rowl1ng.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">编程</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python笔记本
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="multiproccessing.html">
+            
+                <a href="multiproccessing.html">
+            
+                    
+                    多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="superior.html">
+            
+                <a href="superior.html">
+            
+                    
+                    高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="code.html">
+            
+                <a href="code.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="debug.html">
+            
+                <a href="debug.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="functional.html">
+            
+                <a href="functional.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                    文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="log.html">
+            
+                <a href="log.html">
+            
+                    
+                    日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="OOP.html">
+            
+                <a href="OOP.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="error.html">
+            
+                <a href="error.html">
+            
+                    
+                    错误和异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Machine Learning</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="README 3.html">
+            
+                <a href="README 3.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="7b2c-1-zhang-shu-ju-fen-xi.html">
+            
+                <a href="7b2c-1-zhang-shu-ju-fen-xi.html">
+            
+                    
+                    第-1章 数据分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="7b2c-1-zhang-shu-ju-fen-xi/scikit-learn.html">
+            
+                <a href="7b2c-1-zhang-shu-ju-fen-xi/scikit-learn.html">
+            
+                    
+                    scikit-learn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="7b2c-1-zhang-shu-ju-fen-xi/pandas.html">
+            
+                <a href="7b2c-1-zhang-shu-ju-fen-xi/pandas.html">
+            
+                    
+                    pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="7b2c-1-zhang-shu-ju-fen-xi/numpy.html">
+            
+                <a href="7b2c-1-zhang-shu-ju-fen-xi/numpy.html">
+            
+                    
+                    numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第0章 数学准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="inbox0.html">
+            
+                <a href="inbox0.html">
+            
+                    
+                    待整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="han_shu.html">
+            
+                <a href="han_shu.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="differential.html">
+            
+                <a href="differential.html">
+            
+                    
+                    微分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="integral.html">
+            
+                <a href="integral.html">
+            
+                    
+                    积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="matrix.html">
+            
+                <a href="matrix.html">
+            
+                    
+                    矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="probability.html">
+            
+                <a href="probability.html">
+            
+                    
+                    概率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="metrics.html">
+            
+                <a href="metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="distance.html">
+            
+                <a href="distance.html">
+            
+                    
+                    距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.9" data-path="term.md.html">
+            
+                <a href="term.md.html">
+            
+                    
+                    术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    第1章 基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="generality.html">
+            
+                <a href="generality.html">
+            
+                    
+                    方法概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="preprocess.html">
+            
+                <a href="preprocess.html">
+            
+                    
+                    预处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="bayesian.html">
+            
+                <a href="bayesian.html">
+            
+                    
+                    贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="optimizer.html">
+            
+                <a href="optimizer.html">
+            
+                    
+                    优化算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="svm.html">
+            
+                <a href="svm.html">
+            
+                    
+                    支持向量机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="smo.html">
+            
+                <a href="smo.html">
+            
+                    
+                    SMO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="crf.html">
+            
+                <a href="crf.html">
+            
+                    
+                    条件随机场
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="nnintro.html">
+            
+                <a href="nnintro.html">
+            
+                    
+                    第2章 神经网络入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="nnfunction.html">
+            
+                <a href="nnfunction.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="nnstructure.html">
+            
+                <a href="nnstructure.html">
+            
+                    
+                    神经网络结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="regulizer.html">
+            
+                <a href="regulizer.html">
+            
+                    
+                    正则化网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="rnn.html">
+            
+                <a href="rnn.html">
+            
+                    
+                    循环神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="cnn.html">
+            
+                <a href="cnn.html">
+            
+                    
+                    卷积神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="wu-jian-du-xue-xi.html">
+            
+                <a href="wu-jian-du-xue-xi.html">
+            
+                    
+                    无监督学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="nnpractice.html">
+            
+                <a href="nnpractice.html">
+            
+                    
+                    第3章 神经网络编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="keras.html">
+            
+                <a href="keras.html">
+            
+                    
+                    keras
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="theano.html">
+            
+                <a href="theano.html">
+            
+                    
+                    Theano
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="tensorflow.html">
+            
+                <a href="tensorflow.html">
+            
+                    
+                    Tensorflow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="caffe.html">
+            
+                <a href="caffe.html">
+            
+                    
+                    caffe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.5" data-path="layer.html">
+            
+                <a href="layer.html">
+            
+                    
+                    layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.6" data-path="matlab.html">
+            
+                <a href="matlab.html">
+            
+                    
+                    matlab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.7" data-path="pytorch.html">
+            
+                <a href="pytorch.html">
+            
+                    
+                    Pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="deeplearning.html">
+            
+                <a href="deeplearning.html">
+            
+                    
+                    第4章 深度学习探索
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="attention.html">
+            
+                <a href="attention.html">
+            
+                    
+                    Attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="word2vec.html">
+            
+                <a href="word2vec.html">
+            
+                    
+                    word2vec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="alphago.html">
+            
+                <a href="alphago.html">
+            
+                    
+                    AlphaGo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.4" data-path="termsmd.html">
+            
+                <a href="termsmd.html">
+            
+                    
+                    Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.5" data-path="boost.html">
+            
+                <a href="boost.html">
+            
+                    
+                    boost
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" >
+            
+                <span>
+            
+                    
+                    应用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="ying-yong/yu-yin.md">
+            
+                <span>
+            
+                    
+                    语音
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1.1" data-path="ying-yong/yu-yin/ying-yong-yu-an-quan-ling-yu-de-yu-yin-ji-zhu.md">
+            
+                <span>
+            
+                    
+                    应用于安全领域的语音技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.1.2" data-path="ying-yong/yu-yin/std.md">
+            
+                <span>
+            
+                    
+                    内容无关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.1.3" data-path="ying-yong/yu-yin/yin-su.md">
+            
+                <span>
+            
+                    
+                    内容相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.1.4" data-path="ying-yong/yu-yin/dai-zheng-li.md">
+            
+                <span>
+            
+                    
+                    待整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2" data-path="ying-yong/an-quan.md">
+            
+                <span>
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.2.1" data-path="ying-yong/an-quan/e-yi-dai-ma-jian-ce.md">
+            
+                <span>
+            
+                    
+                    恶意代码检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2.2" data-path="ying-yong/an-quan/zi-dong-lou-dong-wa-jue.md">
+            
+                <span>
+            
+                    
+                    脆弱性检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8.2.3" data-path="ying-yong/an-quan/zi-dong-lou-dong-wa-jue.md">
+            
+                <span>
+            
+                    
+                    自动漏洞挖掘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Computer Vision</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="README 2.html">
+            
+                <a href="README 2.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    第0章 数学准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="convolution.html">
+            
+                <a href="convolution.html">
+            
+                    
+                    卷积
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="practice.html">
+            
+                <a href="practice.html">
+            
+                    
+                    实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.3.1" data-path="lane.html">
+            
+                <a href="lane.html">
+            
+                    
+                    车道线识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="roadnn.html">
+            
+                <a href="roadnn.html">
+            
+                    
+                    RoadNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="pythonbian-cheng.html">
+            
+                <a href="pythonbian-cheng.html">
+            
+                    
+                    python编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="pythonbian-cheng/opencv.md">
+            
+                <span>
+            
+                    
+                    opencv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="pythonbian-cheng/matplotlib.md">
+            
+                <span>
+            
+                    
+                    matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="tu-xiang-chu-li-ji-chu.html">
+            
+                <a href="tu-xiang-chu-li-ji-chu.html">
+            
+                    
+                    图像处理基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="ping-hua-hua.html">
+            
+                <a href="ping-hua-hua.html">
+            
+                    
+                    平滑化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="tu-xiang-jun-heng-hua.html">
+            
+                <a href="tu-xiang-jun-heng-hua.html">
+            
+                    
+                    对比度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="yu-zhi.html">
+            
+                <a href="yu-zhi.html">
+            
+                    
+                    阈值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="yi-liao-tu-xiang.html">
+            
+                <a href="yi-liao-tu-xiang.html">
+            
+                    
+                    医疗图像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="feature.html">
+            
+                <a href="feature.html">
+            
+                    
+                    feature
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Math</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="probability-theory.html">
+            
+                <a href="probability-theory.html">
+            
+                    
+                    Probability Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="optimization.html">
+            
+                <a href="optimization.html">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">英语</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="README 4.html">
+            
+                <a href="README 4.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="suffix.html">
+            
+                <a href="suffix.html">
+            
+                    
+                    suffix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="prefix.html">
+            
+                <a href="prefix.html">
+            
+                    
+                    prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="verb.html">
+            
+                <a href="verb.html">
+            
+                    
+                    verb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="synonym.html">
+            
+                <a href="synonym.html">
+            
+                    
+                    synonym
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="math.html">
+            
+                <a href="math.html">
+            
+                    
+                    math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="material.html">
+            
+                <a href="material.html">
+            
+                    
+                    material
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="others.html">
+            
+                <a href="others.html">
+            
+                    
+                    others
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >车道线识别</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;">1. &#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;</a></li><ul><li><a href="#1-&#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;">1.1. 1. &#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;</a></li><ul><li><a href="#11-&#x80CC;&#x666F;">1.1.1. 1.1 &#x80CC;&#x666F;</a></li><li><a href="#12-&#x610F;&#x4E49;">1.1.2. 1.2 &#x610F;&#x4E49;</a></li></ul><li><a href="#2-&#x4E3B;&#x8981;&#x95EE;&#x9898;">1.2. 2. &#x4E3B;&#x8981;&#x95EE;&#x9898;</a></li><li><a href="#3-&#x5B8C;&#x6210;&#x65B9;&#x6CD5;">1.3. 3. &#x5B8C;&#x6210;&#x65B9;&#x6CD5;</a></li><ul><li><a href="#31-&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;">1.3.1. 3.1 &#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;</a></li></ul><li><a href="#4-&#x4EFB;&#x52A1;&#x6B65;&#x9AA4;">1.4. 4. &#x4EFB;&#x52A1;&#x6B65;&#x9AA4;</a></li><ul><li><a href="#41-&#x57FA;&#x7840;&#x64CD;&#x4F5C;">1.4.1. 4.1 &#x57FA;&#x7840;&#x64CD;&#x4F5C;</a></li><li><a href="#42-&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;">1.4.2. 4.2 &#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;</a></li><li><a href="#43--&#x5BF9;&#x6BD4;&#x5EA6;">1.4.3. 4.3 * &#x5BF9;&#x6BD4;&#x5EA6;</a></li><li><a href="#44-&#x9608;&#x503C;&#x5904;&#x7406;">1.4.4. 4.4 &#x9608;&#x503C;&#x5904;&#x7406;</a></li><li><a href="#45-gui&#x90E8;&#x5206;&#xFF08;pyqt4&#xFF09;">1.4.5. 4.5 GUI&#x90E8;&#x5206;&#xFF08;PyQt4&#xFF09;</a></li><li><a href="#1&#xFF09;&#x754C;&#x9762;">1.4.6. 1&#xFF09;&#x754C;&#x9762;</a></li><li><a href="#46-&#x6253;&#x5305;&#x6210;exe">1.4.7. 4.6 &#x6253;&#x5305;&#x6210;EXE</a></li></ul><li><a href="#5-&#x53C2;&#x8003;&#x8D44;&#x6599;">1.5. 5. &#x53C2;&#x8003;&#x8D44;&#x6599;</a></li><li><a href="#6----&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;">1.6. 6.    &#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;</a></li><ul><li><a href="#&#x82B1;&#x7D6E;">1.6.1. &#x82B1;&#x7D6E;</a></li></ul></ul></ul></div><a href="#&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;"><a name="&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;" class="plugin-anchor" href="#&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;" class="anchor-navigation-ex-anchor" href="#&#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x8F66;&#x9053;&#x7EBF;&#x8BC6;&#x522B;</h1>
+<h2 id="1-&#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;"><a name="1-&#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;" class="plugin-anchor" href="#1-&#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-&#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;" class="anchor-navigation-ex-anchor" href="#1-&#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1. &#x4EFB;&#x52A1;&#x7684;&#x80CC;&#x666F;&#x548C;&#x610F;&#x4E49;</h2>
+<h3 id="11-&#x80CC;&#x666F;"><a name="11-&#x80CC;&#x666F;" class="plugin-anchor" href="#11-&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="11-&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#11-&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 1.1 &#x80CC;&#x666F;</h3>
+<ul>
+<li>&#x603B;&#x4F53;&#x9700;&#x6C42;
+&#x5BF9;CiCS&#x8BBE;&#x5907;&#x91C7;&#x96C6;&#x7684;&#x8DEF;&#x9762;&#x56FE;&#x50CF;&#x4E2D;&#x7684;&#x9053;&#x8DEF;&#x6807;&#x5FD7;&#x6807;&#x7EBF;&#x8FDB;&#x884C;&#x8BC6;&#x522B;&#x53CA;&#x4F4D;&#x7F6E;&#x6807;&#x8BB0;&#x3002;</li>
+<li>&#x8DEF;&#x9762;&#x56FE;&#x50CF;
+&#x8DEF;&#x9762;&#x56FE;&#x50CF;&#x5305;&#x62EC;CiCS&#x4E24;&#x79CD;&#x7167;&#x660E;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x4E24;&#x79CD;&#x7167;&#x660E;&#x4E0B;&#x7684;&#x6807;&#x7EBF;&#x8FDB;&#x884C;&#x8BC6;&#x522B;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x7EDF;&#x4E00;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x6709;&#x56F0;&#x96BE;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7B97;&#x6CD5;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7167;&#x660E;&#x56FE;&#x50CF;&#x3002;</li>
+<li>&#x6807;&#x7EBF;&#x8BC6;&#x522B;&#x7ED3;&#x679C;&#x6807;&#x8BB0;
+&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5927;&#x5C0F;&#x4E0E;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x4E00;&#x81F4;&#x7684;&#x56FE;&#x50CF;&#xFF0C;&#x5728;&#x65B0;&#x56FE;&#x50CF;&#x4E2D;&#x5BF9;&#x8BC6;&#x522B;&#x51FA;&#x7684;&#x6807;&#x7EBF;&#x50CF;&#x7D20;&#x7528;&#x767D;&#x8272;&#x7070;&#x5EA6;&#xFF08;255&#xFF09;&#x8868;&#x793A;&#xFF0C;&#x5BF9;&#x4E8E;&#x5176;&#x4F59;&#x4F4D;&#x7F6E;&#x50CF;&#x7D20;&#x7528;&#x9ED1;&#x8272;&#x8868;&#x793A;&#xFF08;0&#xFF09;&#x3002;</li>
+<li>&#x8BC6;&#x522B;&#x8981;&#x6C42;
+1&#xFF09;&#x6807;&#x7EBF;&#x4E0A;&#x7684;&#x5F00;&#x88C2;&#x88C2;&#x7F1D;&#x7B97;&#x4F5C;&#x6807;&#x7EBF;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x9700;&#x8981;&#x7B97;&#x4F5C;&#x6807;&#x7EBF;&#x6574;&#x4F53;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x80FD;&#x5206;&#x6210;&#x5C0F;&#x5757;&#x8BC6;&#x522B;&#x51FA;&#x3002;
+2&#xFF09;&#x6807;&#x7EBF;&#x7531;&#x4E8E;&#x5149;&#x7167;&#x6761;&#x4EF6;&#x53CA;&#x81EA;&#x8EAB;&#x989C;&#x8272;&#xFF0C;&#x5728;&#x7070;&#x5EA6;&#x4E0A;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x6807;&#x7EBF;&#xFF0C;&#x8981;&#x6C42;&#x80FD;&#x81EA;&#x9002;&#x5E94;&#x5404;&#x79CD;&#x7070;&#x5EA6;&#x5206;&#x5E03;&#x4E0B;&#x7684;&#x6807;&#x7EBF;&#x3002;
+3&#xFF09;&#x5BF9;&#x4E8E;&#x6C61;&#x635F;&#x6216;&#x78E8;&#x635F;&#x4E25;&#x91CD;&#x7684;&#x6807;&#x7EBF;&#xFF0C;&#x8981;&#x6C42;&#x80FD;&#x591F;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x5C06;&#x6807;&#x7EBF;&#x8BC6;&#x522B;&#x7684;&#x5B8C;&#x6574;&#x3002;</li>
+<li>&#x6307;&#x6807;
+&#x5BF9;&#x4E8E;&#x6B63;&#x5E38;&#x7684;&#x6D01;&#x51C0;&#x7684;&#x8DEF;&#x9762;&#x56FE;&#x50CF;&#x4E0A;&#x65E0;&#x660E;&#x663E;&#x6216;&#x8F7B;&#x5FAE;&#x6C61;&#x635F;&#x7684;&#x6807;&#x5FD7;&#x6807;&#x7EBF;&#xFF0C;&#x8981;&#x6C42;&#x8BC6;&#x522B;&#x7684;&#x5B8C;&#x6574;&#x6027;&gt;=80%&#x3002;
+&#x5BF9;&#x4E8E;&#x6C61;&#x635F;&#x8F83;&#x4E25;&#x91CD;&#x7684;&#x6807;&#x7EBF;&#xFF0C;&#x8981;&#x6C42;&#x5BF9;&#x65E0;&#x6C61;&#x635F;&#x7684;&#x90E8;&#x5206;&#x80FD;&#x5B8C;&#x6574;&#x8BC6;&#x522B;&#xFF08;&gt;=80%&#xFF09;&#xFF0C;&#x6C61;&#x635F;&#x7684;&#x90E8;&#x5206;&#x5C3D;&#x53EF;&#x80FD;&#x8865;&#x5168;&#x3002;<h3 id="12-&#x610F;&#x4E49;"><a name="12-&#x610F;&#x4E49;" class="plugin-anchor" href="#12-&#x610F;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="12-&#x610F;&#x4E49;" class="anchor-navigation-ex-anchor" href="#12-&#x610F;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. 1.2 &#x610F;&#x4E49;</h3>
+&#x672C;&#x4EFB;&#x52A1;&#x7684;&#x6210;&#x679C;&#x5C06;&#x5E2E;&#x52A9;&#x516C;&#x8DEF;&#x7EF4;&#x62A4;&#x90E8;&#x95E8;&#x5BA1;&#x67E5;&#x8DEF;&#x9762;&#x7EF4;&#x62A4;&#x72B6;&#x51B5;&#xFF1A;&#x901A;&#x8FC7;&#x5BF9;&#x8DEF;&#x9762;&#x56FE;&#x50CF;&#x7684;&#x5904;&#x7406;&#x5E2E;&#x52A9;&#x53D1;&#x73B0;&#x6807;&#x7EBF;&#x7684;&#x6C61;&#x635F;&#x72B6;&#x51B5;&#xFF0C;&#x4EE5;&#x53CA;&#x65F6;&#x505A;&#x51FA;&#x5904;&#x7406;&#x3002;<h2 id="2-&#x4E3B;&#x8981;&#x95EE;&#x9898;"><a name="2-&#x4E3B;&#x8981;&#x95EE;&#x9898;" class="plugin-anchor" href="#2-&#x4E3B;&#x8981;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-&#x4E3B;&#x8981;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#2-&#x4E3B;&#x8981;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 2. &#x4E3B;&#x8981;&#x95EE;&#x9898;</h2>
+</li>
+<li><p>&#x5BF9;&#x4E0D;&#x540C;&#x4EAE;&#x5EA6;&#x7684;&#x56FE;&#x7247;&#x80FD;&#x7EDF;&#x4E00;&#x5904;&#x7406;&#xFF0C;&#x4E14;&#x8FBE;&#x5230;&#x8F83;&#x9AD8;&#x7684;&#x51C6;&#x786E;&#x7387;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x51E0;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+<ul>
+<li>&#x68C0;&#x6D4B;&#x56FE;&#x50CF;&#x767D;&#x8272;&#xFF08;255&#xFF09;&#x50CF;&#x7D20;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x8FC7;&#x9AD8;&#x7684;&#x8BDD;&#xFF0C;&#x8C03;&#x6574;&#x76F8;&#x5E94;&#x9608;&#x503C;&#x3002;&#x6216;&#x8005;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x662F;&#x68C0;&#x6D4B;&#x4EAE;&#x5EA6;&#xFF1B;</li>
+<li>&#x5FAA;&#x73AF;&#x5185;&#x5224;&#x65AD;&#xFF0C;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#x7684;&#x6761;&#x4EF6;&#x5C31;&#x662F;&#x4EAE;&#x5EA6;/&#x6BD4;&#x4F8B;&#xFF1B;</li>
+<li>&#x5BF9;&#x6240;&#x6709;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x5F52;&#x4E00;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x4F7F;&#x5F97;&#x4EAE;&#x5EA6;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#xFF1B;</li>
+<li>&#x589E;&#x52A0;&#x56FE;&#x7247;&#x5BF9;&#x6BD4;&#x5EA6;&#x3002;<h2 id="3-&#x5B8C;&#x6210;&#x65B9;&#x6CD5;"><a name="3-&#x5B8C;&#x6210;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#3-&#x5B8C;&#x6210;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3-&#x5B8C;&#x6210;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-&#x5B8C;&#x6210;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 3. &#x5B8C;&#x6210;&#x65B9;&#x6CD5;</h2>
+&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x9009;&#x62E9;&#x4F7F;&#x7528;Python&#xFF0C;&#x501F;&#x52A9;OpenCV&#x7684;Python&#x5305;&#x5B8C;&#x6210;&#x5BF9;&#x56FE;&#x50CF;&#x7684;&#x57FA;&#x7840;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;PyQt4&#x7F16;&#x5199;&#x754C;&#x9762;&#xFF0C;&#x4EE5;&#x63D0;&#x9AD8;&#x7A0B;&#x5E8F;&#x7684;&#x53EF;&#x64CD;&#x4F5C;&#x6027;&#x3002;<h3 id="31-&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;"><a name="31-&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;" class="plugin-anchor" href="#31-&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="31-&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#31-&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. 3.1 &#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;</h3>
+&#x8FD9;&#x91CC;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#x662F;Eclipse+Python2.7,&#x4F46;&#x60F3;&#x8981;&#x652F;&#x6301;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x7684;&#x5404;&#x79CD;&#x529F;&#x80FD;&#x8FD8;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x5404;&#x79CD;Python&#x7EC4;&#x4EF6;&#x624D;&#x884C;.</li>
+</ul>
+</li>
+<li><p>&#x5B89;&#x88C5;numpy&#x3001;scipy&#x3001;PIL&#xFF08;Pillow&#xFF09;&#x3001;matplotlib&#xFF1A;
+&#x8FD9;&#x4E9B;&#x5305;&#x7528;&#x6765;&#x652F;&#x6301;OpenCV&#x7684;&#x529F;&#x80FD;&#xFF08;PIL&#x662F;Python&#x201C;&#x5AE1;&#x7CFB;&#x201D;&#x7684;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x5B89;&#x88C5;&#xFF09;&#xFF0C;matplotlib&#x65F6;&#x5F88;&#x6709;&#x7528;&#x7684;python&#x4F5C;&#x56FE;&#x7EC4;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;&#x65F6;&#x8981;&#x4F7F;&#x7528;&#x7684;trackbar&#x5C31;&#x662F;&#x5B83;&#x7684;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#x3002; </p>
+</li>
+<li>&#x5B89;&#x88C5;openCV&#xFF1A;    <ul>
+<li>&#x8FDB;&#x5165;OpenCV&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x627E;&#x5230;&#xFF1A;\build\python\2.7\cv2.pyd</li>
+<li>&#x5C06;cv2.pyd&#x590D;&#x5236;&#x5230;Python&#x7684;&#x5B50;&#x76EE;&#x5F55;&#x4E0B;&#xFF1A;\Lib\site-packages\</li>
+</ul>
+</li>
+<li>&#x5B89;&#x88C5;pyQt4&#xFF1B;</li>
+<li>&#x5B89;&#x88C5;pydev(Eclipse)&#xFF1A;&#x5728;Eclipse&#x4E0B;&#x5199;Python&#x7684;&#x5FC5;&#x5907;&#x63D2;&#x4EF6;&#x3002;</li>
+</ul>
+<hr>
+<h2 id="4-&#x4EFB;&#x52A1;&#x6B65;&#x9AA4;"><a name="4-&#x4EFB;&#x52A1;&#x6B65;&#x9AA4;" class="plugin-anchor" href="#4-&#x4EFB;&#x52A1;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="4-&#x4EFB;&#x52A1;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#4-&#x4EFB;&#x52A1;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. 4. &#x4EFB;&#x52A1;&#x6B65;&#x9AA4;</h2>
+<h3 id="41-&#x57FA;&#x7840;&#x64CD;&#x4F5C;"><a name="41-&#x57FA;&#x7840;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#41-&#x57FA;&#x7840;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="41-&#x57FA;&#x7840;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#41-&#x57FA;&#x7840;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. 4.1 &#x57FA;&#x7840;&#x64CD;&#x4F5C;</h3>
+<h4 id="1&#xFF09;-&#x8BFB;&#x5165;&#x3001;&#x8F93;&#x51FA;jpg&#x56FE;&#x7247;"><a name="1&#xFF09;-&#x8BFB;&#x5165;&#x3001;&#x8F93;&#x51FA;jpg&#x56FE;&#x7247;" class="plugin-anchor" href="#1&#xFF09;-&#x8BFB;&#x5165;&#x3001;&#x8F93;&#x51FA;jpg&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#xFF09;-&#x8BFB;&#x5165;&#x3001;&#x8F93;&#x51FA;jpg&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#1&#xFF09;-&#x8BFB;&#x5165;&#x3001;&#x8F93;&#x51FA;jpg&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF09; &#x8BFB;&#x5165;&#x3001;&#x8F93;&#x51FA;jpg&#x56FE;&#x7247;</h4>
+<pre><code class="lang-python">    <span class="hljs-keyword">for</span> infile <span class="hljs-keyword">in</span>  glob.glob(<span class="hljs-string">&apos;../photos/test/*.jpg&apos;</span>):
+         out=processImage(infile)
+         outfile=str(infile).split(<span class="hljs-string">&apos;\\&apos;</span>)[<span class="hljs-number">1</span>]
+         outfile=outfile.split(<span class="hljs-string">&apos;.&apos;</span>)[<span class="hljs-number">0</span>]
+         cv2.imwrite(<span class="hljs-string">&apos;../result/normlaneresult/&apos;</span>+outfile+<span class="hljs-string">&apos;.jpg&apos;</span>,out)
+</code></pre>
+<h4 id="2&#xFF09;-trackbar&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;"><a name="2&#xFF09;-trackbar&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;" class="plugin-anchor" href="#2&#xFF09;-trackbar&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#xFF09;-trackbar&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#2&#xFF09;-trackbar&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF09; trackbar&#x5B9E;&#x65F6;&#x8C03;&#x8282;&#x53C2;&#x6570;</h4>
+<p>&#x901A;&#x8FC7;&#x8C03;&#x8282;trackbar&#x5B9E;&#x65F6;&#x89C2;&#x5BDF;&#x8F93;&#x51FA;&#x7684;&#x56FE;&#x7247;&#x7ED3;&#x679C;&#x66F4;&#x76F4;&#x89C2;&#x3001;&#x6709;&#x6548;&#xFF0C;&#x8282;&#x7701;&#x8C03;&#x53C2;&#x7684;&#x65F6;&#x95F4;&#x3002;
+&#x521B;&#x5EFA;trackbar&#xFF1A;</p>
+<pre><code class="lang-python">    cv2.createTrackbar(<span class="hljs-string">&apos;thrs1&apos;</span>, <span class="hljs-string">&apos;fill&apos;</span>, <span class="hljs-number">2000</span>, <span class="hljs-number">10000</span>, nothing)
+</code></pre>
+<p>&#x4ECE;trackbar&#x83B7;&#x53D6;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">    <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span> 
+        thrs1 = cv2.getTrackbarPos(<span class="hljs-string">&apos;thrs1&apos;</span>, <span class="hljs-string">&apos;fill&apos;</span>)
+        cv2.imshow(<span class="hljs-string">&apos;fill&apos;</span>, image)
+        cv2.waitKey(<span class="hljs-number">0</span>)
+    cv2.destroyAllWindows()
+</code></pre>
+<p>&#x6548;&#x679C;&#x89C1;&#x4E0B;&#x56FE;&#xFF1A;
+<img src="http://static.zybuluo.com/sixijinling/kw38t2wd0qhj5u5a34o32v9u/filter.png" alt="filter.png-1143.7kB">
+&#x8FD9;&#x91CC;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5728;&#x8C03;&#x8282;&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;&#x51FD;&#x6570;&#xFF08;<strong>&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;</strong>&#xFF09;&#x7684;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5BF9;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x6A21;&#x7CCA;&#x5904;&#x7406;&#xFF09;&#x3002;</p>
+<h4 id="3&#xFF09;-scharr&#x64CD;&#x4F5C;"><a name="3&#xFF09;-scharr&#x64CD;&#x4F5C;" class="plugin-anchor" href="#3&#xFF09;-scharr&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#xFF09;-scharr&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#3&#xFF09;-scharr&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#xFF09;* Scharr&#x64CD;&#x4F5C;</h4>
+<p>&#x60F3;&#x8981;&#x660E;&#x786E;&#x533A;&#x5206;&#x56FE;&#x7247;&#x4E2D;&#x7684;&#x6807;&#x7EBF;&#x533A;&#x57DF;&#x548C;&#x8DEF;&#x9762;&#xFF0C;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x662F;&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#x4E4B;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x989C;&#x8272;&#x586B;&#x5145;&#x3002;&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#x7684;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+<img src="http://static.zybuluo.com/sixijinling/sktq295xvyxkgv92gbjm0ypi/black.png" alt="black.png-7.5kB">
+&#x8FB9;&#x7F18;&#x662F;&#x6307;&#x56FE;&#x50CF;&#x91CC;&#x90A3;&#x4E9B;&#x68AF;&#x5EA6;&#x975E;&#x5E38;&#x9AD8;&#x7684;&#x70B9;&#x3002;&#x6211;&#x4EEC;&#x8BF4;&#x7684;&#x68AF;&#x5EA6;&#x662F;&#x6307;&#x50CF;&#x7D20;&#x4EAE;&#x5EA6;&#x503C;&#x53D8;&#x5316;&#x3002;&#x56FE;&#x50CF;&#x68AF;&#x5EA6;&#x662F;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;x&#x548C;y&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x68AF;&#x5EA6;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x6BD5;&#x8FBE;&#x54E5;&#x62C9;&#x65AF;&#x5B9A;&#x7406;(&#x6CE8;:&#x52FE;&#x80A1;&#x5B9A;&#x7406;)&#x7ED3;&#x5408;&#x5F97;&#x5230;&#x3002;&#x867D;&#x7136;&#x901A;&#x5E38;&#x4E0D;&#x9700;&#x8981;&#x8BE5;&#x503C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x901A;&#x8FC7;y&#x4E0E;x&#x7684;&#x6BD4;&#x4F8B;&#x7684;&#x53CD;&#x6B63;&#x5207;&#x6765;&#x5F97;&#x5230;&#x68AF;&#x5EA6;&#x89D2;&#x5EA6;&#x503C;&#x3002;
+Scharr&#x64CD;&#x4F5C;&#xFF1A;x&#x548C;y&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x68AF;&#x5EA6;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x6838;&#x505A;&#x5377;&#x79EF;&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#xFF1A;
+<script type="math/tex; mode=display">
+\begin{array}{ccc}
+        -3 &   0 &  3\\
+        -10 & 0 & 10\\
+        -3  &  0 &  3   \\   (X 方向)
+\end{array}
+\begin{array}{ccc}
+       -3 & -10  & -3\\
+         0  &  0   &  0\\
+        3   & 10   & 3    \\ (Y 方向)
+\end{array}
+</script></p>
+<p>&#x4EFB;&#x52A1;&#x4E2D;&#x5E76;<strong>&#x6CA1;&#x7528;&#x5230;</strong>&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x5C1D;&#x8BD5;&#x540E;&#x53D1;&#x73B0;&#xFF1A;&#x5728;&#x6807;&#x8BC6;&#x7EBF;&#x4E0D;&#x6E05;&#x6670;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Scharr&#x64CD;&#x4F5C;&#x53EA;&#x80FD;&#x7A81;&#x51FA;&#x5BC6;&#x5BC6;&#x9EBB;&#x9EBB;&#x7684;&#x88C2;&#x7F1D;&#xFF08;&#x8FD9;&#x4E5F;&#x5C31;&#x662F;&#x540E;&#x9762;&#x9009;&#x62E9;&#x4F7F;&#x7528;<strong>&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;</strong>&#x7684;&#x539F;&#x56E0;&#x4E86;&#xFF09;&#xFF0C;&#x4F18;&#x70B9;&#x662F;&#x80FD;&#x6709;&#x6548;&#x533A;&#x522B;&#x5F00;&#x6CA1;&#x6709;&#x6C61;&#x635F;&#x7684;&#x6807;&#x8BC6;&#x7EBF;&#xFF08;&#x5E73;&#x6ED1;&#xFF09;&#x548C;&#x8DEF;&#x9762;&#x4E0A;&#x7684;&#x767D;&#x8272;&#x5370;&#x8BB0;&#xFF08;&#x7C97;&#x7CD9;&#xFF09;&#x3002;
+&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python">    gradX = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = <span class="hljs-number">1</span>, dy = <span class="hljs-number">0</span>, ksize = <span class="hljs-number">-1</span>)
+    gradY = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = <span class="hljs-number">0</span>, dy = <span class="hljs-number">1</span>, ksize = <span class="hljs-number">-1</span>)
+    gradient = cv2.subtract(gradX, gradY)
+    gradient = cv2.convertScaleAbs(gradient)
+</code></pre>
+<h3 id="42-&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;"><a name="42-&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;" class="plugin-anchor" href="#42-&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="42-&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#42-&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. 4.2 &#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;</h3>
+<p>&#x5438;&#x6536;&#x524D;&#x9762;&#x4F7F;&#x7528;Scharr&#x64CD;&#x4F5C;&#x5C1D;&#x8BD5;&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#x7684;&#x5931;&#x8D25;&#x7ECF;&#x9A8C;&#xFF0C;&#x6539;&#x53D8;&#x601D;&#x8DEF;&#xFF0C;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x5E73;&#x6ED1;&#x5316;&#x5904;&#x7406;&#x4EE5;&#x5C3D;&#x53EF;&#x80FD;&#x6D88;&#x9664;&#x8DEF;&#x9762;&#x4E0A;&#x88C2;&#x7F1D;&#x7684;&#x5F71;&#x54CD;&#x3002;&#x8003;&#x8651;&#x5230;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x662F;&#x4E8C;&#x503C;&#x5316;&#x56FE;&#x7247;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x53C2;&#x8003;&#x4E86;StackOverflow&#x4E0A;&#x5BF9;&#x56FE;&#x50CF;&#x8FDB;&#x884C;&#x4E8C;&#x503C;&#x5316;&#x5904;&#x7406;&#x7684;&#x4E00;&#x79CD;<a href="http://stackoverflow.com/questions/26145806/filling-contours-in-opencv" target="_blank">&#x89E3;&#x51B3;&#x65B9;&#x6848;</a>&#x3002;&#x5373;&#x6700;&#x7EC8;&#x7684;&#x89E3;&#x51B3;&#x601D;&#x8DEF;&#x662F;&#xFF1A;</p>
+<p>st=&gt;start: &#x5F00;&#x59CB;:&gt;<a href="https://www.row1ng.com" target="_blank">https://www.row1ng.com</a>
+io1=&gt;inputoutput: &#x8F93;&#x5165;&#x56FE;&#x7247;&#xFF08;&#x7070;&#x5EA6;&#x56FE;&#xFF09;
+op1=&gt;operation: &#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;(&#x6A21;&#x7CCA;&#x5316;)
+op2=&gt;operation: &#x589E;&#x5F3A;&#x5BF9;&#x6BD4;&#x5EA6;
+op3=&gt;operation: &#x5168;&#x5C40;&#x9608;&#x503C;
+io2=&gt;inputoutput: &#x8F93;&#x51FA;&#x56FE;&#x7247;&#xFF08;&#x9ED1;&#x767D;&#x4E8C;&#x503C;&#xFF09;
+e=&gt;end: &#x7ED3;&#x675F;</p>
+<p>st-&gt;io1-&gt;op1-&gt;op2-&gt;op3-&gt;io2-&gt;e</p>
+<h4 id="1&#xFF09;-&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;"><a name="1&#xFF09;-&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;" class="plugin-anchor" href="#1&#xFF09;-&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#xFF09;-&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;" class="anchor-navigation-ex-anchor" href="#1&#xFF09;-&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF09; &#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;</h4>
+<blockquote>
+<p>&#x8BE5;&#x6EE4;&#x6CE2;&#x5668;&#x53EF;&#x4EE5;&#x5728;&#x4FDD;&#x8BC1;<strong>&#x8FB9;&#x754C;&#x6E05;&#x6670;</strong>&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6709;&#x6548;&#x7684;<strong>&#x53BB;&#x6389;&#x566A;&#x58F0;</strong>&#x3002;&#x5B83;&#x7684;&#x6784;&#x9020;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5373;&#x8003;&#x8651;&#x4E86;&#x56FE;&#x50CF;&#x7684;<strong>&#x7A7A;&#x95F4;&#x5173;&#x7CFB;</strong>&#xFF0C;&#x4E5F;&#x8003;&#x8651;&#x56FE;&#x50CF;&#x7684;<strong>&#x7070;&#x5EA6;&#x5173;&#x7CFB;</strong>&#x3002;&#x53CC;&#x8FB9;&#x6EE4;&#x6CE2;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;&#x7A7A;&#x95F4;&#x9AD8;&#x65AF;&#x6743;&#x91CD;&#x548C;&#x7070;&#x5EA6;&#x76F8;&#x4F3C;&#x6027;&#x9AD8;&#x65AF;&#x6743;&#x91CD;&#xFF0C;&#x786E;&#x4FDD;&#x4E86;&#x8FB9;&#x754C;&#x4E0D;&#x4F1A;&#x88AB;&#x6A21;&#x7CCA;&#x6389;&#x3002;</p>
+</blockquote>
+<p> <code>cv2.bilateralFilter(src, d, sigmaColor, sigmaSpace[, dst[, borderType]])</code>
+ <code>cv2.bilateralFilter(image, 9, 90,16)</code>
+cv2.bilateralFilter(img,d,&#x2019;p1&#x2019;,&#x2019;p2&#x2019;)&#x51FD;&#x6570;&#x6709;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x9700;&#x8981;&#xFF0C;d&#x662F;&#x9886;&#x57DF;&#x7684;&#x76F4;&#x5F84;&#xFF0C;&#x540E;&#x9762;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7A7A;&#x95F4;&#x9AD8;&#x65AF;&#x51FD;&#x6570;&#x6807;&#x51C6;&#x5DEE;&#x548C;&#x7070;&#x5EA6;&#x503C;&#x76F8;&#x4F3C;&#x6027;&#x9AD8;&#x65AF;&#x51FD;&#x6570;&#x6807;&#x51C6;&#x5DEE;&#x3002;
+    <code>cv2.bilateralFilter(img, 9, 90,16)</code></p>
+<h4 id="2&#xFF09;-&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#xFF08;&#x8FD9;&#x4E2A;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5F71;&#x54CD;&#x3002;&#x3002;&#x3002;&#xFF09;"><a name="2&#xFF09;-&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#xFF08;&#x8FD9;&#x4E2A;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5F71;&#x54CD;&#x3002;&#x3002;&#x3002;&#xFF09;" class="plugin-anchor" href="#2&#xFF09;-&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#xFF08;&#x8FD9;&#x4E2A;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5F71;&#x54CD;&#x3002;&#x3002;&#x3002;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#xFF09;-&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#xFF08;&#x8FD9;&#x4E2A;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5F71;&#x54CD;&#x3002;&#x3002;&#x3002;&#xFF09;" class="anchor-navigation-ex-anchor" href="#2&#xFF09;-&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#xFF08;&#x8FD9;&#x4E2A;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5F71;&#x54CD;&#x3002;&#x3002;&#x3002;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF09; &#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#xFF08;&#x8FD9;&#x4E2A;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5F71;&#x54CD;&#x3002;&#x3002;&#x3002;&#xFF09;</h4>
+<ul>
+<li>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x5947;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x4F7F;&#x7528;trackbar&#x8FDB;&#x884C;&#x8C03;&#x8282;&#x65F6;&#x9700;&#x8981;&#x7528;trackbar*2+1&#x6765;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x503C;&#x3002;<pre><code class="lang-python">  img = cv2.GaussianBlur(image,(<span class="hljs-number">7</span>,<span class="hljs-number">7</span>),<span class="hljs-number">0</span>)
+</code></pre>
+<h3 id="43--&#x5BF9;&#x6BD4;&#x5EA6;"><a name="43--&#x5BF9;&#x6BD4;&#x5EA6;" class="plugin-anchor" href="#43--&#x5BF9;&#x6BD4;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="43--&#x5BF9;&#x6BD4;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#43--&#x5BF9;&#x6BD4;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. 4.3 * &#x5BF9;&#x6BD4;&#x5EA6;</h3>
+OpenCV&#x7684;<a href="http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.html" target="_blank">Histograms</a></li>
+<li style="list-style: none"><input type="checkbox" disabled="disabled"> &#x7528;trackbar&#x8C03;&#x8282;&#x53C2;&#x6570;  img2 = cdf[img]
+  res = np.hstack((img,equ)) #stacking images side-by-side
+
+
+&#x7528;cdf&#x589E;&#x5F3A;&#x5BF9;&#x6BD4;&#x5EA6;&#x540E;&#x53D1;&#x73B0;&#x8DEF;&#x9762;&#x4E0A;&#x7A0D;&#x4EAE;&#x4E00;&#x4E9B;&#x7684;&#x5370;&#x8BB0;&#x4E5F;&#x88AB;&#x5F3A;&#x5316;&#x4E86;,&#x5E76;&#x672A;&#x8FBE;&#x5230;&#x7406;&#x60F3;&#x6548;&#x679C;&#xFF0C;&#x56E0;&#x6B64;&#x653E;&#x5F03;&#x3002;1.4.4. 4.4 &#x9608;&#x503C;&#x5904;&#x7406;
+&#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x5230;&#x8FD9;&#x91CC;&#x5C31;&#x5230;&#x4E86;&#x6536;&#x5C3E;&#x9636;&#x6BB5;&#xFF0C;&#x5904;&#x7406;&#x5B8C;&#x7684;&#x56FE;&#x7247;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x4E3A;&#x4E8C;&#x503C;&#x5316;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x9608;&#x503C;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#x3002;
+&#x4E00;&#x822C;&#x4F7F;&#x5F97;&#x56FE;&#x50CF;&#x7684;&#x50CF;&#x7D20;&#x503C;&#x66F4;&#x5355;&#x4E00;&#x3001;&#x56FE;&#x50CF;&#x66F4;&#x7B80;&#x5355;&#x3002;&#x9608;&#x503C;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x5168;&#x5C40;&#x6027;&#x8D28;&#x7684;&#x9608;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x5C40;&#x90E8;&#x6027;&#x8D28;&#x7684;&#x9608;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x5355;&#x9608;&#x503C;&#x7684;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x9608;&#x503C;&#x7684;&#x3002;
+
+</li>
+</ul>
+<p><img src="http://static.zybuluo.com/sixijinling/8dy1l0qe9n3y7tjgukglu51t/Image1.png" alt="Image1.png-210kB"></p>
+<h4 id="1&#xFF09;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0B;&#x89D2;&#x56FE;&#x7247;&#xFF09;"><a name="1&#xFF09;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0B;&#x89D2;&#x56FE;&#x7247;&#xFF09;" class="plugin-anchor" href="#1&#xFF09;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0B;&#x89D2;&#x56FE;&#x7247;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#xFF09;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0B;&#x89D2;&#x56FE;&#x7247;&#xFF09;" class="anchor-navigation-ex-anchor" href="#1&#xFF09;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0B;&#x89D2;&#x56FE;&#x7247;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#xFF09;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0B;&#x89D2;&#x56FE;&#x7247;&#xFF09;</h4>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x67D0;&#x79CD;&#x7B97;&#x6CD5;&#x5206;&#x522B;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x533A;&#x57DF;&#x8BA1;&#x7B97;&#x4E0D;&#x540C;&#x7684;&#x9608;&#x503C;(&#x81EA;&#x9002;&#x5E94;&#x7684;&#x9608;&#x503C;)&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;&#x7684;&#x9608;&#x503C;&#x5177;&#x4F53;&#x5730;&#x53BB;&#x5904;&#x7406;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;</p>
+</blockquote>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0A;&#x8FF0;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x4F7F;&#x7528;&#x7684;&#x4E3A;11&#xFF0C;&#x5F53;&#x7A97;&#x53E3;&#x8D8A;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x56FE;&#x50CF;&#x8D8A;&#x7EC6;&#x3002;&#x60F3;&#x60F3;&#x4E00;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x628A;&#x7A97;&#x53E3;&#x8BBE;&#x7F6E;&#x8DB3;&#x591F;&#x5927;&#x4EE5;&#x540E;&#xFF08;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;&#x56FE;&#x50CF;&#x5927;&#x5C0F;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x5C31;&#x548C;&#x7B2C;&#x4E8C;&#x5E45;&#x56FE;&#x50CF;&#x7684;&#x76F8;&#x540C;&#x4E86;&#x3002;&lt;
+&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7406;&#x8BBA;&#x4E0A;&#x5F97;&#x5230;&#x7684;&#x6548;&#x679C;&#x66F4;&#x597D;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x52A8;&#x6001;&#x81EA;&#x9002;&#x5E94;&#x7684;&#x8C03;&#x6574;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x50CF;&#x7D20;&#x70B9;&#x7684;&#x9608;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6574;&#x5E45;&#x56FE;&#x50CF;&#x90FD;&#x7528;&#x4E00;&#x4E2A;&#x9608;&#x503C;&#x3002;
+ &#x4F46;&#x7ECF;&#x8FC7;&#x5B9E;&#x8DF5;&#x53D1;&#x73B0;&#x5E76;&#x4E0D;&#x9002;&#x5408;&#x8F66;&#x9053;&#x6807;&#x7EBF;&#x8FD9;&#x79CD;&#x5F3A;&#x8C03;&#x8F6E;&#x5ED3;&#xFF0C;&#x5FFD;&#x89C6;&#x7EC6;&#x8282;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="2&#xFF09;&#x5168;&#x5C40;&#x6027;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0A;&#x89D2;&#x56FE;&#x7247;&#xFF09;"><a name="2&#xFF09;&#x5168;&#x5C40;&#x6027;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0A;&#x89D2;&#x56FE;&#x7247;&#xFF09;" class="plugin-anchor" href="#2&#xFF09;&#x5168;&#x5C40;&#x6027;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0A;&#x89D2;&#x56FE;&#x7247;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#xFF09;&#x5168;&#x5C40;&#x6027;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0A;&#x89D2;&#x56FE;&#x7247;&#xFF09;" class="anchor-navigation-ex-anchor" href="#2&#xFF09;&#x5168;&#x5C40;&#x6027;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0A;&#x89D2;&#x56FE;&#x7247;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF09;&#x5168;&#x5C40;&#x6027;&#x7684;&#x9608;&#x503C;&#xFF08;&#x53F3;&#x4E0A;&#x89D2;&#x56FE;&#x7247;&#xFF09;</h4>
+<p>&#x6700;&#x7EC8;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5168;&#x5C40;&#x6027;&#x9608;&#x503C;(&#x53C2;&#x89C1;&#x82B1;&#x7D6E;[1])&#x3002;<br>&#x5BF9;&#x5728;&#x4E24;&#x79CD;&#x7167;&#x660E;&#x60C5;&#x51B5;&#x4E0B;&#x62CD;&#x6444;&#x7684;&#x56FE;&#x7247;&#x53D6;&#x4E86;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5168;&#x5C40;&#x6027;&#x9608;&#x503C;&#xFF08;thresh&#xFF09;:
+&#x660E;&#x4EAE;&#x73AF;&#x5883;&#xFF08;&#x9608;&#x503C;147&#xFF09;&#xFF1A;
+<img src="http://static.zybuluo.com/sixijinling/3eum3iqvfyaygtr0dayhr9lg/light.png" alt="light.png-6.6kB">
+&#x660F;&#x6697;&#x73AF;&#x5883;&#xFF08;&#x9608;&#x503C;93&#xFF09;&#xFF1A;
+<img src="http://static.zybuluo.com/sixijinling/9ljvyh7kv2vbu5opcrkjueue/dark.png" alt="dark.png-17.5kB"></p>
+<pre><code class="lang-python">    cv2.THRESH_BINARY <span class="hljs-comment"># &#x9ED1;&#x767D;&#x4E8C;&#x503C;</span>
+    binImg = cv2.adaptiveThreshold(img, <span class="hljs-number">1</span>, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, <span class="hljs-number">55</span>, <span class="hljs-number">-3</span>)<span class="hljs-comment">#cv2.bilateralFilter(binImg, 9, 90,16)</span>
+    <span class="hljs-comment">#binImg = cv2.GaussianBlur(binImg, (3,3), 0)</span>
+    <span class="hljs-comment">#ret, binImg = cv2.threshold(img, 35000, 1, cv2.THRESH_BINARY+cv2.THRESH_OTSU)</span>
+    plt.imshow(binImg, cmap = <span class="hljs-string">&apos;gray&apos;</span>, interpolation = <span class="hljs-string">&apos;bicubic&apos;</span>)
+    plt.xticks([]), plt.yticks([])  <span class="hljs-comment"># to hide tick values on X and Y axis</span>
+</code></pre>
+<hr>
+<h3 id="45-gui&#x90E8;&#x5206;&#xFF08;pyqt4&#xFF09;"><a name="45-gui&#x90E8;&#x5206;&#xFF08;pyqt4&#xFF09;" class="plugin-anchor" href="#45-gui&#x90E8;&#x5206;&#xFF08;pyqt4&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="45-gui&#x90E8;&#x5206;&#xFF08;pyqt4&#xFF09;" class="anchor-navigation-ex-anchor" href="#45-gui&#x90E8;&#x5206;&#xFF08;pyqt4&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. 4.5 GUI&#x90E8;&#x5206;&#xFF08;PyQt4&#xFF09;</h3>
+<p><a href="http://www.pythoner.com/176.html" target="_blank">&#x53C2;&#x8003;&#x4EE3;&#x7801;</a></p>
+<h3 id="1&#xFF09;&#x754C;&#x9762;"><a name="1&#xFF09;&#x754C;&#x9762;" class="plugin-anchor" href="#1&#xFF09;&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#xFF09;&#x754C;&#x9762;" class="anchor-navigation-ex-anchor" href="#1&#xFF09;&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.6. 1&#xFF09;&#x754C;&#x9762;</h3>
+<p><img src="http://static.zybuluo.com/sixijinling/fq1y0onoen7c8hr6x2n0yzed/gui.png" alt="gui.png-6.8kB"></p>
+<pre><code class="lang-python">    <span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+
+    <span class="hljs-keyword">import</span> sys
+
+    <span class="hljs-keyword">from</span> PyQt4 <span class="hljs-keyword">import</span> QtCore, QtGui 
+
+    <span class="hljs-keyword">try</span>:
+        _fromUtf8 = QtCore.QString.fromUtf8
+    <span class="hljs-keyword">except</span> AttributeError:
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_fromUtf8</span><span class="hljs-params">(s)</span>:</span>
+            <span class="hljs-keyword">return</span> s
+
+    <span class="hljs-keyword">try</span>:
+        _encoding = QtGui.QApplication.UnicodeUTF8
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_translate</span><span class="hljs-params">(context, text, disambig)</span>:</span>
+            <span class="hljs-keyword">return</span> QtGui.QApplication.translate(context, text, disambig, _encoding)
+    <span class="hljs-keyword">except</span> AttributeError:
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_translate</span><span class="hljs-params">(context, text, disambig)</span>:</span>
+            <span class="hljs-keyword">return</span> QtGui.QApplication.translate(context, text, disambig)
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ui_Dialog</span><span class="hljs-params">(object)</span>:</span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setupUi</span><span class="hljs-params">(self, Dialog)</span>:</span>
+            Dialog.setObjectName(_fromUtf8(<span class="hljs-string">&quot;Dialog&quot;</span>))
+            Dialog.resize(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>)
+            Dialog.setMinimumSize(QtCore.QSize(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>))
+            Dialog.setMaximumSize(QtCore.QSize(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>))
+
+            <span class="hljs-comment">#GroupBox1</span>
+            self.groupBox = QtGui.QGroupBox(Dialog)
+            self.groupBox.setGeometry(QtCore.QRect(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">381</span>, <span class="hljs-number">101</span>))
+            self.groupBox.setObjectName(_fromUtf8(<span class="hljs-string">&quot;groupBox&quot;</span>))
+            self.label_2 = QtGui.QLabel(self.groupBox)
+            self.label_2.setGeometry(QtCore.QRect(<span class="hljs-number">20</span>, <span class="hljs-number">62</span>, <span class="hljs-number">54</span>, <span class="hljs-number">12</span>))
+            self.label_2.setObjectName(_fromUtf8(<span class="hljs-string">&quot;label_2&quot;</span>))
+            <span class="hljs-comment">#Choose Input Path</span>
+            self.InputChoose = QtGui.QPushButton(self.groupBox)
+            self.InputChoose.setGeometry(QtCore.QRect(<span class="hljs-number">320</span>, <span class="hljs-number">28</span>, <span class="hljs-number">40</span>, <span class="hljs-number">25</span>))
+            self.InputChoose.setFocusPolicy(QtCore.Qt.StrongFocus)
+            self.InputChoose.setObjectName(_fromUtf8(<span class="hljs-string">&quot;InputChoose&quot;</span>))
+            self.txtPath1 = QtGui.QLineEdit(self.groupBox)
+            self.txtPath1.setGeometry(QtCore.QRect(<span class="hljs-number">70</span>, <span class="hljs-number">30</span>, <span class="hljs-number">241</span>, <span class="hljs-number">20</span>))
+            self.txtPath1.setFocusPolicy(QtCore.Qt.StrongFocus)
+            self.txtPath1.setReadOnly(<span class="hljs-keyword">True</span>)
+            self.txtPath1.setObjectName(_fromUtf8(<span class="hljs-string">&quot;txtPath1&quot;</span>))
+            <span class="hljs-comment">#Choose Output Path</span>
+            self.OutputChoose = QtGui.QPushButton(self.groupBox)
+            self.OutputChoose.setGeometry(QtCore.QRect(<span class="hljs-number">320</span>, <span class="hljs-number">58</span>, <span class="hljs-number">40</span>, <span class="hljs-number">25</span>))
+            self.OutputChoose.setFocusPolicy(QtCore.Qt.StrongFocus)
+            self.OutputChoose.setObjectName(_fromUtf8(<span class="hljs-string">&quot;OutputChoose&quot;</span>))
+            self.txtPath2 = QtGui.QLineEdit(self.groupBox)
+            self.txtPath2.setGeometry(QtCore.QRect(<span class="hljs-number">70</span>, <span class="hljs-number">60</span>, <span class="hljs-number">241</span>, <span class="hljs-number">20</span>))
+            self.txtPath2.setFocusPolicy(QtCore.Qt.StrongFocus)
+            self.txtPath2.setReadOnly(<span class="hljs-keyword">True</span>)
+            self.txtPath2.setObjectName(_fromUtf8(<span class="hljs-string">&quot;txtPath2&quot;</span>))
+
+            <span class="hljs-comment">#&#x9009;&#x62E9;&#x4E24;&#x79CD;&#x5904;&#x7406;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF1A;</span>
+            self.btnLight = QtGui.QPushButton(Dialog)
+            self.btnLight.setGeometry(QtCore.QRect(<span class="hljs-number">10</span>, <span class="hljs-number">280</span>, <span class="hljs-number">381</span>, <span class="hljs-number">51</span>))
+            self.btnLight.setObjectName(_fromUtf8(<span class="hljs-string">&quot;btnLight&quot;</span>))
+
+            self.btnDark = QtGui.QPushButton(Dialog)
+            self.btnDark.setGeometry(QtCore.QRect(<span class="hljs-number">10</span>, <span class="hljs-number">340</span>, <span class="hljs-number">381</span>, <span class="hljs-number">51</span>))
+            self.btnDark.setObjectName(_fromUtf8(<span class="hljs-string">&quot;btnDark&quot;</span>))
+
+            self.retranslateUi(Dialog)
+            QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">retranslateUi</span><span class="hljs-params">(self, Dialog)</span>:</span>
+            Dialog.setWindowTitle(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;&#x8F66;&#x9053;&#x6807;&#x7EBF;&#x8BC6;&#x522B;&#x7A0B;&#x5E8F; by Rowling&quot;</span>, <span class="hljs-keyword">None</span>))
+            self.btnLight.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;&#x5149;&#x4EAE;&#x6A21;&#x5F0F;&quot;</span>, <span class="hljs-keyword">None</span>))
+            self.btnDark.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;&#x660F;&#x6697;&#x6A21;&#x5F0F;&quot;</span>, <span class="hljs-keyword">None</span>))
+            self.groupBox.setTitle(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;&#x8BF7;&#x9009;&#x62E9;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x5939;&#x4EE5;&#x53CA;&#x8F93;&#x51FA;&#x56FE;&#x7247;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&quot;</span>, <span class="hljs-keyword">None</span>))
+            self.label_2.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;&#x8F93;&#x51FA;&quot;</span>, <span class="hljs-keyword">None</span>))
+            self.InputChoose.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;...&quot;</span>, <span class="hljs-keyword">None</span>))
+            self.OutputChoose.setText(_translate(<span class="hljs-string">&quot;Dialog&quot;</span>, <span class="hljs-string">&quot;...&quot;</span>, <span class="hljs-keyword">None</span>))
+
+
+
+    <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+        app = QtGui.QApplication(sys.argv)
+        Dialog = QtGui.QDialog()
+        ui = Ui_Dialog()
+        ui.setupUi(Dialog)
+        Dialog.show()
+        sys.exit(app.exec_())
+        <span class="hljs-comment">#&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#xFF0C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x4ECE;&#x8FD9;&#x91CC;&#x5F00;&#x59CB;</span>
+</code></pre>
+<ul>
+<li>exec&#x662F;Python&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x7528; exec_() &#x6765;&#x53D6;&#x4EE3;&#x5B83;&#x3002;</li>
+</ul>
+<h4 id="2&#xFF09;-&#x81EA;&#x5B9A;&#x4E49;&#x69FD;"><a name="2&#xFF09;-&#x81EA;&#x5B9A;&#x4E49;&#x69FD;" class="plugin-anchor" href="#2&#xFF09;-&#x81EA;&#x5B9A;&#x4E49;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#xFF09;-&#x81EA;&#x5B9A;&#x4E49;&#x69FD;" class="anchor-navigation-ex-anchor" href="#2&#xFF09;-&#x81EA;&#x5B9A;&#x4E49;&#x69FD;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#xFF09; &#x81EA;&#x5B9A;&#x4E49;&#x69FD;</h4>
+<pre><code class="lang-python">        <span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+
+<span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">from</span> PyQt4 <span class="hljs-keyword">import</span> QtGui
+<span class="hljs-keyword">from</span> PyQt4 <span class="hljs-keyword">import</span> QtCore
+
+<span class="hljs-keyword">import</span> Fill
+<span class="hljs-keyword">from</span> GUI <span class="hljs-keyword">import</span> Ui_Dialog
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ImageProcess</span><span class="hljs-params">(QtGui.QDialog, Ui_Dialog)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, parent = None)</span>:</span>
+        QtGui.QDialog.__init__(self, parent)
+        self.setupUi(self)
+        self.exclude_list = []
+
+<span class="hljs-meta">    @QtCore.pyqtSignature(&quot;&quot;)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_InputChoose_clicked</span><span class="hljs-params">(self)</span>:</span>
+        self.indir = QtGui.QFileDialog.getExistingDirectory(self,  <span class="hljs-string">u&quot;&#x9009;&#x62E9;&#x76EE;&#x5F55;&quot;</span>,<span class="hljs-string">&quot;../photos/light_lane&quot;</span>).replace(<span class="hljs-string">&quot;\\&quot;</span>,<span class="hljs-string">&quot;/&quot;</span>)
+        self.txtPath1.setText(self.indir)
+
+<span class="hljs-meta">    @QtCore.pyqtSignature(&quot;&quot;)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_OutputChoose_clicked</span><span class="hljs-params">(self)</span>:</span>
+        self.outdir = QtGui.QFileDialog.getExistingDirectory(self,  <span class="hljs-string">u&quot;&#x9009;&#x62E9;&#x76EE;&#x5F55;&quot;</span>,<span class="hljs-string">&quot;../result/laneresult&quot;</span>).replace(<span class="hljs-string">&quot;\\&quot;</span>,<span class="hljs-string">&quot;/&quot;</span>)
+        self.txtPath2.setText(self.outdir)
+
+
+<span class="hljs-meta">    @QtCore.pyqtSignature(&quot;&quot;)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_btnLight_clicked</span><span class="hljs-params">(self)</span>:</span>
+        Fill.processLightLane(str(self.indir),str(self.outdir))
+        QtGui.QMessageBox.warning(self, <span class="hljs-string">&apos;&#x5B8C;&#x6210;&apos;</span>, <span class="hljs-string">&apos;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#xFF0C;&#x8BF7;&#x5230;&#x8F93;&#x51FA;&#x76EE;&#x5F55;&#x4E0B;&#x67E5;&#x770B;&apos;</span>)
+
+
+<span class="hljs-meta">    @QtCore.pyqtSignature(&quot;&quot;)</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_btnDark_clicked</span><span class="hljs-params">(self)</span>:</span>
+        Fill.processDarkLane(str(self.indir),str(self.outdir))
+        QtGui.QMessageBox.warning(self, <span class="hljs-string">&apos;&#x5B8C;&#x6210;&apos;</span>, <span class="hljs-string">&apos;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#xFF0C;&#x8BF7;&#x5230;&#x8F93;&#x51FA;&#x76EE;&#x5F55;&#x4E0B;&#x67E5;&#x770B;&apos;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_formated_path1</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.format_path(self.txtPath1.text())
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_formated_path2</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.format_path(self.txtPath2.text())
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">format_path</span><span class="hljs-params">(self, path
+        return str<span class="hljs-params">(path)</span>.rstrip<span class="hljs-params">(<span class="hljs-string">&apos;\\&apos;</span>)</span> + <span class="hljs-string">&apos;\\&apos;</span>
+
+
+if __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    reload<span class="hljs-params">(sys)</span>
+    app = QtGui.QApplication<span class="hljs-params">(sys.argv)</span>
+    dlg = ImageProcess<span class="hljs-params">()</span>
+    dlg.show<span class="hljs-params">()</span>
+    sys.exit<span class="hljs-params">(app.exec_<span class="hljs-params">()</span>)</span>
+</span></span></code></pre>
+<h3 id="46-&#x6253;&#x5305;&#x6210;exe"><a name="46-&#x6253;&#x5305;&#x6210;exe" class="plugin-anchor" href="#46-&#x6253;&#x5305;&#x6210;exe"><i class="fa fa-link" aria-hidden="true"></i></a><a name="46-&#x6253;&#x5305;&#x6210;exe" class="anchor-navigation-ex-anchor" href="#46-&#x6253;&#x5305;&#x6210;exe"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.7. 4.6 &#x6253;&#x5305;&#x6210;EXE</h3>
+<p>&#x5C06;Python&#x7A0B;&#x5E8F;&#x6253;&#x5305;&#x6210;exe&#x6709;&#x597D;&#x51E0;&#x79CD;&#x9009;&#x62E9;,</p>
+<ul>
+<li>py2exe </li>
+<li>cx_Freeze</li>
+<li>pyinstaller
+&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x770B;&#x8FD9;&#x4E2A;<a href="https://www.youtube.com/watch?v=11Q2QADsAEE" target="_blank">&#x89C6;&#x9891;</a>&#x3002;
+&#x8FD9;&#x91CC;&#x9009;&#x62E9;&#x7684;&#x662F;&#x8F83;&#x4E3A;&#x65B9;&#x4FBF;&#x7684;pyinstaller&#xFF1A;
+&#x9996;&#x5148;&#x6309;Documentation&#x7684;&#x8981;&#x6C42;&#x5B89;&#x88C5;pyinstaller,&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x8981;&#x5B89;&#x88C5;pywin32,&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x7248;&#x672C;&#x5373;&#x53EF;&#xFF08;&#x6BD4;&#x5982;&#x6211;&#x7684;Python&#x662F;2.7&#xFF0C;&#x7CFB;&#x7EDF;&#x662F;64&#x4F4D;&#xFF09;&#x3002;
+&#x5B89;&#x88C5;&#x5B8C;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x7528;powershell(&#x7BA1;&#x7406;&#x5458;&#x6A21;&#x5F0F;&#x4E0B;&#x6253;&#x5F00;)&#xFF0C;&#x8FD0;&#x884C;<code>pip install PyInstaller</code>&#x3002;
+&#x4E4B;&#x540E;&#x5207;&#x5230;&#x8981;&#x6253;&#x5305;&#x7684;python&#x7A0B;&#x5E8F;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x53C2;&#x89C1;&#x82B1;&#x7D6E;[2]&#xFF09;&#x8FD0;&#x884C;<code>pyinstaller XXX.py</code>&#x5373;&#x53EF;&#xFF0C;&#x76EE;&#x6807;exe&#x4FDD;&#x5B58;&#x5728;dist&#x76EE;&#x5F55;&#x4E0B;&#x3002;
+&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x8865;&#x5145;&#xFF1A;</li>
+</ul>
+<blockquote>
+<ul>
+<li>-c, --console, --nowindowed      Open a console window for standard i/o (default)</li>
+<li>-w, --windowed, --noconsole      Windows and Mac OS X: <strong>do not</strong> provide a <strong>console window</strong> for standard i/o. On Mac OS X this also triggers
+building an OS X .app bundle.This option is ignored in *NIX systems.</li>
+<li>-F, --onefile    Create a one-file bundled executable.</li>
+<li>-D, --onedir    Create a one-folder bundle containing an executable (default)</li>
+</ul>
+</blockquote>
+<p>&#x6240;&#x4EE5;&#x6700;&#x540E;&#x7684;&#x6267;&#x884C;&#x8BED;&#x53E5;&#x662F;&#xFF1A; 
+   <code>pyinstaller -F -D --noconsole -n Lane G:\C\Lane\Lane\file_ui.py</code></p>
+<hr>
+<h2 id="5-&#x53C2;&#x8003;&#x8D44;&#x6599;"><a name="5-&#x53C2;&#x8003;&#x8D44;&#x6599;" class="plugin-anchor" href="#5-&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="5-&#x53C2;&#x8003;&#x8D44;&#x6599;" class="anchor-navigation-ex-anchor" href="#5-&#x53C2;&#x8003;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. 5. &#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p>&#x6E05;&#x534E;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;&#x7684;&#x300A;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x4E0E;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x7B97;&#x6CD5;&#x53CA;&#x5E94;&#x7528;(&#x7B2C;0&#x7248;) &#x300B;TP391.41/P121.</p>
+<p><em>&#x56FE;&#x4E66;&#x9986;&#x8FD8;&#x6709;&#x4E00;&#x672C;&#x4F46;&#x5C31;&#x662F;&#x627E;&#x4E0D;&#x5230;&#x3002;&#x3002;&#x3002;</em></p>
+<pre><code>  [1]: http://stackoverflow.com/questions/26145806/filling-contours-in-opencv
+  [2]: http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_imgproc/py_histograms/py_histogram_equalization/py_histogram_equalization.html
+  [3]: http://www.pythoner.com/176.html
+  [4]: https://www.youtube.com/watch?v=11Q2QADsAEE
+</code></pre><h2 id="6----&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;"><a name="6----&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;" class="plugin-anchor" href="#6----&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="6----&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;" class="anchor-navigation-ex-anchor" href="#6----&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. 6.    &#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x4F53;&#x4F1A;</h2>
+<p>&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x5B66;&#x4E60;OpenCV&#x56FE;&#x50CF;&#x5904;&#x7406;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x521A;&#x4E0A;&#x624B;&#x7684;Python,&#x5BF9;&#x81EA;&#x5DF1;&#x800C;&#x8A00;&#x65E0;&#x7591;&#x662F;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x6311;&#x6218;&#x3002;&#x597D;&#x5728;&#x8FC7;&#x7A0B;&#x8FD8;&#x7B97;&#x987A;&#x5229;&#xFF0C;&#x867D;&#x7136;&#x4F1A;&#x4E0D;&#x505C;&#x5730;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x7ECF;&#x8FC7;&#x4E0D;&#x65AD;&#x5C1D;&#x8BD5;&#x603B;&#x80FD;&#x6216;&#x591A;&#x6216;&#x5C11;&#x5730;&#x7F13;&#x89E3;&#x201C;&#x71C3;&#x7709;&#x4E4B;&#x6025;&#x201D;&#x3002;&#x5C31;&#x76EE;&#x524D;&#x6765;&#x770B;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x8FD8;&#x6709;&#x5F88;&#x5927;&#x63D0;&#x5347;&#x7A7A;&#x95F4;&#xFF0C;&#x8B6C;&#x5982;&#x81EA;&#x52A8;&#x5316;&#x8BC6;&#x522B;&#xFF0C;&#x8981;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x6216;&#x8005;&#x5F97;&#x5F7B;&#x5E95;&#x6539;&#x53D8;&#x601D;&#x8DEF;&#xFF08;&#x8B6C;&#x5982;&#x5145;&#x5206;&#x6A21;&#x7CCA;&#x5316;&#x4E4B;&#x540E;&#x518D;&#x505A;&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF09;&#xFF0C;&#x5373;&#x5BF9;&#x4E0D;&#x540C;&#x4EAE;&#x5EA6;&#x7684;&#x56FE;&#x7247;&#x80FD;&#x8FBE;&#x5230;&#x540C;&#x6837;&#x9AD8;&#x7684;&#x6B63;&#x786E;&#x7387;&#x3002;
+&#x5728;&#x8BF7;&#x6559;&#x522B;&#x4EBA;&#x540E;&#x4F1A;&#x6709;&#x4EBA;&#x5EFA;&#x8BAE;&#x53BB;&#x770B;Photoshop&#x600E;&#x4E48;&#x505A;&#xFF0C;&#x5FFD;&#x7136;&#x610F;&#x8BC6;&#x5230;&#x6210;&#x719F;&#x7684;&#x5546;&#x4E1A;&#x8F6F;&#x4EF6;&#x80CC;&#x540E;&#x8574;&#x85CF;&#x7740;&#x8BB8;&#x8BB8;&#x591A;&#x591A;&#x4EBA;&#x667A;&#x6167;&#x7684;&#x7ED3;&#x6676;&#xFF0C;&#x800C;&#x81EA;&#x5DF1;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x5F88;&#x591A;&#x9700;&#x8981;&#x7406;&#x89E3;&#x638C;&#x63E1;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<h3 id="&#x82B1;&#x7D6E;"><a name="&#x82B1;&#x7D6E;" class="plugin-anchor" href="#&#x82B1;&#x7D6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x82B1;&#x7D6E;" class="anchor-navigation-ex-anchor" href="#&#x82B1;&#x7D6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. &#x82B1;&#x7D6E;</h3>
+<blockquote>
+<ul>
+<li>[1] &#x8FD9;&#x6B21;&#x7528;&#x7684;&#x662F;&#x5168;&#x5C40;&#x6027;&#x9608;&#x503C;&#xFF0C;&#x81EA;&#x9002;&#x5E94;&#x9608;&#x503C;&#x80FD;&#x5E73;&#x8861;&#x7EC6;&#x8282;&#xFF0C;&#x4F46;&#x5BF9;&#x6709;&#x88C2;&#x7F1D;&#x7684;&#x8F66;&#x9053;&#x6765;&#x8BF4;&#x5E76;&#x4E0D;&#x9002;&#x7528;&#x3002;&#x56E0;&#x4E3A;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x5F3A;&#x8C03;&#x6807;&#x5FD7;&#x7EBF;&#x4E0E;&#x8DEF;&#x9762;&#x7684;&#x9ED1;&#x767D;&#x5BF9;&#x6BD4;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x9608;&#x503C;&#x201C;&#x7B5B;&#x51FA;&#x201D;&#x767D;&#x8272;&#x6807;&#x5FD7;&#x7EBF;&#x3002;&#x4E0D;&#x8FC7;&#x8FD9;&#x65F6;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;&#x5BF9;&#x4E8E;&#x5149;&#x7167;&#x6761;&#x4EF6;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x9762;&#x7167;&#x7247;&#xFF0C;&#x9608;&#x503C;&#x662F;&#x4E0D;&#x540C;&#x7684;,&#x751A;&#x81F3;&#x5728;&#x4E00;&#x79CD;&#x5149;&#x7167;&#x6761;&#x4EF6;&#xFF08;&#x6697;&#x5149;&#xFF09;&#xFF0C;&#x8DEF;&#x9762;&#x7167;&#x7247;&#x4E5F;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5F00;&#x59CB;&#x8003;&#x8651;&#x5F52;&#x4E00;&#x5316;&#x548C;&#x589E;&#x5F3A;&#x5BF9;&#x6BD4;&#x5EA6;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+<li>[2] &#x771F;&#x50BB;&#x8FD8;&#x662F;&#x5047;&#x50BB;&#x3002;&#x3002;&#x3002;&#x3002;&#x5728;powershell&#x91CC;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x9ED8;&#x8BA4;&#x90FD;&#x662F;&#x5728;system32&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x554A;&#x3002;&#x3002;&#x3002;&#x3002;&#x5F97;&#x5207;&#x5230;&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x624D;&#x597D;&#x554A;&#x554A;&#x554A;&#x554A;</li>
+</ul>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="practice.html" class="navigation navigation-prev " aria-label="Previous page: 实践">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="roadnn.html" class="navigation navigation-next " aria-label="Next page: RoadNN">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"车道线识别","level":"3.3.1","depth":2,"next":{"title":"RoadNN","level":"3.3.2","depth":2,"path":"roadnn.md","ref":"roadnn.md","articles":[]},"previous":{"title":"实践","level":"3.3","depth":1,"path":"practice.md","ref":"practice.md","articles":[{"title":"车道线识别","level":"3.3.1","depth":2,"path":"lane.md","ref":"lane.md","articles":[]},{"title":"RoadNN","level":"3.3.2","depth":2,"path":"roadnn.md","ref":"roadnn.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","copy-code-button","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"lane.md","mtime":"2018-06-13T06:59:41.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T12:35:17.787Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-update-cdn/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
