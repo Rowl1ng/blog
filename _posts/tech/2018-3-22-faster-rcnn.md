@@ -5,7 +5,7 @@ background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2
 tech: true
 istop: true
 mathjax: true
-date: 2018-6-4 20:15
+date: 2018-7-27 17:00
 category: tech
 description:  基于pytorch版Detectron
 tags:

@@ -343,6 +343,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.3" data-path="linux.html">
+            
+                <a href="linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -655,6 +668,19 @@
             
                     
                     条件随机场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="normalization.html">
+            
+                <a href="normalization.html">
+            
+                    
+                    normalization
             
                 </a>
             
@@ -1198,6 +1224,19 @@
             
         </li>
     
+        <li class="chapter " data-level="4.3.3" data-path="pythonbian-cheng/skimage.html">
+            
+                <a href="pythonbian-cheng/skimage.html">
+            
+                    
+                    skimage
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1541,27 +1580,29 @@
 <li>&#x4F7F;&#x7528;JSON YAML&#x7B49;&#x683C;&#x5F0F;&#x6765;&#x914D;&#x7F6E;logging&#xFF0C;&#x611F;&#x89C9;&#x6BD4;&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x6216;&#x8005; ini&#x683C;&#x5F0F;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x65B9;&#x4FBF;</li>
 </ul>
 <p>&#x7B80;&#x5355;&#x7684;&#x5C0F;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x5355;&#x4E2A;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x8981;&#x6253;&#x5370;&#x63A7;&#x5236;&#x53F0;</p>
-<pre><code>import logging
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
 
 logging.basicConfig(level=logging.DEBUG,
-format=&apos;%(asctime)s %(name)-12s %(levelname)-8s %(message)s&apos;,
-datefmt=&apos;%m-%d %H:%M&apos;,
-filename=&apos;/temp/myapp.log&apos;,
-filemode=&apos;w&apos;)
+format=<span class="hljs-string">&apos;%(asctime)s %(name)-12s %(levelname)-8s %(message)s&apos;</span>,
+datefmt=<span class="hljs-string">&apos;%m-%d %H:%M&apos;</span>,
+filename=<span class="hljs-string">&apos;/temp/myapp.log&apos;</span>,
+filemode=<span class="hljs-string">&apos;w&apos;</span>)
 console = logging.StreamHandler()
 console.setLevel(logging.INFO)
-formatter = logging.Formatter(&apos;%(name)-12s: %(levelname)-8s %(message)s&apos;)
+formatter = logging.Formatter(<span class="hljs-string">&apos;%(name)-12s: %(levelname)-8s %(message)s&apos;</span>)
 console.setFormatter(formatter)
-# add the handler to the root logger
-logging.getLogger(&apos;&apos;).addHandler(console)
-</code></pre><p>&#x8BB0;&#x5F55; Exception &#x7684;trace &#x4FE1;&#x606F;&#xFF08;&#x5F88;&#x6709;&#x7528;&#x54E6;)</p>
-<pre><code>try:
-open(&apos;/path/to/does/not/exist&apos;, &apos;rb&apos;)
-except (SystemExit, KeyboardInterrupt):
-raise
-except Exception, e:
-logger.error(&apos;Failed to open file&apos;, exc_info=True)
-</code></pre><pre><code class="lang-python">logger.warning(<span class="hljs-string">&quot;consider setting layer size to a multiple of 4 for greater performance&quot;</span>)
+<span class="hljs-comment"># add the handler to the root logger</span>
+logging.getLogger(<span class="hljs-string">&apos;&apos;</span>).addHandler(console)
+</code></pre>
+<p>&#x8BB0;&#x5F55; Exception &#x7684;trace &#x4FE1;&#x606F;&#xFF08;&#x5F88;&#x6709;&#x7528;&#x54E6;)</p>
+<pre><code class="lang-python"><span class="hljs-keyword">try</span>:
+open(<span class="hljs-string">&apos;/path/to/does/not/exist&apos;</span>, <span class="hljs-string">&apos;rb&apos;</span>)
+<span class="hljs-keyword">except</span> (SystemExit, KeyboardInterrupt):
+<span class="hljs-keyword">raise</span>
+<span class="hljs-keyword">except</span> Exception, e:
+logger.error(<span class="hljs-string">&apos;Failed to open file&apos;</span>, exc_info=<span class="hljs-keyword">True</span>)
+</code></pre>
+<pre><code class="lang-python">logger.warning(<span class="hljs-string">&quot;consider setting layer size to a multiple of 4 for greater performance&quot;</span>)
 </code></pre>
 
                                 
@@ -1606,7 +1647,7 @@ logger.error(&apos;Failed to open file&apos;, exc_info=True)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"日志","level":"2.1.9","depth":2,"next":{"title":"模块","level":"2.1.10","depth":2,"path":"module.md","ref":"module.md","articles":[]},"previous":{"title":"文件","level":"2.1.8","depth":2,"path":"file.md","ref":"file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"log.md","mtime":"2018-05-29T13:27:59.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-30T13:51:34.909Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"日志","level":"2.1.9","depth":2,"next":{"title":"模块","level":"2.1.10","depth":2,"path":"module.md","ref":"module.md","articles":[]},"previous":{"title":"文件","level":"2.1.8","depth":2,"path":"file.md","ref":"file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"log.md","mtime":"2018-07-07T06:24:05.978Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-31T07:41:56.741Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
