@@ -27,7 +27,7 @@ versions:
 - pycocotools
 
 ```
-pip install easydict cython
+pip install easydict cython cffi
 ```
 
 # 基本概念
@@ -245,7 +245,12 @@ Resnet中的Bottleneck：
 
 ![image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png-30.8kB][16]
 
-还提供了一个选择：OnlyP6
+可以看到降采样从P5到P2是(1. / 32., 1. / 16., 1. / 8., 1. / 4.)
+
+选择：
+
+- `FPN.EXTRA_CONV_LEVELS` ：可以选择是否加上P6，即最上层stride2的降采样后的Output，这样降采样就还加上 1. / 64.
+- P2Only：选择是否只使用P2的Output
 
 ```
 # FPN is enabled if True
