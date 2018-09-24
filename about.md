@@ -22,6 +22,7 @@ By day a programmer | illustrator, photographer, writer, guqin player by night.
 喜欢钻研技术，热爱画画，偶尔弹琴写字。
 
 Contact me: ling.rowling.luo@gmail.com
+[download my cv][2]
 
 # 本站
 
@@ -32,3 +33,4 @@ Contact me: ling.rowling.luo@gmail.com
 
 
   [1]: https://liberxue.github.io/?liberxue
+  [2]: http://rowl1ng.com/cv/Academic_CV.pdf
