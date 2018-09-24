@@ -7,6 +7,10 @@ redirect_from:
   - /about/
 ---
 
+# CV
+
+[my cv][2]
+
 # Hi
 
 第二版的博客啦，这次终于一行一行代码认真跑了。
@@ -22,7 +26,7 @@ By day a programmer | illustrator, photographer, writer, guqin player by night.
 喜欢钻研技术，热爱画画，偶尔弹琴写字。
 
 Contact me: ling.rowling.luo@gmail.com
-[download my cv][2]
+
 
 # 本站
 
