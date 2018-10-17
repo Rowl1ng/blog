@@ -5,9 +5,10 @@ background-image: http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2
 tech: true
 istop: true
 mathjax: true
-date: 2018-8-24 17:00
+date: 2018-3-22 17:00
+update: 2018-8-24 17:00
 category: tech
-description:  基于pytorch版Detectron
+description:  pytorch version of Detectron
 tags:
 - object detection
 version:

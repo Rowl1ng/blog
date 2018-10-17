@@ -4,6 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/ibgqkim9qh04myy4jzs5dm9i/psb%20%288%29.jpeg
 write: true
 date: 2015-3-24 19:54
+update: 2015-3-24 19:54
 category: write
 description:  APEC期间的山东之行
 tags:

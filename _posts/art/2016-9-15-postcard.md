@@ -3,6 +3,8 @@ layout: blog
 background-image: http://img03.deviantart.net/6cff/i/2016/168/f/a/untitled_by_sixijinling-da6ngsx.jpg
 art: true
 title:  明信片
+date: 2016-9-15 21:23
+update: 2016-9-15 21:23
 category: art
 description:  Self-made postcards.
 tags:

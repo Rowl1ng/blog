@@ -1,5 +1,5 @@
 ---
-description:  为了诈骗识别任务探索如何不经过ASR找出相似内容的语音
+description:  exploring how to find similar content without ASR for scam recognition task
 title:  基于音素识别的语音相似度研究
 layout: blog
 tech: true
@@ -8,6 +8,7 @@ mathjax: true
 background-image: http://static.zybuluo.com/sixijinling/o6i3xw4f4qgsc3j1pf4x33ir/%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C.png
 tech: true
 date: 2017-8-1 13:27
+update: 2018-8-1 13:27
 category: tech
 tags:
 - 语音处理

@@ -4,8 +4,9 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/piogmpt0ujvdu7zvs5ma08mb/psb.jpeg
 book: true
 date: 2017-1-3 17:08
+update: 2017-1-3 17:08
 category: book
-description:  中国特色社会主义实践教学与期末论文
+description:  final paper of Practical Teaching of Socialism with Chinese Characteristics
 tags:
 - 政治
 ---

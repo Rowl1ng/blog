@@ -10,18 +10,9 @@
             <title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</title>
             <category>tech</category>
             <description>Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Det...</description>
-            <pubDate>2018-06-04 20:15:00 </pubDate>
+            <pubDate>2018-03-22 17:00:00 </pubDate>
             <link>http://localhost:4000/tech/faster-rcnn.html</link>
             <guid isPermaLink="true">http://localhost:4000/tech/faster-rcnn.html</guid>
-        </item>
-        
-        <item>
-            <title>肺部结节检测</title>
-            <category>tech</category>
-            <description>图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentati...</description>
-            <pubDate>2018-05-29 21:38:00 </pubDate>
-            <link>http://localhost:4000/tech/luna.html</link>
-            <guid isPermaLink="true">http://localhost:4000/tech/luna.html</guid>
         </item>
         
         <item>
@@ -35,11 +26,11 @@
         
         <item>
             <title>各种英语考试的经验</title>
-            <category>book</category>
-            <description>托福 : 104阅读 + 听力计时刷tpo  网易云的托福词以类记，午睡也能“听单词”了。托福是3264个单词，不多不多。口语推荐app“爱托福”，据说是基于AI评估语音语义来打分，不过重点是花...</description>
-            <pubDate>2018-03-19 16:10:00 </pubDate>
-            <link>http://localhost:4000/book/English.html</link>
-            <guid isPermaLink="true">http://localhost:4000/book/English.html</guid>
+            <category>学习</category>
+            <description>托福 : 104阅读 + 听力计时刷tpo  网易云的托福词以类记，午睡也能“听单词”了。托福是3264个单词，不多不多。推荐听podcast，比如每天早上一起床就开始听。推荐的podcast：...</description>
+            <pubDate>2018-03-19 18:50:00 </pubDate>
+            <link>http://localhost:4000/%E5%AD%A6%E4%B9%A0/English.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E5%AD%A6%E4%B9%A0/English.html</guid>
         </item>
         
         <item>
@@ -53,18 +44,18 @@
         
         <item>
             <title>基于Rasa_NLU的微信chatbot</title>
-            <category>tech</category>
+            <category>技术</category>
             <description>重要资料  本项目的github地址：Rasa_wechat  视频讲解（正文+编程+QA）：bilibili  Rasa_NLU官方文档  Rasa_Core官方文档  wxpy文档  关于机...</description>
             <pubDate>2017-11-05 00:00:00 </pubDate>
-            <link>http://localhost:4000/tech/chatbot.html</link>
-            <guid isPermaLink="true">http://localhost:4000/tech/chatbot.html</guid>
+            <link>http://localhost:4000/%E6%8A%80%E6%9C%AF/chatbot.html</link>
+            <guid isPermaLink="true">http://localhost:4000/%E6%8A%80%E6%9C%AF/chatbot.html</guid>
         </item>
         
         <item>
             <title>何事秋风空画扇</title>
             <category>art</category>
-            <description>流云b站绘制过程江陵明月孤龙山烟雨荷柔</description>
-            <pubDate>2017-10-31 00:00:00 </pubDate>
+            <description>猫になりたい流云b站绘制过程江陵明月孤龙山烟雨荷柔</description>
+            <pubDate>2017-10-31 16:00:00 </pubDate>
             <link>http://localhost:4000/art/fan.html</link>
             <guid isPermaLink="true">http://localhost:4000/art/fan.html</guid>
         </item>
@@ -94,6 +85,15 @@
             <pubDate>2017-08-01 13:27:00 </pubDate>
             <link>http://localhost:4000/tech/phoneme.html</link>
             <guid isPermaLink="true">http://localhost:4000/tech/phoneme.html</guid>
+        </item>
+        
+        <item>
+            <title>肺部结节检测</title>
+            <category>tech</category>
+            <description>图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentati...</description>
+            <pubDate>2017-04-25 21:38:00 </pubDate>
+            <link>http://localhost:4000/tech/luna.html</link>
+            <guid isPermaLink="true">http://localhost:4000/tech/luna.html</guid>
         </item>
         
         <item>

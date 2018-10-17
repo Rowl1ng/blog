@@ -11,14 +11,6 @@
 
 
 {
-"title" : "肺部结节检测 - ",
-"url" : "/tech/luna.html"
-}
-
-,
-
-
-{
 "title" : "愉快地画头像 - ",
 "url" : "/art/avatar.html"
 }
@@ -28,7 +20,7 @@
 
 {
 "title" : "各种英语考试的经验 - ",
-"url" : "/book/English.html"
+"url" : "/%E5%AD%A6%E4%B9%A0/English.html"
 }
 
 ,
@@ -44,7 +36,7 @@
 
 {
 "title" : "基于Rasa_NLU的微信chatbot - ",
-"url" : "/tech/chatbot.html"
+"url" : "/%E6%8A%80%E6%9C%AF/chatbot.html"
 }
 
 ,
@@ -83,6 +75,14 @@
 
 
 {
+"title" : "肺部结节检测 - ",
+"url" : "/tech/luna.html"
+}
+
+,
+
+
+{
 "title" : "《观念的水位》+《柏林墙》 - ",
 "url" : "/book/Socialism.html"
 }
@@ -101,14 +101,6 @@
 {
 "title" : "爱好：看电视 - ",
 "url" : "/book/watch_TV.html"
-}
-
-,
-
-
-{
-"title" : "裂缝识别 - ",
-"url" : "/tech/RoadNN.html"
 }
 
 ,
@@ -149,6 +141,14 @@
 {
 "title" : "How to learn word2vec - ",
 "url" : "/tech/word2vec.html"
+}
+
+,
+
+
+{
+"title" : "裂缝识别 - ",
+"url" : "/tech/RoadNN.html"
 }
 
 ,

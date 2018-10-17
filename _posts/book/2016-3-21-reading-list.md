@@ -3,10 +3,12 @@ title: Reading List
 layout: blog
 background-image: http://static.zybuluo.com/sixijinling/l74yefqlwkefzm1xbpjovr9g/memoir.jpg
 book: true
+date: 2016-3-21 17:50
+update: 2016-3-21 17:50
 category: book
 tags:
 - 书籍
-description: 写下来就一定要看完哟
+description: If you write it down, you must read it.
 ---
 
 # Recommendation

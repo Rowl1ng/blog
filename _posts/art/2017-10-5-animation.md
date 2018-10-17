@@ -4,6 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/195gt9ihi0rqc1x6ix6609v8/psb%20%281%29.gif
 art: true
 date: 2017-10-5 18:32
+update: 2017-10-5 18:32
 category: art
 description:  Animation experiments. Update every year~
 tags:

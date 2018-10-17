@@ -4,6 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/18fzvcrq4zmyyibbcdxgl0hh/17396394-E29D-48B0-BE1C-5894FCFC573F.png
 art: true
 date: 2013-6-4 18:59
+update: 2013-6-4 18:59
 category: art
 description:  Music is what feeling sound like.
 tags:
