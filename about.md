@@ -3,6 +3,7 @@ layout: blog
 title: 关于Rowl1ng
 description: "关于Rowl1ng博客的自述"
 lang: cn
+update: 2016-10-30 17:41
 redirect_from:
   - /about/
 ---
