@@ -35,6 +35,18 @@ Contact me: ling.rowling.luo@gmail.com
 - 编程工具是Webstorm（可以很方便地本地调试Jekyll）
 - 模板参考[LiberXue的博客][1]。
 
+# 我的关注
+
+- <img src="https://sivers.org/images/DerekSivers-20141209a-100.jpg" width = "50px" height = "50px" align="left" /> [Derek Sivers][5]: 关于技术和音乐，更关于人生
+- [pluskid][4]: 博客之路的启蒙，文章主要是编程、AI与认知科学
+
+# 可爱的友邻
+
+- <img src="https://github.com/kujihhoe/blog-files/raw/master/tx.jpg" width = "50px" height = "50px" align="left" />    [赫赫文王][3]：古琴、古音、古文与田野录音
+
 
   [1]: https://liberxue.github.io/?liberxue
   [2]: http://rowl1ng.com/cv/Academic_CV.pdf
+  [3]: https://kujihhoe.com/
+  [4]: http://freemind.pluskid.org/
+  [5]: https://sivers.org/

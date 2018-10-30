@@ -87,19 +87,7 @@
 
             </div>
             <div id="container"></div>
-            <link rel="stylesheet" href="/css/gitment.css">
-            <script src="/js/gitment.browser.js"></script>
-            <script>
-                var gitment = new Gitment({
-                    owner: 'Rowl1ng',
-                    repo: 'rowl1ng.github.io',
-                    oauth: {
-                        client_id: 'd3a4fe07f0e275a814af',
-                        client_secret: '568c448355abf329a831ea9e1cbcaf94dab7ce8b',
-                    },
-                })
-                gitment.render('container')
-            </script>
+            {% include comment.html %}
         </article>
         {% include foot.html %}
         <div id="directory-content" class="directory-content">
