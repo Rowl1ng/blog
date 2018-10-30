@@ -31,13 +31,18 @@ Contact me: ling.rowling.luo@gmail.com
 # 本站
 
 - 使用Jekyll
+
 - 架设于Github Pages
+
 - 编程工具是Webstorm（可以很方便地本地调试Jekyll）
+
 - 模板参考[LiberXue的博客][1]。
 
 # 我的关注
 
-- <img src="https://sivers.org/images/DerekSivers-20141209a-100.jpg" width = "50px" height = "50px" align="left" /> [Derek Sivers][5]: 关于技术和音乐，更关于人生
+-  [Derek Sivers][5]: 关于技术和音乐，更关于人生
+
+
 - [pluskid][4]: 博客之路的启蒙，文章主要是编程、AI与认知科学
 
 # 可爱的友邻
