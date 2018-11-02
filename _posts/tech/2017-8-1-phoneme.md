@@ -94,6 +94,9 @@ $$
 r(q_i,d_j)=\frac{U(q_{i}\cdot d_{j})-||q_i||||d_j||}{\sqrt {(U||q_i||^2-||q_i||)(U||d_j||^2-||d_j||)}}
 $$
 
+1) CZ 音素后验： 布尔诺科技大学(Brno University of Technology，BUT)提供的捷克语音素识别器[16]在QUESST数据上解码获得的音素后验特征，音素个数为45。
+2) HU音素后验： BUT提供的匈牙利语音素识别器[16]在QUESST数据上解码获得的音素后验特征，音素个数61。
+3) RU音素后验： BUT提供的俄语音素识别器[16]在QUESST数据上解码获得的音素后验特征，音素个数为52。
 ### CTC的tensorflow实现
 
 [github项目地址](https://github.com/Rowl1ng/phoneme-ctc)
@@ -116,6 +119,33 @@ $$
 
 ![实验效果.png-179.3kB][6]
 
+# Reference
+
+- GTM-UVigo Systems for the Query-by-Example Search on Speech Task at MediaEval 2015，Paula Lopez-Otero, Laura Docio-Fernandez, Carmen Garcia-Mateo
+Spoken Audio Search
+(or Query-by-Example Spoken-Term Detection)
+Given a spoken query we search for matches (at lexical level) within a set of  spoken documents
+• It is similar to Spoken Term Detection (NIST STD2006, OpenKWS) ut ...
+Queries are spoken
+No prior information  Different acoustic conditions  “ear hi gforwhole do u e ts
+6 lang. (Albanian, Chinese, Czech, Portuguese, Romanian, Slovak)
+	•	19 hours of audio (dev = eval), per sentence segmentation
+	•	450 queries/dev, 450 queries/eval
+	•	Recorded in isolation by different speakers (some non-native of the language)
+	•	Utterance-level matching
+	•	Recorded with context New!
+	•	3 types of search
+	•	T1 - Exact match, dictated
+	•	T2 - Reordering and small variations, dictated
+	•	T3 - Reordering and small variations, conversational speech New!
+
+- 基于分段动态时间规整和后验特征的中文语音模式发现
+- 使 用 了 Ｂｒｎｏ 大 学 开 发 的 音 素 识 别 器 ＢＵT来提取音 素 后 验 特 征。
+约１０ｈ左右的中文广 播语料（ＴＤＴ２ 中文广播语料库），训练出中文音素识别器。
+无论是有无词边界信息的 情况下，音素后验特征的效果总是明显优于 ＭＦＣＣ 特征，特 别 是 在 多 说 话 人 的 语 料 上，后 验 特 征 对 ＦＭｅａｓｕｒｅ的提升 更 大。
+在 词 边 界 信 息 的 帮 助 下，语音模式发现的效果 提 升 明 显，不 仅 ＦＭｅａｓｕｒｅ 大大提高，在时间消耗上也要省得多。
+寻求一种直 接在声学信息上找出词或短语边界的方法，才能真 正使这种优势体现出来。
+
 # Future work
 
 ## Todo list
@@ -123,6 +153,7 @@ $$
 - 提升效率：DTW算法的时间复杂度是O(M x N)，尝试使用监督学习方法训练端到端识别网络，降低时间复杂度；
 - 文本关键词检索：先将文本关键词转化为对应的音素特征，再来进行检索。
 - 不确定是否需要一些标准化的措施。
+
 ## Things to learn
 
 查询样例转换成音素序列后怎么查找
@@ -154,6 +185,10 @@ $$
 
 ![屏幕快照 2017-11-26 14.13.59.png-239.2kB][8]
 
+## 电话诈骗识别
+
+![phone_scam_detection.png-1408.4kB][9]
+
 
   [1]: http://static.zybuluo.com/sixijinling/bfniz4zkgsfqhp4vyaiw6aun/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%2013.54.59.png
   [2]: http://static.zybuluo.com/sixijinling/6c7imoqzgk405jznwfku1ol2/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%2013.52.57.png
@@ -163,3 +198,4 @@ $$
   [6]: http://static.zybuluo.com/sixijinling/o6i3xw4f4qgsc3j1pf4x33ir/%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C.png
   [7]: http://speech.fit.vutbr.cz/software/quesst-2014-multilingual-database-query-by-example-keyword-spotting
   [8]: http://static.zybuluo.com/sixijinling/065pnzbrgs904fre9ejsm4vn/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%2014.13.59.png
+  [9]: http://static.zybuluo.com/sixijinling/tco4wp29if620gmxaexwlpgo/phone_scam_detection.png
