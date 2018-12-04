@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>scikit-learn · GitBook</title>
+        <title>opencv · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pandas.html" />
+    <link rel="next" href="matplotlib.html" />
     
     
-    <link rel="prev" href="../data_analyse.html" />
+    <link rel="prev" href="../python_programming.html" />
     
 
     </head>
@@ -390,9 +390,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.2.1" data-path="scikit-learn.html">
+        <li class="chapter " data-level="3.2.1" data-path="../data_analyse/scikit-learn.html">
             
-                <a href="scikit-learn.html">
+                <a href="../data_analyse/scikit-learn.html">
             
                     
                     scikit-learn
@@ -403,9 +403,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="pandas.html">
+        <li class="chapter " data-level="3.2.2" data-path="../data_analyse/pandas.html">
             
-                <a href="pandas.html">
+                <a href="../data_analyse/pandas.html">
             
                     
                     pandas
@@ -416,9 +416,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.3" data-path="jupyter.html">
+        <li class="chapter " data-level="3.2.3" data-path="../data_analyse/jupyter.html">
             
-                <a href="jupyter.html">
+                <a href="../data_analyse/jupyter.html">
             
                     
                     Jupyter
@@ -429,9 +429,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.4" data-path="numpy.html">
+        <li class="chapter " data-level="3.2.4" data-path="../data_analyse/numpy.html">
             
-                <a href="numpy.html">
+                <a href="../data_analyse/numpy.html">
             
                     
                     numpy
@@ -1224,9 +1224,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.3.1" data-path="../python_programming/opencv.html">
+        <li class="chapter active" data-level="4.3.1" data-path="opencv.html">
             
-                <a href="../python_programming/opencv.html">
+                <a href="opencv.html">
             
                     
                     opencv
@@ -1237,9 +1237,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.2" data-path="../python_programming/matplotlib.html">
+        <li class="chapter " data-level="4.3.2" data-path="matplotlib.html">
             
-                <a href="../python_programming/matplotlib.html">
+                <a href="matplotlib.html">
             
                     
                     matplotlib
@@ -1250,9 +1250,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.3" data-path="../python_programming/skimage.html">
+        <li class="chapter " data-level="4.3.3" data-path="skimage.html">
             
-                <a href="../python_programming/skimage.html">
+                <a href="skimage.html">
             
                     
                     skimage
@@ -1577,7 +1577,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >scikit-learn</a>
+        <a href=".." >opencv</a>
     </h1>
 </div>
 
@@ -1592,23 +1592,73 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#sickit-learn">1. sickit-learn</a></li><ul><li><a href="#traintestsplit">1.1. train_test_split</a></li></ul></ul></div><a href="#sickit-learn" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sickit-learn"><a name="sickit-learn" class="plugin-anchor" href="#sickit-learn"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sickit-learn" class="anchor-navigation-ex-anchor" href="#sickit-learn"><i class="fa fa-link" aria-hidden="true"></i></a>1. sickit-learn</h1>
-<h2 id="traintestsplit"><a name="traintestsplit" class="plugin-anchor" href="#traintestsplit"><i class="fa fa-link" aria-hidden="true"></i></a><a name="traintestsplit" class="anchor-navigation-ex-anchor" href="#traintestsplit"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. train_test_split</h2>
-<p>&#x628A;array&#x6216;&#x8005;matrice&#x968F;&#x673A;&#x5212;&#x5206;&#x4E3A;train&#x548C;test</p>
-<ul>
-<li>&#x53C2;&#x6570;stratify&#xFF1A; &#x4F9D;&#x636E;&#x6807;&#x7B7E;y&#xFF0C;&#x6309;&#x539F;&#x6570;&#x636E;y&#x4E2D;&#x5404;&#x7C7B;&#x6BD4;&#x4F8B;&#xFF0C;&#x5206;&#x914D;&#x7ED9;train&#x548C;test&#xFF0C;&#x4F7F;&#x5F97;train&#x548C;test&#x4E2D;&#x5404;&#x7C7B;&#x6570;&#x636E;&#x7684;&#x6BD4;&#x4F8B;&#x4E0E;&#x539F;&#x6570;&#x636E;&#x96C6;&#x4E00;&#x6837;&#x3002; 
-A:B:C=1:2:3 
-split&#x540E;&#xFF0C;train&#x548C;test&#x4E2D;&#xFF0C;&#x90FD;&#x662F;A:B:C=1:2:3 
-&#x5C06;stratify=X&#x5C31;&#x662F;&#x6309;&#x7167;X&#x4E2D;&#x7684;&#x6BD4;&#x4F8B;&#x5206;&#x914D; 
-&#x5C06;stratify=y&#x5C31;&#x662F;&#x6309;&#x7167;y&#x4E2D;&#x7684;&#x6BD4;&#x4F8B;&#x5206;&#x914D; 
-&#x4E00;&#x822C;&#x90FD;&#x662F;=y</li>
-</ul>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
-
-pat_train, pat_test, labs_train, labs_test = train_test_split(
-    pat_train, pat_labs, stratify=pat_labs, test_size=test_size, random_state=<span class="hljs-number">12345</span>)
+                                <h2 id="opencv"><a name="opencv" class="plugin-anchor" href="#opencv"><i class="fa fa-link" aria-hidden="true"></i></a><a name="opencv" class="anchor-navigation-ex-anchor" href="#opencv"><i class="fa fa-link" aria-hidden="true"></i></a>OpenCV</h2>
+<p>&#x4F7F;&#x7528;conda&#x5B89;&#x88C5;</p>
+<pre><code>conda install opencv
+</code></pre><p>&#x6216;&#x8005;&#x4F7F;&#x7528;pip&#x5B89;&#x88C5;</p>
+<pre><code>pip install opencv-python
+</code></pre><h2 id="&#x8BFB;&#x5165;&#x56FE;&#x7247;"><a name="&#x8BFB;&#x5165;&#x56FE;&#x7247;" class="plugin-anchor" href="#&#x8BFB;&#x5165;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BFB;&#x5165;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x8BFB;&#x5165;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BFB;&#x5165;&#x56FE;&#x7247;</h2>
+<p>&#x8BFB;&#x5165;&#x7070;&#x5EA6;&#x56FE;&#xFF1A;</p>
+<pre><code class="lang-python">img = cv2.imread(<span class="hljs-string">&apos;13.jpg&apos;</span>,<span class="hljs-number">0</span>)
 </code></pre>
-
+<p>&#x5224;&#x65AD;&#x56FE;&#x7247;&#x662F;&#x5426;&#x635F;&#x574F;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i, image_path <span class="hljs-keyword">in</span> enumerate(train_image_list):
+    test_image = cv2.imread(image_path.encode(<span class="hljs-string">&apos;utf-8&apos;</span>))
+    <span class="hljs-keyword">try</span>:
+        test_image.shape
+<span class="hljs-comment">#         print(&quot;checked for shape {}&quot;.format(test_image.shape))</span>
+    <span class="hljs-keyword">except</span> AttributeError:
+        <span class="hljs-keyword">print</span> i
+        <span class="hljs-keyword">print</span> image_path
+        print(<span class="hljs-string">&quot;shape not found&quot;</span>)
+</code></pre>
+<p>&#x6216;&#x8005;</p>
+<pre><code>im = cv2.imread(roidb[i][&apos;image&apos;])
+assert im is not None, \
+    &apos;Failed to read image \&apos;{}\&apos;&apos;.format(roidb[i][&apos;image&apos;])
+</code></pre><h3 id="&#x753B;&#x56FE;"><a name="&#x753B;&#x56FE;" class="plugin-anchor" href="#&#x753B;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x753B;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x753B;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x753B;&#x56FE;</h3>
+<pre><code>cv2.circle(image_,(1251, 2661),5,(255,255,0),2)
+cv2.imwrite(&apos;test_1.png&apos;, image_)
+</code></pre><h3 id="resize"><a name="resize" class="plugin-anchor" href="#resize"><i class="fa fa-link" aria-hidden="true"></i></a><a name="resize" class="anchor-navigation-ex-anchor" href="#resize"><i class="fa fa-link" aria-hidden="true"></i></a>Resize</h3>
+<p>&#x6CE8;&#x610F;size&#x7684;&#x987A;&#x5E8F;&#x662F;&#x53CD;&#x7684;</p>
+<pre><code>cv2.resize(image, dsize=(width, height), 
+                                 interpolation=cv2.INTER_CUBIC)
+</code></pre><h3 id="&#x77E9;&#xFF1A;moments"><a name="&#x77E9;&#xFF1A;moments" class="plugin-anchor" href="#&#x77E9;&#xFF1A;moments"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x77E9;&#xFF1A;moments" class="anchor-navigation-ex-anchor" href="#&#x77E9;&#xFF1A;moments"><i class="fa fa-link" aria-hidden="true"></i></a>&#x77E9;&#xFF1A;Moments</h3>
+<p>&#x56FE;&#x50CF;&#x77E9;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x56FE;&#x50CF;&#x7684;&#x8D28;&#x5FC3;&#xFF0C;&#x9762;&#x79EF;&#x7B49;&#x7B49;&#x3002;</p>
+<pre><code># &#x6839;&#x636E;&#x56FE;&#x50CF;&#x7684;&#x77E9;&#x8BA1;&#x7B97;&#x91CD;&#x5FC3; 
+def find_center(contour):
+    M = cv2.moments(contour)
+    rx,ry,rw,rh = cv2.boundingRect(contour)
+    try:
+        cx = int(M[&apos;m10&apos;] / M[&apos;m00&apos;])
+        cy = int(M[&apos;m01&apos;] / M[&apos;m00&apos;])
+        print &quot;ROI centroid=&quot;, (cx, cy);
+    except ZeroDivisionError:
+        cx = rx + int(rw / 2)
+        cy = ry + int(rh / 2)
+        print &quot;ROI centroid=Unknown, use b-box center=&quot;, (cx, cy)
+    return cx, cy
+</code></pre><h3 id="&#x83B7;&#x5F97;bbox"><a name="&#x83B7;&#x5F97;bbox" class="plugin-anchor" href="#&#x83B7;&#x5F97;bbox"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x5F97;bbox" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x5F97;bbox"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x5F97;bbox</h3>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x8F93;&#x5165;&#x662F;int&#x578B;&#x54E6;~</p>
+<pre><code>label_array = np.array(points, dtype=np.int32) #&#xFF08;n, 2&#xFF09;
+x1, y1, w, h = cv2.boundingRect(label_array[:, np.newaxis, :]) # (n, 1, 2)
+</code></pre><h3 id="&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF1A;findcontours"><a name="&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF1A;findcontours" class="plugin-anchor" href="#&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF1A;findcontours"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF1A;findcontours" class="anchor-navigation-ex-anchor" href="#&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF1A;findcontours"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#xFF1A;FindContours</h3>
+<p><a href="https://github.com/makelove/OpenCV-Python-Tutorial/blob/master/ch21-%E8%BD%AE%E5%BB%93Contours/21-findContour.py" target="_blank">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</a></p>
+<pre><code class="lang-python">ver = (cv2.__version__).split(<span class="hljs-string">&apos;.&apos;</span>)
+<span class="hljs-keyword">if</span> int(ver[<span class="hljs-number">0</span>]) &lt; <span class="hljs-number">3</span>:
+    contours,_ = cv2.findContours(roi_mask_8u.copy(), cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+<span class="hljs-keyword">else</span>:
+    _, contours,_ = cv2.findContours(roi_mask_8u.copy(), cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    cont_areas = [ cv2.contourArea(cont) <span class="hljs-keyword">for</span> cont <span class="hljs-keyword">in</span> contours ]
+    idx = np.argmax(cont_areas)  <span class="hljs-comment"># find the largest contour.</span>
+    rx,ry,rw,rh = cv2.boundingRect(contours[idx])
+</code></pre>
+<p>&#x8BA1;&#x7B97;&#x9762;&#x79EF;</p>
+<pre><code>area = cv2.contourArea(cnt)
+</code></pre><h3 id="&#x6591;&#x70B9;&#x68C0;&#x6D4B;&#xFF1A;blobdetector"><a name="&#x6591;&#x70B9;&#x68C0;&#x6D4B;&#xFF1A;blobdetector" class="plugin-anchor" href="#&#x6591;&#x70B9;&#x68C0;&#x6D4B;&#xFF1A;blobdetector"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6591;&#x70B9;&#x68C0;&#x6D4B;&#xFF1A;blobdetector" class="anchor-navigation-ex-anchor" href="#&#x6591;&#x70B9;&#x68C0;&#x6D4B;&#xFF1A;blobdetector"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6591;&#x70B9;&#x68C0;&#x6D4B;&#xFF1A;BlobDetector</h3>
+<p><a href="https://github.com/makelove/OpenCV-Python-Tutorial/blob/master/ch25-%E6%96%91%E7%82%B9%E6%A3%80%E6%B5%8B/%E6%96%91%E7%82%B9%E6%A3%80%E6%B5%8BSimpleBlobDetector.py" target="_blank">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</a></p>
+<pre><code>detector = cv2.SimpleBlobDetector()
+</code></pre>
                                 
                                 </section>
                             
@@ -1635,12 +1685,12 @@ pat_train, pat_test, labs_train, labs_test = train_test_split(
 
             
                 
-                <a href="../data_analyse.html" class="navigation navigation-prev " aria-label="Previous page: 第-1章 数据分析">
+                <a href="../python_programming.html" class="navigation navigation-prev " aria-label="Previous page: python编程">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="pandas.html" class="navigation navigation-next " aria-label="Next page: pandas">
+                <a href="matplotlib.html" class="navigation navigation-next " aria-label="Next page: matplotlib">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1651,7 +1701,7 @@ pat_train, pat_test, labs_train, labs_test = train_test_split(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"scikit-learn","level":"3.2.1","depth":2,"next":{"title":"pandas","level":"3.2.2","depth":2,"path":"data_analyse/pandas.md","ref":"data_analyse/pandas.md","articles":[]},"previous":{"title":"第-1章 数据分析","level":"3.2","depth":1,"path":"data_analyse.md","ref":"data_analyse.md","articles":[{"title":"scikit-learn","level":"3.2.1","depth":2,"path":"data_analyse/scikit-learn.md","ref":"data_analyse/scikit-learn.md","articles":[]},{"title":"pandas","level":"3.2.2","depth":2,"path":"data_analyse/pandas.md","ref":"data_analyse/pandas.md","articles":[]},{"title":"Jupyter","level":"3.2.3","depth":2,"path":"data_analyse/jupyter.md","ref":"data_analyse/jupyter.md","articles":[]},{"title":"numpy","level":"3.2.4","depth":2,"path":"data_analyse/numpy.md","ref":"data_analyse/numpy.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"data_analyse/scikit-learn.md","mtime":"2018-10-15T07:27:27.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T06:57:42.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"opencv","level":"4.3.1","depth":2,"next":{"title":"matplotlib","level":"4.3.2","depth":2,"path":"python_programming/matplotlib.md","ref":"python_programming/matplotlib.md","articles":[]},"previous":{"title":"python编程","level":"4.3","depth":1,"path":"python_programming.md","ref":"python_programming.md","articles":[{"title":"opencv","level":"4.3.1","depth":2,"path":"python_programming/opencv.md","ref":"python_programming/opencv.md","articles":[]},{"title":"matplotlib","level":"4.3.2","depth":2,"path":"python_programming/matplotlib.md","ref":"python_programming/matplotlib.md","articles":[]},{"title":"skimage","level":"4.3.3","depth":2,"path":"python_programming/skimage.md","ref":"python_programming/skimage.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"python_programming/opencv.md","mtime":"2018-10-15T07:27:27.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T06:57:42.905Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

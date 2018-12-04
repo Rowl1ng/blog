@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>scikit-learn · GitBook</title>
+        <title>matplotlib · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="pandas.html" />
+    <link rel="next" href="skimage.html" />
     
     
-    <link rel="prev" href="../data_analyse.html" />
+    <link rel="prev" href="opencv.html" />
     
 
     </head>
@@ -390,9 +390,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.2.1" data-path="scikit-learn.html">
+        <li class="chapter " data-level="3.2.1" data-path="../data_analyse/scikit-learn.html">
             
-                <a href="scikit-learn.html">
+                <a href="../data_analyse/scikit-learn.html">
             
                     
                     scikit-learn
@@ -403,9 +403,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="pandas.html">
+        <li class="chapter " data-level="3.2.2" data-path="../data_analyse/pandas.html">
             
-                <a href="pandas.html">
+                <a href="../data_analyse/pandas.html">
             
                     
                     pandas
@@ -416,9 +416,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.3" data-path="jupyter.html">
+        <li class="chapter " data-level="3.2.3" data-path="../data_analyse/jupyter.html">
             
-                <a href="jupyter.html">
+                <a href="../data_analyse/jupyter.html">
             
                     
                     Jupyter
@@ -429,9 +429,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.4" data-path="numpy.html">
+        <li class="chapter " data-level="3.2.4" data-path="../data_analyse/numpy.html">
             
-                <a href="numpy.html">
+                <a href="../data_analyse/numpy.html">
             
                     
                     numpy
@@ -1224,9 +1224,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.3.1" data-path="../python_programming/opencv.html">
+        <li class="chapter " data-level="4.3.1" data-path="opencv.html">
             
-                <a href="../python_programming/opencv.html">
+                <a href="opencv.html">
             
                     
                     opencv
@@ -1237,9 +1237,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.2" data-path="../python_programming/matplotlib.html">
+        <li class="chapter active" data-level="4.3.2" data-path="matplotlib.html">
             
-                <a href="../python_programming/matplotlib.html">
+                <a href="matplotlib.html">
             
                     
                     matplotlib
@@ -1250,9 +1250,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.3" data-path="../python_programming/skimage.html">
+        <li class="chapter " data-level="4.3.3" data-path="skimage.html">
             
-                <a href="../python_programming/skimage.html">
+                <a href="skimage.html">
             
                     
                     skimage
@@ -1577,7 +1577,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >scikit-learn</a>
+        <a href=".." >matplotlib</a>
     </h1>
 </div>
 
@@ -1592,21 +1592,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#sickit-learn">1. sickit-learn</a></li><ul><li><a href="#traintestsplit">1.1. train_test_split</a></li></ul></ul></div><a href="#sickit-learn" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sickit-learn"><a name="sickit-learn" class="plugin-anchor" href="#sickit-learn"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sickit-learn" class="anchor-navigation-ex-anchor" href="#sickit-learn"><i class="fa fa-link" aria-hidden="true"></i></a>1. sickit-learn</h1>
-<h2 id="traintestsplit"><a name="traintestsplit" class="plugin-anchor" href="#traintestsplit"><i class="fa fa-link" aria-hidden="true"></i></a><a name="traintestsplit" class="anchor-navigation-ex-anchor" href="#traintestsplit"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. train_test_split</h2>
-<p>&#x628A;array&#x6216;&#x8005;matrice&#x968F;&#x673A;&#x5212;&#x5206;&#x4E3A;train&#x548C;test</p>
-<ul>
-<li>&#x53C2;&#x6570;stratify&#xFF1A; &#x4F9D;&#x636E;&#x6807;&#x7B7E;y&#xFF0C;&#x6309;&#x539F;&#x6570;&#x636E;y&#x4E2D;&#x5404;&#x7C7B;&#x6BD4;&#x4F8B;&#xFF0C;&#x5206;&#x914D;&#x7ED9;train&#x548C;test&#xFF0C;&#x4F7F;&#x5F97;train&#x548C;test&#x4E2D;&#x5404;&#x7C7B;&#x6570;&#x636E;&#x7684;&#x6BD4;&#x4F8B;&#x4E0E;&#x539F;&#x6570;&#x636E;&#x96C6;&#x4E00;&#x6837;&#x3002; 
-A:B:C=1:2:3 
-split&#x540E;&#xFF0C;train&#x548C;test&#x4E2D;&#xFF0C;&#x90FD;&#x662F;A:B:C=1:2:3 
-&#x5C06;stratify=X&#x5C31;&#x662F;&#x6309;&#x7167;X&#x4E2D;&#x7684;&#x6BD4;&#x4F8B;&#x5206;&#x914D; 
-&#x5C06;stratify=y&#x5C31;&#x662F;&#x6309;&#x7167;y&#x4E2D;&#x7684;&#x6BD4;&#x4F8B;&#x5206;&#x914D; 
-&#x4E00;&#x822C;&#x90FD;&#x662F;=y</li>
-</ul>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#matplotlib">1. Matplotlib</a></li><ul><li><a href="#&#x67F1;&#x72B6;&#x56FE;-bar">1.1. &#x67F1;&#x72B6;&#x56FE; bar</a></li><li><a href="#&#x6563;&#x70B9;&#x56FE;-plot">1.2. &#x6563;&#x70B9;&#x56FE; plot</a></li><li><a href="#&#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846;-rectangle--&#x753B;&#x5B50;&#x56FE;">1.3. &#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846; Rectangle + &#x753B;&#x5B50;&#x56FE;</a></li><li><a href="#&#x4FDD;&#x5B58;&#x56FE;&#x7247;">1.4. &#x4FDD;&#x5B58;&#x56FE;&#x7247;</a></li></ul></ul></div><a href="#matplotlib" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="matplotlib"><a name="matplotlib" class="plugin-anchor" href="#matplotlib"><i class="fa fa-link" aria-hidden="true"></i></a><a name="matplotlib" class="anchor-navigation-ex-anchor" href="#matplotlib"><i class="fa fa-link" aria-hidden="true"></i></a>1. Matplotlib</h1>
+<p>Matplotlib&#x7684;&#x65B9;&#x4FBF;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x4F7F;&#x7528;Jupyter notebook&#x65F6;&#x80FD;&#x5B9E;&#x65F6;&#x753B;&#x56FE;&#x5E76;&#x663E;&#x793A;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x8FDC;&#x7A0B;&#x5373;&#x53EF;&#x770B;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x56FE;&#x3002;</p>
+<h2 id="&#x67F1;&#x72B6;&#x56FE;-bar"><a name="&#x67F1;&#x72B6;&#x56FE;-bar" class="plugin-anchor" href="#&#x67F1;&#x72B6;&#x56FE;-bar"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x67F1;&#x72B6;&#x56FE;-bar" class="anchor-navigation-ex-anchor" href="#&#x67F1;&#x72B6;&#x56FE;-bar"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x67F1;&#x72B6;&#x56FE; bar</h2>
+<pre><code class="lang-python">plt.bar(range(len(mean_hist)), mean_hist, width=<span class="hljs-number">1.0</span>, linewidth=<span class="hljs-number">1</span>)
+plt.xlim([<span class="hljs-number">0</span>,<span class="hljs-number">256</span>])
+<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x6A2A;&#x5750;&#x6807;&#x7684;&#x6587;&#x5B57;&#x8BF4;&#x660E;</span>
+plt.xlabel(<span class="hljs-string">&apos;Grade&apos;</span>)
+<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x7EB5;&#x5750;&#x6807;&#x7684;&#x6587;&#x5B57;&#x8BF4;&#x660E;</span>
+plt.ylabel(<span class="hljs-string">&apos;Frequency&apos;</span>)
+<span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x6807;&#x9898;</span>
+plt.title(<span class="hljs-string">&apos;Title&apos;</span>)
+plt.show()
+</code></pre>
+<h2 id="&#x6563;&#x70B9;&#x56FE;-plot"><a name="&#x6563;&#x70B9;&#x56FE;-plot" class="plugin-anchor" href="#&#x6563;&#x70B9;&#x56FE;-plot"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6563;&#x70B9;&#x56FE;-plot" class="anchor-navigation-ex-anchor" href="#&#x6563;&#x70B9;&#x56FE;-plot"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x6563;&#x70B9;&#x56FE; plot</h2>
+<pre><code class="lang-python">plot(X(pos, <span class="hljs-number">1</span>), X(pos, <span class="hljs-number">2</span>), <span class="hljs-string">&apos;k+&apos;</span>, <span class="hljs-string">&apos;LineWidth&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;MarkerSize&apos;</span>)
+</code></pre>
+<p>k-black</p>
+<pre><code>       b     blue          .     point              -     solid
+       g     green         o     circle             :     dotted
+       r     red           x     x-mark             -.    dashdot 
+       c     cyan          +     plus               --    dashed   
+       m     magenta       *     star             (none)  no line
+       y     yellow        s     square
+       k     black         d     diamond
+       w     white         v     triangle (down)
+                           ^     triangle (up)
+                           &lt;     triangle (left)
+                           &gt;     triangle (right)
+                           p     pentagram
+                           h     hexagram
+</code></pre><p><img src="http://static.zybuluo.com/sixijinling/ufzbesntpuybr1rsiy6bbtyy/%E6%95%A3%E7%82%B9%E5%9B%BE.png" alt="&#x6563;&#x70B9;&#x56FE;.png-38.8kB"></p>
+<pre><code class="lang-python">pos = find(y==<span class="hljs-number">1</span>);
+neg = find(y==<span class="hljs-number">0</span>);
 
-pat_train, pat_test, labs_train, labs_test = train_test_split(
-    pat_train, pat_labs, stratify=pat_labs, test_size=test_size, random_state=<span class="hljs-number">12345</span>)
+plot(X(pos, <span class="hljs-number">1</span>), X(pos, <span class="hljs-number">2</span>), <span class="hljs-string">&apos;k+&apos;</span>, <span class="hljs-string">&apos;LineWidth&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;MarkerSize&apos;</span>, <span class="hljs-number">7</span>);
+
+plot(X(neg, <span class="hljs-number">1</span>), X(neg, <span class="hljs-number">2</span>), <span class="hljs-string">&apos;ko&apos;</span>, <span class="hljs-string">&apos;MarkerFaceColor&apos;</span>, <span class="hljs-string">&apos;y&apos;</span>, <span class="hljs-string">&apos;MarkerSize&apos;</span>, <span class="hljs-number">7</span>);
+</code></pre>
+<h2 id="&#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846;-rectangle--&#x753B;&#x5B50;&#x56FE;"><a name="&#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846;-rectangle--&#x753B;&#x5B50;&#x56FE;" class="plugin-anchor" href="#&#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846;-rectangle--&#x753B;&#x5B50;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846;-rectangle--&#x753B;&#x5B50;&#x56FE;" class="anchor-navigation-ex-anchor" href="#&#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846;-rectangle--&#x753B;&#x5B50;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5728;&#x56FE;&#x4E0A;&#x753B;&#x6846; Rectangle + &#x753B;&#x5B50;&#x56FE;</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> matplotlib.patches <span class="hljs-keyword">as</span> patches
+
+image = cv2.imread(png_dir + image_name + <span class="hljs-string">&apos;.png&apos;</span>)
+fig1 = plt.figure()
+ax1 = fig1.add_subplot(<span class="hljs-number">111</span>, aspect=<span class="hljs-string">&apos;equal&apos;</span>)
+ax1.imshow(image)
+ax1.add_patch(
+    patches.Rectangle(
+        (bbox[<span class="hljs-number">0</span>], bbox[<span class="hljs-number">1</span>]),   <span class="hljs-comment"># (x,y)</span>
+        bbox[<span class="hljs-number">2</span>],          <span class="hljs-comment"># width</span>
+        bbox[<span class="hljs-number">3</span>],          <span class="hljs-comment"># height</span>
+    )
+)
+plt.imshow(image)
+</code></pre>
+<h2 id="&#x4FDD;&#x5B58;&#x56FE;&#x7247;"><a name="&#x4FDD;&#x5B58;&#x56FE;&#x7247;" class="plugin-anchor" href="#&#x4FDD;&#x5B58;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4FDD;&#x5B58;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x4FDD;&#x5B58;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x4FDD;&#x5B58;&#x56FE;&#x7247;</h2>
+<pre><code class="lang-python">plt.savefig(<span class="hljs-string">&apos;example.jpg&apos;</span>)
 </code></pre>
 
                                 
@@ -1635,12 +1677,12 @@ pat_train, pat_test, labs_train, labs_test = train_test_split(
 
             
                 
-                <a href="../data_analyse.html" class="navigation navigation-prev " aria-label="Previous page: 第-1章 数据分析">
+                <a href="opencv.html" class="navigation navigation-prev " aria-label="Previous page: opencv">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="pandas.html" class="navigation navigation-next " aria-label="Next page: pandas">
+                <a href="skimage.html" class="navigation navigation-next " aria-label="Next page: skimage">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1651,7 +1693,7 @@ pat_train, pat_test, labs_train, labs_test = train_test_split(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"scikit-learn","level":"3.2.1","depth":2,"next":{"title":"pandas","level":"3.2.2","depth":2,"path":"data_analyse/pandas.md","ref":"data_analyse/pandas.md","articles":[]},"previous":{"title":"第-1章 数据分析","level":"3.2","depth":1,"path":"data_analyse.md","ref":"data_analyse.md","articles":[{"title":"scikit-learn","level":"3.2.1","depth":2,"path":"data_analyse/scikit-learn.md","ref":"data_analyse/scikit-learn.md","articles":[]},{"title":"pandas","level":"3.2.2","depth":2,"path":"data_analyse/pandas.md","ref":"data_analyse/pandas.md","articles":[]},{"title":"Jupyter","level":"3.2.3","depth":2,"path":"data_analyse/jupyter.md","ref":"data_analyse/jupyter.md","articles":[]},{"title":"numpy","level":"3.2.4","depth":2,"path":"data_analyse/numpy.md","ref":"data_analyse/numpy.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"data_analyse/scikit-learn.md","mtime":"2018-10-15T07:27:27.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T06:57:42.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"matplotlib","level":"4.3.2","depth":2,"next":{"title":"skimage","level":"4.3.3","depth":2,"path":"python_programming/skimage.md","ref":"python_programming/skimage.md","articles":[]},"previous":{"title":"opencv","level":"4.3.1","depth":2,"path":"python_programming/opencv.md","ref":"python_programming/opencv.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"python_programming/matplotlib.md","mtime":"2018-11-08T05:45:29.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-04T06:57:42.905Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
