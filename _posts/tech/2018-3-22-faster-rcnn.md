@@ -20,16 +20,16 @@ versions:
 
 {% include post-version-selector.html %}
 
-本文mask rcnn的部分基于[Detectron.pytorch][1]（参考了[Faster R-CNN的pytorch实现][2]），[Detectron][3]（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN神马的），可以学习一下。
+[Detectron][1]（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。
+本文mask rcnn的部分基于pytorch实现的一版Detectron：[Detectron.pytorch][2]（参考了[Faster R-CNN的pytorch实现][3]），
 
 需要安装：
 
 - pytorch > 0.3.0
 - pycocotools
-
-```
-pip install easydict cython cffi
-```
+- easydict
+- cython
+- cffi
 
 # 基本概念
 
@@ -222,7 +222,7 @@ R-CNN包括三种主要网络：
     - `Crop Pooling`：从feature map中crop相应位置
 3. Classification Network：对crop出的区域进行分类。
 
-在pytorch版Detectron中，[medeling/model_builder.py][18]中的`generalized_rcnn`将FPN、fast rcnn、mask rcnn作为“插件”，通过config文件中控制“插拔”。
+在pytorch版Detectron中，[medeling/model_builder.py][12]中的`generalized_rcnn`将FPN、fast rcnn、mask rcnn作为“插件”，通过config文件中控制“插拔”。
 
 ```
 MODEL:
@@ -246,19 +246,19 @@ MODEL:
         - 通过MRCNN.ROI_MASK_HEAD设置
     - Mask_Outs# 输入mask_feat，返回mask_pred
 
-![network architecture][19]
+![network architecture][13]
 
 先来看看Head怎么得到feature map。拿VGG16作为backbone来举例的话，一个完整的VGG16网络长这样：
 
-![VGG16][20]
+![VGG16][14]
 
 其中红色部分就是下采样的时刻。原始论文里使用VGG16，因为提feature map只用了最后一次max pooling前面的部分，所以留下来的四次pooling总共下采样是16倍。得到的feature map长这样：
 
-![under sampling][21]
+![under sampling][15]
 
 最终的feature映射回原图的话大概长这样：
 
-![此处输入图片的描述][22]
+![此处输入图片的描述][16]
 
 有了feature map以后，开始走RCNN的主体流程：
 
@@ -281,26 +281,29 @@ Resnet.py打包了各种resnet的backbone，比如ResNet50_conv5_body：
 def ResNet50_conv5_body():
     return ResNet_convX_body((3, 4, 6, 3)) # block_counts: 分别对应res2、res3、res4、res5
 ```
-![img_5aa59c8da4c4b.png-50.2kB][12]
+![img_5aa59c8da4c4b.png-50.2kB][17]
 
 
 Resnet中的Bottleneck：
 
-![bottleneck][13]
+![bottleneck][18]
 
 ### FPN
 
-[原始论文][14]
+[原始论文][19]
 
 可以选择是否用于RoI transform，是否用于RPN：
 
 1. **feature extraction**：fpn.py中的fpn类将backbone“加工”为FPN。比如当config里的CONV_BODY: FPN.fpn_ResNet50_conv5_body，实际要做的就是先初始化Resnet.ResNet50_conv5_body，再交给fpn得到fpn_ResNet50_conv5_body。
 2. **RPN with FPN backbone**: 如果rpn使用FPN，那么FPN的每个level都会做RPN，生成相应大小的anchor，返回相应的cls_score和bbox_pred。rpn_heads,FPN.fpn_rpn_outputs
 
-![image_1c8u6egich3e1ha41d3o1m22s3g16.png-228.8kB][15]
+![image_1c8u6egich3e1ha41d3o1m22s3g16.png-228.8kB][20]
 
-![image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png-30.8kB][16]
+![image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png-30.8kB][21]
 
+![fpn_rpn.png-206.4kB][22]
+
+![fpn_faster_rcnn.jpeg-43.5kB][23]
 可以看到降采样从P5到P2是(1. / 32., 1. / 16., 1. / 8., 1. / 4.)
 
 选择：
@@ -353,13 +356,13 @@ __C.FPN.EXTRA_CONV_LEVELS = False
 
 ```
 
-其他[FPN的Pytorch实现][17]。
+其他[FPN的Pytorch实现][24]。
 
 ## 1. Anchor Generation Layer
 
 第一步就是生成anchor（`lib/modeling/generate_anchors.py`），这里的anchor亦可理解为bounding box。Anchor Generation Layer的任务是对feature map上的每个点都计算若干anchor。而RPN的任务就是判断哪些是好的anchor（包含gt对象）并计算regression coefficients（优化anchor的位置，更好地贴合object）：
 
-![generate anchors][24]
+![generate anchors][25]
 
 -  三种颜色分别代表128x128, 256x256, 512x512
 -  每种颜色的三个框分别代表比例1:1, 1:2 and 2:1
@@ -375,7 +378,7 @@ args.set_cfgs = ['ANCHOR_SCALES', '[4, 8, 16, 32]', 'ANCHOR_RATIOS', '[0.5,1,2]'
 
 ```
 
-![image_1cle4qa281hb61mdq1pl7i0mf7919.png-12.7kB][25]
+![image_1cle4qa281hb61mdq1pl7i0mf7919.png-12.7kB][26]
 
 
 
@@ -400,7 +403,7 @@ Region Proposal Layer的两个任务就是：
 
 ### 2.1 Region Proposal Network
 
-![RPN][23]
+![RPN][27]
 
 值得注意的是，这里的anchor是以降采样16倍的卷积网(called rpn_net in code)得到的feature map为基础的。
 
@@ -410,7 +413,7 @@ rpn_net的输出通过两个 (1,1)核的卷积网，从而产生bg/fg的class sc
 proposal layer基于anchor generation layer得到的anchor，使用nms（基于fg的score）来筛除多余的anchor。此外，它还负责将RPN得到的regression coefficients应用到对应的anchor上，从而得到transformed bbox。
 
 
-![proposal layer][26]
+![proposal layer][28]
 
 ### 2.3 Anchor Target Layer
 
@@ -456,7 +459,7 @@ $$smooth_{L1}(x) = \begin{cases} \frac{\sigma^2x^2}{2} & \lVert x \rVert < \frac
 1. type A: 对每个gt box，所有和它有最大iou overlap的fg box
 2. type B: 和某些gt box最大overlap超过一定阈值的anchor box
 
-![nms][27]
+![nms][29]
 
 体现在代码里：
 
@@ -561,7 +564,7 @@ crop pooling的步骤：
 ## 4.Classification Layer
 crop pooling layer基于proposal target layer生成的ROI boxes和“head” network的convolutional feature maps，生成square feature maps。 feature maps接下来通过ResNet的layer4、沿着spatial维的average pooling，结果(called “fc7” in code) 是每个ROI的一维特征向量。过程如下：
 
-![classification layer][35]
+![classification layer][34]
 
 fc之后得到的一维特征向量被送到两个全连接网络中：`bbox_pred_net` and `cls_score_net`
 
@@ -572,7 +575,7 @@ fc之后得到的一维特征向量被送到两个全连接网络中：`bbox_pre
 
 过程如下：
 
-![img_5aa55c97f3287.png-62.8kB][36]
+![img_5aa55c97f3287.png-62.8kB][35]
 
 有意思的是，训练classification layer得到的loss也会反向传播给RPN。这是因为用来做crop pooling的ROI box坐标不仅是RPN产生的 regression coefficients应用到anchor box上的结果，其本身也是网络输出。因此，在反传的时候，误差会通过roi pooling layer传播到RPN layer。好在crop pooling在Pytorch中有内部实现，省去了计算梯度的麻烦。
 
@@ -598,9 +601,9 @@ classification layer和RPN的关键区别是：RPN处理的是bg/fg的问题，c
 
 - **classification loss**：cross entropy loss with the true object class and predicted class score as the parameters. 计算过程如下:
 
-![img_5aa1cd250f265-1.png-22.8kB][28]
+![img_5aa1cd250f265-1.png-22.8kB][36]
 
-![img_5aa1bf41503d4-1 .png-16.7kB][29]
+![img_5aa1bf41503d4-1 .png-16.7kB][37]
 
 - **bounding box regression loss**:和RPN的时候类似，除了现在 regression coefficients是针对class的. 也就是说，会针对每个object类型计算 regression coefficients. 显然，对某anchor box来说，最大重合的gt box所属的类别算得的 target regression coefficients 才是可用的。在计算loss时，会以mask array的形式标记出每个anchor box的正确class。分类错误的其余class 的 regression coefficients 就被忽略了. This mask array allows the computation of loss to be a matrix multiplication as opposed to requiring a for-each loop.
 
@@ -639,66 +642,27 @@ For showing the final classification results, we apply another round of NMS and 
 
 # Appendix
 
-## non-maximum suppression（nms）
+## 非极大值抑制（non-maximum suppression，nms）
 
-![img_5aa7c828703ab.png-978.8kB][45]
+
+![UNADJUSTEDNONRAW_thumb_5e2.jpg-87.6kB][45]
+
+![img_5aa7c828703ab.png-978.8kB][46]
 
 上图左边的黑色数字代表fg的概率
 
 - standard NMS (boxes are ranked by y coordinate of bottom right corner). This results in the box with a lower score being retained. The second figure uses modified NMS (boxes are ranked by foreground scores).
 
-![img_5aa7c84451f81.png-975kB][46]
+![img_5aa7c84451f81.png-975kB][47]
 
 - This results in the box with the highest foreground score being retained, which is more desirable. In both cases, the overlap between the boxes is assumed to be higher than the NMS overlap threhold.
 
-[讲nms（non-maximum suppression）的文章][47]
-
-## Focal loss
-
-看ICCV那篇focal loss的论文[《Focal Loss for Dense Object Detection》][48].
-
-不过这个pytorch版detectron还没实现，官方Detectron是集成在Caffe2里。可参考[Pytorch实现][49]。
-
-$$
-Loss(x, class) = - \alpha (1-softmax(x)_{[class]})^\gamma \log(softmax(x)_{[class]})
-$$
-
-```
-def focal_loss(inputs, targets):
-    gamma = 2
-    N = inputs.size(0)
-    C = inputs.size(1)
-    P = F.softmax(inputs) # softmax(x)
-
-    class_mask = inputs.data.new(N, C).fill_(0)
-    class_mask = Variable(class_mask)
-    ids = targets.view(-1, 1)
-    class_mask.scatter_(1, ids, 1.)
-    # print(class_mask)
-
-    probs = (P * class_mask).sum(1).view(-1, 1)# softmax(x)_class
-
-    log_p = probs.log()
-    # print('probs size= {}'.format(probs.size()))
-    # print(probs)
-
-    batch_loss = -(torch.pow((1 - probs), gamma)) * log_p
-    # print('-----bacth_loss------')
-    # print(batch_loss)
-
-    loss = batch_loss.mean()
-
-    return loss
-```
-
-- $$\alpha$$(1D Tensor, Variable) : the scalar factor for this criterion
-- $$\gamma$$(float, double) : $$\gamma > 0$$; reduces the relative loss for well-classiﬁed examples (p > .5), putting more focus on hard, misclassiﬁed examples
-- size_average(bool): By default, the losses are averaged over observations for each minibatch. However, if the field size_average is set to False, the losses are instead summed for each minibatch.
+[讲nms（non-maximum suppression）的文章][48]
 
 
 ## 针对小物体
 
-每个小红点之间就是16像素的间隔了，如果要检测特别细小的物体，这么大的下采样就很危险了。于是，为了尽量不破坏细小物体的清晰度，参考[github上关于检测微小物体的讨论][50]，我尝试了两种方案：
+每个小红点之间就是16像素的间隔了，如果要检测特别细小的物体，这么大的下采样就很危险了。于是，为了尽量不破坏细小物体的清晰度，参考[github上关于检测微小物体的讨论][51]，我尝试了两种方案：
 
 ### 1. 降低下采样倍数
 
@@ -735,15 +699,15 @@ warmup：
 
 ## Reference
 
-- [faster rcnn原始论文][51]
-- 如果想了解object detection的发展史，可以看[Object Detection][52]
-- 推荐阅读[Faster R-CNN: Down the rabbit hole of modern object detection][53]
-- [Object Detection and Classification using R-CNNs][54]
+- [faster rcnn原始论文][52]
+- 如果想了解object detection的发展史，可以看[Object Detection][53]
+- 推荐阅读[Faster R-CNN: Down the rabbit hole of modern object detection][54]
+- [Object Detection and Classification using R-CNNs][55]
 
 
-  [1]: https://github.com/roytseng-tw/Detectron.pytorch
-  [2]: https://github.com/jwyang/faster-rcnn.pytorch
-  [3]: https://github.com/facebookresearch/Detectron
+  [1]: https://github.com/facebookresearch/Detectron
+  [2]: https://github.com/roytseng-tw/Detectron.pytorch
+  [3]: https://github.com/jwyang/faster-rcnn.pytorch
   [4]: http://static.zybuluo.com/sixijinling/ljdcym3rohxn1rwe6sqxl67h/img_5aa6f476535f7.png
   [5]: https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/datasets/roidb.py
   [6]: https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/utils/boxes.py
@@ -752,32 +716,32 @@ warmup：
   [9]: https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/roi_data/minibatch.py
   [10]: https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/roi_data/fast_rcnn.py
   [11]: http://static.zybuluo.com/sixijinling/h9i0bgmhs3da2yn7acgzouo2/img_5aa46e9e0bbd7.png
-  [12]: http://static.zybuluo.com/sixijinling/o1qnl7ql20gxbcebb1b4f8aa/img_5aa59c8da4c4b.png
-  [13]: http://static.zybuluo.com/sixijinling/y1x4ad3ch2bcmps4r3ubur96/img_5aa59d170c750.png
-  [14]: https://arxiv.org/pdf/1612.03144.pdf
-  [15]: http://static.zybuluo.com/sixijinling/cv2l758k7dyj022k0iinwsm1/image_1c8u6egich3e1ha41d3o1m22s3g16.png
-  [16]: http://static.zybuluo.com/sixijinling/elabj076z56xa1xsfbwqyy50/image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png
-  [17]: https://github.com/jwyang/fpn.pytorch
-  [18]: https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/modeling/model_builder.py
-  [19]: http://static.zybuluo.com/sixijinling/zyrc1nxcdube8ctwotdkkj29/img_5a9ffec911c19.png
-  [20]: https://tryolabs.com/images/blog/post-images/2018-01-18-faster-rcnn/vgg.b6e48b99.png
-  [21]: https://tryolabs.com/images/blog/post-images/2018-01-18-faster-rcnn/image-to-feature-map.89f5aecb.png
-  [22]: https://tryolabs.com/images/blog/post-images/2018-01-18-faster-rcnn/anchors-centers.141181d6.png
-  [23]: http://static.zybuluo.com/sixijinling/l8pye2hx4ow6m1exbhz04cwc/img_5aa0695484e3e.png
-  [24]: http://static.zybuluo.com/sixijinling/ps6dpvykieraqc80a88ov81o/img_5aa05d3ecef3e.png
-  [25]: http://static.zybuluo.com/sixijinling/3wdn06u2j39hax3tfl72fz54/image_1cle4qa281hb61mdq1pl7i0mf7919.png
-  [26]: http://static.zybuluo.com/sixijinling/jpo1lb32swi80srohmotmyjd/img_5aa5766d53b63.png
-  [27]: http://static.zybuluo.com/sixijinling/ct3ekd3g5cmjns60k0knnp2u/img_5aa13d4d911d3.png
-  [28]: http://static.zybuluo.com/sixijinling/gtg0hic03zafemdwc7yjol5n/img_5aa1cd250f265-1.png
-  [29]: http://static.zybuluo.com/sixijinling/ko6f7dt80ai9w5sfb85m1e2v/img_5aa1bf41503d4-1%20.png
+  [12]: https://github.com/roytseng-tw/Detectron.pytorch/blob/9294ec13d4a59cf449b09e1ada72a56b3420249c/lib/modeling/model_builder.py
+  [13]: http://static.zybuluo.com/sixijinling/zyrc1nxcdube8ctwotdkkj29/img_5a9ffec911c19.png
+  [14]: https://tryolabs.com/images/blog/post-images/2018-01-18-faster-rcnn/vgg.b6e48b99.png
+  [15]: https://tryolabs.com/images/blog/post-images/2018-01-18-faster-rcnn/image-to-feature-map.89f5aecb.png
+  [16]: https://tryolabs.com/images/blog/post-images/2018-01-18-faster-rcnn/anchors-centers.141181d6.png
+  [17]: http://static.zybuluo.com/sixijinling/o1qnl7ql20gxbcebb1b4f8aa/img_5aa59c8da4c4b.png
+  [18]: http://static.zybuluo.com/sixijinling/y1x4ad3ch2bcmps4r3ubur96/img_5aa59d170c750.png
+  [19]: https://arxiv.org/pdf/1612.03144.pdf
+  [20]: http://static.zybuluo.com/sixijinling/cv2l758k7dyj022k0iinwsm1/image_1c8u6egich3e1ha41d3o1m22s3g16.png
+  [21]: http://static.zybuluo.com/sixijinling/elabj076z56xa1xsfbwqyy50/image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png
+  [22]: http://static.zybuluo.com/sixijinling/lvmo09rywt1pyvil3vphwvtc/fpn_rpn.png
+  [23]: http://static.zybuluo.com/sixijinling/tw90x779iyn4kyezgamq9ztj/fpn_faster_rcnn.jpeg
+  [24]: https://github.com/jwyang/fpn.pytorch
+  [25]: http://static.zybuluo.com/sixijinling/ps6dpvykieraqc80a88ov81o/img_5aa05d3ecef3e.png
+  [26]: http://static.zybuluo.com/sixijinling/3wdn06u2j39hax3tfl72fz54/image_1cle4qa281hb61mdq1pl7i0mf7919.png
+  [27]: http://static.zybuluo.com/sixijinling/l8pye2hx4ow6m1exbhz04cwc/img_5aa0695484e3e.png
+  [28]: http://static.zybuluo.com/sixijinling/jpo1lb32swi80srohmotmyjd/img_5aa5766d53b63.png
+  [29]: http://static.zybuluo.com/sixijinling/ct3ekd3g5cmjns60k0knnp2u/img_5aa13d4d911d3.png
   [30]: http://static.zybuluo.com/sixijinling/dzkgskozvpbqmx6kdkf35gft/img_5aa32302afc0b-1.png
   [31]: http://www.telesens.co/2018/03/11/object-detection-and-classification-using-r-cnns/#ITEM-1455-7
   [32]: http://static.zybuluo.com/sixijinling/fzk6ue5q4avnq790p0xef3j8/img_5aa402baba3a1-1.png
   [33]: http://static.zybuluo.com/sixijinling/jxcixxdomu4s3dxe6mkhtnni/img_5aa4255fdacb6.png
-  [34]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa4255fdacb6.png
-  [35]: http://static.zybuluo.com/sixijinling/kip2q7kejresvo9f74nu2xn3/img_5aa55c81eac0a.png
-  [36]: http://static.zybuluo.com/sixijinling/xtlc2ntcxq99hkcz06k8zs7k/img_5aa55c97f3287.png
-  [37]: http://www.telesens.co/wordpress/wp-content/uploads/2018/03/img_5aa4255fdacb6.png
+  [34]: http://static.zybuluo.com/sixijinling/kip2q7kejresvo9f74nu2xn3/img_5aa55c81eac0a.png
+  [35]: http://static.zybuluo.com/sixijinling/xtlc2ntcxq99hkcz06k8zs7k/img_5aa55c97f3287.png
+  [36]: http://static.zybuluo.com/sixijinling/gtg0hic03zafemdwc7yjol5n/img_5aa1cd250f265-1.png
+  [37]: http://static.zybuluo.com/sixijinling/ko6f7dt80ai9w5sfb85m1e2v/img_5aa1bf41503d4-1%20.png
   [38]: https://github.com/multimodallearning/pytorch-mask-rcnn
   [39]: https://arxiv.org/pdf/1703.06870.pdf
   [40]: http://static.zybuluo.com/sixijinling/oesmj70d6c1cybe1ukfme81a/img_5aa70ff399c57.png
@@ -785,13 +749,12 @@ warmup：
   [42]: http://static.zybuluo.com/sixijinling/zw21rkn6g6epcsnjmp6aanw6/img_5aa5809cc7206.png
   [43]: http://static.zybuluo.com/sixijinling/qp5523r1dm9dvkx40vmbc8is/img_5aa581709aa82.png
   [44]: http://static.zybuluo.com/sixijinling/3w0vrvap36yevoy0cnelb0fn/img_5aa5827c1d42c.png
-  [45]: http://static.zybuluo.com/sixijinling/5qfym3rpsdgyxs35izkg23u4/img_5aa7c828703ab.png
-  [46]: http://static.zybuluo.com/sixijinling/zknxyptjoaa3pzbyw1a4dxd7/img_5aa7c84451f81.png
-  [47]: https://zhuanlan.zhihu.com/p/31427728
-  [48]: http://openaccess.thecvf.com/content_ICCV_2017/papers/Lin_Focal_Loss_for_ICCV_2017_paper.pdf
-  [49]: https://github.com/marvis/pytorch-yolo2/blob/master/FocalLoss.py
-  [50]: https://github.com/rbgirshick/py-faster-rcnn/issues/86
-  [51]: https://arxiv.org/pdf/1506.01497.pdf
-  [52]: https://tryolabs.com/blog/2017/08/30/object-detection-an-overview-in-the-age-of-deep-learning/
-  [53]: https://tryolabs.com/blog/2018/01/18/faster-r-cnn-down-the-rabbit-hole-of-modern-object-detection/
-  [54]: http://www.telesens.co/2018/03/11/object-detection-and-classification-using-r-cnns/
+  [45]: http://static.zybuluo.com/sixijinling/pw80rvcl6ocrbbqslbekme2j/UNADJUSTEDNONRAW_thumb_5e2.jpg
+  [46]: http://static.zybuluo.com/sixijinling/5qfym3rpsdgyxs35izkg23u4/img_5aa7c828703ab.png
+  [47]: http://static.zybuluo.com/sixijinling/zknxyptjoaa3pzbyw1a4dxd7/img_5aa7c84451f81.png
+  [48]: https://zhuanlan.zhihu.com/p/31427728
+  [51]: https://github.com/rbgirshick/py-faster-rcnn/issues/86
+  [52]: https://arxiv.org/pdf/1506.01497.pdf
+  [53]: https://tryolabs.com/blog/2017/08/30/object-detection-an-overview-in-the-age-of-deep-learning/
+  [54]: https://tryolabs.com/blog/2018/01/18/faster-r-cnn-down-the-rabbit-hole-of-modern-object-detection/
+  [55]: http://www.telesens.co/2018/03/11/object-detection-and-classification-using-r-cnns/
