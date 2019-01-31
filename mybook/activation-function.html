@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>优化算法 · GitBook</title>
+        <title>activation function · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="svm.html" />
+    <link rel="next" href="loss-function.html" />
     
     
-    <link rel="prev" href="bayesian.html" />
+    <link rel="prev" href="nnfunction.html" />
     
 
     </head>
@@ -655,7 +655,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4.4" data-path="optimizer.html">
+        <li class="chapter " data-level="3.4.4" data-path="optimizer.html">
             
                 <a href="optimizer.html">
             
@@ -753,7 +753,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.5.1.1" data-path="activation-function.html">
+        <li class="chapter active" data-level="3.5.1.1" data-path="activation-function.html">
             
                 <a href="activation-function.html">
             
@@ -1647,7 +1647,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >优化算法</a>
+        <a href="." >activation function</a>
     </h1>
 </div>
 
@@ -1662,108 +1662,95 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x4F18;&#x5316;">1. &#x4F18;&#x5316;</a></li><ul><li><a href="#&#x7B97;&#x6CD5;">1.1. &#x7B97;&#x6CD5;</a></li><ul><li><a href="#&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;sgd&#xFF1A;stochastic-gradient-descent&#xFF09;">1.1.1. &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;SGD&#xFF1A;Stochastic Gradient Descent&#xFF09;</a></li><li><a href="#&#x52A8;&#x91CF;&#xFF08;momentum&#xFF09;">1.1.2. &#x52A8;&#x91CF;&#xFF08;Momentum&#xFF09;</a></li><li><a href="#adadelta">1.1.3. Adadelta</a></li><li><a href="#adagrad">1.1.4. Adagrad</a></li><li><a href="#adam">1.1.5. Adam</a></li><li><a href="#rmsprop">1.1.6. RMSProp</a></li></ul><li><a href="#&#x95EE;&#x9898;">1.2. &#x95EE;&#x9898;</a></li><ul><li><a href="#&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;vanishing-gradient-problem&#xFF09;">1.2.1. &#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;Vanishing Gradient Problem&#xFF09;</a></li><li><a href="#&#x96BE;&#x4F8B;&#x6316;&#x6398;">1.2.2. &#x96BE;&#x4F8B;&#x6316;&#x6398;</a></li></ul></ul></ul></div><a href="#&#x4F18;&#x5316;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F18;&#x5316;"><a name="&#x4F18;&#x5316;" class="plugin-anchor" href="#&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4F18;&#x5316;</h1>
-<h2 id="&#x7B97;&#x6CD5;"><a name="&#x7B97;&#x6CD5;" class="plugin-anchor" href="#&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B97;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7B97;&#x6CD5;</h2>
-<p>&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x7684;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF0C;&#x8BF4;&#x767D;&#x4E86;&#x5C31;&#x662F;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x3002;&#x6BCF;&#x6B21;&#x7684;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<p>1.&#x904D;&#x5386;&#x5168;&#x90E8;&#x6570;&#x636E;&#x96C6;&#x7B97;&#x4E00;&#x6B21;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x7B97;&#x51FD;&#x6570;&#x5BF9;&#x5404;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x66F4;&#x65B0;&#x68AF;&#x5EA6;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x6BCF;&#x66F4;&#x65B0;&#x4E00;&#x6B21;&#x53C2;&#x6570;&#x90FD;&#x8981;&#x628A;&#x6570;&#x636E;&#x96C6;&#x91CC;&#x7684;&#x6240;&#x6709;&#x6837;&#x672C;&#x90FD;&#x770B;&#x4E00;&#x904D;&#xFF0C;&#x8BA1;&#x7B97;&#x91CF;&#x5F00;&#x9500;&#x5927;&#xFF0C;&#x8BA1;&#x7B97;&#x901F;&#x5EA6;&#x6162;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x5728;&#x7EBF;&#x5B66;&#x4E60;&#xFF0C;&#x8FD9;&#x79F0;&#x4E3A;Batch gradient descent&#xFF0C;&#x6279;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x3002;The gradients are accumulated over the entire traing set.</p>
-<p>2.&#x6BCF;&#x770B;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5C31;&#x7B97;&#x4E00;&#x4E0B;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x6C42;&#x68AF;&#x5EA6;&#x66F4;&#x65B0;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x79F0;&#x4E3A;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF0C;stochastic gradient descent&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x5FEB;&#xFF0C;&#x4F46;&#x662F;&#x6536;&#x655B;&#x6027;&#x80FD;&#x4E0D;&#x592A;&#x597D;&#xFF0C;&#x53EF;&#x80FD;&#x5728;&#x6700;&#x4F18;&#x70B9;&#x9644;&#x8FD1;&#x6643;&#x6765;&#x6643;&#x53BB;&#xFF0C;hit&#x4E0D;&#x5230;&#x6700;&#x4F18;&#x70B9;&#x3002;&#x4E24;&#x6B21;&#x53C2;&#x6570;&#x7684;&#x66F4;&#x65B0;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x4E92;&#x76F8;&#x62B5;&#x6D88;&#x6389;&#xFF0C;&#x9020;&#x6210;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x9707;&#x8361;&#x7684;&#x6BD4;&#x8F83;&#x5267;&#x70C8;&#x3002;</p>
-<p>&#x4E3A;&#x4E86;&#x514B;&#x670D;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x7F3A;&#x70B9;&#xFF0C;&#x73B0;&#x5728;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x7684;&#x662F;&#x4E00;&#x79CD;&#x6298;&#x4E2D;&#x624B;&#x6BB5;&#xFF0C;<strong>mini-batch gradient decent</strong>&#xFF0C;&#x5C0F;&#x6279;&#x7684;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x628A;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x82E5;&#x5E72;&#x4E2A;&#x6279;&#xFF0C;&#x6309;&#x6279;&#x6765;&#x66F4;&#x65B0;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;<strong>&#x4E00;&#x4E2A;&#x6279;&#x4E2D;&#x7684;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x5171;&#x540C;&#x51B3;&#x5B9A;&#x4E86;&#x672C;&#x6B21;&#x68AF;&#x5EA6;&#x7684;&#x65B9;&#x5411;</strong>&#xFF0C;&#x4E0B;&#x964D;&#x8D77;&#x6765;&#x5C31;&#x4E0D;&#x5BB9;&#x6613;&#x8DD1;&#x504F;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x968F;&#x673A;&#x6027;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x56E0;&#x4E3A;&#x6279;&#x7684;&#x6837;&#x672C;&#x6570;&#x4E0E;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x76F8;&#x6BD4;&#x5C0F;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x8BA1;&#x7B97;&#x91CF;&#x4E5F;&#x4E0D;&#x662F;&#x5F88;&#x5927;&#x3002;</p>
-<h3 id="&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;sgd&#xFF1A;stochastic-gradient-descent&#xFF09;"><a name="&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;sgd&#xFF1A;stochastic-gradient-descent&#xFF09;" class="plugin-anchor" href="#&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;sgd&#xFF1A;stochastic-gradient-descent&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;sgd&#xFF1A;stochastic-gradient-descent&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;sgd&#xFF1A;stochastic-gradient-descent&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;SGD&#xFF1A;Stochastic Gradient Descent&#xFF09;</h3>
-<p>&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x662F;&#x4E00;&#x79CD;&#x88AB;&#x7528;&#x5728;&#x8BAD;&#x7EC3;&#x9636;&#x6BB5;&#x5B66;&#x4E60;&#x7F51;&#x7EDC;&#x53C2;&#x6570;&#x7684;&#x57FA;&#x4E8E;&#x68AF;&#x5EA6;&#x7684;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x3002;&#x68AF;&#x5EA6;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x7B97;&#x6CD5;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x4EBA;&#x4EEC;&#x4F7F;&#x7528;&#x5FAE;&#x5C0F;&#x6279;&#x91CF;&#x7248;&#x672C;&#x7684; SGD&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#x57FA;&#x4E8E;&#x6279;&#x6848;&#x4F8B;&#x800C;&#x975E;&#x5355;&#x4E2A;&#x6848;&#x4F8B;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x80FD;&#x589E;&#x52A0;&#x8BA1;&#x7B97;&#x6548;&#x7387;&#x3002;vanilla SGD &#x5B58;&#x5728;&#x8BB8;&#x591A;&#x6269;&#x5C55;&#xFF0C;&#x5305;&#x62EC;&#x52A8;&#x91CF;&#xFF08;Momentum&#xFF09;&#x3001;Adagrad&#x3001;rmsprop&#x3001;Adadelta &#x6216; Adam&#x3002;</p>
-<p>&#x8BBA;&#x6587;&#xFF1A;&#x7528;&#x4E8E;&#x5728;&#x7EBF;&#x5B66;&#x4E60;&#x548C;&#x968F;&#x673A;&#x4F18;&#x5316;&#x7684;&#x81EA;&#x9002;&#x5E94;&#x6B21;&#x68AF;&#x5EA6;&#x65B9;&#x6CD5;&#xFF08;Adaptive Subgradient Methods for Online Learning and Stochastic Optimization&#xFF09;<br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x65AF;&#x5766;&#x798F;CS231n&#xFF1A;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF08;<a href="http://cs231n.github.io/neural-networks-3/&#xFF09;" target="_blank">http://cs231n.github.io/neural-networks-3/&#xFF09;</a><br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x6982;&#x8FF0;&#xFF08;<a href="http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;" target="_blank">http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;</a></p>
-<h3 id="&#x52A8;&#x91CF;&#xFF08;momentum&#xFF09;"><a name="&#x52A8;&#x91CF;&#xFF08;momentum&#xFF09;" class="plugin-anchor" href="#&#x52A8;&#x91CF;&#xFF08;momentum&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x52A8;&#x91CF;&#xFF08;momentum&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x91CF;&#xFF08;momentum&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x52A8;&#x91CF;&#xFF08;Momentum&#xFF09;</h3>
-<p>&#x52A8;&#x91CF;&#x662F;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7B97;&#x6CD5;&#xFF08;Gradient Descent Algorithm&#xFF09;&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x901F;&#x548C;&#x963B;&#x6291;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x5728;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x66F4;&#x65B0;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x52A8;&#x91CF;&#x9879;&#x53EF;&#x5728;&#x6DF1;&#x5EA6;&#x7F51;&#x7EDC;&#x4E2D;&#x5F97;&#x5230;&#x66F4;&#x597D;&#x7684;&#x6536;&#x655B;&#x901F;&#x5EA6;&#xFF08;convergence rate&#xFF09;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;">1. &#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;Activation Function&#xFF09;</a></li><ul><li><a href="#why-use&#xFF1F;">1.1. Why use&#xFF1F;</a></li><li><a href="#which-one-to-choose&#xFF1F;">1.2. which one to choose&#xFF1F;</a></li><li><a href="#&#x53D1;&#x5C55;&#x5386;&#x53F2;">1.3. &#x53D1;&#x5C55;&#x5386;&#x53F2;</a></li><li><a href="#&#x7EBF;&#x6027;&#x51FD;&#x6570;">1.4. &#x7EBF;&#x6027;&#x51FD;&#x6570;</a></li><li><a href="#&#x9636;&#x8DC3;&#x51FD;&#x6570;step-function">1.5. &#x9636;&#x8DC3;&#x51FD;&#x6570;(step function)</a></li><li><a href="#sigmoid&#x51FD;&#x6570;logistic&#x51FD;&#x6570;">1.6. sigmoid&#x51FD;&#x6570;/Logistic&#x51FD;&#x6570;</a></li><li><a href="#tanh&#x51FD;&#x6570;">1.7. tanh&#x51FD;&#x6570;</a></li><li><a href="#relu">1.8. ReLU</a></li><li><a href="#lifting-layers">1.9. Lifting Layers</a></li></ul></ul></div><a href="#&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;"><a name="&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;" class="plugin-anchor" href="#&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;activation-function&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;Activation Function&#xFF09;</h1>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x80FD;&#x591F;&#x5B66;&#x4E60;&#x590D;&#x6742;&#x7684;&#x51B3;&#x7B56;&#x8FB9;&#x754C;&#xFF08;decision boundary&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5176;&#x4E00;&#x4E9B;&#x5C42;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x975E;&#x7EBF;&#x6027;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;&#x6700;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#x5305;&#x62EC;  sigmoid&#x3001;tanh&#x3001;ReLU&#xFF08;Rectified Linear Unit &#x7EBF;&#x6027;&#x4FEE;&#x6B63;&#x5355;&#x5143;&#xFF09; &#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x4F53;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x53EF;&#x7528;&#x6765;&#x9650;&#x5236;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x632F;&#x5E45;&#xFF0C;&#x5B83;&#x4E5F;&#x79F0;&#x4E3A;&#x538B;&#x5236;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7684;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x538B;&#x5236;&#xFF08;&#x9650;&#x5236;&#xFF09;&#x5230;&#x5141;&#x8BB8;&#x8303;&#x56F4;&#x4E4B;&#x5185;&#x7684;&#x4E00;&#x5B9A;&#x503C;&#x3002;</p>
 <ul>
-<li>It damps oscillation in directions of high curvature by combining gradients with opposite signs.</li>
-<li>It builds up speed in directions with a gentle but consistent gradient.</li>
+<li>affine transformation <script type="math/tex; ">a = b+Wx</script>, elementwise</li>
 </ul>
-<p><script type="math/tex; ">\mathrm v(t)=\alpha \mathrm v(t-1)-\varepsilon \frac {\partial E}{\partial \mathrm w}(t)</script></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1667471-6d3b43bce94b33de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>  <script type="math/tex; mode=display">
+  h=\phi (a)⇔{ h }_{ i }=\phi ({ a }_{ i })=\phi ({ b }_{ i }+{ W }_{ i,: }x)
+  </script></p>
+<h2 id="why-use&#xFF1F;"><a name="why-use&#xFF1F;" class="plugin-anchor" href="#why-use&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="why-use&#xFF1F;" class="anchor-navigation-ex-anchor" href="#why-use&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Why use&#xFF1F;</h2>
+<p>Activation functions for the hidden units are needed to introduce <strong>nonlinearity</strong> into the network. Without nonlinearity, hidden units would not make nets more powerful than just plain perceptrons (which do not have any hidden units, just input and output units). The reason is that a linear function of linear functions is again a linear function. However, it is the nonlinearity (i.e, the capability to represent nonlinear functions) that makes multilayer networks so powerful. Almost any nonlinear function does the job, except for polynomials. </p>
+<p>For backpropagation learning, the activation function must be differentiable, and it helps if the function is bounded; the sigmoidal functions such as <strong>logistic</strong> and <strong>tanh</strong> and the <strong>Gaussian</strong> function are the most common choices. Functions such as tanh or arctan that produce both positive and negative values tend to yield <strong>faster</strong> training than functions that produce only positive values such as logistic, because of better numerical conditioning (see ftp://ftp.sas.com/pub/neural/illcond/illcond.html).</p>
+<h2 id="which-one-to-choose&#xFF1F;"><a name="which-one-to-choose&#xFF1F;" class="plugin-anchor" href="#which-one-to-choose&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="which-one-to-choose&#xFF1F;" class="anchor-navigation-ex-anchor" href="#which-one-to-choose&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. which one to choose&#xFF1F;</h2>
+<p>For hidden units, sigmoid activation functions are usually preferable to threshold activation functions. Networks with threshold units are difficult to train because the error function is <strong>stepwise constant</strong>, hence the gradient either does not exist or is zero, making it impossible to use backprop or more efficient gradient-based training methods. Even for training methods that do not use gradients--such as simulated annealing and genetic algorithms--sigmoid units are easier to train than threshold units. With sigmoid units, a small change in the weights will usually produce a change in the outputs, which makes it possible to tell whether that change in the weights is good or bad. With threshold units, a small change in the weights will often produce no change in the outputs.</p>
+<p>For the output units, you should choose an activation function suited to the distribution of the target values:</p>
 <ul>
-<li>increment the previous velocity</li>
-<li>decays by momentum <script type="math/tex; ">\alpha(\alpha<1)</script> </li>
+<li>For <strong>binary</strong> (0/1) targets, the <strong>logistic</strong> function is an excellent choice (Jordan, 1995).</li>
+<li>For categorical targets using <strong>1-of-C</strong> coding, the <strong>softmax</strong> activation function is the logical extension of the logistic function.</li>
+<li>For <strong>continuous-valued</strong> targets with a bounded range, the <strong>logistic and tanh</strong> functions can be used, provided you either scale the outputs to the range of the targets or scale the targets to the range of the output activation function (&quot;scaling&quot; means multiplying by and adding appropriate constants).</li>
+<li>If the target values are positive but have <strong>no known upper bound</strong>, you can use an <strong>exponential</strong> output activation function, but beware of overflow.</li>
+<li>For <strong>continuous-valued</strong> targets with no known bounds, use the identity or &quot;linear&quot; activation function (which amounts to no activation function) unless you have a very good reason to do otherwise.</li>
 </ul>
-<p><script type="math/tex; ">\Delta \mathrm w(t)=\mathrm v(t)=\alpha \Delta \mathrm w(t-1)-\varepsilon \frac {\partial E}{\partial \mathrm w}(t)</script></p>
-<p>terminal velocity:<script type="math/tex; ">\frac 1{1-\alpha}(-\varepsilon \frac{\partial E}{\partial \mathrm w})</script></p>
-<p><script type="math/tex; ">\alpha=0.9</script> correspond to multiplying the maximum speed by 10 relative to the gradient descent algorithm. </p>
-<p>It is less important to adapt <script type="math/tex; ">\alpha</script> over time than to shrink <script type="math/tex; ">\varepsilon</script> over time.</p>
-<h4 id="nesterov-momentum"><a name="nesterov-momentum" class="plugin-anchor" href="#nesterov-momentum"><i class="fa fa-link" aria-hidden="true"></i></a><a name="nesterov-momentum" class="anchor-navigation-ex-anchor" href="#nesterov-momentum"><i class="fa fa-link" aria-hidden="true"></i></a>Nesterov Momentum</h4>
-<p>First make a jump</p>
-<p>Then measure the gradient, make a correction.</p>
-<p>&quot;It turns out ,if you&apos;re going to gamble, it&apos;s much better to gamble and then make a correction, than to make a correction and then gamble.</p>
-<p>&#x8BBA;&#x6587;&#xFF1A;&#x901A;&#x8FC7;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#xFF08;back-propagating error&#xFF09;&#x9519;&#x8BEF;&#x5B66;&#x4E60;&#x8868;&#x5F81;</p>
-<h3 id="adadelta"><a name="adadelta" class="plugin-anchor" href="#adadelta"><i class="fa fa-link" aria-hidden="true"></i></a><a name="adadelta" class="anchor-navigation-ex-anchor" href="#adadelta"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. Adadelta</h3>
-<p> Adadelta &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x95F4;&#x8C03;&#x6574;&#x9002;&#x5E94;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5B66;&#x4E60;&#x7387;&#x3002;&#x5B83;&#x662F;&#x4F5C;&#x4E3A; Adagrad &#x7684;&#x6539;&#x8FDB;&#x7248;&#x63D0;&#x51FA;&#x7684;&#xFF0C;&#x5B83;&#x6BD4;&#x8D85;&#x53C2;&#x6570;&#xFF08;hyperparameter&#xFF09;&#x66F4;&#x654F;&#x611F;&#x800C;&#x4E14;&#x53EF;&#x80FD;&#x4F1A;&#x592A;&#x8FC7;&#x4E25;&#x91CD;&#x5730;&#x964D;&#x4F4E;&#x5B66;&#x4E60;&#x7387;&#x3002;Adadelta &#x7C7B;&#x4F3C;&#x4E8E; rmsprop&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x88AB;&#x7528;&#x6765;&#x66FF;&#x4EE3; vanilla SGD&#x3002;</p>
-<p>To determine the individual learning rates:</p>
+<h2 id="&#x53D1;&#x5C55;&#x5386;&#x53F2;"><a name="&#x53D1;&#x5C55;&#x5386;&#x53F2;" class="plugin-anchor" href="#&#x53D1;&#x5C55;&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53D1;&#x5C55;&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x5C55;&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x53D1;&#x5C55;&#x5386;&#x53F2;</h2>
+<h2 id="&#x7EBF;&#x6027;&#x51FD;&#x6570;"><a name="&#x7EBF;&#x6027;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x7EBF;&#x6027;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EBF;&#x6027;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x6027;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x7EBF;&#x6027;&#x51FD;&#x6570;</h2>
+<p>&#x6052;&#x7B49;&#x51FD;&#x6570;&#xFF08;Identity&#xFF09;&#x6216;&#x7EBF;&#x6027;&#x6FC0;&#x6D3B;&#xFF08;Linear activation&#xFF09;&#x51FD;&#x6570;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;&#x8F93;&#x51FA;&#x548C;&#x8F93;&#x5165;&#x6210;&#x6BD4;&#x4F8B;&#x3002;&#x7EBF;&#x6027;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x7684;&#x95EE;&#x9898;&#x5728;&#x4E8E;&#xFF0C;&#x5B83;&#x7684;&#x5BFC;&#x6570;&#x662F;&#x5E38;&#x6570;&#xFF0C;&#x68AF;&#x5EA6;&#x4E5F;&#x662F;&#x5E38;&#x6570;&#xFF0C;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x65E0;&#x6CD5;&#x5DE5;&#x4F5C;&#x3002;
+<script type="math/tex; mode=display">
+f(x)=x
+</script>
+<img src="https://www.jqr.com/editor/670/721/670721337-5af94f1b7a147" alt=""></p>
+<h2 id="&#x9636;&#x8DC3;&#x51FD;&#x6570;step-function"><a name="&#x9636;&#x8DC3;&#x51FD;&#x6570;step-function" class="plugin-anchor" href="#&#x9636;&#x8DC3;&#x51FD;&#x6570;step-function"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9636;&#x8DC3;&#x51FD;&#x6570;step-function" class="anchor-navigation-ex-anchor" href="#&#x9636;&#x8DC3;&#x51FD;&#x6570;step-function"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x9636;&#x8DC3;&#x51FD;&#x6570;(step function)</h2>
+<p><script type="math/tex; mode=display">
+\varphi (v)  = \begin{cases}  
+1, & v \ge 0 \\ 
+0, & v < 0
+\end{cases}
+</script></p>
+<p><img src="http://static.zybuluo.com/sixijinling/zcs7oxqe75t3aebzyld5mmu1/ScreenShot_20160426153615.png" alt="ScreenShot_20160426153615.png-8.5kB"></p>
+<h2 id="sigmoid&#x51FD;&#x6570;logistic&#x51FD;&#x6570;"><a name="sigmoid&#x51FD;&#x6570;logistic&#x51FD;&#x6570;" class="plugin-anchor" href="#sigmoid&#x51FD;&#x6570;logistic&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sigmoid&#x51FD;&#x6570;logistic&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#sigmoid&#x51FD;&#x6570;logistic&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. sigmoid&#x51FD;&#x6570;/Logistic&#x51FD;&#x6570;</h2>
+<p>&#x903B;&#x8F91;&#x51FD;&#x6570;&#x6216;&#x903B;&#x8F91;&#x66F2;&#x7EBF;&#x662F;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;S&#x5F62;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x662F;&#x76AE;&#x57C3;&#x5C14;&#xB7;&#x5F17;&#x6717;&#x7D22;&#x74E6;&#xB7;&#x97E6;&#x5415;&#x52D2;&#x5728;1844&#x6216;1845&#x5E74;&#x5728;&#x7814;&#x7A76;&#x5B83;&#x4E0E;&#x4EBA;&#x53E3;&#x589E;&#x957F;&#x7684;&#x5173;&#x7CFB;&#x65F6;&#x547D;&#x540D;&#x7684;&#x3002;&#x5E7F;&#x4E49;Logistic&#x66F2;&#x7EBF;&#x53EF;&#x4EE5;&#x6A21;&#x4EFF;&#x4E00;&#x4E9B;&#x60C5;&#x51B5;&#x4EBA;&#x53E3;&#x589E;&#x957F;&#xFF08;P&#xFF09;&#x7684;S&#x5F62;&#x66F2;&#x7EBF;&#x3002;&#x8D77;&#x521D;&#x9636;&#x6BB5;&#x5927;&#x81F4;&#x662F;&#x6307;&#x6570;&#x589E;&#x957F;&#xFF1B;&#x7136;&#x540E;&#x968F;&#x7740;&#x5F00;&#x59CB;&#x53D8;&#x5F97;&#x9971;&#x548C;&#xFF0C;&#x589E;&#x52A0;&#x53D8;&#x6162;&#xFF1B;&#x6700;&#x540E;&#xFF0C;&#x8FBE;&#x5230;&#x6210;&#x719F;&#x65F6;&#x589E;&#x52A0;&#x505C;&#x6B62;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;Logistic&#x51FD;&#x6570;&#x53EF;&#x7528;&#x4E0B;&#x5F0F;&#x8868;&#x793A;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+P(t)=\frac 1{1+e^{-t}}
+</script></p>
+<p>Logistic&#x51FD;&#x6570;&#x4E5F;&#x79F0;&#x903B;&#x8F91;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF08;Logistic activation function&#xFF09;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x5BF9;&#x9636;&#x8DC3;&#x51FD;&#x6570;&#x7684;&#x5E73;&#x6ED1;&#x5316;&#x62DF;&#x5408;&#x3002;</p>
 <ul>
-<li>Start with a local gain of 1 for every weight.</li>
-<li><script type="math/tex; ">+\delta</script> : Increase the local gain if the gradient for that weight does not change sign.</li>
-<li><script type="math/tex; ">\times(1-\delta)</script> : Use small additive increases and multiplicative decreases.</li>
+<li>&#x8BA1;&#x7B97;sigmoid&#x51FD;&#x6570;&#x7684;&#x5BFC;&#x6570;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;<script type="math/tex; ">f'(x)=f(x)(1-f(x))</script></li>
+<li>&#x6700;&#x5E38;&#x7528;&#x4E8E;&#x4E8C;&#x5143;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#x3002;&#x5728;&#x4E00;&#x5B9A;epoch&#x6570;&#x76EE;&#x4E4B;&#x540E;&#xFF0C;&#x7F51;&#x7EDC;&#x62D2;&#x7EDD;&#x5B66;&#x4E60;&#xFF0C;&#x6216;&#x975E;&#x5E38;&#x7F13;&#x6162;&#x5730;&#x5B66;&#x4E60;&#xFF0C;&#x56E0;&#x4E3A;&#x8F93;&#x5165;&#xFF08;X&#xFF09;&#x5BFC;&#x81F4;&#x8F93;&#x51FA;&#xFF08;Y&#xFF09;&#x4E2D;&#x975E;&#x5E38;&#x5C0F;&#x7684;&#x6539;&#x52A8;&#x3002;&#x8FD9;&#x4E00;&#x51FD;&#x6570;&#x66F4;&#x5BB9;&#x6613;&#x78B0;&#x5230;&#x540E;&#x7EED;&#x5C42;&#x7684;&#x9971;&#x548C;&#x95EE;&#x9898;&#xFF0C;&#x5BFC;&#x81F4;&#x8BAD;&#x7EC3;&#x53D8;&#x5F97;&#x56F0;&#x96BE;&#x3002;</li>
 </ul>
-<p>Tricks:</p>
+<p><img src="https://www.jqr.com/editor/277/651/2776515976-5af9537b35c35" alt=""></p>
+<p>![&#x6B64;&#x5904;&#x8F93;&#x5165;&#x56FE;&#x7247;&#x7684;&#x63CF;&#x8FF0;][9]</p>
+<h3 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h3>
+<p>&#x975E;&#x7EBF;&#x6027;&#x4E14;&#x5904;&#x5904;&#x53EF;&#x5FAE;</p>
+<p><script type="math/tex; mode=display">
+\varphi(v)=\frac{1}{1+\exp(-av)}
+</script>
+<img src="http://static.zybuluo.com/sixijinling/os6tp2kzrwe1yfbgmzi42548/ScreenShot_20160426153626.png" alt="ScreenShot_20160426153626.png-26.2kB"></p>
+<h2 id="tanh&#x51FD;&#x6570;"><a name="tanh&#x51FD;&#x6570;" class="plugin-anchor" href="#tanh&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tanh&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#tanh&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. tanh&#x51FD;&#x6570;</h2>
+<p><script type="math/tex; mode=display">
+\varphi(v)=\tanh(v)
+</script></p>
 <ul>
-<li>Limit the gains to lie in some reasonable range.</li>
-<li>Use full batch learning or very big mini-batches.</li>
-<li>Adaptive learning rates can be combined with momentum.</li>
-<li>Adaptive learning rates only deal with axis-aligned effects.</li>
-</ul>
-<p>&#x8BBA;&#x6587;&#xFF1A;Adadelta&#xFF1A;&#x4E00;&#x79CD;&#x81EA;&#x9002;&#x5E94;&#x5B66;&#x4E60;&#x7387;&#x65B9;&#x6CD5;&#xFF08;ADADELTA: An Adaptive Learning Rate Method&#xFF09;<br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x65AF;&#x5766;&#x798F; CS231n&#xFF1A;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF08;<a href="http://cs231n.github.io/neural-networks-3/&#xFF09;" target="_blank">http://cs231n.github.io/neural-networks-3/&#xFF09;</a><br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x6982;&#x8FF0;&#xFF08;<a href="http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;" target="_blank">http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;</a></p>
-<h3 id="adagrad"><a name="adagrad" class="plugin-anchor" href="#adagrad"><i class="fa fa-link" aria-hidden="true"></i></a><a name="adagrad" class="anchor-navigation-ex-anchor" href="#adagrad"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. Adagrad</h3>
-<p>Adagrad &#x662F;&#x4E00;&#x79CD;&#x81EA;&#x9002;&#x5E94;&#x5B66;&#x4E60;&#x7387;&#x7B97;&#x6CD5;&#xFF0C;&#x80FD;&#x591F;&#x968F;&#x65F6;&#x95F4;&#x8DDF;&#x8E2A;&#x5E73;&#x65B9;&#x68AF;&#x5EA6;&#x5E76;&#x81EA;&#x52A8;&#x9002;&#x5E94;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5B66;&#x4E60;&#x7387;&#x3002;&#x5B83;&#x53EF;&#x88AB;&#x7528;&#x6765;&#x66FF;&#x4EE3;vanilla SGD (<a href="http://www.wildml.com/deep-learning-glossary/#sgd%29&#xFF1B;&#x800C;&#x4E14;&#x5728;&#x7A00;&#x758F;&#x6570;&#x636E;&#x4E0A;&#x66F4;&#x662F;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x5B83;&#x53EF;&#x4EE5;&#x5C06;&#x66F4;&#x9AD8;&#x7684;&#x5B66;&#x4E60;&#x7387;&#x5206;&#x914D;&#x7ED9;&#x66F4;&#x65B0;&#x4E0D;&#x9891;&#x7E41;&#x7684;&#x53C2;&#x6570;&#x3002;" target="_blank">http://www.wildml.com/deep-learning-glossary/#sgd)&#xFF1B;&#x800C;&#x4E14;&#x5728;&#x7A00;&#x758F;&#x6570;&#x636E;&#x4E0A;&#x66F4;&#x662F;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x5B83;&#x53EF;&#x4EE5;&#x5C06;&#x66F4;&#x9AD8;&#x7684;&#x5B66;&#x4E60;&#x7387;&#x5206;&#x914D;&#x7ED9;&#x66F4;&#x65B0;&#x4E0D;&#x9891;&#x7E41;&#x7684;&#x53C2;&#x6570;&#x3002;</a></p>
-<p>&#x8BBA;&#x6587;&#xFF1A;&#x7528;&#x4E8E;&#x5728;&#x7EBF;&#x5B66;&#x4E60;&#x548C;&#x968F;&#x673A;&#x4F18;&#x5316;&#x7684;&#x81EA;&#x9002;&#x5E94;&#x6B21;&#x68AF;&#x5EA6;&#x65B9;&#x6CD5;&#xFF08;Adaptive Subgradient Methods for Online Learning and Stochastic Optimization&#xFF09;<br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x65AF;&#x5766;&#x798F; CS231n&#xFF1A;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF08;<a href="http://cs231n.github.io/neural-networks-3/&#xFF09;" target="_blank">http://cs231n.github.io/neural-networks-3/&#xFF09;</a><br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x6982;&#x8FF0;&#xFF08;<a href="http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;" target="_blank">http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;</a></p>
-<h3 id="adam"><a name="adam" class="plugin-anchor" href="#adam"><i class="fa fa-link" aria-hidden="true"></i></a><a name="adam" class="anchor-navigation-ex-anchor" href="#adam"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. Adam</h3>
-<p>Adam &#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C;&#x4E8E; rmsprop &#x7684;&#x81EA;&#x9002;&#x5E94;&#x5B66;&#x4E60;&#x7387;&#x7B97;&#x6CD5;&#xFF0C;&#x4F46;&#x5B83;&#x7684;&#x66F4;&#x65B0;&#x662F;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x7684;&#x7B2C;&#x4E00;&#x548C;&#x7B2C;&#x4E8C;&#x65F6;&#x523B;&#x7684;&#x8FD0;&#x884C;&#x5E73;&#x5747;&#x503C;&#xFF08;running average&#xFF09;&#x76F4;&#x63A5;&#x4F30;&#x8BA1;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x504F;&#x5DEE;&#x6821;&#x6B63;&#x9879;&#x3002;</p>
-<p>&#x8BBA;&#x6587;&#xFF1A;Adam&#xFF1A;&#x4E00;&#x79CD;&#x968F;&#x673A;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#xFF08;Adam: A Method for Stochastic Optimization&#xFF09;<br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x6982;&#x8FF0;&#xFF08;<a href="http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;" target="_blank">http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;</a></p>
-<h3 id="rmsprop"><a name="rmsprop" class="plugin-anchor" href="#rmsprop"><i class="fa fa-link" aria-hidden="true"></i></a><a name="rmsprop" class="anchor-navigation-ex-anchor" href="#rmsprop"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. RMSProp</h3>
-<p>RMSProp &#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x68AF;&#x5EA6;&#x7684;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x3002;&#x5B83;&#x4E0E; Adagrad &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x8870;&#x51CF;&#x9879;&#x62B5;&#x6D88; Adagrad &#x5728;&#x5B66;&#x4E60;&#x7387;&#x4E0A;&#x7684;&#x5FEB;&#x901F;&#x4E0B;&#x964D;&#x3002;</p>
-<ul>
-<li>The magnitude of the gradient can be very different for different weights and can change during learning.<ul>
-<li>This makes it hard to choose a single global learning rate.</li>
-</ul>
+<li><strong>motivation</strong>: to compose <em>simple transformations</em> in order to obtain 
+<em>highly non-linear</em> ones</li>
+<li>(MLPs compose affine transformations and element-wise non-linearities)</li>
+<li><p>hyperbolic tangent activation functions:</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sinh_cosh_tanh.svg/256px-Sinh_cosh_tanh.svg.png" alt="">
+<script type="math/tex; mode=display">
+{ h }^{ k }=tanh({ b }^{ k }+{ W }^{ k }{ h }^{ k-1 })
+</script></p>
 </li>
-<li>For <strong>full batch learning</strong>, we can deal with this variation by only using the sign of the gradient.</li>
+<li>the input of the neural net: <script type="math/tex; ">{ h }^{ 0 }=x</script></li>
+<li>the output of the k-th hidden layer: <script type="math/tex; ">{ h }^{ k }</script></li>
 </ul>
-<p>rprop: This combines the idea of only using the sign of the gradient with the idea of adapting the step size separately for each weight.</p>
-<p>RMSProp: A mini-batch version of rprop</p>
+<h2 id="relu"><a name="relu" class="plugin-anchor" href="#relu"><i class="fa fa-link" aria-hidden="true"></i></a><a name="relu" class="anchor-navigation-ex-anchor" href="#relu"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. ReLU</h2>
+<p>&#x7EBF;&#x6027;&#x4FEE;&#x6B63;&#x5355;&#x5143;&#xFF08;Rectified Linear Unit&#xFF09;&#x3002;ReLU &#x5E38;&#x5728;&#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x88AB;&#x7528;&#x4F5C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x4EEC;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+f(x) = \max(0, x)
+</script> </p>
+<p>ReLU &#x76F8;&#x5BF9;&#x4E8E; tanh &#x7B49;&#x51FD;&#x6570;&#x7684;&#x4F18;&#x52BF;&#x5305;&#x62EC;&#x5B83;&#x4EEC;&#x5F80;&#x5F80;&#x5F88;&#x7A00;&#x758F;&#xFF08;&#x5B83;&#x4EEC;&#x7684;&#x6FC0;&#x6D3B;&#x503C;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x8BBE;&#x7F6E;&#x4E3A; 0&#xFF09;&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x4EEC;&#x53D7;&#x5230;&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#x7684;&#x5F71;&#x54CD;&#x4E5F;&#x66F4;&#x5C0F;&#x3002;ReLU &#x4E3B;&#x8981;&#x88AB;&#x7528;&#x5728;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x7528;&#x4F5C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;ReLU &#x5B58;&#x5728;&#x51E0;&#x79CD;&#x53D8;&#x4F53;&#xFF0C;&#x5982;Leaky ReLUs&#x3001;Parametric ReLU (PReLU) &#x6216;&#x66F4;&#x4E3A;&#x6D41;&#x7545;&#x7684; softplus&#x8FD1;&#x4F3C;&#x3002;</p>
+<p>&#x8BBA;&#x6587;&#xFF1A;</p>
 <ul>
-<li>Keep a moving average of the squared gradient for each weight</li>
+<li>&#x6DF1;&#x5165;&#x7814;&#x7A76;&#x4FEE;&#x6B63;&#x5668;&#xFF08;Rectifiers&#xFF09;&#xFF1A;&#x5728; ImageNet &#x5206;&#x7C7B;&#x4E0A;&#x8D85;&#x8D8A;&#x4EBA;&#x7C7B;&#x6C34;&#x5E73;&#x7684;&#x6027;&#x80FD;&#xFF08;Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification&#xFF09;  </li>
+<li>&#x4FEE;&#x6B63;&#x975E;&#x7EBF;&#x6027;&#x6539;&#x8FDB;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x58F0;&#x5B66;&#x6A21;&#x578B;&#xFF08;Rectifier Nonlinearities Improve Neural Network Acoustic Models &#xFF09;  </li>
+<li>&#x8BBA;&#x6587;&#xFF1A;&#x7EBF;&#x6027;&#x4FEE;&#x6B63;&#x5355;&#x5143;&#x6539;&#x8FDB;&#x53D7;&#x9650;&#x73BB;&#x5C14;&#x5179;&#x66FC;&#x673A;&#xFF08;Rectified Linear Units Improve Restricted Boltzmann Machines  &#xFF09;</li>
 </ul>
-<p><script type="math/tex; ">MeanSquare(w,t)=0.9 MeanSquare(w,t-1)+0.1(\frac {\partial E}{\partial w}(t))^2</script></p>
-<ul>
-<li>Dividing the gradient by <script type="math/tex; ">\sqrt{MeanSquare(w,t)}</script> makes the learning work much better.</li>
-</ul>
-<p>PPT&#xFF1A;&#x7528;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC; &#x8BB2;&#x5EA7;6a<br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x65AF;&#x5766;&#x798F;CS231n&#xFF1A;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF08;<a href="http://cs231n.github.io/neural-networks-3/&#xFF09;" target="_blank">http://cs231n.github.io/neural-networks-3/&#xFF09;</a><br>&#x6280;&#x672F;&#x535A;&#x5BA2;&#xFF1A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x6982;&#x8FF0;&#xFF08;<a href="http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;" target="_blank">http://sebastianruder.com/optimizing-gradient-descent/&#xFF09;</a></p>
-<h2 id="&#x95EE;&#x9898;"><a name="&#x95EE;&#x9898;" class="plugin-anchor" href="#&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x95EE;&#x9898;</h2>
-<h3 id="&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;vanishing-gradient-problem&#xFF09;"><a name="&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;vanishing-gradient-problem&#xFF09;" class="plugin-anchor" href="#&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;vanishing-gradient-problem&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;vanishing-gradient-problem&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;vanishing-gradient-problem&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#xFF08;Vanishing Gradient Problem&#xFF09;</h3>
-<p>&#x68AF;&#x5EA6;&#x6D88;&#x5931;&#x95EE;&#x9898;&#x51FA;&#x73B0;&#x5728;&#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x5F88;&#x5C0F;&#xFF08;&#x5728; 0 &#x5230; 1 &#x7684;&#x8303;&#x56F4;&#x5185;&#xFF09;&#x7684;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x7684;&#x975E;&#x5E38;&#x6DF1;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x5FAA;&#x73AF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x5C0F;&#x68AF;&#x5EA6;&#x4F1A;&#x5728;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x4E2D;&#x76F8;&#x4E58;&#xFF0C;&#x5B83;&#x4EEC;&#x5F80;&#x5F80;&#x5728;&#x8FD9;&#x4E9B;&#x5C42;&#x4E2D;&#x4F20;&#x64AD;&#x65F6;&#x300C;&#x6D88;&#x5931;&#x300D;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x7F51;&#x7EDC;&#x65E0;&#x6CD5;&#x5B66;&#x4E60;&#x957F;&#x7A0B;&#x4F9D;&#x8D56;&#x3002;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528; ReLU &#x8FD9;&#x6837;&#x7684;&#x4E0D;&#x53D7;&#x5C0F;&#x68AF;&#x5EA6;&#x5F71;&#x54CD;&#x7684;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF0C;&#x6216;&#x4F7F;&#x7528;&#x660E;&#x786E;&#x9488;&#x5BF9;&#x6D88;&#x5931;&#x68AF;&#x5EA6;&#x95EE;&#x9898;&#x7684;&#x67B6;&#x6784;&#xFF0C;&#x5982;LSTM&#x3002;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x53CD;&#x9762;&#x88AB;&#x79F0;&#x4E3A;&#x68AF;&#x5EA6;&#x7206;&#x70B8;&#x95EE;&#x9898;&#xFF08;exploding gradient problem&#xFF09;&#x3002;</p>
-<p>&#x8BBA;&#x6587;&#xFF1A;&#x8BAD;&#x7EC3;&#x5FAA;&#x73AF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x56F0;&#x96BE;&#x4E4B;&#x5904;&#xFF08;On the difficulty of training Recurrent Neural Networks&#xFF09;</p>
-<h3 id="&#x96BE;&#x4F8B;&#x6316;&#x6398;"><a name="&#x96BE;&#x4F8B;&#x6316;&#x6398;" class="plugin-anchor" href="#&#x96BE;&#x4F8B;&#x6316;&#x6398;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x96BE;&#x4F8B;&#x6316;&#x6398;" class="anchor-navigation-ex-anchor" href="#&#x96BE;&#x4F8B;&#x6316;&#x6398;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x96BE;&#x4F8B;&#x6316;&#x6398;</h3>
-<p>&#x5927;&#x81F4;&#x601D;&#x8DEF;&#x662F;&#x53EA;&#x9009;&#x8F83;&#x96BE;&#x7684;case&#x8FDB;&#x884C;loss&#x8BA1;&#x7B97;&#xFF0C;&#x8F83;&#x96BE;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#xFF1A;&#x5BB9;&#x6613;&#x9519;&#x5206;&#x6210;&#x53E6;&#x4E00;&#x7C7B;&#x7684;case&#xFF0C;&#x5177;&#x4F53;&#x8868;&#x73B0;&#x5C31;&#x662F;loss&#x5927;&#xFF0C;&#x6240;&#x4EE5;&#x4F53;&#x73B0;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x5C31;&#x662F;&#x9009;loss&#x6700;&#x5927;&#x7684;topk&#x6765;&#x53CD;&#x4F20;&#x68AF;&#x5EA6;&#x3002;</p>
-<p>&#x6700;&#x7EC8;&#x6548;&#x679C;&#x662F;&#x51CF;&#x5C11;FP&#xFF08;&#x5982;&#x679C;&#x5BF9;negative sample&#x8FDB;&#x884C;&#x96BE;&#x4F8B;&#x6316;&#x6398;&#x7684;&#x8BDD;&#xFF09;&#x3002;&#x8FD9;&#x91CC;&#x662F;pytorch&#x5B9E;&#x73B0;&#xFF1A;<a href="http://www.erogol.com/online-hard-example-mining-pytorch/" target="_blank">Online Hard Example Mining on PyTorch</a></p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> torch <span class="hljs-keyword">as</span> th                                                                 
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NLL_OHEM</span><span class="hljs-params">(th.nn.NLLLoss)</span>:</span>                                                     
-    <span class="hljs-string">&quot;&quot;&quot; Online hard example mining. 
-    Needs input from nn.LogSotmax() &quot;&quot;&quot;</span>                                             
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ratio)</span>:</span>      
-        super(NLL_OHEM, self).__init__(<span class="hljs-keyword">None</span>, <span class="hljs-keyword">True</span>)                                 
-        self.ratio = ratio                                                         
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x, y, ratio=None)</span>:</span>                                           
-        <span class="hljs-keyword">if</span> ratio <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:                                                      
-            self.ratio = ratio                                                     
-        num_inst = x.size(<span class="hljs-number">0</span>)                                                       
-        num_hns = int(self.ratio * num_inst)                                       
-        x_ = x.clone()                                                             
-        inst_losses = th.autograd.Variable(th.zeros(num_inst)).cuda()              
-        <span class="hljs-keyword">for</span> idx, label <span class="hljs-keyword">in</span> enumerate(y.data):                                       
-            inst_losses[idx] = -x_.data[idx, label]                                 
-        <span class="hljs-comment">#loss_incs = -x_.sum(1)                                                    </span>
-        _, idxs = inst_losses.topk(num_hns)                                        
-        x_hn = x.index_select(<span class="hljs-number">0</span>, idxs)                                             
-        y_hn = y.index_select(<span class="hljs-number">0</span>, idxs)                                             
-        <span class="hljs-keyword">return</span> th.nn.functional.nll_loss(x_hn, y_hn)
-</code></pre>
+<h2 id="lifting-layers"><a name="lifting-layers" class="plugin-anchor" href="#lifting-layers"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lifting-layers" class="anchor-navigation-ex-anchor" href="#lifting-layers"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Lifting Layers</h2>
+<p>&#x51FA;&#x81EA; &#x300A;<a href="https://arxiv.org/abs/1803.08660" target="_blank">Lifting Layers: Analysis and Applications</a>&#x300B;</p>
 
                                 
                                 </section>
@@ -1791,12 +1778,12 @@
 
             
                 
-                <a href="bayesian.html" class="navigation navigation-prev " aria-label="Previous page: 贝叶斯">
+                <a href="nnfunction.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="svm.html" class="navigation navigation-next " aria-label="Next page: 支持向量机">
+                <a href="loss-function.html" class="navigation navigation-next " aria-label="Next page: loss function">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1807,7 +1794,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"优化算法","level":"3.4.4","depth":2,"next":{"title":"支持向量机","level":"3.4.5","depth":2,"path":"svm.md","ref":"svm.md","articles":[]},"previous":{"title":"贝叶斯","level":"3.4.3","depth":2,"path":"bayesian.md","ref":"bayesian.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"optimizer.md","mtime":"2018-12-08T12:40:41.504Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T07:48:37.953Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"activation function","level":"3.5.1.1","depth":3,"next":{"title":"loss function","level":"3.5.1.2","depth":3,"path":"loss-function.md","ref":"loss-function.md","articles":[]},"previous":{"title":"函数","level":"3.5.1","depth":2,"path":"nnfunction.md","ref":"nnfunction.md","articles":[{"title":"activation function","level":"3.5.1.1","depth":3,"path":"activation-function.md","ref":"activation-function.md","articles":[]},{"title":"loss function","level":"3.5.1.2","depth":3,"path":"loss-function.md","ref":"loss-function.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"activation-function.md","mtime":"2019-01-18T07:17:10.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T07:48:37.953Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

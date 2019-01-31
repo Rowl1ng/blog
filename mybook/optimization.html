@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Optimization · GitBook</title>
+        <title>Nonliner Optimization · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,7 +81,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="README 4.html" />
+    <link rel="next" href="optimization/introduction.html" />
     
     
     <link rel="prev" href="probability.html" />
@@ -440,6 +440,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.4.1" data-path="data_analyse/numpy/array.html">
+            
+                <a href="data_analyse/numpy/array.html">
+            
+                    
+                    array
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
 
@@ -731,9 +750,23 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1.1" data-path="activation-function.html">
+            
+                <a href="activation-function.html">
+            
+                    
+                    activation function
+            
+                </a>
+            
+
+            
         </li>
     
-        <li class="chapter " data-level="3.5.2" data-path="loss-function.html">
+        <li class="chapter " data-level="3.5.1.2" data-path="loss-function.html">
             
                 <a href="loss-function.html">
             
@@ -746,7 +779,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.3" data-path="nnstructure.html">
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="nnstructure.html">
             
                 <a href="nnstructure.html">
             
@@ -759,7 +797,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.4" data-path="regulizer.html">
+        <li class="chapter " data-level="3.5.3" data-path="regulizer.html">
             
                 <a href="regulizer.html">
             
@@ -772,7 +810,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.5" data-path="rnn.html">
+        <li class="chapter " data-level="3.5.4" data-path="rnn.html">
             
                 <a href="rnn.html">
             
@@ -785,7 +823,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.6" data-path="cnn.html">
+        <li class="chapter " data-level="3.5.5" data-path="cnn.html">
             
                 <a href="cnn.html">
             
@@ -798,7 +836,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.7" data-path="wu-jian-du-xue-xi.html">
+        <li class="chapter " data-level="3.5.6" data-path="wu-jian-du-xue-xi.html">
             
                 <a href="wu-jian-du-xue-xi.html">
             
@@ -811,7 +849,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5.8" data-path="criterion.html">
+        <li class="chapter " data-level="3.5.7" data-path="criterion.html">
             
                 <a href="criterion.html">
             
@@ -1435,11 +1473,30 @@
                 <a href="optimization.html">
             
                     
-                    Optimization
+                    Nonliner Optimization
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="optimization/introduction.html">
+            
+                <a href="optimization/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1590,7 +1647,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Optimization</a>
+        <a href="." >Nonliner Optimization</a>
     </h1>
 </div>
 
@@ -1605,61 +1662,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;">1. &#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;</a></li><ul><li><a href="#&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;">1.1. &#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;</a></li><li><a href="#&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;">1.2. &#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;</a></li><li><a href="#&#x7B2C;&#x4E00;&#x7AE0;-&#x6982;&#x8BBA;">1.3. &#x7B2C;&#x4E00;&#x7AE0; &#x6982;&#x8BBA;</a></li><ul><li><a href="#&#x8BC4;&#x4EF7;&#x51FD;&#x6570;">1.3.1. &#x8BC4;&#x4EF7;&#x51FD;&#x6570;</a></li><li><a href="#&#x6536;&#x655B;">1.3.2. &#x6536;&#x655B;</a></li><li><a href="#&#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;">1.3.3. &#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;</a></li></ul><li><a href="#&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;">1.4. &#x7B2C;&#x4E8C;&#x7AE0; &#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;</a></li><ul><li><a href="#1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;">1.4.1. 1. &#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;</a></li><li><a href="#3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;">1.4.2. 3. &#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;</a></li><li><a href="#2-newton-method">1.4.3. 2. Newton Method</a></li><li><a href="#2-quasi-newton-method">1.4.4. 2. Quasi-Newton Method</a></li><li><a href="#3&#x7EBF;&#x6027;&#x641C;&#x7D22;">1.4.5. 3.&#x7EBF;&#x6027;&#x641C;&#x7D22;</a></li><li><a href="#bb&#x6CD5;">1.4.6. bb&#x6CD5;</a></li></ul><li><a href="#&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;">1.5. &#x7B2C;&#x4E09;&#x7AE0; &#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;</a></li><ul><li><a href="#1-&#x4FE1;&#x8D56;&#x57DF;">1.5.1. 1. &#x4FE1;&#x8D56;&#x57DF;</a></li><li><a href="#2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;">1.5.2. 2. &#x79EF;&#x6781;&#x96C6;&#x6CD5;</a></li><li><a href="#3-&#x76F4;&#x63A5;&#x6CD5;">1.5.3. 3. &#x76F4;&#x63A5;&#x6CD5;</a></li></ul><li><a href="#reference">1.6. Reference</a></li><li><a href="#&#x672F;&#x8BED;&#x8868;">1.7. &#x672F;&#x8BED;&#x8868;</a></li><li><a href="#&#x5176;&#x4ED6;">1.8. &#x5176;&#x4ED6;</a></li><ul><li><a href="#0618&#x6CD5;">1.8.1. 0.618&#x6CD5;</a></li><li><a href="#kkt&#x6761;&#x4EF6;">1.8.2. KKT&#x6761;&#x4EF6;</a></li></ul><li><a href="#&#x7F16;&#x7A0B;">1.9. &#x7F16;&#x7A0B;</a></li></ul></ul></div><a href="#&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;"><a name="&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;" class="plugin-anchor" href="#&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x975E;&#x7EBF;&#x6027;&#x6700;&#x4F18;&#x5316;</h1>
-<h2 id="&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;"><a name="&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;" class="plugin-anchor" href="#&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;</h2>
-<p>&#x51F8;&#x4F18;&#x5316;&#xFF1A;</p>
+                                <h2 id="&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;"><a name="&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;" class="plugin-anchor" href="#&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51F8;&#x4F18;&#x5316;&#x4E0E;&#x975E;&#x51F8;&#x4F18;&#x5316;</h2>
+<p>&#x51F8;&#x4F18;&#x5316;&#xFF1A;&#x51F8;&#x4F18;&#x5316;&#x5728;&#x67D0;&#x79CD;&#x610F;&#x4E49;&#x4E0A;&#x8BF4;&#x8F83;&#x4E00;&#x822C;&#x60C5;&#x5F62;&#x7684;&#x6570;&#x5B66;&#x6700;&#x4F18;&#x5316;&#x95EE;&#x9898;&#x8981;&#x7B80;&#x5355;&#xFF0C;&#x8B6C;&#x5982;&#x5728;&#x51F8;&#x4F18;&#x5316;&#x4E2D;&#x5C40;&#x90E8;&#x6700;&#x4F18;&#x503C;&#x5FC5;&#x5B9A;&#x662F;&#x5168;&#x5C40;&#x6700;&#x4F18;&#x503C;&#x3002;</p>
 <p><img src="http://www.scipy-lectures.org/_images/plot_convex_1.png" alt=""></p>
 <p>&#x975E;&#x51F8;&#x4F18;&#x5316;&#xFF1A;</p>
 <p><img src="http://www.scipy-lectures.org/_images/plot_convex_2.png" alt=""></p>
 <p>&#x5BF9;&#x4E8E;&#x51F8;&#x4F18;&#x5316;&#x6765;&#x8BF4;&#xFF0C;&#x5C40;&#x90E8;&#x6700;&#x5C0F;&#x5C31;&#x662F;&#x5168;&#x5C40;&#x6700;&#x5C0F;&#xFF0C;&#x56E0;&#x6B64;&#x95EE;&#x9898;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#x3002;</p>
-<h2 id="&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;"><a name="&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;" class="plugin-anchor" href="#&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;" class="anchor-navigation-ex-anchor" href="#&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;</h2>
+<h2 id="&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;"><a name="&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;" class="plugin-anchor" href="#&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;" class="anchor-navigation-ex-anchor" href="#&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E73;&#x6ED1;&#x4E0E;&#x975E;&#x5E73;&#x6ED1;</h2>
 <p>&#x5E73;&#x6ED1;&#xFF1A;</p>
 <p><img src="http://www.scipy-lectures.org/_images/plot_smooth_1.png" alt=""><br> &#x5904;&#x5904;&#x53EF;&#x5BFC;</p>
 <p>&#x975E;&#x5E73;&#x6ED1;&#xFF1A;</p>
 <p><img src="http://www.scipy-lectures.org/_images/plot_smooth_2.png" alt=""></p>
-<h2 id="&#x7B2C;&#x4E00;&#x7AE0;-&#x6982;&#x8BBA;"><a name="&#x7B2C;&#x4E00;&#x7AE0;-&#x6982;&#x8BBA;" class="plugin-anchor" href="#&#x7B2C;&#x4E00;&#x7AE0;-&#x6982;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E00;&#x7AE0;-&#x6982;&#x8BBA;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E00;&#x7AE0;-&#x6982;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7B2C;&#x4E00;&#x7AE0; &#x6982;&#x8BBA;</h2>
-<h3 id="&#x8BC4;&#x4EF7;&#x51FD;&#x6570;"><a name="&#x8BC4;&#x4EF7;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x8BC4;&#x4EF7;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BC4;&#x4EF7;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x8BC4;&#x4EF7;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x8BC4;&#x4EF7;&#x51FD;&#x6570;</h3>
-<ul>
-<li>&#x5BF9;&#x4E8E;&#x65E0;&#x7EA6;&#x675F;&#xFF0C;&#x8D8A;&#x662F;&#x8FED;&#x4EE3;&#xFF0C;&#x8BC4;&#x4EF7;&#x51FD;&#x6570;&#x4E0B;&#x964D;&#x5373;&#x53EF;</li>
-<li>&#x6709;&#x7EA6;&#x675F;&#xFF0C;&#x5C31;&#x5F97;&#x52A0;&#x4E0A;&#x9650;&#x5236;&#xFF1A;&#x662F;<strong>&#x53EF;&#x884C;&#x70B9;</strong></li>
-</ul>
-<h3 id="&#x6536;&#x655B;"><a name="&#x6536;&#x655B;" class="plugin-anchor" href="#&#x6536;&#x655B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6536;&#x655B;" class="anchor-navigation-ex-anchor" href="#&#x6536;&#x655B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x6536;&#x655B;</h3>
-<p>&#x82E5;&#x4E0D;&#x53EF;&#x80FD;&#x6709;&#x9650;&#x6B65;&#x627E;&#x5230;&#x6700;&#x4F18;&#x89E3;&#xFF0C;&#x5C31;&#x8981;&#x987E;&#x53CA;&#x5230;&#x6536;&#x655B;&#x901F;&#x5EA6;</p>
-<p><script type="math/tex; mode=display">
-e_k=x_k-x^*\\
-\lim _{k \rightarrow \infty} \frac {||e_{k+1}||}{||e_k||}=C
-</script></p>
-<p>&#x8FD9;&#x53EB;<strong>&#x4EE5;</strong><script type="math/tex; ">C</script><strong>&#x4E3A;&#x56E0;&#x5B50;</strong><script type="math/tex; ">r</script><strong>&#x9636;&#x6536;&#x655B;&#x4E8E;</strong><script type="math/tex; ">x^*</script>&#x3002;</p>
-<ul>
-<li>&#x7EBF;&#x6027;&#x6536;&#x655B;&#xFF1A;<script type="math/tex; ">||e_{k+1}||\leq C||e_k||</script></li>
-<li>&#x8D85;&#x7EBF;&#x6027;&#x6536;&#x655B;&#xFF1A;&#x6BD4;&#x524D;&#x8005;&#x5FEB;&#xFF0C;&#x591A;&#x6570;&#x5982;&#x6B64;&#x3002;</li>
-</ul>
-<p><script type="math/tex; mode=display">
-\lim _{k \rightarrow \infty} \frac {||e_{k+1}||}{||e_k||^n}=C\\
-\lim _{k \rightarrow \infty} \frac {||e_{k+1}||}{||e_k||}=C \times \lim _{k \rightarrow \infty} {||e_k||}^{n-1}
-</script></p>
-<ol>
-<li>local minimun <script type="math/tex; ">\Longrightarrow \nabla f\(x^_\)=0, \nabla ^2 f\(x^_\) \geq 0</script> </li>
-<li><script type="math/tex; ">\nabla f\(x_\)=0 \& \nabla ^2 f\(x_\) &gt;0 \Longrightarrow  </script> local minimum ,eg. <script type="math/tex; ">y=x^3</script></li>
-</ol>
-<h3 id="&#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;"><a name="&#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;" class="plugin-anchor" href="#&#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. &#x8FED;&#x4EE3;&#x4E0B;&#x964D;&#x4F18;&#x5316;&#x7B97;&#x6CD5;</h3>
-<p>&#x5BFB;&#x627E;&#x4E00;&#x4E2A;&#x641C;&#x7D22;&#x65B9;&#x5411;<script type="math/tex; ">d_k</script>&#x4F7F;&#x5F97;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x65F6;&#x51FD;&#x6570;&#x503C;&#x51CF;&#x5C0F;&#x3002;</p>
-<p>&#x9996;&#x5148;&#x9009;&#x53D6;&#x521D;&#x59CB;&#x70B9;<script type="math/tex; ">x0</script><em>&#xFF0C;<br>loop until </em><script type="math/tex; ">x_{k+1}</script>&#x6EE1;&#x8DB3;&#x7EC8;&#x6B62;&#x6761;&#x4EF6;&#xFF1A;</p>
-<ul>
-<li>&#x6784;&#x9020;&#x641C;&#x7D22;&#x65B9;&#x5411;<script type="math/tex; ">d_k</script></li>
-<li>&#x6839;&#x636E; <script type="math/tex; "> d\_k </script> &#x786E;&#x5B9A;&#x6B65;&#x957F; <script type="math/tex; ">\lambda \_k</script></li>
-<li><p><script type="math/tex; ">x_{k+1}=x_k+\lambda_k d_k</script></p>
-<p>&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
-</li>
-<li><p>&#x5F80;&#x54EA;&#x4E2A;&#x65B9;&#x5411;&#x8D70;&#xFF1F;<script type="math/tex; ">d\_{k}</script></p>
-</li>
-<li>&#x8D70;&#x591A;&#x8FDC;&#xFF1F;<script type="math/tex; ">\lambda_k</script></li>
-<li>&#x80FD;&#x627E;&#x5230;<script type="math/tex; ">x_*</script>&#x5417;&#xFF1F;</li>
-<li>&#x591A;&#x5FEB;&#x80FD;&#x627E;&#x5230;&#xFF1F;</li>
-</ul>
-<p>&#x4E0B;&#x9762;&#x4ECE;&#x5178;&#x578B;&#x7684;&#x65E0;&#x4F18;&#x5316;&#x7EA6;&#x675F;&#x7B97;&#x6CD5;&#x5F00;&#x59CB;&#xFF1A;</p>
-<h2 id="&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;"><a name="&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;" class="plugin-anchor" href="#&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x7B2C;&#x4E8C;&#x7AE0; &#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;</h2>
-<h3 id="1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;"><a name="1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;" class="plugin-anchor" href="#1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. 1. &#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;</h3>
+<h2 id="&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;"><a name="&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;" class="plugin-anchor" href="#&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E8C;&#x7AE0;-&#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E8C;&#x7AE0; &#x65E0;&#x7EA6;&#x675F;&#x4F18;&#x5316;&#xFF08;&#x7EBF;&#x641C;&#x7D22;&#x6846;&#x67B6;&#x4E0B;&#xFF09;</h2>
+<h3 id="1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;"><a name="1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;" class="plugin-anchor" href="#1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#1-&#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x68AF;&#x5EA6;&#x6CD5;&#xFF08;&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#xFF09;</h3>
 <p>&#x68AF;&#x5EA6;&#xFF08;gradient&#xFF09;&#xFF1A;&#x589E;&#x957F;&#x6700;&#x5FEB;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x5BFC;&#x6570;&#x7684;&#x9AD8;&#x7EF4;&#x6269;&#x5C55;</p>
 <p><script type="math/tex; mode=display">
 g(x)=\nabla f(x)=[\frac {\partial f(x)}{\partial x_1},\dots,\frac {\partial f(x)}{\partial x_n}]^T
@@ -1681,7 +1696,7 @@ g(x)=\nabla f(x)=[\frac {\partial f(x)}{\partial x_1},\dots,\frac {\partial f(x)
 <ol>
 <li>&#x6700;&#x901F;&#x4E0B;&#x964D;&#x6CD5;&#x9002;&#x7528;&#x4E8E;&#x5BFB;&#x4F18;&#x8FC7;&#x7A0B;&#x7684;&#x524D;&#x671F;&#x8FED;&#x4EE3;&#x6216;&#x4F5C;&#x4E3A;&#x95F4;&#x63D2;&#x6B65;&#x9AA4;&#xFF0C;&#x5F53;&#x63A5;&#x8FD1;&#x6781;&#x503C;&#x70B9;&#x65F6;&#xFF0C;&#x5B9C;&#x9009;&#x7528;&#x6536;&#x655B;&#x5FEB;&#x7684;&#x7B97;&#x6CD5;.</li>
 </ol>
-<h3 id="3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;"><a name="3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;" class="plugin-anchor" href="#3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. 3. &#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;</h3>
+<h3 id="3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;"><a name="3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;" class="plugin-anchor" href="#3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;</h3>
 <p><img src="http://www.scipy-lectures.org/_images/plot_gradient_descent_5.png" alt=""><br><img src="http://www.scipy-lectures.org/_images/plot_gradient_descent_105.png" alt=""></p>
 <p>&#x6B63;&#x5982;&#x4ECE;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x7B80;&#x5355;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x7B97;&#x6CD5;&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x5B83;&#x8BD5;&#x7740;&#x6447;&#x6446;&#x7A7F;&#x8D8A;&#x5CE1;&#x8C37;&#xFF0C;&#x6BCF;&#x6B21;&#x8DDF;&#x968F;&#x68AF;&#x5EA6;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x7A7F;&#x8D8A;&#x5CE1;&#x8C37;&#x3002;<strong>&#x5171;&#x8F6D;&#x68AF;&#x5EA6;</strong>&#x901A;&#x8FC7;&#x6DFB;&#x52A0;<strong>&#x6469;&#x64E6;&#x529B;</strong>&#x9879;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;: &#x6BCF;&#x4E00;&#x6B65;&#x4F9D;&#x8D56;&#x4E8E;&#x524D;&#x4E24;&#x4E2A;&#x503C;&#x7684;&#x68AF;&#x5EA6;&#x7136;&#x540E;&#x6025;&#x8F6C;&#x5F2F;&#x51CF;&#x5C11;&#x4E86;&#x3002;</p>
 <p>&#x9996;&#x5148;&#x7406;&#x89E3;&#x7279;&#x5F81;&#x503C;&#xFF1A;</p>
@@ -1723,7 +1738,7 @@ p_i^T A p_j=0,\forall i\neq j
 <li>&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x7B97;&#x6CD5;&#x5219;&#x662F;&#x5728;&#x8FED;&#x4EE3;&#x8FC7;&#x7A0B;&#x4E2D;&#x5229;&#x7528;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6CD5;&#x6765;&#x66F4;&#x65B0;&#x5171;&#x8F6D;&#x5411;&#x91CF;&#x7EC4;&#x3002;</li>
 </ul>
 <p>&#x4ECE;&#x4EFB;&#x610F;&#x70B9;$x_0$&#x51FA;&#x53D1;&#xFF0C;&#x6CBF;&#x4EFB;&#x610F;&#x4E0B;&#x964D;&#x65B9;&#x5411;$p_i$&#x505A;&#x76F4;&#x7EBF;&#x641C;&#x7D22;&#x5F97;&#x5230;$x_1$&#xFF0C;&#x63A5;&#x7740;&#x6CBF;&#x4E0E;$p_i$&#x5171;&#x8F6D;&#x7684;$p_j$&#x65B9;&#x5411;&#x641C;&#x7D22;&#xFF0C;&#x53CD;&#x590D;&#x8FED;&#x4EE3;</p>
-<h3 id="2-newton-method"><a name="2-newton-method" class="plugin-anchor" href="#2-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-newton-method" class="anchor-navigation-ex-anchor" href="#2-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. 2. Newton Method</h3>
+<h3 id="2-newton-method"><a name="2-newton-method" class="plugin-anchor" href="#2-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-newton-method" class="anchor-navigation-ex-anchor" href="#2-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a>2. Newton Method</h3>
 <p>&#x725B;&#x987F;&#x6CD5;&#x4F7F;&#x7528;<strong>&#x5C40;&#x90E8;&#x4E8C;&#x5143;&#x8FD1;&#x4F3C;</strong>&#x6765;&#x8BA1;&#x7B97;&#x8DF3;&#x8DC3;&#x7684;&#x65B9;&#x5411;&#x3002;&#x4E3A;&#x4E86;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F9D;&#x8D56;&#x4E8E;&#x51FD;&#x6570;&#x7684;<strong>&#x524D;&#x4E24;&#x4E2A;&#x5BFC;&#x6570;&#x68AF;</strong>&#x5EA6;&#x548C;<strong>Hessian</strong>&#x3002;</p>
 <p><script type="math/tex; mode=display">
 \Delta \mathbf w =-\epsilon H(\mathbf w)^{-1}\frac {\mathrm d E}{\mathrm d \mathbf w}
@@ -1776,7 +1791,7 @@ x_{k+1}=x_k-\frac {g(x_k)}{g'(x_k)}
 <li>&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x4E8C;&#x9636;&#x5BFC;&#x6570;&#x548C;&#x9006;&#x77E9;&#x9635;&#xFF0C;&#x8BA1;&#x7B97;&#x91CF;&#x548C;&#x5B58;&#x50A8;&#x91CF;
 &#x5F00;&#x9500;&#x8F83;&#x5927;</li>
 </ul>
-<h3 id="2-quasi-newton-method"><a name="2-quasi-newton-method" class="plugin-anchor" href="#2-quasi-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-quasi-newton-method" class="anchor-navigation-ex-anchor" href="#2-quasi-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. 2. Quasi-Newton Method</h3>
+<h3 id="2-quasi-newton-method"><a name="2-quasi-newton-method" class="plugin-anchor" href="#2-quasi-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-quasi-newton-method" class="anchor-navigation-ex-anchor" href="#2-quasi-newton-method"><i class="fa fa-link" aria-hidden="true"></i></a>2. Quasi-Newton Method</h3>
 <p>In the Hessian-free method, we make an approximation to the curvature matrix and then, assuming that approcimation is correct, we minimize the error using an efficient technique called <code>conjugate gradient</code>. Then we make another approximation to the curvature matrix and minimize again.</p>
 <ul>
 <li>For RNNs its important to add a penalty for changing any of the hidden activities too much.</li>
@@ -1804,7 +1819,7 @@ d_k^{QN}=-H_kg_k\\
 </li>
 <li>The HF optimizer uses CG for minimization on a genuinely quadratic surface where it excels.</li>
 </ul>
-<h3 id="3&#x7EBF;&#x6027;&#x641C;&#x7D22;"><a name="3&#x7EBF;&#x6027;&#x641C;&#x7D22;" class="plugin-anchor" href="#3&#x7EBF;&#x6027;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x7EBF;&#x6027;&#x641C;&#x7D22;" class="anchor-navigation-ex-anchor" href="#3&#x7EBF;&#x6027;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. 3.&#x7EBF;&#x6027;&#x641C;&#x7D22;</h3>
+<h3 id="3&#x7EBF;&#x6027;&#x641C;&#x7D22;"><a name="3&#x7EBF;&#x6027;&#x641C;&#x7D22;" class="plugin-anchor" href="#3&#x7EBF;&#x6027;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x7EBF;&#x6027;&#x641C;&#x7D22;" class="anchor-navigation-ex-anchor" href="#3&#x7EBF;&#x6027;&#x641C;&#x7D22;"><i class="fa fa-link" aria-hidden="true"></i></a>3.&#x7EBF;&#x6027;&#x641C;&#x7D22;</h3>
 <ul>
 <li>&#x641C;&#x7D22;&#x65B9;&#x5411;$d_k$</li>
 <li><p>&#x6B65;&#x957F;&#x56E0;&#x5B50;$\alpha_k$</p>
@@ -1842,8 +1857,8 @@ f(x)=\frac 12 x^TAx+b^Tx
 <p>&#x9AD8;-&#x4F4E;-&#x9AD8;</p>
 <h4 id="&#x4E8C;&#x6B21;&#x6536;&#x655B;&#x6027;"><a name="&#x4E8C;&#x6B21;&#x6536;&#x655B;&#x6027;" class="plugin-anchor" href="#&#x4E8C;&#x6B21;&#x6536;&#x655B;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E8C;&#x6B21;&#x6536;&#x655B;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x6B21;&#x6536;&#x655B;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x6B21;&#x6536;&#x655B;&#x6027;</h4>
 <p>&#x5F53;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x662F;&#x4E8C;&#x6B21;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5171;&#x8F6D;&#x65B9;&#x5411;&#x6CD5;&#x6700;&#x591A;&#x7ECF;&#x8FC7;$N$&#x6B65;&#x8FED;&#x4EE3;&#xFF08;$N$=&#x5411;&#x91CF;&#x7EF4;&#x6570;&#xFF09;&#xFF0C;&#x5C31;&#x53EF;&#x8FBE;&#x5230;&#x6781;&#x5C0F;&#x503C;&#x70B9;&#x3002;</p>
-<h3 id="bb&#x6CD5;"><a name="bb&#x6CD5;" class="plugin-anchor" href="#bb&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="bb&#x6CD5;" class="anchor-navigation-ex-anchor" href="#bb&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.6. bb&#x6CD5;</h3>
-<h2 id="&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;"><a name="&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;" class="plugin-anchor" href="#&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x7B2C;&#x4E09;&#x7AE0; &#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;</h2>
+<h3 id="bb&#x6CD5;"><a name="bb&#x6CD5;" class="plugin-anchor" href="#bb&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="bb&#x6CD5;" class="anchor-navigation-ex-anchor" href="#bb&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>bb&#x6CD5;</h3>
+<h2 id="&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;"><a name="&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;" class="plugin-anchor" href="#&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x7B2C;&#x4E09;&#x7AE0;-&#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E09;&#x7AE0; &#x6709;&#x7EA6;&#x675F;&#x4F18;&#x5316;</h2>
 <p><script type="math/tex; mode=display">
 L(x,\mathbf \lambda)=f(x)-\sum_{i=1}^m\lambda_i c_i(x)
 </script></p>
@@ -1855,7 +1870,7 @@ L(x,\mathbf \lambda)=f(x)-\sum_{i=1}^m\lambda_i c_i(x)
 </ul>
 <p><img src="http://www.scipy-lectures.org/_images/plot_constraints_1.png" alt=""></p>
 <p>$-1 &lt; x_1 &lt; 1$<br>$-1 &lt; x_2 &lt; 1$</p>
-<h3 id="1-&#x4FE1;&#x8D56;&#x57DF;"><a name="1-&#x4FE1;&#x8D56;&#x57DF;" class="plugin-anchor" href="#1-&#x4FE1;&#x8D56;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-&#x4FE1;&#x8D56;&#x57DF;" class="anchor-navigation-ex-anchor" href="#1-&#x4FE1;&#x8D56;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. 1. &#x4FE1;&#x8D56;&#x57DF;</h3>
+<h3 id="1-&#x4FE1;&#x8D56;&#x57DF;"><a name="1-&#x4FE1;&#x8D56;&#x57DF;" class="plugin-anchor" href="#1-&#x4FE1;&#x8D56;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-&#x4FE1;&#x8D56;&#x57DF;" class="anchor-navigation-ex-anchor" href="#1-&#x4FE1;&#x8D56;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4FE1;&#x8D56;&#x57DF;</h3>
 <ul>
 <li>&#x5F53;&#x524D;&#x70B9;&#xFF0C;&#x7528;&#x4E8C;&#x6B21;&#x51FD;&#x6570;&#x8FD1;&#x4F3C;&#x5F53;&#x524D;&#x51FD;&#x6570;&#xFF1A;$q_k(\cdot)\approx f(x)$</li>
 <li>&#x6C42;&#x89E3;$q_k$&#x6781;&#x5C0F;&#x503C;&#x70B9;&#x4F5C;&#x4E3A;&#x4E0B;&#x4E00;&#x6B21;&#x8BD5;&#x63A2;&#x70B9;</li>
@@ -1928,7 +1943,7 @@ s_k=s_k^c+\lambda(s_k^{\hat N}-s_k^c)=\left[
 \end{matrix}
 \right]
 </script></p>
-<h3 id="2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;"><a name="2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;" class="plugin-anchor" href="#2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2. 2. &#x79EF;&#x6781;&#x96C6;&#x6CD5;</h3>
+<h3 id="2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;"><a name="2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;" class="plugin-anchor" href="#2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#2-&#x79EF;&#x6781;&#x96C6;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x79EF;&#x6781;&#x96C6;&#x6CD5;</h3>
 <ul>
 <li>$y\in {y|\nabla_ic(x^*)^\top y=0,\forall i}$&#x5728;$c(x)=0$&#x8FD9;&#x4E2A;&#x8D85;&#x5E73;&#x9762;&#x4E0A;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x5728;&#x65E0;&#x7EA6;&#x675F;&#x60C5;&#x51B5;$y\in \mathbb R^n$&#x3002;</li>
 <li>&#x7528;&#x811A;&#x6807;&#x7684;&#x96C6;&#x5408;&#x8868;&#x793A;&#x54EA;&#x4E9B;&#x5230;&#x8FBE;&#x8FB9;&#x754C;&#x7EA6;&#x675F;&#x3002;<ul>
@@ -2021,7 +2036,7 @@ d_1\\d_2\\\lambda_1
 \right]
 </script></p>
 <p>&#x6C42;&#x89E3;&#x65B9;&#x7A0B;&#x7EC4;&#x5F97;&#x5230;<br>$d_1=\frac 12,d_2=\frac 94,\lambda_1=\frac 34&gt;0$&#xFF0C;&#x5373;$\mathbf \lambda=(\frac 34,0,0)^\top$&#xFF0C;$\mathbf x^2=(\frac 12,\frac 94)^\top$&#x662F;&#x6700;&#x4F18;&#x89E3;&#x3002;</p>
-<h3 id="3-&#x76F4;&#x63A5;&#x6CD5;"><a name="3-&#x76F4;&#x63A5;&#x6CD5;" class="plugin-anchor" href="#3-&#x76F4;&#x63A5;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3-&#x76F4;&#x63A5;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-&#x76F4;&#x63A5;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.3. 3. &#x76F4;&#x63A5;&#x6CD5;</h3>
+<h3 id="3-&#x76F4;&#x63A5;&#x6CD5;"><a name="3-&#x76F4;&#x63A5;&#x6CD5;" class="plugin-anchor" href="#3-&#x76F4;&#x63A5;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3-&#x76F4;&#x63A5;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#3-&#x76F4;&#x63A5;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x76F4;&#x63A5;&#x6CD5;</h3>
 <ol>
 <li>$x_1\in \mathbb R^n,d_1,\dots,d_n&#x7EBF;&#x6027;&#x65E0;&#x5173;$</li>
 <li>$x_1$&#x6CBF;$d_1$&#x7EBF;&#x6027;&#x641C;&#x7D22;&#x5F97;$x_2$&#xFF0C;&#x5373;$x_2$&#x662F;$f(x)$&#x5728;${z|z=x_1+\alpha_1 d_1}$&#x4E0A;&#x7684;&#x6781;&#x5C0F;&#x503C;&#x70B9;</li>
@@ -2033,24 +2048,24 @@ d_1\\d_2\\\lambda_1
 <li>&#x4EE4;$d_3=\nu^{(3)}-x_3$&#xFF0C;&#x5219;$\nu^{(3)}$&#x662F;$f(x)$&#x5728;${z|z=x_1+\alpha_1 d_1+\alpha_2 d_2}$&#x4E0A;&#x7684;&#x6781;&#x5C0F;&#x503C;&#x70B9;</li>
 <li>$x<em>{k+1}$&#x662F;$f(x)$&#x5728;${z|z=x_1+\sum</em>{i=1}^k\alpha<em>i d_i}$&#x4E0A;&#x7684;&#x6781;&#x5C0F;&#x503C;&#x70B9;&#xFF0C;&#x4EE4;$d</em>{k+1}=\nu^{(k+1)}-x_{k+1}$</li>
 </ol>
-<h2 id="reference"><a name="reference" class="plugin-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a><a name="reference" class="anchor-navigation-ex-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Reference</h2>
+<h2 id="reference"><a name="reference" class="plugin-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a><a name="reference" class="anchor-navigation-ex-anchor" href="#reference"><i class="fa fa-link" aria-hidden="true"></i></a>Reference</h2>
 <ul>
 <li>&#x300A;&#x6700;&#x4F18;&#x5316;&#x7406;&#x8BBA;&#x4E0E;&#x65B9;&#x6CD5;&#x300B;&#x9648;&#x5B9D;&#x6797;</li>
 <li>&#x300A;&#x975E;&#x7EBF;&#x6027;&#x4F18;&#x5316;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x300B;&#x8881;&#x4E9A;&#x6E58;</li>
 <li>&#x300A;Numerical Optimization&#x300B;Jorge Nocedal</li>
 </ul>
-<h2 id="&#x672F;&#x8BED;&#x8868;"><a name="&#x672F;&#x8BED;&#x8868;" class="plugin-anchor" href="#&#x672F;&#x8BED;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672F;&#x8BED;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x672F;&#x8BED;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x672F;&#x8BED;&#x8868;</h2>
+<h2 id="&#x672F;&#x8BED;&#x8868;"><a name="&#x672F;&#x8BED;&#x8868;" class="plugin-anchor" href="#&#x672F;&#x8BED;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672F;&#x8BED;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x672F;&#x8BED;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672F;&#x8BED;&#x8868;</h2>
 <p>&#x4E8C;&#x9636;&#xFF08;quadratic&#xFF09;</p>
-<h2 id="&#x5176;&#x4ED6;"><a name="&#x5176;&#x4ED6;" class="plugin-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5176;&#x4ED6;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x5176;&#x4ED6;</h2>
-<h3 id="0618&#x6CD5;"><a name="0618&#x6CD5;" class="plugin-anchor" href="#0618&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="0618&#x6CD5;" class="anchor-navigation-ex-anchor" href="#0618&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8.1. 0.618&#x6CD5;</h3>
+<h2 id="&#x5176;&#x4ED6;"><a name="&#x5176;&#x4ED6;" class="plugin-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5176;&#x4ED6;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;</h2>
+<h3 id="0618&#x6CD5;"><a name="0618&#x6CD5;" class="plugin-anchor" href="#0618&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="0618&#x6CD5;" class="anchor-navigation-ex-anchor" href="#0618&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>0.618&#x6CD5;</h3>
 <p>&#x7528;0.618&#x6CD5;&#x5BFB;&#x627E;&#x6700;&#x4F73;&#x70B9;&#x65F6;&#xFF0C;&#x867D;&#x7136;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5728;&#x6709;&#x9650;&#x6B21;&#x5185;&#x51C6;&#x786E;&#x627E;&#x51FA;&#x6700;&#x4F73;&#x70B9;&#xFF0C;&#x4F46;&#x968F;&#x7740;&#x8BD5;&#x9A8C;&#x6B21;&#x6570;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x6700;&#x4F73;&#x70B9;&#x88AB;&#x9650;&#x5B9A;&#x5728;&#x8D8A;&#x6765;&#x8D8A;&#x5C0F;&#x7684;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5373;&#x5B58;&#x4F18;&#x8303;&#x56F4;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x5C0F;&#x3002;&#x7528;&#x5B58;&#x4F18;&#x8303;&#x56F4;&#x4E0E;&#x539F;&#x59CB;&#x8303;&#x56F4;&#x7684;&#x6BD4;&#x503C;&#x6765;&#x8861;&#x91CF;&#x4E00;&#x79CD;&#x8BD5;&#x9A8C;&#x65B9;&#x6CD5;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x8FD9;&#x4E2A;&#x6BD4;&#x503C;&#x53EB;&#x7CBE;&#x5EA6;&#x3002;&#x7528;0.618&#x6CD5;&#x786E;&#x5B9A;&#x8BD5;&#x70B9;&#x65F6;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x5B9E;&#x9A8C;&#x90FD;&#x628A;&#x5B58;&#x4F18;&#x8303;&#x56F4;&#x7F29;&#x5C0F;&#x4E3A;&#x539F;&#x6765;&#x7684;0.618.&#x56E0;&#x6B64;&#xFF0C;n&#x6B21;&#x8BD5;&#x9A8C;&#x540E;&#x7684;&#x7CBE;&#x5EA6;&#x4E3A;&#xFF1A;</p>
 <p><script type="math/tex; mode=display">
 \delta _n=0.618^n
 </script></p>
-<h3 id="kkt&#x6761;&#x4EF6;"><a name="kkt&#x6761;&#x4EF6;" class="plugin-anchor" href="#kkt&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="kkt&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#kkt&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8.2. KKT&#x6761;&#x4EF6;</h3>
+<h3 id="kkt&#x6761;&#x4EF6;"><a name="kkt&#x6761;&#x4EF6;" class="plugin-anchor" href="#kkt&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="kkt&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#kkt&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>KKT&#x6761;&#x4EF6;</h3>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Inequality_constraint_diagram.svg/440px-Inequality_constraint_diagram.svg.png" alt=""></p>
 <p>In mathematical optimization, the <strong>Karush&#x2013;Kuhn&#x2013;Tucker</strong> (KKT) conditions (also known as the <strong>Kuhn&#x2013;Tucker conditions</strong>) are first order necessary conditions for a solution in <strong>nonlinear</strong> programming to be optimal, provided that some regularity conditions are satisfied. Allowing <strong>inequality constraints</strong>, the KKT approach to nonlinear programming generalizes the method of <strong>Lagrange multipliers</strong>, which allows only <strong>equality constraints</strong>. The system of equations corresponding to the KKT conditions is usually not solved directly, except in the few special cases where a closed-form solution can be derived analytically. In general, many optimization algorithms can be interpreted as methods for numerically solving the KKT system of equations.</p>
-<h2 id="&#x7F16;&#x7A0B;"><a name="&#x7F16;&#x7A0B;" class="plugin-anchor" href="#&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x7F16;&#x7A0B;</h2>
+<h2 id="&#x7F16;&#x7A0B;"><a name="&#x7F16;&#x7A0B;" class="plugin-anchor" href="#&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x7A0B;</h2>
 <p>[Anaconda][17]</p>
 <p>[17]: <a href="http://www.jianshu.com/p/2f3be7781451" target="_blank">http://www.jianshu.com/p/2f3be7781451</a></p>
 <blockquote id="fn_footnote1">
@@ -2088,7 +2103,7 @@ d_1\\d_2\\\lambda_1
                 </a>
                 
                 
-                <a href="README 4.html" class="navigation navigation-next " aria-label="Next page: Introduction">
+                <a href="optimization/introduction.html" class="navigation navigation-next " aria-label="Next page: Introduction">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2099,7 +2114,7 @@ d_1\\d_2\\\lambda_1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Optimization","level":"5.2","depth":1,"next":{"title":"Introduction","level":"6.1","depth":1,"path":"README 4.md","ref":"README 4.md","articles":[{"title":"suffix","level":"6.1.1","depth":2,"path":"suffix.md","ref":"suffix.md","articles":[]},{"title":"prefix","level":"6.1.2","depth":2,"path":"prefix.md","ref":"prefix.md","articles":[]},{"title":"verb","level":"6.1.3","depth":2,"path":"verb.md","ref":"verb.md","articles":[]},{"title":"synonym","level":"6.1.4","depth":2,"path":"synonym.md","ref":"synonym.md","articles":[]},{"title":"math","level":"6.1.5","depth":2,"path":"math.md","ref":"math.md","articles":[]},{"title":"material","level":"6.1.6","depth":2,"path":"material.md","ref":"material.md","articles":[]},{"title":"others","level":"6.1.7","depth":2,"path":"others.md","ref":"others.md","articles":[]}]},"previous":{"title":"Probability Theory","level":"5.1","depth":1,"path":"probability.md","ref":"probability.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"optimization.md","mtime":"2018-06-19T12:08:51.797Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-31T08:17:24.983Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nonliner Optimization","level":"5.2","depth":1,"next":{"title":"Introduction","level":"5.2.1","depth":2,"path":"optimization/introduction.md","ref":"optimization/introduction.md","articles":[]},"previous":{"title":"Probability Theory","level":"5.1","depth":1,"path":"probability.md","ref":"probability.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax-update-cdn","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","anchor-navigation-ex@0.1.8","todo@^0.1.3","anchors@^0.7.1","donate@^1.0.2"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://static.zybuluo.com/sixijinling/3fnxywa4rs75f25kinu5ahnn/image_1cfuh8j65mc41k3q28cp431679.png","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://static.zybuluo.com/sixijinling/3mhqbsdz9a24mrhdgj348e9x/image_1cfuoqam86g5197d1cnt12k211s823.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"mathjax-update-cdn":{"forceSVG":false,"version":"2.7.1"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"http://rowl1ng.com"}},"gitbook":"*"},"file":{"path":"optimization.md","mtime":"2019-01-17T03:31:54.126Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T07:48:37.953Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
