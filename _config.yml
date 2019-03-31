@@ -49,7 +49,7 @@ links:
   - name:         WRITE
     url:          /write
     external:     false
-  - name:         GITBOOK
+  - name:         WIKI
     url:          /mybook
     external:     false
   - name:         ARCHIVE
