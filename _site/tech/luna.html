@@ -11,12 +11,12 @@
 <title>肺部结节检测 - Rowl1ng|黑客与画家</title>
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="肺部结节检测 - Rowl1ng|黑客与画家">
-<meta name="twitter:keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentation import clear_bord..." property='og:description' />
+<meta name="twitter:keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系  统一spacing到0.5x0.5x0.5mm，也就是说96x96的patch对应现实中48x48mmm预处理阶段可能用到的包：fr..." property='og:description' />
 <meta property="og:type" content="article">
 <meta property="og:title" content="肺部结节检测">
 <!--<meta property="og:title" content="肺部结节检测 - Rowl1ng|黑客与画家">-->
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="og:keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentation import clear_bord..." property='og:description' />
+<meta name="og:keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系  统一spacing到0.5x0.5x0.5mm，也就是说96x96的patch对应现实中48x48mmm预处理阶段可能用到的包：fr..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
 <link rel="icon" type="image/png" href="http://localhost:4000/style/favicons/favicon.ico" />
 <link href="http://localhost:4000/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
@@ -25,14 +25,14 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="/manifest.json">
 <link rel="shortcut icon" href="http://localhost:4000/style/favicons/favicon.ico" type="image/x-icon">
-<meta name="keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentation import clear_bord..." property='og:description' />
+<meta name="keywords"  content="图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系  统一spacing到0.5x0.5x0.5mm，也就是说96x96的patch对应现实中48x48mmm预处理阶段可能用到的包：fr..." property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
 <link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
 <link href="http://localhost:4000/style/style-rowl1ng.css" rel="stylesheet">
 
     <meta content='http://localhost:4000/tech/luna.html' property='og:url' />
-    <meta content="experience in the Tianchi lung nodule detection contest" property='og:description' />
+    <meta content="experience in the Tianchi Lung Nodule Detection Contest" property='og:description' />
     <meta content="article" property="og:type" />
 
 
@@ -59,7 +59,9 @@
             
             <a href="http://localhost:4000/write">WRITE</a>
             
-            <a href="http://localhost:4000/mybook">GITBOOK</a>
+            <a href="http://localhost:4000/mybook">WIKI</a>
+            
+            <a href="http://localhost:4000/NeuralFish">FISH</a>
             
             <a href="http://localhost:4000/archives">ARCHIVE</a>
             
@@ -88,7 +90,9 @@
                 
                 <li><a href="http://localhost:4000/write">WRITE</a></li>
                 
-                <li><a href="http://localhost:4000/mybook">GITBOOK</a></li>
+                <li><a href="http://localhost:4000/mybook">WIKI</a></li>
+                
+                <li><a href="http://localhost:4000/NeuralFish">FISH</a></li>
                 
                 <li><a href="http://localhost:4000/archives">ARCHIVE</a></li>
                 
@@ -111,6 +115,7 @@
                         肺部结节检测</h1>
                     <div class="post-data">
                         <time datetime="2017-04-25 21:38:00" itemprop="datePublished">发布时间：2017-04-25 21:38:00</time>
+                        <time datetime="2018-12-20 16:28:00" itemprop="datePublished">更新时间：2018-12-20 16:28:00</time>
                         <a href="/tags#tech" title="访问 tech" data-hover="博客分类: tech">博客分类: tech</a>
                         <!--busuanzi-->
                         <script async src="/js/busuanzi.pure.mini.js">
@@ -169,7 +174,9 @@
 
 <p><img src="http://upload-images.jianshu.io/upload_images/1156558-a483ffcb4ca3d4ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述" /></p>
 
-<h2 id="preprocessing">Preprocessing</h2>
+<ul>
+  <li>统一spacing到0.5x0.5x0.5mm，也就是说96x96的patch对应现实中48x48mmm</li>
+</ul>
 
 <p>预处理阶段可能用到的包：</p>
 
@@ -180,7 +187,7 @@ from scipy import ndimage as ndi
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection # 用于可视化3d图像
 from skimage.morphology import ball, disk, dilation, binary_erosion, remove_small_objects, erosion, closing, reconstruction, binary_closing
 </code></pre></div></div>
-<h3 id="肺部区域分割">肺部区域分割</h3>
+<h2 id="肺部区域分割">肺部区域分割</h2>
 
 <p>参考<a href="https://www.kaggle.com/arnavkj95/candidate-generation-and-luna16-preprocessing/code">Candidate Generation and LUNA16 preprocessing
 </a>可实现肺部区域的分割，从而为下一步提取3d cube做准备。</p>
@@ -324,33 +331,35 @@ print areas
 
 <p><img src="http://static.zybuluo.com/sixijinling/cv3ice16g6d1cir64spqbjum/image_1ce6iegtia0mjhs46f1q3n1e1e9.png" alt="image_1ce6iegtia0mjhs46f1q3n1e1e9.png-16.5kB" /></p>
 
-<h3 id="预处理">预处理</h3>
-
-<ul>
-  <li>统一spacing到0.5x0.5x0.5mm，也就是说96x96的patch对应现实中48x48mmm</li>
-  <li>取三个轴向的切面(patch)，根据candidate的label存储在true/false文件夹下</li>
-</ul>
-
-<h4 id="balance">balance</h4>
-
-<ul>
-  <li>weighted loss function</li>
-  <li>10-foldcross validation：划分为10个</li>
-</ul>
-
 <h1 id="模型">模型</h1>
 
-<p>通常分两个阶段：</p>
+<p>考虑到3d场景下做目标检测的计算量，通常分两个阶段，先筛出可疑对象，再筛掉假阳性：</p>
 
 <h2 id="stage-1candidates-proposal">Stage 1：Candidates Proposal</h2>
 <p>这个阶段的任务是尽可能找出所有可能是结节的候选（candidate）</p>
+
 <h3 id="思路1segmentation">思路1：Segmentation</h3>
 
 <p>例如U-net，</p>
 
+<h4 id="merge-candidates">Merge Candidates</h4>
+
+<p>先腐蚀，再算连通性，再取label，每个label代表一个candidate，取mass中心，存储为csv
+对照annotations.csv得到每个candidate的是TP还是FP的label，得到新的csv（最后一列为true/false的标记）
+欧式距离</p>
+
 <h3 id="思路2-object-detection">思路2: Object Detection</h3>
 
-<p>例如Faster RCNN，使用2D模型处理3D检测问题，例如每个通道代表z轴的一个slice，这样就有3个slice组成的3通道二维图像，即形如<script type="math/tex">600\times 600 \times 3</script>的image。每个tong通道可以是相邻的slice。</p>
+<p>例如Faster RCNN，使用2D模型处理3D检测问题，例如每个通道代表z轴的一个slice，这样就有3个slice组成的3通道二维图像，即形如<script type="math/tex">600\times 600 \times 3</script>的image。每个通道可以是相邻的slice。</p>
+
+<p>需要注意的是：考虑到肺结节的尺度比常规的自然图像中的物体要小得多，而原始的Faster RCNN使用的是16倍降采样（VGG-16Net的前四个卷积group作为feature extraction），需要通过减小降采样的方式提升ROI检测的效果。有两种思路：</p>
+
+<ol>
+  <li>减少feature extractor的maxpooling层：例如删掉某个group中的maxpooling</li>
+  <li>在feature extractor最后增加deconvolutional layer：例如 <code class="highlighter-rouge">nn.ConvTranspose2d(1024, 1024, 4, 4, 4)</code>会上采样4倍，这样最终是降采样4倍</li>
+</ol>
+
+<p>另一个相伴相生的问题：标注的大小。normalize之后的结节标注可能只有1个像素大小（可能是医生标注的问题），这样即使是4倍下采样也达不到检出效果。我的方案是中心不变、扩大到8个像素。</p>
 
 <h4 id="rpn">RPN</h4>
 
@@ -361,15 +370,19 @@ print areas
 
 <h2 id="stage2false-positive--reduction">Stage2：False Positive  Reduction</h2>
 
-<h3 id="classification-stage">Classification Stage</h3>
+<h3 id="2d-resnet">2D Resnet</h3>
 
-<p>找結節中心
-maximum divergence normalized gradient
-data augmentation: zoom, rotation, translation</p>
+<p>可参考<a href="https://github.com/gzuidhof/luna16">LUNA16 Lung Nodule Analysis</a></p>
+
+<p>First we equalize the spacings tp 0.5mm0.5mm0.5mm using src/data_processing/equalize_spacings.py. Then we create the 96x96 patches in all three orientations using src/data_processing/create_xy_xz_yz_CARTESIUS.py. Scripts to perform this using SLURM for job management (will require some editing of paths) can be found in /scripts/create_patches/ and /scripts/rescale</p>
+
+<ul>
+  <li>取三个轴向的切面(patch)，根据candidate的label存储在true/false文件夹下</li>
+</ul>
+
+<h3 id="3d-conv">3d conv</h3>
 
 <p>由于ct是三维的，考虑使用常见的2d U-net的3d版本。</p>
-
-<h4 id="3d-conv">3d conv</h4>
 
 <p>可参考：</p>
 
@@ -412,41 +425,10 @@ data augmentation: zoom, rotation, translation</p>
 
 <p>这里的输入shape指的是函数内部实现的输入shape，而非函数接口应指定的input_shape。</p>
 
-<h3 id="merge-candidates">Merge Candidates</h3>
-<p>先腐蚀，再算连通性，再取label，每个label代表一个candidate，取mass中心，存储为csv
-对照annotations.csv得到每个candidate的是TP还是FP的label，得到新的csv（最后一列为true/false的标记）
-欧式距离</p>
-
-<h1 id="评价指标froc曲线">评价指标：FROC曲线</h1>
-
-<p>先来回顾一下精确率（precision）和召回率（recall）：</p>
-
-<p>实际上非常简单，精确率是针对我们预测结果而言的，它表示的是预测为正的样本中有多少是真正的正样本。那么预测为正就有两种可能了，一种就是把正类预测为正类(TP)，另一种就是把负类预测为正类(FP)，也就是
-<script type="math/tex">\frac {TP}{TP+FP}</script>
-而召回率是针对我们原来的样本而言的，它表示的是样本中的正例有多少被预测正确了。那也有两种可能，一种是把原来的正类预测成正类(TP)，另一种就是把原来的正类预测为负类(FN)。
-<script type="math/tex">\frac {TP}{TP+FN}</script>
-<img src="http://static.zybuluo.com/sixijinling/19kbgb66gbhj9yzropa03qm7/tp.png" alt="此处输入图片的描述" /></p>
-
-<p>FROC曲线（Free-response ROC）要从<a href="https://zh.m.wikipedia.org/wiki/%E9%9D%88%E6%95%8F%E5%BA%A6%E5%92%8C%E7%89%B9%E7%95%B0%E5%BA%A6">ROC曲线</a>说起，和我们常用的accuracy和recall也可以联系起来看。主要是为了平衡两者：</p>
-
-<ul>
-  <li>TPR（True Positive Rate）/ <strong>灵敏度</strong> （Sensitivity） :在所有真的得了癌症的人中，我们要尽最大努力把这些病人都找出来，等同于正例的召回率。
-    <ul>
-      <li>所有 test
-scans 中检测到的真结节的比例： TP/n 其中n是所有scans中真结节的总数, so n = 207 in this stud
-<script type="math/tex">\frac {TP}{TP+FN}</script></li>
-    </ul>
-  </li>
-  <li>FPR（False Positive Rate）/(1 - Specificity)：在所有健康人中，我们要尽最大努力<strong>避免误判</strong>成癌症患者，或者说，是尽最大努力把这些健康人都找出来，等同于反例的召回率。
-    <ul>
-      <li>FP/m 其中m是scans的总数。 so m = 50 in this study <script type="math/tex">\frac{FP}{FP+TN}</script></li>
-    </ul>
-  </li>
-</ul>
-
-<p>这样每一个decision threshhold，都有各自的TP、TN、FP、FN，都对应着曲线上的一个点</p>
+<h1 id="评价指标">评价指标</h1>
 
 <p><a href="https://luna16.grand-challenge.org/evaluation/">Luna官方说明</a>：The evaluation is performed by measuring the detection sensitivity of the algorithm and the corresponding false positive rate per scan.</p>
+
 <ul>
   <li>TP判定（hit criterion）：candidate必须是在standard reference 中以nodule center为中心的半径R（结节直径除2）之内。hit到一个正例之后就将这个例子从表中除去，保证不重复计数。也就是说，又有第二个预测点hit到这个结节时就被忽略，不算TP。</li>
   <li>FP判定：在设定的半径距离内没有hit到任何reference结节.</li>
@@ -460,7 +442,7 @@ scans 中检测到的真结节的比例： TP/n 其中n是所有scans中真结�
   <li>完美是1，最低是0. Most CAD systems in clinical use today have their internal threshold set to operate somewhere between 1 to 4 false positives per scan on average. Some systems allow the user to vary the threshold. To make the task more challenging, we included low false positive rates in our evaluation. This determines if a system can also identify a significant percentage of nodules with very few false alarms, as might be needed for CAD algorithms that operate more or less autonomously.</li>
 </ul>
 
-<h3 id="论文里关于froc的说明">论文里关于FROC的说明：</h3>
+<p>论文里关于FROC的说明：</p>
 
 <p>sensitivity是关于FPR平均值的函数：</p>
 
@@ -491,7 +473,7 @@ LKDS_00005,98.0667072477,-46.4666486536,-141.421980179,0.000256219
 
 
                 <p class="post-info">
-                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:2018-05-29 21:38:00
+                    本文由 <a href="/">Rowl1ng</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>本文会经常更新，最后编辑时间为:2018-12-20 16:28:00
                 </p>
 
             </div>
@@ -553,7 +535,7 @@ LKDS_00005,98.0667072477,-46.4666486536,-141.421980179,0.000256219
                     <div class="info-text">
                         <p>Theme is <a href="http://rowl1ng.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll Rowl1ng主题"  data-hover="Jekyll Rowl1ng"target="_blank">Jekyll rowl1ng</a> by <a href="http://rowl1ng.com/about" target="_blank">Rowl1ng</a></p>
                         <p>Powered by <a href="http://localhost:4000/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
-                        <p>&copy; 2018 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
+                        <p>&copy; 2019 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
                         <p>
                             <span id="busuanzi_container_site_uv" style="display: inline">
                            本站 UV <a href="http://ibruce.info" target="_blank"><span id="busuanzi_value_site_uv"></span></a>
@@ -568,6 +550,8 @@ LKDS_00005,98.0667072477,-46.4666486536,-141.421980179,0.000256219
             <div class="meta-item meta-posts">
                 <h3 class="meta-title">置顶文章</h3>
                 <!--置顶-->
+                
+                
                 
                 
                 <li><a href="/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
@@ -603,12 +587,12 @@ LKDS_00005,98.0667072477,-46.4666486536,-141.421980179,0.000256219
                 
                 
                 
-                
-                
                 <!--置顶-->
             </div>
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
+                
+                <!---->
                 
                 <!---->
                 
@@ -640,8 +624,6 @@ LKDS_00005,98.0667072477,-46.4666486536,-141.421980179,0.000256219
                 
                 <!---->
                     <li><a href="/book/watch_TV.html" title="访问 爱好：看电视" data-hover="爱好：看电视">爱好：看电视</a></li>
-                <!---->
-                
                 <!---->
                 
             </div>

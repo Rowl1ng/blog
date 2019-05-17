@@ -11,12 +11,12 @@
 <title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家</title>
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家">
-<meta name="twitter:keywords"  content="Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Detectron（使用caffe2）是fac..." property='og:description' />
+<meta name="twitter:keywords"  content="Choose your language :简体中文EnglishDetectron（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。本文mask rcnn的部分基于pytor..." property='og:description' />
 <meta property="og:type" content="article">
 <meta property="og:title" content="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">
 <!--<meta property="og:title" content="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - Rowl1ng|黑客与画家">-->
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="og:keywords"  content="Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Detectron（使用caffe2）是fac..." property='og:description' />
+<meta name="og:keywords"  content="Choose your language :简体中文EnglishDetectron（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。本文mask rcnn的部分基于pytor..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
 <link rel="icon" type="image/png" href="http://localhost:4000/style/favicons/favicon.ico" />
 <link href="http://localhost:4000/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
@@ -25,7 +25,7 @@
 <meta charset="UTF-8">
 <link rel="manifest" href="/manifest.json">
 <link rel="shortcut icon" href="http://localhost:4000/style/favicons/favicon.ico" type="image/x-icon">
-<meta name="keywords"  content="Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Detectron（使用caffe2）是fac..." property='og:description' />
+<meta name="keywords"  content="Choose your language :简体中文EnglishDetectron（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。本文mask rcnn的部分基于pytor..." property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
 <link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
@@ -59,7 +59,9 @@
             
             <a href="http://localhost:4000/write">WRITE</a>
             
-            <a href="http://localhost:4000/mybook">GITBOOK</a>
+            <a href="http://localhost:4000/mybook">WIKI</a>
+            
+            <a href="http://localhost:4000/NeuralFish">FISH</a>
             
             <a href="http://localhost:4000/archives">ARCHIVE</a>
             
@@ -88,7 +90,9 @@
                 
                 <li><a href="http://localhost:4000/write">WRITE</a></li>
                 
-                <li><a href="http://localhost:4000/mybook">GITBOOK</a></li>
+                <li><a href="http://localhost:4000/mybook">WIKI</a></li>
+                
+                <li><a href="http://localhost:4000/NeuralFish">FISH</a></li>
                 
                 <li><a href="http://localhost:4000/archives">ARCHIVE</a></li>
                 
@@ -111,6 +115,7 @@
                         Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</h1>
                     <div class="post-data">
                         <time datetime="2018-03-22 17:00:00" itemprop="datePublished">发布时间：2018-03-22 17:00:00</time>
+                        <time datetime="2018-08-24 17:00:00" itemprop="datePublished">更新时间：2018-08-24 17:00:00</time>
                         <a href="/tags#tech" title="访问 tech" data-hover="博客分类: tech">博客分类: tech</a>
                         <!--busuanzi-->
                         <script async src="/js/busuanzi.pure.mini.js">
@@ -162,17 +167,18 @@
                 </p>
                 <p>Choose your language :<select onchange="self.location.href=options[selectedIndex].value"><option value="//tech/faster-rcnn.html" selected="selected">简体中文</option><option value="">English</option></select></p>
 
-<p>本文mask rcnn的部分基于<a href="https://github.com/roytseng-tw/Detectron.pytorch">Detectron.pytorch</a>（参考了<a href="https://github.com/jwyang/faster-rcnn.pytorch">Faster R-CNN的pytorch实现</a>），<a href="https://github.com/facebookresearch/Detectron">Detectron</a>（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN神马的），可以学习一下。</p>
+<p><a href="https://github.com/facebookresearch/Detectron">Detectron</a>（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。
+本文mask rcnn的部分基于pytorch实现的一版Detectron：<a href="https://github.com/roytseng-tw/Detectron.pytorch">Detectron.pytorch</a>（参考了<a href="https://github.com/jwyang/faster-rcnn.pytorch">Faster R-CNN的pytorch实现</a>），</p>
 
 <p>需要安装：</p>
 
 <ul>
   <li>pytorch &gt; 0.3.0</li>
   <li>pycocotools</li>
+  <li>easydict</li>
+  <li>cython</li>
+  <li>cffi</li>
 </ul>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install easydict cython cffi
-</code></pre></div></div>
 
 <h1 id="基本概念">基本概念</h1>
 
@@ -500,7 +506,10 @@ Bbox regression loss has the form:
 
 <p><img src="http://static.zybuluo.com/sixijinling/elabj076z56xa1xsfbwqyy50/image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png" alt="image_1c8u6f7esu9i1sl510hs1pnm1qvl1j.png-30.8kB" /></p>
 
-<p>可以看到降采样从P5到P2是(1. / 32., 1. / 16., 1. / 8., 1. / 4.)</p>
+<p><img src="http://static.zybuluo.com/sixijinling/lvmo09rywt1pyvil3vphwvtc/fpn_rpn.png" alt="fpn_rpn.png-206.4kB" /></p>
+
+<p><img src="http://static.zybuluo.com/sixijinling/tw90x779iyn4kyezgamq9ztj/fpn_faster_rcnn.jpeg" alt="fpn_faster_rcnn.jpeg-43.5kB" />
+可以看到降采样从P5到P2是(1. / 32., 1. / 16., 1. / 8., 1. / 4.)</p>
 
 <p>选择：</p>
 
@@ -881,7 +890,9 @@ From the final classification scores array (dim: n, 21), we select the column co
 
 <h1 id="appendix">Appendix</h1>
 
-<h2 id="non-maximum-suppressionnms">non-maximum suppression（nms）</h2>
+<h2 id="非极大值抑制non-maximum-suppressionnms">非极大值抑制（non-maximum suppression，nms）</h2>
+
+<p><img src="http://static.zybuluo.com/sixijinling/pw80rvcl6ocrbbqslbekme2j/UNADJUSTEDNONRAW_thumb_5e2.jpg" alt="UNADJUSTEDNONRAW_thumb_5e2.jpg-87.6kB" /></p>
 
 <p><img src="http://static.zybuluo.com/sixijinling/5qfym3rpsdgyxs35izkg23u4/img_5aa7c828703ab.png" alt="img_5aa7c828703ab.png-978.8kB" /></p>
 
@@ -898,47 +909,6 @@ From the final classification scores array (dim: n, 21), we select the column co
 </ul>
 
 <p><a href="https://zhuanlan.zhihu.com/p/31427728">讲nms（non-maximum suppression）的文章</a></p>
-
-<h2 id="focal-loss">Focal loss</h2>
-
-<p>看ICCV那篇focal loss的论文<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Lin_Focal_Loss_for_ICCV_2017_paper.pdf">《Focal Loss for Dense Object Detection》</a>.</p>
-
-<p>不过这个pytorch版detectron还没实现，官方Detectron是集成在Caffe2里。可参考<a href="https://github.com/marvis/pytorch-yolo2/blob/master/FocalLoss.py">Pytorch实现</a>。</p>
-
-<script type="math/tex; mode=display">Loss(x, class) = - \alpha (1-softmax(x)_{[class]})^\gamma \log(softmax(x)_{[class]})</script>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def focal_loss(inputs, targets):
-    gamma = 2
-    N = inputs.size(0)
-    C = inputs.size(1)
-    P = F.softmax(inputs) # softmax(x)
-
-    class_mask = inputs.data.new(N, C).fill_(0)
-    class_mask = Variable(class_mask)
-    ids = targets.view(-1, 1)
-    class_mask.scatter_(1, ids, 1.)
-    # print(class_mask)
-
-    probs = (P * class_mask).sum(1).view(-1, 1)# softmax(x)_class
-
-    log_p = probs.log()
-    # print('probs size= {}'.format(probs.size()))
-    # print(probs)
-
-    batch_loss = -(torch.pow((1 - probs), gamma)) * log_p
-    # print('-----bacth_loss------')
-    # print(batch_loss)
-
-    loss = batch_loss.mean()
-
-    return loss
-</code></pre></div></div>
-
-<ul>
-  <li><script type="math/tex">\alpha</script>(1D Tensor, Variable) : the scalar factor for this criterion</li>
-  <li><script type="math/tex">\gamma</script>(float, double) : <script type="math/tex">\gamma > 0</script>; reduces the relative loss for well-classiﬁed examples (p &gt; .5), putting more focus on hard, misclassiﬁed examples</li>
-  <li>size_average(bool): By default, the losses are averaged over observations for each minibatch. However, if the field size_average is set to False, the losses are instead summed for each minibatch.</li>
-</ul>
 
 <h2 id="针对小物体">针对小物体</h2>
 
@@ -1060,7 +1030,7 @@ From the final classification scores array (dim: n, 21), we select the column co
                     <div class="info-text">
                         <p>Theme is <a href="http://rowl1ng.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll Rowl1ng主题"  data-hover="Jekyll Rowl1ng"target="_blank">Jekyll rowl1ng</a> by <a href="http://rowl1ng.com/about" target="_blank">Rowl1ng</a></p>
                         <p>Powered by <a href="http://localhost:4000/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
-                        <p>&copy; 2018 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
+                        <p>&copy; 2019 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
                         <p>
                             <span id="busuanzi_container_site_uv" style="display: inline">
                            本站 UV <a href="http://ibruce.info" target="_blank"><span id="busuanzi_value_site_uv"></span></a>
@@ -1075,6 +1045,8 @@ From the final classification scores array (dim: n, 21), we select the column co
             <div class="meta-item meta-posts">
                 <h3 class="meta-title">置顶文章</h3>
                 <!--置顶-->
+                
+                
                 
                 
                 <li><a href="/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
@@ -1110,12 +1082,12 @@ From the final classification scores array (dim: n, 21), we select the column co
                 
                 
                 
-                
-                
                 <!--置顶-->
             </div>
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
+                
+                <!---->
                 
                 <!---->
                 
@@ -1147,8 +1119,6 @@ From the final classification scores array (dim: n, 21), we select the column co
                 
                 <!---->
                     <li><a href="/book/watch_TV.html" title="访问 爱好：看电视" data-hover="爱好：看电视">爱好：看电视</a></li>
-                <!---->
-                
                 <!---->
                 
             </div>

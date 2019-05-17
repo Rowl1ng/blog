@@ -52,6 +52,9 @@ links:
   - name:         WIKI
     url:          /mybook
     external:     false
+  - name:         FISH
+    url:          /NeuralFish
+    external:     false
   - name:         ARCHIVE
     url:          /archives
     external:     false

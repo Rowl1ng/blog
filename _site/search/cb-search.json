@@ -3,6 +3,14 @@
 "data" : [
 
 {
+"title" : "待从头 2018 - ",
+"url" : "/write/Again_2018.html"
+}
+
+,
+
+
+{
 "title" : "Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - ",
 "url" : "/tech/faster-rcnn.html"
 }

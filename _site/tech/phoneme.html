@@ -59,7 +59,9 @@
             
             <a href="http://localhost:4000/write">WRITE</a>
             
-            <a href="http://localhost:4000/mybook">GITBOOK</a>
+            <a href="http://localhost:4000/mybook">WIKI</a>
+            
+            <a href="http://localhost:4000/NeuralFish">FISH</a>
             
             <a href="http://localhost:4000/archives">ARCHIVE</a>
             
@@ -88,7 +90,9 @@
                 
                 <li><a href="http://localhost:4000/write">WRITE</a></li>
                 
-                <li><a href="http://localhost:4000/mybook">GITBOOK</a></li>
+                <li><a href="http://localhost:4000/mybook">WIKI</a></li>
+                
+                <li><a href="http://localhost:4000/NeuralFish">FISH</a></li>
                 
                 <li><a href="http://localhost:4000/archives">ARCHIVE</a></li>
                 
@@ -111,6 +115,7 @@
                         基于音素识别的语音相似度研究</h1>
                     <div class="post-data">
                         <time datetime="2017-08-01 13:27:00" itemprop="datePublished">发布时间：2017-08-01 13:27:00</time>
+                        <time datetime="2018-08-01 13:27:00" itemprop="datePublished">更新时间：2018-08-01 13:27:00</time>
                         <a href="/tags#tech" title="访问 tech" data-hover="博客分类: tech">博客分类: tech</a>
                         <!--busuanzi-->
                         <script async src="/js/busuanzi.pure.mini.js">
@@ -254,6 +259,9 @@
 
 <script type="math/tex; mode=display">r(q_i,d_j)=\frac{U(q_{i}\cdot d_{j})-||q_i||||d_j||}{\sqrt {(U||q_i||^2-||q_i||)(U||d_j||^2-||d_j||)}}</script>
 
+<p>1) CZ 音素后验： 布尔诺科技大学(Brno University of Technology，BUT)提供的捷克语音素识别器[16]在QUESST数据上解码获得的音素后验特征，音素个数为45。
+2) HU音素后验： BUT提供的匈牙利语音素识别器[16]在QUESST数据上解码获得的音素后验特征，音素个数61。
+3) RU音素后验： BUT提供的俄语音素识别器[16]在QUESST数据上解码获得的音素后验特征，音素个数为52。</p>
 <h3 id="ctc的tensorflow实现">CTC的tensorflow实现</h3>
 
 <p><a href="https://github.com/Rowl1ng/phoneme-ctc">github项目地址</a></p>
@@ -283,6 +291,36 @@
 
 <p><img src="http://static.zybuluo.com/sixijinling/o6i3xw4f4qgsc3j1pf4x33ir/%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C.png" alt="实验效果.png-179.3kB" /></p>
 
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li>
+    <p>GTM-UVigo Systems for the Query-by-Example Search on Speech Task at MediaEval 2015，Paula Lopez-Otero, Laura Docio-Fernandez, Carmen Garcia-Mateo
+Spoken Audio Search
+(or Query-by-Example Spoken-Term Detection)
+Given a spoken query we search for matches (at lexical level) within a set of  spoken documents
+• It is similar to Spoken Term Detection (NIST STD2006, OpenKWS) ut …
+Queries are spoken
+No prior information  Different acoustic conditions  “ear hi gforwhole do u e ts
+6 lang. (Albanian, Chinese, Czech, Portuguese, Romanian, Slovak)
+  •	19 hours of audio (dev = eval), per sentence segmentation
+  •	450 queries/dev, 450 queries/eval
+  •	Recorded in isolation by different speakers (some non-native of the language)
+  •	Utterance-level matching
+  •	Recorded with context New!
+  •	3 types of search
+  •	T1 - Exact match, dictated
+  •	T2 - Reordering and small variations, dictated
+  •	T3 - Reordering and small variations, conversational speech New!</p>
+  </li>
+  <li>基于分段动态时间规整和后验特征的中文语音模式发现</li>
+  <li>使 用 了 Ｂｒｎｏ 大 学 开 发 的 音 素 识 别 器 ＢＵT来提取音 素 后 验 特 征。
+约１０ｈ左右的中文广 播语料（ＴＤＴ２ 中文广播语料库），训练出中文音素识别器。
+无论是有无词边界信息的 情况下，音素后验特征的效果总是明显优于 ＭＦＣＣ 特征，特 别 是 在 多 说 话 人 的 语 料 上，后 验 特 征 对 ＦＭｅａｓｕｒｅ的提升 更 大。
+在 词 边 界 信 息 的 帮 助 下，语音模式发现的效果 提 升 明 显，不 仅 ＦＭｅａｓｕｒｅ 大大提高，在时间消耗上也要省得多。
+寻求一种直 接在声学信息上找出词或短语边界的方法，才能真 正使这种优势体现出来。</li>
+</ul>
+
 <h1 id="future-work">Future work</h1>
 
 <h2 id="todo-list">Todo list</h2>
@@ -290,10 +328,10 @@
 <ul>
   <li>提升效率：DTW算法的时间复杂度是O(M x N)，尝试使用监督学习方法训练端到端识别网络，降低时间复杂度；</li>
   <li>文本关键词检索：先将文本关键词转化为对应的音素特征，再来进行检索。</li>
-  <li>不确定是否需要一些标准化的措施。
-    <h2 id="things-to-learn">Things to learn</h2>
-  </li>
+  <li>不确定是否需要一些标准化的措施。</li>
 </ul>
+
+<h2 id="things-to-learn">Things to learn</h2>
 
 <p>查询样例转换成音素序列后怎么查找</p>
 
@@ -337,6 +375,10 @@
 <h2 id="语音智能客服">语音智能客服</h2>
 
 <p><img src="http://static.zybuluo.com/sixijinling/065pnzbrgs904fre9ejsm4vn/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-11-26%2014.13.59.png" alt="屏幕快照 2017-11-26 14.13.59.png-239.2kB" /></p>
+
+<h2 id="电话诈骗识别">电话诈骗识别</h2>
+
+<p><img src="http://static.zybuluo.com/sixijinling/tco4wp29if620gmxaexwlpgo/phone_scam_detection.png" alt="phone_scam_detection.png-1408.4kB" /></p>
 
 
                 <p class="post-info">
@@ -402,7 +444,7 @@
                     <div class="info-text">
                         <p>Theme is <a href="http://rowl1ng.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll Rowl1ng主题"  data-hover="Jekyll Rowl1ng"target="_blank">Jekyll rowl1ng</a> by <a href="http://rowl1ng.com/about" target="_blank">Rowl1ng</a></p>
                         <p>Powered by <a href="http://localhost:4000/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
-                        <p>&copy; 2018 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
+                        <p>&copy; 2019 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
                         <p>
                             <span id="busuanzi_container_site_uv" style="display: inline">
                            本站 UV <a href="http://ibruce.info" target="_blank"><span id="busuanzi_value_site_uv"></span></a>
@@ -417,6 +459,8 @@
             <div class="meta-item meta-posts">
                 <h3 class="meta-title">置顶文章</h3>
                 <!--置顶-->
+                
+                
                 
                 
                 <li><a href="/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
@@ -452,12 +496,12 @@
                 
                 
                 
-                
-                
                 <!--置顶-->
             </div>
             <div class="meta-item meta-comments">
                 <h3 class="meta-title">最新文章</h3>
+                
+                <!---->
                 
                 <!---->
                 
@@ -489,8 +533,6 @@
                 
                 <!---->
                     <li><a href="/book/watch_TV.html" title="访问 爱好：看电视" data-hover="爱好：看电视">爱好：看电视</a></li>
-                <!---->
-                
                 <!---->
                 
             </div>

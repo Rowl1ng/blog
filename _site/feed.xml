@@ -7,9 +7,18 @@
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>待从头 2018</title>
+            <category>write</category>
+            <description>序决定写些正经文字，以示进步。今年的最大收获大概是：己所不能，必求于人。因为申请phd的缘故，一门心思跳出了固有的小圈子，发现大世界里有太多太多力有不逮。也因为申请phd的缘故，最近第一次写pe...</description>
+            <pubDate>2018-12-04 21:11:00 </pubDate>
+            <link>http://localhost:4000/write/Again_2018.html</link>
+            <guid isPermaLink="true">http://localhost:4000/write/Again_2018.html</guid>
+        </item>
+        
+        <item>
             <title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</title>
             <category>tech</category>
-            <description>Choose your language :简体中文English本文mask rcnn的部分基于Detectron.pytorch（参考了Faster R-CNN的pytorch实现），Det...</description>
+            <description>Choose your language :简体中文EnglishDetectron（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。本...</description>
             <pubDate>2018-03-22 17:00:00 </pubDate>
             <link>http://localhost:4000/tech/faster-rcnn.html</link>
             <guid isPermaLink="true">http://localhost:4000/tech/faster-rcnn.html</guid>
@@ -45,7 +54,7 @@
         <item>
             <title>基于Rasa_NLU的微信chatbot</title>
             <category>技术</category>
-            <description>重要资料  本项目的github地址：Rasa_wechat  视频讲解（正文+编程+QA）：bilibili  Rasa_NLU官方文档  Rasa_Core官方文档  wxpy文档  关于机...</description>
+            <description>重要资料chatbot三步走：nlu model-&gt;dialogue policy-&gt;agent  本项目的github地址：Rasa_wechat  视频讲解（正文+编程+QA）：...</description>
             <pubDate>2017-11-05 00:00:00 </pubDate>
             <link>http://localhost:4000/%E6%8A%80%E6%9C%AF/chatbot.html</link>
             <guid isPermaLink="true">http://localhost:4000/%E6%8A%80%E6%9C%AF/chatbot.html</guid>
@@ -90,7 +99,7 @@
         <item>
             <title>肺部结节检测</title>
             <category>tech</category>
-            <description>图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系Preprocessing预处理阶段可能用到的包：from skimage.segmentati...</description>
+            <description>图像处理基础  origin：表示CT图像最边缘的坐标  sapcing：真实世界和像素的比例关系  统一spacing到0.5x0.5x0.5mm，也就是说96x96的patch对应现实中48...</description>
             <pubDate>2017-04-25 21:38:00 </pubDate>
             <link>http://localhost:4000/tech/luna.html</link>
             <guid isPermaLink="true">http://localhost:4000/tech/luna.html</guid>
@@ -112,15 +121,6 @@
             <pubDate>2017-01-01 17:34:00 </pubDate>
             <link>http://localhost:4000/write/Reply_2016.html</link>
             <guid isPermaLink="true">http://localhost:4000/write/Reply_2016.html</guid>
-        </item>
-        
-        <item>
-            <title>爱好：看电视</title>
-            <category>book</category>
-            <description>记单词时间～20172016十月  小戏骨          补锅      白毛女        校阅女孩六月  Person of Interest          共五季，诺兰弟弟担当编...</description>
-            <pubDate>2016-10-20 17:50:00 </pubDate>
-            <link>http://localhost:4000/book/watch_TV.html</link>
-            <guid isPermaLink="true">http://localhost:4000/book/watch_TV.html</guid>
         </item>
         
     </channel>
