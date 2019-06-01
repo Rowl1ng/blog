@@ -2,15 +2,125 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33bd1ed6-cc2e-4c35-8128-c6f06fcee756" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change beforePath="$PROJECT_DIR$/neural-network-fish" afterPath="$PROJECT_DIR$/neural-network-fish" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Creature.js" beforeDir="false" afterPath="$PROJECT_DIR$/Creature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/OOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/OOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/README 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/README 2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/README 3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/README 3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/README 4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/README 4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/activation-function.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/activation-function.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/alphago.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/alphago.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/attention.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/attention.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/backbone.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/backbone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/basics.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/basics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/bayesian.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/boost.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/boost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/caffe.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/caffe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/chapter1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/chapter1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/cnn.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/cnn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/code.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/code.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/convolution.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/convolution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/crf.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/crf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/criterion.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/criterion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/cython.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/cython.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/data_analyse.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/data_analyse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/data_analyse/jupyter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/data_analyse/numpy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/data_analyse/numpy/array.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/data_analyse/pandas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/data_analyse/scikit-learn.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/database.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/database.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/debug.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/deeplearning.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/deeplearning.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/differential.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/differential.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/distance.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/distance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/engineering.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/engineering.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/file.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/function.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/function.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/functional.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/functional.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/generality.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/generality.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/hua-hua/color.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/hua-hua/light.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/image_basics.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/image_basics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/inbox0.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/inbox0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/integral.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/integral.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/keras.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/keras.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/lane.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/lane.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/latex.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/latex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/layer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/layer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/linux.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/linux.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/linux/trainandtest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/linux/trainandtest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/loss-function.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/loss-function.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/mammogram.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/mammogram.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/material.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/material.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/math.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/math.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/matlab.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/matlab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/matrix.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/matrix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/method.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/method.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/metrics.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/metrics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/module.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/module.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/multiproccessing.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/multiproccessing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/music/gu-qin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/music/gu-qin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/nnfunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/nnfunction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/nnintro.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/nnintro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/nnpractice.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/nnpractice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/nnstructure.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/nnstructure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/normalization.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/normalization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/optimization.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/optimization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/optimization/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/optimization/introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/optimizer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/optimizer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/others.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/others.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/ping-hua-hua.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/ping-hua-hua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/practice.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/practice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/prefix.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/prefix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/preprocess.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/probability.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/probability.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming/froc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming/froc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming/matplotlib.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming/matplotlib.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming/opencv.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming/opencv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming/patch.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming/patch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming/skimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming/skimage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/python_programming/visualize.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/python_programming/visualize.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/pytorch.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/pytorch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/read-me.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/read-me.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/regulizer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/regulizer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/ren-wu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/ren-wu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/ri-ben-yu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/ri-ben-yu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/rnn.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/rnn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/roadnn.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/roadnn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/search_index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/segmentation.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/segmentation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/smo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/smo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/suffix.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/suffix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/superior.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/superior.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/svm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/svm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/synonym.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/synonym.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/tensorflow.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/tensorflow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/term.md.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/term.md.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/termsmd.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/termsmd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/theano.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/theano.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/verb.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/verb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/wen-ti.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/wen-ti.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/wen-ti/few-shot-learning.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/wen-ti/normalization.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/wen-ti/transfer-learning.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/wen-ti/yang-ben-bu-jun-heng.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/word2vec.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/word2vec.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/wu-jian-du-xue-xi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/wu-jian-du-xue-xi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/yi-liao-tu-xiang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/yi-liao-tu-xiang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mybook/yu-zhi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mybook/yu-zhi.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,107 +131,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Fish.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fish.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="1539">
+              <caret line="81" column="42" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="p5.min.js" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p5.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="3" column="7053" lean-forward="false" selection-start-line="3" selection-start-column="7053" selection-end-line="3" selection-end-column="7053" />
-              <folding />
+            <state relative-caret-position="57">
+              <caret line="3" column="7053" selection-start-line="3" selection-start-column="7053" selection-end-line="3" selection-end-column="7053" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fish.pde" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neural-network-fish/Fish.pde">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="741">
-              <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-              <folding />
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-              <folding />
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evolution.txt" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neural-network-fish/evolution.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="brain.txt" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/brain.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="Creature.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Creature.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3420">
-              <caret line="182" column="9" lean-forward="false" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
+            <state relative-caret-position="243">
+              <caret line="216" column="14" selection-start-line="216" selection-start-column="14" selection-end-line="216" selection-end-column="14" />
               <folding>
-                <element signature="e#0#42#0" expanded="false" />
+                <element signature="e#0#42#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Creature.pde" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neural-network-fish/Creature.pde">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3686">
-              <caret line="194" column="7" lean-forward="false" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="7" />
-              <folding />
+              <caret line="194" column="7" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Brain.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Brain.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="836">
-              <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding>
-                <element signature="e#0#42#0" expanded="false" />
+                <element signature="e#0#42#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Neuron.js" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Neuron.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding>
-                <element signature="e#0#42#0" expanded="false" />
+                <element signature="e#0#42#0" />
               </folding>
             </state>
           </provider>
@@ -158,13 +253,15 @@
       <find>Food</find>
       <find>r</find>
       <find>food</find>
+      <find>fill</find>
+      <find>width</find>
     </findStrings>
     <replaceStrings>
       <replace>var</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -173,16 +270,10 @@
         <option value="$PROJECT_DIR$/Brain.js" />
         <option value="$PROJECT_DIR$/neural-network-fish/README.md" />
         <option value="$PROJECT_DIR$/Neuron.js" />
-        <option value="$PROJECT_DIR$/Creature.js" />
         <option value="$PROJECT_DIR$/Fish.js" />
+        <option value="$PROJECT_DIR$/Creature.js" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
@@ -212,22 +303,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,16 +329,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="js.eslint.eslintPackage" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -323,9 +403,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -350,6 +427,9 @@
       <workItem from="1552653621279" duration="148000" />
       <workItem from="1552653900334" duration="964000" />
       <workItem from="1554814652138" duration="3702000" />
+      <workItem from="1558236106928" duration="3021000" />
+      <workItem from="1558588949923" duration="264000" />
+      <workItem from="1558764724787" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1552654996222</created>
@@ -362,417 +442,128 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31441000" />
+    <option name="totallyTimeSpent" value="35492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20789288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5235792" sideWeight="0.45384073" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49753347" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5082353" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.9201935" sideWeight="0.54615927" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33645955" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49753347" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20789288" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49753347" weight="0.32889965" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49722221" weight="0.5082353" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33645955" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.54615927" visible="true" weight="0.26626506" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.45384073" side_tool="true" weight="0.5235792" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32942554" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.49753347" weight="0.32889965" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Brain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/brain.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Neuron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Creature.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Brain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/brain.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Neuron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Creature.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/session2/01_drag_force/index.html" />
-    <entry file="file://$PROJECT_DIR$/Neuron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Creature.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Brain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Fish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="199" column="0" lean-forward="true" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/session2/01_drag_force/index.html" />
-    <entry file="file://$PROJECT_DIR$/Neuron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Creature.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Brain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addons/p5.sound.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/neural-network-fish/code/sketch.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Downloads/session2/01_drag_force/index.html" />
     <entry file="file://$PROJECT_DIR$/p5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
-          <caret line="7855" column="52" lean-forward="false" selection-start-line="7855" selection-start-column="52" selection-end-line="7855" selection-end-column="52" />
+          <caret line="7855" column="52" selection-start-line="7855" selection-start-column="52" selection-end-line="7855" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../kadenze/wekinator_examples-master/teaching_examples/DTW_Mouse_Explorer/DTW_Mouse_Explorer.pde" />
     <entry file="file://$PROJECT_DIR$/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state>
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/neural-network-fish/Brain.pde">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neural-network-fish/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="171">
-            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/neural-network-fish/README.md" />
     <entry file="file://$PROJECT_DIR$/neural-network-fish/Neuron.pde">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neural-network-fish/fish.jpg" />
-    <entry file="file://$PROJECT_DIR$/Brain.js">
+    <entry file="file://$PROJECT_DIR$/Fish.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1539">
+          <caret line="81" column="42" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/brain.txt">
+    <entry file="file://$PROJECT_DIR$/p5.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural-network-fish/evolution.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="57">
+          <caret line="3" column="7053" selection-start-line="3" selection-start-column="7053" selection-end-line="3" selection-end-column="7053" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neural-network-fish/Fish.pde">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
-          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural-network-fish/Creature.pde">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3686">
-          <caret line="194" column="7" lean-forward="false" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="7" />
-          <folding />
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Creature.js">
+    <entry file="file://$PROJECT_DIR$/neural-network-fish/evolution.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brain.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural-network-fish/Creature.pde">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="182" column="9" lean-forward="false" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
+        <state relative-caret-position="3686">
+          <caret line="194" column="7" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Brain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
           <folding>
-            <element signature="e#0#42#0" expanded="false" />
+            <element signature="e#0#42#0" />
           </folding>
         </state>
       </provider>
@@ -780,26 +571,20 @@
     <entry file="file://$PROJECT_DIR$/Neuron.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding>
-            <element signature="e#0#42#0" expanded="false" />
+            <element signature="e#0#42#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fish.js">
+    <entry file="file://$PROJECT_DIR$/Creature.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p5.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="7053" lean-forward="false" selection-start-line="3" selection-start-column="7053" selection-end-line="3" selection-end-column="7053" />
-          <folding />
+        <state relative-caret-position="243">
+          <caret line="216" column="14" selection-start-line="216" selection-start-column="14" selection-end-line="216" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#42#0" />
+          </folding>
         </state>
       </provider>
     </entry>
