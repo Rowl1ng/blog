@@ -65,7 +65,7 @@ links:
     url:          /about
     external:     false
 
-permalink: /:categories/:title.html
+permalink: blog/:categories/:title.html
 defaults:
   - values:
       layout: "default"
