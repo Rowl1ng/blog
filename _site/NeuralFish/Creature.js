@@ -189,11 +189,11 @@ var Creature = {
             var span = createVector(0,0);
             for (var i = 0; i < food.length; i++)
             {
-                span = p5.Vector.sub(food[i], this.location);
+                span = p5.Vector.sub(food[i], this.location); // distance betwen fish and food_i
                 if (span.mag() < this.r)
                 {
                     this.Contents+=5;
-                    return i+1;
+                    return i+1; // the id of food
                 }
             }
             return 0;
@@ -205,7 +205,7 @@ var Creature = {
             {
             var theta = this.velocity.heading() - PI/2;
             if (this.dead) {
-                fill(255, 0, 0);
+                fill(255, 0, 0); // red - dead
             } else {
                 fill(this.Color);
             }
