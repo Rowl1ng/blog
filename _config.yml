@@ -18,7 +18,7 @@ languages: ["en", "cn"]
 title: "Rowl1ng|黑客与画家"
 email: "ling.rowling.luo@gmail.com"
 description: "Tech & Art"
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+#baseurl: "/blog" # the subpath of your site, e.g. /blog
 #url: https://rowl1ng.com/blog # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: "Rowl1ng"
 github_username:  "Rowl1ng"
