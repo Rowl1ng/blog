@@ -38,16 +38,16 @@ plugins:
 
 links:
   - name:         TECH
-    url:          /tech
+    url:          /blog/tech
     external:     false
   - name:         ART
-    url:          /art
+    url:          /blog/art
     external:     false
   - name:         BOOK
-    url:          /book
+    url:          /blog/book
     external:     false
   - name:         WRITE
-    url:          /write
+    url:          /blog/write
     external:     false
   - name:         WIKI
     url:          /mybook
