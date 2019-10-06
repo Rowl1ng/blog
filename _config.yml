@@ -18,8 +18,8 @@ languages: ["en", "cn"]
 title: "Rowl1ng|黑客与画家"
 email: "ling.rowling.luo@gmail.com"
 description: "Tech & Art"
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://rowl1ng.com/blog" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /blog # the subpath of your site, e.g. /blog
+url: https://rowl1ng.com/blog # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: "Rowl1ng"
 github_username:  "Rowl1ng"
 signoff:          "Rowl1ng" # Your name
@@ -38,16 +38,16 @@ plugins:
 
 links:
   - name:         TECH
-    url:          /blog/tech
+    url:          /tech
     external:     false
   - name:         ART
-    url:          /blog/art
+    url:          /art
     external:     false
   - name:         BOOK
-    url:          /blog/book
+    url:          /book
     external:     false
   - name:         WRITE
-    url:          /blog/write
+    url:          /write
     external:     false
   - name:         WIKI
     url:          /mybook
