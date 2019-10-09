@@ -1,3 +1,3 @@
-rm -r /Users/luoling/Documents/WebstormProjects/rowl1ng.github.io/mybook
+rm -r /Users/luoling/Documents/WebstormProjects/blog/mybook
 gitbook build
-cp -r _book/ /Users/luoling/Documents/WebstormProjects/rowl1ng.github.io/mybook
+cp -r _book/ /Users/luoling/Documents/WebstormProjects/blog/mybook
