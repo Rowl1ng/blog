@@ -49,9 +49,6 @@ links:
   - name:         WRITE
     url:          /write
     external:     false
-  - name:         FISH
-    url:          /NeuralFish
-    external:     false
   - name:         ARCHIVE
     url:          /archives
     external:     false
