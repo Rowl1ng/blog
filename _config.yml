@@ -49,9 +49,6 @@ links:
   - name:         WRITE
     url:          /write
     external:     false
-  - name:         WIKI
-    url:          /mybook
-    external:     false
   - name:         FISH
     url:          /NeuralFish
     external:     false
