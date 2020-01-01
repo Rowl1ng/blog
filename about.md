@@ -53,6 +53,6 @@ Contact me: ling.rowling.luo@gmail.com
 
   [1]: https://liberxue.github.io/?liberxue
   [2]: http://rowl1ng.com/cv/Academic_CV.pdf
-  [3]: https://kqh.ac/
+  [3]: https://kqh.me
   [4]: http://freemind.pluskid.org/
   [5]: https://sivers.org/
