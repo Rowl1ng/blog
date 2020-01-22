@@ -1,22 +1,19 @@
 ---
-title:  Sketch VR Development Log
+description: "VR Development"
+title:  "Sketch VR Development Log"
 layout: blog
-background-image: http://static.zybuluo.com/sixijinling/ndghatp2hshzuvinrvq96c9a/colorpicker.PNG
 tech: true
+background-image: http://static.zybuluo.com/sixijinling/ndghatp2hshzuvinrvq96c9a/colorpicker.PNG
 istop: true
-mathjax: true
 date: 2020-1-22 14:00
 update: 2020-1-22 14:00
 category: tech
-description:  
 tags:
 - VR
-version:
-  current: English
-versions:
-  - 简体中文: #
-  - English: #
+- Unity
 ---
+
+
 
 
 # Raw Materials
