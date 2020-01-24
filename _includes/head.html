@@ -44,7 +44,7 @@
 
 <header id="header" class="header bg-white">
     <div class="navbar-container">
-        <a href="/?rowl1ng" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.baseurl }}/style/images/logo-rowl1ng.png" alt="{{ site.title }}"> </a>
+        <a href="{{ site.baseurl }}" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.baseurl }}/style/images/logo-rowl1ng.png" alt="{{ site.title }}"> </a>
         <div class="navbar-menu">
             {% for link in site.links %}
             <a href="{% unless link.external %}{{ site.baseurl }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
