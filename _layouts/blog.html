@@ -18,7 +18,7 @@
                     <div class="post-data">
                         <time datetime="{{ page.date | date: '%F %H:%M:%S'}}" itemprop="datePublished">发布时间：{{ page.date | date: "%F %H:%M:%S"}}</time>
                         <time datetime="{{ page.update | date: '%F %H:%M:%S'}}" itemprop="datePublished">更新时间：{{ page.update | date: "%F %H:%M:%S"}}</time>
-                        <a href="/tags#{{ page.category }}" title="访问 {{ page.category }}" data-hover="博客分类: {{ page.category }}">博客分类: {{ page.category }}</a>
+                        <a href="{{ site.baseurl}}/tags#{{ page.category }}" title="访问 {{ page.category }}" data-hover="博客分类: {{ page.category }}">博客分类: {{ page.category }}</a>
                         <!--busuanzi-->
                         <script async src="{{ site.baseurl}}/js/busuanzi.pure.mini.js">
                         </script>
@@ -32,14 +32,14 @@
                             {% assign tags_list = page.tags %}
                             {% if tags_list.first[0] == null %}
                                 {% for tag in tags_list %}
-                                <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
+                                <a href="{{ site.baseurl}}/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
                                     {{ tag }} <span>({{ site.tags[tag].size }})</span>
                                     {% unless forloop.last %}{% endunless %}
                                 </a>
                                 {% endfor %}
                             {% else %}
                                 {% for tag in tags_list %}
-                            <a href="/tags#{{ tag[0] }}" title="访问 {{ tag[0] }}" data-hover="{{tag[0]}}">
+                            <a href="{{ site.baseurl}}/tags#{{ tag[0] }}" title="访问 {{ tag[0] }}" data-hover="{{tag[0]}}">
                                 {{ tag[0] }} <span>({{ tag[1].size }})</span>
                                 {% unless forloop.last %}{% endunless %}
                             </a>
@@ -65,14 +65,14 @@
                         {% assign tags_list = page.tags %}
                         {% if tags_list.first[0] == null %}
                             {% for tag in tags_list %}
-                                <a href="/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
+                                <a href="{{ site.baseurl}}/tags#{{ tag }}" title="访问{{ tag }}" data-hover="{{ tag }}">
                                     {{ tag }} <span>({{ site.tags[tag].size }})</span>
                                     {% unless forloop.last %}{% endunless %}
                                 </a>
                             {% endfor %}
                         {% else %}
                             {% for tag in tags_list %}
-                                <a href="/tags#{{ tag[0] }}" title="访问{{ tag[0] }}"  data-hover="{{ tag[0] }}">
+                                <a href="{{ site.baseurl}}/tags#{{ tag[0] }}" title="访问{{ tag[0] }}"  data-hover="{{ tag[0] }}">
                                     {{ tag[0] }} <span>({{ tag[1].size }})</span>
                                     {% unless forloop.last %}{% endunless %}
                                 </a>
