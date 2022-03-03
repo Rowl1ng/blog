@@ -1,15 +1,5 @@
 ./_site
 .idea/inspectionProfiles/
 .idea/workspace.xml
-_site/2012/
-_site/2013/
-_site/2014/
-_site/2015/
-_site/2016/09/12/
-_site/2016/09/25/
-_site/2016/10/20/
-_site/2017/
-_site/about.html
-_site/rowl1ngpage2/
-_site/style/images/logo-rowl1ng.png
-_site/write/
+_site/
+bin/
