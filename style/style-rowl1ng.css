@@ -293,6 +293,7 @@ pre code::after {font-size: 1rem;color: #BFBFBF;position: absolute;top: 5px;righ
 /* ==========================================================================
    #directory
    ========================================================================== */
+/* .{position:relative;z-index:0;max-width:720px;margin-right:auto!important;margin-left:auto!important;text-align:right;} */
 .directory-content{position:relative;z-index:0;max-width:720px;margin-right:auto!important;margin-left:auto!important;text-align:right;}
 .directory-content.initial{opacity:0;}
 .directory-content.pinned{opacity:1;}
