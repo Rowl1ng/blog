@@ -4,7 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/195gt9ihi0rqc1x6ix6609v8/psb%20%281%29.gif
 art: true
 date: 2017-10-5 18:32
-update: 2022-3-10
+update: 2024-1-12 00:00
 category: art
 description:  Animation experiments. Update every year~
 tags:
@@ -12,11 +12,22 @@ tags:
 ---
 
 
+# 2023
+
+![动画.gif](https://s2.loli.net/2024/01/12/zyqJTFur75dSbha.gif)
+
+|1|2|3|
+|:-:|:-:|:-:|
+|![动画2.GIF](https://s2.loli.net/2024/01/12/EQeDjMYZghAGBmu.gif)|![动画3.gif](https://s2.loli.net/2024/01/12/VTNysRbUkcj4fYm.gif)|![动画4.gif](https://s2.loli.net/2024/01/12/27ZEyednf8oVqGY.gif)|
+
+
+
 # 2022
 
 虎年大吉！
 
 ![未命名作品.gif](https://s2.loli.net/2022/03/10/a2UfbLO1HTwPjol.gif)
+
 
 # 2017
 
