@@ -1,22 +1,127 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>{{ site.title }}</title>
-        <description>{{ site.description }}</description>
-        <link>{{ site.baseurl }}</link>
-        <atom:link href="{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml" />
-        {% for post in site.posts limit:13%}
+        <title>Rowl1ng|黑客与画家</title>
+        <description>Tech & Art</description>
+        <link>/blog</link>
+        <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml" />
+        
         <item>
-            <title>{{ post.title }}</title>
-            <category>{{ post.category }}</category>
-            <description>{{ post.content | strip_html | strip_newlines | truncate: 100 }}</description>
-            <pubDate>{{ post.date | date: "%F %H:%M:%S " }}</pubDate>
-            <link>{{ site.baseurl }}{{ post.url }}</link>
-            <guid isPermaLink="true">{{ site.baseurl }}{{ post.url }}</guid>
+            <title>单人间 2024</title>
+            <category>write</category>
+            <description>Work学业  毕业：          viva slides：                  scripts          用现在的眼光看第一篇工作的slides感觉不够简洁直观，得...</description>
+            <pubDate>2025-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Room.html</link>
+            <guid isPermaLink="true">/blog/write/Room.html</guid>
         </item>
-        {% endfor %}
+        
+        <item>
+            <title>散步去 2023</title>
+            <category>write</category>
+            <description>Work  3D VR sketch to shape generation:          Research：                  sketch to shape recon...</description>
+            <pubDate>2024-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Wander_2023.html</link>
+            <guid isPermaLink="true">/blog/write/Wander_2023.html</guid>
+        </item>
+        
+        <item>
+            <title>蒙太奇 2022</title>
+            <category>write</category>
+            <description>Work  jupyter notebook for stroke filtering；3DV21的project发布到github；制作sketch的gif图  upload sketchVR...</description>
+            <pubDate>2023-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Montage_2022.html</link>
+            <guid isPermaLink="true">/blog/write/Montage_2022.html</guid>
+        </item>
+        
+        <item>
+            <title>少年游 2021</title>
+            <category>write</category>
+            <description>今年我的胃罢工了很长时间，一下子被生活迎面重击，倒地不起，但越躺平情况只会越严重，于是间歇性工作、持续性偷懒。今年最喜欢的一幅画：WorkProjectExperiments  critical...</description>
+            <pubDate>2022-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Youth_2021.html</link>
+            <guid isPermaLink="true">/blog/write/Youth_2021.html</guid>
+        </item>
+        
+        <item>
+            <title>微信视频的漫画说明书</title>
+            <category>art</category>
+            <description></description>
+            <pubDate>2021-10-14 00:00:00 </pubDate>
+            <link>/blog/art/guide.html</link>
+            <guid isPermaLink="true">/blog/art/guide.html</guid>
+        </item>
+        
+        <item>
+            <title>在一起 2020</title>
+            <category>write</category>
+            <description>今年的情况很不一样，所以总结的写法也调整一下好了（其实就是按往年的流水帐模式好不容易整理好结果没保存，泪）。工作TeachingFor the first time I tried to hel...</description>
+            <pubDate>2021-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Together_2020.html</link>
+            <guid isPermaLink="true">/blog/write/Together_2020.html</guid>
+        </item>
+        
+        <item>
+            <title>二十五首</title>
+            <category>art</category>
+            <description>字：Allblues画：Rowl1ng有约1.《与梦得沽酒闲饮且约后期》风月2.1 《兰亭集序》2.2 《玉蝴蝶》2.3 《前赤壁赋》2.4 《如梦令》芳丛3.1 《晓出净慈寺送林子方》3.2 ...</description>
+            <pubDate>2020-01-24 02:42:00 </pubDate>
+            <link>/blog/art/24-poems.html</link>
+            <guid isPermaLink="true">/blog/art/24-poems.html</guid>
+        </item>
+        
+        <item>
+            <title>Sketch VR Development Log</title>
+            <category>tech</category>
+            <description>Raw Materials  Devices:          Oculus Rift: headset + handset x 2 + sensor x 2      Dell deskto...</description>
+            <pubDate>2020-01-22 14:00:00 </pubDate>
+            <link>/blog/tech/Sketch-VR.html</link>
+            <guid isPermaLink="true">/blog/tech/Sketch-VR.html</guid>
+        </item>
+        
+        <item>
+            <title>心所向 2019</title>
+            <category>write</category>
+            <description>工作申请  申请中：          skype，做ppt，面试；写research proposal；      开始申请ATAS（补充Why do you want to study th...</description>
+            <pubDate>2020-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Heart_2019.html</link>
+            <guid isPermaLink="true">/blog/write/Heart_2019.html</guid>
+        </item>
+        
+        <item>
+            <title>待从头 2018</title>
+            <category>write</category>
+            <description>序决定写些正经文字，以示进步。今年的最大收获大概是：己所不能，必求于人。因为申请phd的缘故，一门心思跳出了固有的小圈子，发现大世界里有太多太多力有不逮。也因为申请phd的缘故，最近第一次写pe...</description>
+            <pubDate>2018-12-04 21:11:00 </pubDate>
+            <link>/blog/write/Again_2018.html</link>
+            <guid isPermaLink="true">/blog/write/Again_2018.html</guid>
+        </item>
+        
+        <item>
+            <title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</title>
+            <category>tech</category>
+            <description>Choose your language :简体中文EnglishDetectron（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。本...</description>
+            <pubDate>2018-03-22 17:00:00 </pubDate>
+            <link>/blog/tech/faster-rcnn.html</link>
+            <guid isPermaLink="true">/blog/tech/faster-rcnn.html</guid>
+        </item>
+        
+        <item>
+            <title>愉快地画头像</title>
+            <category>art</category>
+            <description>20212020201820162014~ 2012</description>
+            <pubDate>2018-03-19 22:56:00 </pubDate>
+            <link>/blog/art/avatar.html</link>
+            <guid isPermaLink="true">/blog/art/avatar.html</guid>
+        </item>
+        
+        <item>
+            <title>各种英语考试的经验</title>
+            <category>book</category>
+            <description>托福 : 104阅读 + 听力计时刷tpo  网易云的托福词以类记，午睡也能“听单词”了。托福是3264个单词，不多不多。推荐听podcast，比如每天早上一起床就开始听。推荐的podcast：...</description>
+            <pubDate>2018-03-19 18:50:00 </pubDate>
+            <link>/blog/book/English.html</link>
+            <guid isPermaLink="true">/blog/book/English.html</guid>
+        </item>
+        
     </channel>
 </rss>

@@ -1,45 +1,1165 @@
----
-title: 全部标签
-description: "标签分类的博文"
----
-<div class="main-content archive-page clearfix">
-    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-    {% assign tags_list = site_tags | split:',' | sort %}
+
+<!DOCTYPE html>
+<html lang="cn" data-scribe-reduced-action-queue="true">
+<!--<html lang="zh-cn" data-scribe-reduced-action-queue="true">-->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>Rowl1ng|黑客与画家</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>全部标签 - Rowl1ng|黑客与画家</title>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="全部标签 - Rowl1ng|黑客与画家">
+<meta name="twitter:keywords"  content="    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% end..." property='og:description' />
+<meta property="og:type" content="article">
+<meta property="og:title" content="全部标签">
+<!--<meta property="og:title" content="全部标签 - Rowl1ng|黑客与画家">-->
+<meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="og:keywords"  content="    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% end..." property='og:description' />
+<meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
+<link rel="icon" type="image/png" href="/blog/style/favicons/favicon.ico" />
+<link href="/blog/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
+<link rel="canonical" href="/blog/">
+<link rel="alternate" type="application/rss+xml" title="Rowl1ng" href="/blog/feed.xml">
+<meta charset="UTF-8">
+<!--<link rel="manifest" href="/manifest.json">-->
+<link rel="shortcut icon" href="/blog/style/favicons/favicon.ico" type="image/x-icon">
+<meta name="keywords"  content="    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% end..." property='og:description' />
+<meta name="description" content="nothing is more practicla than a good theory" />
+<link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+
+<link href="/blog/style/style-rowl1ng.css" rel="stylesheet">
+<link href="/blog/style/tocbot.css" rel="stylesheet">
+
+
+    <meta content='/blog' property='og:url' />
+    <meta content="Tech & Art" property='og:description' />
+    <meta content="blog" property="og:type" />
+
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-71226909-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+<header id="header" class="header bg-white">
+    <div class="navbar-container">
+        <a href="/blog" title="访问 Rowl1ng|黑客与画家" class="navbar-logo"> <img src="/blog/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家"> </a>
+        <div class="navbar-menu">
+            
+            <a href="/blog/tech">TECH</a>
+            
+            <a href="/blog/art">ART</a>
+            
+            <a href="/blog/book">BOOK</a>
+            
+            <a href="/blog/write">WRITE</a>
+            
+            <a href="/blog/archives">ARCHIVE</a>
+            
+            <a href="/blog/tags">TAGS</a>
+            
+            <a href="/blog/about">ABOUT</a>
+            
+        </div>
+        <div class="navbar-search" onclick="">
+            <span class="icon-search"></span>
+            <form id="cb-search-btn" role="search">
+                        <span class="search-box">
+                             <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
+                        </span>
+            </form>
+        </div>
+        <div class="navbar-mobile-menu" onclick="">
+            <span class="icon-menu cross"><span class="middle"></span></span>
+            <ul>
+                
+                <li><a href="/blog/tech">TECH</a></li>
+                
+                <li><a href="/blog/art">ART</a></li>
+                
+                <li><a href="/blog/book">BOOK</a></li>
+                
+                <li><a href="/blog/write">WRITE</a></li>
+                
+                <li><a href="/blog/archives">ARCHIVE</a></li>
+                
+                <li><a href="/blog/tags">TAGS</a></li>
+                
+                <li><a href="/blog/about">ABOUT</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</header>
+
+    </head>
+    <body class="bg-grey" gtools_scp_screen_capture_injected="true"><div id="MathJax_Message" style="display: none;"></div>
+        <main class="tl f6 relative pa4 pa5-ns overflow-hidden">
+
+        
+            <div class="mb4">
+                
+                <h1 class="ttu f3 mt0 lh-title cb mb2">
+                    
+                    全部标签
+                </h1>
+                
+            </div>
+        
+        <div class="markdown-body">
+            <div class="main-content archive-page clearfix">
+    
+    
     <h3 class="post-title" itemprop="name headline">标签分类的博文--点击自动查找相应`Tags`</h3>
     <div class="post-data">
         <div class="post-tags">
-            {% for item in (0..site.tags.size)  %}{% unless forloop.last %}
-                {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-                <a href="#{{ this_word }}">{{ this_word }} <span>({{ site.tags[this_word].size }})个</span></a>
-            {% endunless %}{% endfor %}
+            
+                
+                <a href="#CNN">CNN <span>(1)个</span></a>
+            
+                
+                <a href="#NLP">NLP <span>(2)个</span></a>
+            
+                
+                <a href="#Unity">Unity <span>(1)个</span></a>
+            
+                
+                <a href="#VR">VR <span>(1)个</span></a>
+            
+                
+                <a href="#chatbot">chatbot <span>(1)个</span></a>
+            
+                
+                <a href="#object detection">object detection <span>(1)个</span></a>
+            
+                
+                <a href="#书籍">书籍 <span>(1)个</span></a>
+            
+                
+                <a href="#动画">动画 <span>(1)个</span></a>
+            
+                
+                <a href="#医疗图像">医疗图像 <span>(1)个</span></a>
+            
+                
+                <a href="#国画">国画 <span>(1)个</span></a>
+            
+                
+                <a href="#图像分割">图像分割 <span>(1)个</span></a>
+            
+                
+                <a href="#年终总结">年终总结 <span>(9)个</span></a>
+            
+                
+                <a href="#影视">影视 <span>(1)个</span></a>
+            
+                
+                <a href="#摄影">摄影 <span>(3)个</span></a>
+            
+                
+                <a href="#政治">政治 <span>(1)个</span></a>
+            
+                
+                <a href="#旅游">旅游 <span>(2)个</span></a>
+            
+                
+                <a href="#明信片">明信片 <span>(2)个</span></a>
+            
+                
+                <a href="#水彩">水彩 <span>(2)个</span></a>
+            
+                
+                <a href="#深度学习">深度学习 <span>(1)个</span></a>
+            
+                
+                <a href="#漫画">漫画 <span>(1)个</span></a>
+            
+                
+                <a href="#英语">英语 <span>(1)个</span></a>
+            
+                
+                <a href="#语言">语言 <span>(1)个</span></a>
+            
+                
+                <a href="#语音处理">语音处理 <span>(1)个</span></a>
+            
+                
+                <a href="#音乐">音乐 <span>(1)个</span></a>
+            
         </div>
     </div>
 </div>
 <div class="main-content archive-page" >
-    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-        {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-        <div id="{{ this_word }}" class="post-lists" id="{{ this_word }}">
+    
+        
+        <div id="CNN" class="post-lists" id="CNN">
             <div class="categorys-item">
                 <div class="categorys-title">
-                    {{ this_word }} : {{ site.tags[this_word].size }}
+                    CNN : 1
                 </div>
-                {% for post in site.tags[this_word] %}{% if post.title != null %}
+                
                     <div class="post-list-item" >
                         <div class="post-list-item-container">
                             <div class="item-label">
                                 <div class="item-title" >
-                                    <a href="{{ site.baseurl }}{{ post.url }}" data-hover="{{ post.title }}">{{ post.title }}</a>
+                                    <a href="/blog/tech/RoadNN.html" data-hover="裂缝识别">裂缝识别</a>
                                 </div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-date">
-                                        <a href="/archives#{{ post.date | date: "%Y"}}" data-hover="{{ post.date | date: "%F %H:%M:%S "}}">	{{ post.date | date: "%F %H:%M:%S "}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#{{ post.date | date: "%Y"}}" data-hover="{{ post.category }}">{{ post.category }}</a>
+                                        <a href="/archives#2015" data-hover="2015-10-18 11:12:00 ">	2015-10-18 11:12:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2015" data-hover="tech">tech</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {% endif %}{% endfor %}
+                
             </div>
         </div>
-    {% endunless %}{% endfor %}
+    
+        
+        <div id="NLP" class="post-lists" id="NLP">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    NLP : 2
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/chatbot.html" data-hover="基于Rasa_NLU的微信chatbot">基于Rasa_NLU的微信chatbot</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-11-05 00:00:00 ">	2017-11-05 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/word2vec.html" data-hover="How to learn word2vec">How to learn word2vec</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2015" data-hover="2015-12-25 11:12:00 ">	2015-12-25 11:12:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2015" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="Unity" class="post-lists" id="Unity">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    Unity : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/Sketch-VR.html" data-hover="Sketch VR Development Log">Sketch VR Development Log</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2020" data-hover="2020-01-22 14:00:00 ">	2020-01-22 14:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2020" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="VR" class="post-lists" id="VR">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    VR : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/Sketch-VR.html" data-hover="Sketch VR Development Log">Sketch VR Development Log</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2020" data-hover="2020-01-22 14:00:00 ">	2020-01-22 14:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2020" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="chatbot" class="post-lists" id="chatbot">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    chatbot : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/chatbot.html" data-hover="基于Rasa_NLU的微信chatbot">基于Rasa_NLU的微信chatbot</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-11-05 00:00:00 ">	2017-11-05 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="object detection" class="post-lists" id="object detection">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    object detection : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/faster-rcnn.html" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2018" data-hover="2018-03-22 17:00:00 ">	2018-03-22 17:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2018" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="书籍" class="post-lists" id="书籍">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    书籍 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/book/reading-list.html" data-hover="Reading List">Reading List</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-03-21 17:50:00 ">	2016-03-21 17:50:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="book">book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="动画" class="post-lists" id="动画">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    动画 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/animation.html" data-hover="动画笔记">动画笔记</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-10-05 18:32:00 ">	2017-10-05 18:32:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="医疗图像" class="post-lists" id="医疗图像">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    医疗图像 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/luna.html" data-hover="肺部结节检测">肺部结节检测</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-04-25 21:38:00 ">	2017-04-25 21:38:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="国画" class="post-lists" id="国画">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    国画 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/fan.html" data-hover="何事秋风空画扇">何事秋风空画扇</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-10-31 16:00:00 ">	2017-10-31 16:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="图像分割" class="post-lists" id="图像分割">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    图像分割 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/RoadNN.html" data-hover="裂缝识别">裂缝识别</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2015" data-hover="2015-10-18 11:12:00 ">	2015-10-18 11:12:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2015" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="年终总结" class="post-lists" id="年终总结">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    年终总结 : 9
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Room.html" data-hover="单人间 2024">单人间 2024</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2025" data-hover="2025-01-01 00:00:00 ">	2025-01-01 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2025" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Wander_2023.html" data-hover="散步去 2023">散步去 2023</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2024" data-hover="2024-01-01 00:00:00 ">	2024-01-01 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2024" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Montage_2022.html" data-hover="蒙太奇 2022">蒙太奇 2022</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2023" data-hover="2023-01-01 00:00:00 ">	2023-01-01 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2023" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Youth_2021.html" data-hover="少年游 2021">少年游 2021</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2022" data-hover="2022-01-01 00:00:00 ">	2022-01-01 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2022" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Together_2020.html" data-hover="在一起 2020">在一起 2020</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2021" data-hover="2021-01-01 00:00:00 ">	2021-01-01 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2021" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Heart_2019.html" data-hover="心所向 2019">心所向 2019</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2020" data-hover="2020-01-01 00:00:00 ">	2020-01-01 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2020" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Again_2018.html" data-hover="待从头 2018">待从头 2018</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2018" data-hover="2018-12-04 21:11:00 ">	2018-12-04 21:11:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2018" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Bye_2017.html" data-hover="再见啦 2017">再见啦 2017</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-12-31 14:24:00 ">	2017-12-31 14:24:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Reply_2016.html" data-hover="请回答 2016">请回答 2016</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-01-01 17:34:00 ">	2017-01-01 17:34:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="影视" class="post-lists" id="影视">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    影视 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/book/watch_TV.html" data-hover="爱好：看电视">爱好：看电视</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-10-20 17:50:00 ">	2016-10-20 17:50:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="book">book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="摄影" class="post-lists" id="摄影">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    摄影 : 3
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/Photography.html" data-hover="摄影笔记">摄影笔记</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-09-25 21:23:00 ">	2016-09-25 21:23:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/Sichuan.html" data-hover="四川之行">四川之行</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-09-12 21:23:00 ">	2016-09-12 21:23:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Shandong.html" data-hover="在山的那边海的那边">在山的那边海的那边</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2015" data-hover="2015-03-24 19:54:00 ">	2015-03-24 19:54:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2015" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="政治" class="post-lists" id="政治">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    政治 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/book/Socialism.html" data-hover="《观念的水位》+《柏林墙》">《观念的水位》+《柏林墙》</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-01-03 17:08:00 ">	2017-01-03 17:08:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="book">book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="旅游" class="post-lists" id="旅游">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    旅游 : 2
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/Sichuan.html" data-hover="四川之行">四川之行</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-09-12 21:23:00 ">	2016-09-12 21:23:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/write/Shandong.html" data-hover="在山的那边海的那边">在山的那边海的那边</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2015" data-hover="2015-03-24 19:54:00 ">	2015-03-24 19:54:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2015" data-hover="write">write</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="明信片" class="post-lists" id="明信片">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    明信片 : 2
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/24-poems.html" data-hover="二十五首">二十五首</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2020" data-hover="2020-01-24 02:42:00 ">	2020-01-24 02:42:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2020" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/postcard.html" data-hover="明信片">明信片</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-09-15 21:23:00 ">	2016-09-15 21:23:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="水彩" class="post-lists" id="水彩">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    水彩 : 2
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/fan.html" data-hover="何事秋风空画扇">何事秋风空画扇</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-10-31 16:00:00 ">	2017-10-31 16:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/postcard.html" data-hover="明信片">明信片</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-09-15 21:23:00 ">	2016-09-15 21:23:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="深度学习" class="post-lists" id="深度学习">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    深度学习 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/phoneme.html" data-hover="基于音素识别的语音相似度研究">基于音素识别的语音相似度研究</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-08-01 13:27:00 ">	2017-08-01 13:27:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="漫画" class="post-lists" id="漫画">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    漫画 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/guide.html" data-hover="微信视频的漫画说明书">微信视频的漫画说明书</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2021" data-hover="2021-10-14 00:00:00 ">	2021-10-14 00:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2021" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="英语" class="post-lists" id="英语">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    英语 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/book/watch_TV.html" data-hover="爱好：看电视">爱好：看电视</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2016" data-hover="2016-10-20 17:50:00 ">	2016-10-20 17:50:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2016" data-hover="book">book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="语言" class="post-lists" id="语言">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    语言 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/book/English.html" data-hover="各种英语考试的经验">各种英语考试的经验</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2018" data-hover="2018-03-19 18:50:00 ">	2018-03-19 18:50:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2018" data-hover="book">book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="语音处理" class="post-lists" id="语音处理">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    语音处理 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/tech/phoneme.html" data-hover="基于音素识别的语音相似度研究">基于音素识别的语音相似度研究</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-08-01 13:27:00 ">	2017-08-01 13:27:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="tech">tech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+        
+        <div id="音乐" class="post-lists" id="音乐">
+            <div class="categorys-item">
+                <div class="categorys-title">
+                    音乐 : 1
+                </div>
+                
+                    <div class="post-list-item" >
+                        <div class="post-list-item-container">
+                            <div class="item-label">
+                                <div class="item-title" >
+                                    <a href="/blog/art/fan.html" data-hover="何事秋风空画扇">何事秋风空画扇</a>
+                                </div>
+                                <div class="item-meta clearfix">
+                                    <div class="item-meta-date">
+                                        <a href="/archives#2017" data-hover="2017-10-31 16:00:00 ">	2017-10-31 16:00:00 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives#2017" data-hover="art">art</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
 </div>
+
+        </div>
+        
+        </main>
+        
+
+        <footer class="footer bg-white">
+    <div class="footer-social">
+        <div class="footer-container clearfix">
+            <div class="social-list">
+                <!--<a class="social segmentfault" target="blank" href="https://segmentfault.com/u/rowl1ng" title="访问 LiberXue_Twitter" data-hover="Segmentfault">Segmentfault</a>-->
+                <a class="social github" target="blank" href="https://github.com/rowl1ng" title="访问 Rowl1ng_Github" data-hover="GitHub">GitHub</a>
+                <a class="social deviantart" target="blank" href="https://sixijinling.deviantart.com/" title="访问 Rowl1ng_deviantart" data-hover="deviantart">Deviantart</a>
+                <a class="social bilibili" target="blank" href="https://space.bilibili.com/3556743/#!/index" title="访问 Rowl1ng_bilibili" data-hover="bilibili">bilibili</a>
+                <!--<a class="social twitter" target="blank" href="http://twitter.com/rowl1ng" title="访问 LiberXue_Twitter" data-hover="Twitter">Twitter</a>-->
+                <!--<a class="social stackoverflow" target="blank" href="https://stackoverflow.com/users/6902190/rowl1ng" title="访问 LiberXue_stackoverflow" data-hover="StackOverflow">StackOverflow</a>-->
+                <a class="social douban" target="blank" href="https://www.douban.com/people/rowl1ng/" title="访问 Rowl1ng_douban" data-hover="douban">douban</a>
+                <a class="social rss" target="blank" href="/feed.xml"title="访问 Rowl1ng_RSS" data-hover="RSS">RSS</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-meta">
+        <div class="footer-container">
+            <div class="meta-item meta-copyright">
+                <div class="meta-copyright-info">
+                    <a href="/" class="info-logo">
+                        <img src="/blog/style/images/logo-rowl1ng.png"   title="访问 Rowl1ng_blog" data-hover="Rowl1ng_blog" alt="Rowl1ng_blog" /> </a>
+                    <div class="info-text">
+                        <p>Theme is <a href="http://rowl1ng.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll Rowl1ng主题"  data-hover="Jekyll Rowl1ng"target="_blank">Jekyll rowl1ng</a> by <a href="http://rowl1ng.com/about" target="_blank">Rowl1ng</a></p>
+                        <p>Powered by <a href="/blog/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
+                        <p>&copy; 2024 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
+                        <p>
+                            <span id="busuanzi_container_site_uv" style="display: inline">
+                           本站 UV <a href="http://ibruce.info" target="_blank"><span id="busuanzi_value_site_uv"></span></a>
+                            </span>
+                            本站 PV <span id="busuanzi_container_site_pv" style="display: inline"></span>
+                                <span id="busuanzi_value_site_pv"></span>
+                        </p>
+                        <!--<p>总计文章：篇</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="meta-item meta-posts">
+                <h3 class="meta-title">置顶文章</h3>
+                <!--置顶-->
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a href=" /blog/tech/Sketch-VR.html" title="访问 Sketch VR Development Log" data-hover="Sketch VR Development Log">Sketch VR Development Log</a></li>
+                
+                
+                
+                
+                
+                
+                
+                <li><a href=" /blog/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a href=" /blog/tech/chatbot.html" title="访问 基于Rasa_NLU的微信chatbot" data-hover="基于Rasa_NLU的微信chatbot">基于Rasa_NLU的微信chatbot</a></li>
+                
+                
+                <!--置顶-->
+            </div>
+            <div class="meta-item meta-comments">
+                <h3 class="meta-title">最新文章</h3>
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                
+                <!---->
+                    <li><a href=" /blog/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
+                <!---->
+                
+                <!---->
+                
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
+<script src="/blog/search/js/cb-search.js"></script>
+<script>
+    $(function () {
+        setTimeout(function () {
+            $('code').removeClass('hljs');
+            $('code').removeClass('language');
+        }, 90);
+    });
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+    </body>
+
+
+</html>
