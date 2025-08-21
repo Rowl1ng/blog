@@ -16,11 +16,8 @@ $(function () {
         };
     }
 
-    // 自动拼接 baseurl
-    var baseurl = "{{ site.baseurl }}";
-    if (!baseurl.endsWith("/")) {
-        baseurl += "/";
-    }
+    // 使用全局 BASEURL，如果没有定义则默认为根目录 "/"
+    var baseurl = window.BASEURL || "/";
     var searchPath = baseurl + "search/cb-search.json";
 
     $.getJSON(searchPath)
