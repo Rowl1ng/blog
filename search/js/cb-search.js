@@ -16,7 +16,14 @@ $(function () {
         };
     }
 
-    $.getJSON("/search/cb-search.json")
+    // 自动拼接 baseurl
+    var baseurl = "{{ site.baseurl }}";
+    if (!baseurl.endsWith("/")) {
+        baseurl += "/";
+    }
+    var searchPath = baseurl + "search/cb-search.json";
+
+    $.getJSON(searchPath)
         .done(function (data) {
             if (data.code === 0 && data.data && data.data.length > 0) {
                 data.data.forEach(function (item) {
@@ -39,7 +46,6 @@ $(function () {
 
                 // 监听选择
                 $("#cb-search-content").bind("typeahead:select", function (ev, suggestion) {
-
                     var idx = names.indexOf(suggestion);
                     if (idx !== -1) {
                         window.location.href = urls[idx].trim();
