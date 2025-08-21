@@ -1,6 +1,30 @@
-./_site
 .idea/inspectionProfiles/
 .idea/workspace.xml
-_site/
 bin/
+
+# Ruby / Bundler
+/.bundle/
+/vendor/bundle
+Gemfile.lock
+
+# Jekyll build output
+/_site
+.sass-cache
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node / npm (如果用了)
 node_modules/
+
+# VSCode
+.vscode/
+
+# Devcontainer
+.devcontainer/devcontainer.json
+.devcontainer/Dockerfile
+
+# Logs / temp
+*.log
+tmp/

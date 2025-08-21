@@ -1,0 +1,44 @@
+name: Build & Deploy Jekyll
+
+on:
+  push:
+    branches: ["source"]   # 🚀 只监听 source 分支的提交
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 允许推送到 master 分支
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: source   # 确保检出 source 分支
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle install --jobs 4 --retry 3
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build -d ./_site
+
+      - name: Deploy to master branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: master   # 🚀 输出到 master 分支

@@ -1,10 +1,10 @@
 ---
 title:  《观念的水位》+《柏林墙》
 layout: blog
-background-image: http://static.zybuluo.com/sixijinling/piogmpt0ujvdu7zvs5ma08mb/psb.jpeg
+background-image: 
 book: true
 date: 2017-1-3 17:08
-update: 2017-1-3 17:08
+update: 2017-01-03 17:08:00
 category: book
 description:  final paper of Practical Teaching of Socialism with Chinese Characteristics
 tags:

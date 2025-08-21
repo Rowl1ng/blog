@@ -1,51 +1,55 @@
 ---
+layout: default
+pagination:
+  enabled: true
 ---
 
 <div class="main-content index-page clearfix ">
     <div class="post-lists">
         <div class="post-lists-body">
-            {% for posts in paginator.posts %}
+            {% for post in paginator.posts %}
             <div class="post-list-item">
                 <div class="post-list-item-container">
-                    <div class="item-thumb  bg-{{posts.background }}" style="background-image:url('{{posts.background-image }}');"></div>
-                    <a href="{{ site.baseurl }}{{ posts.url }}">
+                    <div class="item-thumb bg-{{ post.background }}" style="background-image:url('{{ post.background-image }}');"></div>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
                         <div class="item-desc">
-                            <p>{{ posts.description| strip_html | strip_newlines | truncate: 100 }}</p>
+                            <p>{{ post.description | strip_html | strip_newlines | truncate: 100 }}</p>
                         </div>
                     </a>
-                    <div class="item-slant reverse-slant  bg-{{ posts.background }}"></div>
+                    <div class="item-slant reverse-slant bg-{{ post.background }}"></div>
                     <div class="item-slant"></div>
                     <div class="item-label">
-                        <div class="item-title"><a href="{{ site.baseurl }}{{ posts.url }}" title="访问 {{ posts.title }}"  data-hover="{{ posts.title }}">{{ posts.title }}</a></div>
+                        <div class="item-title">
+                            <a href="{{ site.baseurl }}{{ post.url }}" 
+                               title="访问 {{ post.title }}"  
+                               data-hover="{{ post.title }}">{{ post.title }}</a>
+                        </div>
                         <div class="item-meta clearfix">
-                            {% if posts.tech %}
-                            <div class="item-meta-ico bg-ico-code" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            {% else %}
-                                {% if posts.art %}
+                            {% if post.tech %}
+                                <div class="item-meta-ico bg-ico-code" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+                            {% elsif post.art %}
                                 <div class="item-meta-ico bg-ico-design" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                                {% else %}
-                                    {% if posts.write %}
-                                    <div class="item-meta-ico bg-ico-note" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-
-                                    {% else %}
-                                    <div class="item-meta-ico bg-ico-book" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                                    {% endif %}
-
-                                {% endif %}
+                            {% elsif post.write %}
+                                <div class="item-meta-ico bg-ico-note" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
+                            {% else %}
+                                <div class="item-meta-ico bg-ico-book" style="background: url('{{ site.baseurl }}/style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                             {% endif %}
-                            <div class="item-meta-cat">
-                                <a href="/tags#{{ posts.category }}" title="访问 {{ posts.category }}" data-hover="{{ posts.category }}">{{ posts.category }}</a>
-                                <!--<a href="/archives#{{ posts.date | date: "%Y"}}" title="访问 {{ posts.date | date: "%Y"}}" data-hover="{{ posts.date | date: "%F %H:%M"}}">{{ posts.date | date: "%F %H:%M"}}</a>-->
-                                <a href="/archives#{{ posts.update | date: "%Y"}}" title="访问 {{ posts.update | date: "%Y"}}" data-hover="{{ posts.update | date: "%F %H:%M"}}">{{ posts.update | date: "%F %H:%M"}}</a>
 
-                            </div>
+                            <div class="item-meta-cat">
+                                <a href="/tags#{{ post.category }}" 
+                                   title="访问 {{ post.category }}" 
+                                   data-hover="{{ post.category }}">{{ post.category }}</a>
+                                <a href="/archives#{{ post.update | date: "%Y" }}" 
+                                title="访问 {{ post.update | date: "%Y" }}" 
+                                data-hover="{{ post.update | date: "%F" }}">{{ post.update | date: "%F" }}</a>
+                           </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             {% endfor %}
         </div>
     </div>
 </div>
+
 {% include pagination.html %}

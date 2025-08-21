@@ -1,10 +1,10 @@
 ---
 title:  在山的那边海的那边
 layout: blog
-background-image: http://static.zybuluo.com/sixijinling/ibgqkim9qh04myy4jzs5dm9i/psb%20%288%29.jpeg
+background-image: https://s2.loli.net/2025/08/18/K4Z56YksGtAzTde.jpg
 write: true
 date: 2015-3-24 19:54
-update: 2015-3-24 19:54
+update: 2015-03-24 19:54:00
 category: write
 description:  APEC期间的山东之行
 tags:
@@ -95,25 +95,25 @@ tags:
 最后的最后，一台随时保持定位的手机很重要......
 
 
-  [1]: http://static.zybuluo.com/sixijinling/hy9irad7hgoi9cb61396hxbh/psb%20%283%29.jpeg
-  [2]: http://static.zybuluo.com/sixijinling/euzhf3gtz2l11q44hzd8ee0m/psb%20%284%29.jpeg
-  [3]: http://static.zybuluo.com/sixijinling/n3uxckkc0rgu60krgtt5fyvo/psb%20%285%29.jpeg
-  [4]: http://static.zybuluo.com/sixijinling/cxjxoi2lueptzyoulsi27sz2/psb%20%286%29.jpeg
-  [5]: http://static.zybuluo.com/sixijinling/ac13po1xviexc3daasmas9l7/psb%20%287%29.jpeg
-  [6]: http://static.zybuluo.com/sixijinling/ibgqkim9qh04myy4jzs5dm9i/psb%20%288%29.jpeg
-  [7]: http://static.zybuluo.com/sixijinling/urhjsndpjm8shietnn66q24k/psb%20%289%29.jpeg
-  [8]: http://static.zybuluo.com/sixijinling/7uqhhuldtkh54or9u80jxwsu/psb%20%2810%29.jpeg
-  [9]: http://static.zybuluo.com/sixijinling/5814sosg005asp3uwt39m95u/psb%20%2811%29.jpeg
-  [10]: http://static.zybuluo.com/sixijinling/n08atewuut5gly2kw7q5j7g3/psb%20%2812%29.jpeg
-  [11]: http://static.zybuluo.com/sixijinling/xwilfekp9y1mgl3chp2fd5y2/psb%20%2813%29.jpeg
-  [12]: http://static.zybuluo.com/sixijinling/xqpixqtuawoqq0j516ublyim/psb%20%2814%29.jpeg
-  [13]: http://static.zybuluo.com/sixijinling/euk1nqrlbfwrn6x0513b4aii/psb%20%2815%29.jpeg
-  [14]: http://static.zybuluo.com/sixijinling/kbdwsp4yq2pjg8whjy37gca3/psb%20%2814%29.jpeg
-  [15]: http://static.zybuluo.com/sixijinling/p5aon6s4uv12a372qo8n1sy1/psb%20%2815%29.jpeg
-  [16]: http://static.zybuluo.com/sixijinling/vc8ztdb9domncrantzfv448o/psb%20%2819%29.jpeg
-  [17]: http://static.zybuluo.com/sixijinling/url4k531vh80uue0n1svkuts/psb%20%2820%29.jpeg
-  [18]: http://static.zybuluo.com/sixijinling/yxicdfhci8khwtrjk98xokrg/psb%20%2821%29.jpeg
-  [19]: http://static.zybuluo.com/sixijinling/4kx8v5bort43znpgg51zwbzj/psb%20%2822%29.jpeg
-  [20]: http://static.zybuluo.com/sixijinling/845lhl9u7hci5f6ezpbdpk5r/psb%20%2823%29.jpeg
-  [21]: http://static.zybuluo.com/sixijinling/0ixm0na8ysbh54nf0p43av0q/psb%20%2824%29.jpeg
-  [22]: http://static.zybuluo.com/sixijinling/9su2hzui6d84myi3ptlincn8/psb%20%2825%29.jpeg
+  [1]: https://s2.loli.net/2025/08/18/revSchz6EUMn7iR.jpg
+  [2]: https://s2.loli.net/2025/08/18/1rx8wC4IbZdfEqN.jpg
+  [3]: https://s2.loli.net/2025/08/18/MoVaHElWwTUFr5C.jpg
+  [4]: https://s2.loli.net/2025/08/18/pTlXtMsNabzuoi5.jpg
+  [5]: https://s2.loli.net/2025/08/18/dMxV1kSLu6HD7yT.jpg
+  [6]: https://s2.loli.net/2025/08/18/K4Z56YksGtAzTde.jpg
+  [7]: https://s2.loli.net/2025/08/18/2pRrJaI9XO5LsSx.jpg
+  [8]: https://s2.loli.net/2025/08/18/AM7EFmz1ycriDBq.jpg
+  [9]: https://s2.loli.net/2025/08/18/FjBYDSzU6JPQIn5.jpg
+  [10]: https://s2.loli.net/2025/08/18/wEFiQd8Cx2D7pRH.jpg
+  [11]: https://s2.loli.net/2025/08/18/HAcQSl1dfpaNEjk.jpg
+  [12]: https://s2.loli.net/2025/08/18/2gCKqdtSF19suxN.jpg
+  [13]: https://s2.loli.net/2025/08/18/OaPEBn61Nr24Vh8.jpg
+  [14]: https://s2.loli.net/2025/08/18/2gCKqdtSF19suxN.jpg
+  [15]: https://s2.loli.net/2025/08/18/OaPEBn61Nr24Vh8.jpg
+  [16]: https://s2.loli.net/2025/08/18/yrIgl9edpaWRHtn.jpg
+  [17]: https://s2.loli.net/2025/08/18/lNubGAmBiKfwPvn.jpg
+  [18]: https://s2.loli.net/2025/08/18/XLQSx59VrKgpBvd.jpg
+  [19]: https://s2.loli.net/2025/08/18/owvhYt1M95ujpgE.jpg
+  [20]: https://s2.loli.net/2025/08/18/9eHhtNuAzcqYJBb.jpg
+  [21]: https://s2.loli.net/2025/08/18/qIEmrsdNShAn7UO.jpg
+  [22]: https://s2.loli.net/2025/08/18/YhrD3p1XfmzAuoO.jpg

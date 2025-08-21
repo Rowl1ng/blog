@@ -19,13 +19,16 @@
 <link rel="shortcut icon" href="{{ site.baseurl }}/style/favicons/favicon.ico" type="image/x-icon">
 <meta name="keywords"  content="{{ page.content | strip_html | strip_newlines | truncate: 120 }}" property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
-<link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 
 <link href="{{ site.baseurl }}/style/style-rowl1ng.css" rel="stylesheet">
 <link href="{{ site.baseurl }}/style/tocbot.css" rel="stylesheet">
+
+<!-- SimpleLightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" rel="stylesheet">
 
 {% if page.date %}
     <meta content='{{ site.baseurl }}{{ page.url }}' property='og:url' />
@@ -49,27 +52,34 @@
 
 <header id="header" class="header bg-white">
     <div class="navbar-container">
-        <a href="{{ site.baseurl }}" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.baseurl }}/style/images/logo-rowl1ng.png" alt="{{ site.title }}"> </a>
+        <a href="{{ '/' | relative_url }}" title="访问 {{ site.title }}" class="navbar-logo">
+        <img src="{{ '/style/images/logo-rowl1ng.png' | relative_url }}" alt="{{ site.title }}">
+        </a>
         <div class="navbar-menu">
             {% for link in site.links %}
-            <a href="{% unless link.external %}{{ site.baseurl }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
+            <a href="{% unless link.external %}{{ link.url | relative_url }}{% else %}{{ link.url }}{% endunless %}">{{ link.name }}</a>
             {% endfor %}
         </div>
+
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
             <form id="cb-search-btn" role="search">
-                        <span class="search-box">
-                             <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
-                        </span>
+                <span class="search-box">
+                    <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
+                </span>
             </form>
         </div>
+
         <div class="navbar-mobile-menu" onclick="">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
                 {% for link in site.links %}
-                <li><a href="{% unless link.external %}{{ site.baseurl }}{% endunless %}{{ link.url }}">{{ link.name }}</a></li>
+                <li>
+                    <a href="{% unless link.external %}{{ link.url | relative_url }}{% else %}{{ link.url }}{% endunless %}">{{ link.name }}</a>
+                </li>
                 {% endfor %}
             </ul>
         </div>
+
     </div>
 </header>

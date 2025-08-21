@@ -4,7 +4,7 @@ layout: blog
 background-image: http://static.zybuluo.com/sixijinling/l74yefqlwkefzm1xbpjovr9g/memoir.jpg
 book: true
 date: 2016-3-21 17:50
-update: 2016-3-21 17:50
+update: 2016-03-21 17:50:00
 category: book
 tags:
 - 书籍
