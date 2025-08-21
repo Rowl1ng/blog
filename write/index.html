@@ -21,25 +21,28 @@
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="og:keywords"  content="                        {% for posts in site.posts %}                {% if posts.write%}                             ..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
-<link rel="icon" type="image/png" href="/blog/style/favicons/favicon.ico" />
-<link href="/blog/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
-<link rel="canonical" href="/blog/">
-<link rel="alternate" type="application/rss+xml" title="Rowl1ng" href="/blog/feed.xml">
+<link rel="icon" type="image/png" href="/style/favicons/favicon.ico" />
+<link href="/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
+<link rel="canonical" href="/">
+<link rel="alternate" type="application/rss+xml" title="Rowl1ng" href="/feed.xml">
 <meta charset="UTF-8">
 <!--<link rel="manifest" href="/manifest.json">-->
-<link rel="shortcut icon" href="/blog/style/favicons/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/style/favicons/favicon.ico" type="image/x-icon">
 <meta name="keywords"  content="                        {% for posts in site.posts %}                {% if posts.write%}                             ..." property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
-<link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 
-<link href="/blog/style/style-rowl1ng.css" rel="stylesheet">
-<link href="/blog/style/tocbot.css" rel="stylesheet">
+<link href="/style/style-rowl1ng.css" rel="stylesheet">
+<link href="/style/tocbot.css" rel="stylesheet">
+
+<!-- SimpleLightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" rel="stylesheet">
 
 
-    <meta content='/blog' property='og:url' />
+    <meta content='' property='og:url' />
     <meta content="Tech & Art" property='og:description' />
     <meta content="blog" property="og:type" />
 
@@ -56,52 +59,71 @@
 
 <header id="header" class="header bg-white">
     <div class="navbar-container">
-        <a href="/blog" title="访问 Rowl1ng|黑客与画家" class="navbar-logo"> <img src="/blog/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家"> </a>
+        <a href="/" title="访问 Rowl1ng|黑客与画家" class="navbar-logo">
+        <img src="/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家">
+        </a>
         <div class="navbar-menu">
             
-            <a href="/blog/tech">TECH</a>
+            <a href="/art">ART</a>
             
-            <a href="/blog/art">ART</a>
+            <a href="/book">BOOK</a>
             
-            <a href="/blog/book">BOOK</a>
+            <a href="/write">WRITE</a>
             
-            <a href="/blog/write">WRITE</a>
+            <a href="https://rowl1ng.com/posts">TECH</a>
             
-            <a href="/blog/archives">ARCHIVE</a>
+            <a href="/archives">ARCHIVE</a>
             
-            <a href="/blog/tags">TAGS</a>
+            <a href="/tags">TAGS</a>
             
-            <a href="/blog/about">ABOUT</a>
+            <a href="/about">ABOUT</a>
             
         </div>
+
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
             <form id="cb-search-btn" role="search">
-                        <span class="search-box">
-                             <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
-                        </span>
+                <span class="search-box">
+                    <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
+                </span>
             </form>
         </div>
+
         <div class="navbar-mobile-menu" onclick="">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
                 
-                <li><a href="/blog/tech">TECH</a></li>
+                <li>
+                    <a href="/art">ART</a>
+                </li>
                 
-                <li><a href="/blog/art">ART</a></li>
+                <li>
+                    <a href="/book">BOOK</a>
+                </li>
                 
-                <li><a href="/blog/book">BOOK</a></li>
+                <li>
+                    <a href="/write">WRITE</a>
+                </li>
                 
-                <li><a href="/blog/write">WRITE</a></li>
+                <li>
+                    <a href="https://rowl1ng.com/posts">TECH</a>
+                </li>
                 
-                <li><a href="/blog/archives">ARCHIVE</a></li>
+                <li>
+                    <a href="/archives">ARCHIVE</a>
+                </li>
                 
-                <li><a href="/blog/tags">TAGS</a></li>
+                <li>
+                    <a href="/tags">TAGS</a>
+                </li>
                 
-                <li><a href="/blog/about">ABOUT</a></li>
+                <li>
+                    <a href="/about">ABOUT</a>
+                </li>
                 
             </ul>
         </div>
+
     </div>
 </header>
 
@@ -128,7 +150,7 @@
                     <div class="post-list-item">
                         <div class="post-list-item-container">
                             <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/01/16/zRb8fBDMgJYKVve.jpg');"></div>
-                            <a href="/blog/write/Room.html">
+                            <a href="/write/Room_2024.html">
                                 <div class="item-desc">
                                     <p>Single room, 2024 year-end personal summary</p>
                                 </div>
@@ -136,12 +158,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Room.html">单人间 2024</a></div>
+                                <div class="item-title"><a href="/write/Room_2024.html">单人间 2024</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2025" data-hover="2025-01-01 00:00:00 ">2025-01-01 00:00:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2025" data-hover="2025-01-01">2025-01-01 00:00:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +175,7 @@
                     <div class="post-list-item">
                         <div class="post-list-item-container">
                             <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2024/01/11/usaKrJ7Tx4XUcei.jpg');"></div>
-                            <a href="/blog/write/Wander_2023.html">
+                            <a href="/write/Wander_2023.html">
                                 <div class="item-desc">
                                     <p>Wandering, 2023 year-end personal summary</p>
                                 </div>
@@ -161,12 +183,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Wander_2023.html">散步去 2023</a></div>
+                                <div class="item-title"><a href="/write/Wander_2023.html">散步去 2023</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2024" data-hover="2024-01-01 00:00:00 ">2024-01-01 00:00:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2024" data-hover="2024-01-01">2024-01-01 00:00:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +200,7 @@
                     <div class="post-list-item">
                         <div class="post-list-item-container">
                             <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2022/11/24/BgDdfJG4ZF6OmbR.jpg');"></div>
-                            <a href="/blog/write/Montage_2022.html">
+                            <a href="/write/Montage_2022.html">
                                 <div class="item-desc">
                                     <p>Montage, 2022 year-end personal summary</p>
                                 </div>
@@ -186,12 +208,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Montage_2022.html">蒙太奇 2022</a></div>
+                                <div class="item-title"><a href="/write/Montage_2022.html">蒙太奇 2022</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2023" data-hover="2023-01-01 00:00:00 ">2023-01-01 00:00:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2023" data-hover="2023-01-01">2023-01-01 00:00:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +225,7 @@
                     <div class="post-list-item">
                         <div class="post-list-item-container">
                             <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2022/03/11/kQt28T3vPmYojlC.jpg');"></div>
-                            <a href="/blog/write/Youth_2021.html">
+                            <a href="/write/Youth_2021.html">
                                 <div class="item-desc">
                                     <p>Youth, 2021 year-end personal summary</p>
                                 </div>
@@ -211,12 +233,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Youth_2021.html">少年游 2021</a></div>
+                                <div class="item-title"><a href="/write/Youth_2021.html">少年游 2021</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2022" data-hover="2022-01-01 00:00:00 ">2022-01-01 00:00:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2022" data-hover="2022-01-01">2022-01-01 15:40:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +252,7 @@
                     <div class="post-list-item">
                         <div class="post-list-item-container">
                             <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2022/03/10/JnkFpMYe4mQ8ajC.jpg');"></div>
-                            <a href="/blog/write/Together_2020.html">
+                            <a href="/write/Together_2020.html">
                                 <div class="item-desc">
                                     <p>Together, 2020 year-end personal summary</p>
                                 </div>
@@ -238,12 +260,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Together_2020.html">在一起 2020</a></div>
+                                <div class="item-title"><a href="/write/Together_2020.html">在一起 2020</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2021" data-hover="2021-01-01 00:00:00 ">2021-01-01 00:00:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2021" data-hover="2021-01-01">2021-01-01 20:19:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -254,12 +276,10 @@
                 
             
                 
-            
-                
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/zxgq2sm33auh4gtgvt8xgla4/IMG_5817.jpeg');"></div>
-                            <a href="/blog/write/Heart_2019.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/9rCoqGYQw68RdJp.jpg');"></div>
+                            <a href="/write/Heart_2019.html">
                                 <div class="item-desc">
                                     <p>Heart, 2019 year-end personal summary</p>
                                 </div>
@@ -267,12 +287,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Heart_2019.html">心所向 2019</a></div>
+                                <div class="item-title"><a href="/write/Heart_2019.html">心所向 2019</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2020" data-hover="2020-01-01 00:00:00 ">2020-01-01 00:00:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2020" data-hover="2020-01-01">2020-01-01 20:19:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -283,8 +303,8 @@
                 
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/a0to5l9mzu3ddgy4vr0gh92p/521543930975_.pic_hd.jpg');"></div>
-                            <a href="/blog/write/Again_2018.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/7OhFoyau2WNpvGf.jpg');"></div>
+                            <a href="/write/Again_2018.html">
                                 <div class="item-desc">
                                     <p>Again, 2018 year-end personal summary</p>
                                 </div>
@@ -292,12 +312,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Again_2018.html">待从头 2018</a></div>
+                                <div class="item-title"><a href="/write/Again_2018.html">待从头 2018</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2018" data-hover="2018-12-04 21:11:00 ">2018-12-04 21:11:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2018" data-hover="2018-12-04">2018-12-04 21:11:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -308,14 +328,10 @@
                 
             
                 
-            
-                
-            
-                
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/evtzbllzz2wc91u25i0gbxdv/IMG_0346.JPG');"></div>
-                            <a href="/blog/write/Bye_2017.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/InsfUZTrmSH2d6R.jpg');"></div>
+                            <a href="/write/Bye_2017.html">
                                 <div class="item-desc">
                                     <p>Bye, 2017 year-end personal summary</p>
                                 </div>
@@ -323,12 +339,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Bye_2017.html">再见啦 2017</a></div>
+                                <div class="item-title"><a href="/write/Bye_2017.html">再见啦 2017</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2017" data-hover="2017-12-31 14:24:00 ">2017-12-31 14:24:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2017" data-hover="2017-12-31">2017-12-31 14:24:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -339,12 +355,10 @@
                 
             
                 
-            
-                
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/vds8zw17tw8ktibhxc0mfw4s/psb%20%281%29.jpeg');"></div>
-                            <a href="/blog/write/star.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/6pbgqvr9yNEOHYB.jpg');"></div>
+                            <a href="/write/star.html">
                                 <div class="item-desc">
                                     <p></p>
                                 </div>
@@ -352,12 +366,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/star.html">仰望星空</a></div>
+                                <div class="item-title"><a href="/write/star.html">仰望星空</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2017" data-hover="2017-10-18 10:26:00 ">2017-10-18 10:26:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2017" data-hover="2017-10-18">2017-10-18 10:26:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -370,14 +384,10 @@
                 
             
                 
-            
-                
-            
-                
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/szzohlqjco1v8uhnt4xnfa64/test.jpeg');"></div>
-                            <a href="/blog/write/Reply_2016.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/ZhvlbsELWmRSqFO.jpg');"></div>
+                            <a href="/write/Reply_2016.html">
                                 <div class="item-desc">
                                     <p>Reply, 2016 year-end personal summary</p>
                                 </div>
@@ -385,12 +395,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Reply_2016.html">请回答 2016</a></div>
+                                <div class="item-title"><a href="/write/Reply_2016.html">请回答 2016</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2017" data-hover="2017-01-01 17:34:00 ">2017-01-01 17:34:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2017" data-hover="2017-01-01">2017-01-01 17:34:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -405,18 +415,10 @@
                 
             
                 
-            
-                
-            
-                
-            
-                
-            
-                
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/ibgqkim9qh04myy4jzs5dm9i/psb%20%288%29.jpeg');"></div>
-                            <a href="/blog/write/Shandong.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/K4Z56YksGtAzTde.jpg');"></div>
+                            <a href="/write/Shandong.html">
                                 <div class="item-desc">
                                     <p>APEC期间的山东之行</p>
                                 </div>
@@ -424,12 +426,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Shandong.html">在山的那边海的那边</a></div>
+                                <div class="item-title"><a href="/write/Shandong.html">在山的那边海的那边</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2015" data-hover="2015-03-24 19:54:00 ">2015-03-24 19:54:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2015" data-hover="2015-03-24">2015-03-24 19:54:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -440,8 +442,8 @@
                 
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/7helpf9wtdn1n2db9mc5mgn6/%E6%8F%929.jpg');"></div>
-                            <a href="/blog/write/Goldbach-conjecture.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/sDZAuKpUQFV5zdh.jpg');"></div>
+                            <a href="/write/Goldbach-conjecture.html">
                                 <div class="item-desc">
                                     <p>《哥德巴赫猜想》读后感</p>
                                 </div>
@@ -449,12 +451,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Goldbach-conjecture.html">鹤鸣</a></div>
+                                <div class="item-title"><a href="/write/Goldbach-conjecture.html">鹤鸣</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2014" data-hover="2014-04-04 10:26:00 ">2014-04-04 10:26:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2014" data-hover="2014-04-04">2014-04-04 10:26:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -469,8 +471,8 @@
                 
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/vsruhijz6l54wn8rlz05sej6/%E6%8F%928.jpg');"></div>
-                            <a href="/blog/write/college.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/D7jhq9FM5GgJSOY.jpg');"></div>
+                            <a href="/write/college.html">
                                 <div class="item-desc">
                                     <p>马克思原理作业               ------关于当今大学同学关系</p>
                                 </div>
@@ -478,12 +480,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/college.html">岂曰无衣，与子同袍</a></div>
+                                <div class="item-title"><a href="/write/college.html">岂曰无衣，与子同袍</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2013" data-hover="2013-05-23 10:26:00 ">2013-05-23 10:26:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2013" data-hover="2013-05-23">2013-05-23 10:26:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -494,8 +496,8 @@
                 
                     <div class="post-list-item">
                         <div class="post-list-item-container">
-                            <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/nlz71aa808yf4ll5t9ntn0ys/%E6%8F%921.jpg');"></div>
-                            <a href="/blog/write/Life.html">
+                            <div class="item-thumb  bg-" style="background-image:url('https://s2.loli.net/2025/08/18/Ua8fENsymrpK6F2.jpg');"></div>
+                            <a href="/write/Life.html">
                                 <div class="item-desc">
                                     <p>大学生心理课论文  主题：个人探索—生命、生活</p>
                                 </div>
@@ -503,12 +505,12 @@
                             <div class="item-slant reverse-slant  bg-"></div>
                             <div class="item-slant"></div>
                             <div class="item-label">
-                                <div class="item-title"><a href="/blog/write/Life.html">许我这一生</a></div>
+                                <div class="item-title"><a href="/write/Life.html">许我这一生</a></div>
                                 <div class="item-meta clearfix">
                                     <div class="item-meta-ico bg-ico-note" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
                                     <div class="item-meta-cat">
                                         <a href="category/thoughts/index.html" title="访问 write"  data-hover="write">write</a>
-                                        <a href="category/thoughts/index.html" title="访问 2012" data-hover="2012-12-23 10:26:00 ">2012-12-23 10:26:00 </a>
+                                        <a href="category/thoughts/index.html" title="访问 2012" data-hover="2012-12-23">2012-12-23 00:00:00 </a>
                                     </div>
                                 </div>
                             </div>
@@ -521,14 +523,14 @@
     <div class="lists-navigator clearfix">
     <ol class="page-navigator">
         <li class="current">
-            <a href="/blog/?rowl1ng" data-hover="首页">
+            <a href="/?rowl1ng" data-hover="首页">
                 <span>首页</span>
             </a>
         </li>
         <li class="current">
             
                 
-                    <a href="/blog/page?rowl1ng" >
+                    <a href="/page?rowl1ng" >
                 
                     <span>&laquo;</span>
                     </a>
@@ -541,7 +543,7 @@
             
         </li>
         <li>
-            <a href="/blog/page?rowl1ng" data-hover="末页">
+            <a href="/page?rowl1ng" data-hover="末页">
                 <span>末页</span>
             </a>
         </li>
@@ -576,19 +578,11 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <a href="/" class="info-logo">
-                        <img src="/blog/style/images/logo-rowl1ng.png"   title="访问 Rowl1ng_blog" data-hover="Rowl1ng_blog" alt="Rowl1ng_blog" /> </a>
+                        <img src="/style/images/logo-rowl1ng.png"   title="访问 Rowl1ng_blog" data-hover="Rowl1ng_blog" alt="Rowl1ng_blog" /> </a>
                     <div class="info-text">
                         <p>Theme is <a href="http://rowl1ng.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll Rowl1ng主题"  data-hover="Jekyll Rowl1ng"target="_blank">Jekyll rowl1ng</a> by <a href="http://rowl1ng.com/about" target="_blank">Rowl1ng</a></p>
-                        <p>Powered by <a href="/blog/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
+                        <p>Powered by <a href="/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
                         <p>&copy; 2024 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
-                        <p>
-                            <span id="busuanzi_container_site_uv" style="display: inline">
-                           本站 UV <a href="http://ibruce.info" target="_blank"><span id="busuanzi_value_site_uv"></span></a>
-                            </span>
-                            本站 PV <span id="busuanzi_container_site_pv" style="display: inline"></span>
-                                <span id="busuanzi_value_site_pv"></span>
-                        </p>
-                        <!--<p>总计文章：篇</p>-->
                     </div>
                 </div>
             </div>
@@ -611,15 +605,6 @@
                 
                 
                 
-                <li><a href=" /blog/tech/Sketch-VR.html" title="访问 Sketch VR Development Log" data-hover="Sketch VR Development Log">Sketch VR Development Log</a></li>
-                
-                
-                
-                
-                
-                
-                
-                <li><a href=" /blog/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
                 
                 
                 
@@ -629,7 +614,10 @@
                 
                 
                 
-                <li><a href=" /blog/tech/chatbot.html" title="访问 基于Rasa_NLU的微信chatbot" data-hover="基于Rasa_NLU的微信chatbot">基于Rasa_NLU的微信chatbot</a></li>
+                
+                
+                
+                
                 
                 
                 <!--置顶-->
@@ -662,8 +650,6 @@
                 <!---->
                 
                 <!---->
-                    <li><a href=" /blog/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
-                <!---->
                 
                 <!---->
                 
@@ -671,29 +657,37 @@
         </div>
     </div>
 </footer>
-<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
-<script src="/blog/search/js/cb-search.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="/js/typeahead.bundle.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+<!-- jQuery 已加载后 -->
 <script>
-    $(function () {
-        setTimeout(function () {
-            $('code').removeClass('hljs');
-            $('code').removeClass('language');
-        }, 90);
+$(document).ready(function(){
+    // 移动端点击切换菜单
+    $('.navbar-mobile-menu').on('click touchstart', function(e){
+        e.preventDefault();
+        $(this).find('ul').toggleClass('open');       // 切换菜单显示
+        $(this).find('.icon-menu').toggleClass('cross'); // 切换图标叉号
     });
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
+});
 </script>
+
+<!-- SimpleLightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var lightbox = new SimpleLightbox('.post-content a.lightbox', {
+    captions: true,
+    captionSelector: 'img',
+    captionType: 'attr',
+    captionsData: 'alt',
+    close: true,
+    showCounter: true
+  });
+});
+</script>
+
+
     </body>
 
 

@@ -253,6 +253,35 @@ pre code::after {font-size: 1rem;color: #BFBFBF;position: absolute;top: 5px;righ
 .post-tags a:nth-child(6n){color:#fff;border:1px solid #e8583d;border-radius:15px;background:#e8583d;}
 /* .post-tags a::before{content:'# ';} */
 .post-content .post-tags a:hover{color:#5f5f5f;border:1px solid #f7f7f7;outline-style:none;background:#f7f7f7;}
+
+.post-content img {
+  max-height: 400px;       /* 限制高度 */
+  width: auto;
+  display: block;          /* 改为块级元素 */
+  margin: 1em auto;        /* 上下间距 + 居中 */
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.post-content img:hover {
+  transform: scale(1.02);
+}
+
+/* 移动端图片高度更小 */
+@media screen and (max-width: 768px) {
+  .post-content img {
+    max-height: 250px;
+  }
+}
+
+/* 如果图片被 Lightbox 包裹 */
+.post-content a.lightbox {
+  display: block;
+  margin: 1em auto;  /* 居中 */
+  text-align: center;
+}
+
 .post-info{overflow:hidden;margin:25px -20px 0;padding:25px 20px 20px;white-space:nowrap;text-overflow:ellipsis;border-top:1px solid #e0e0e0;}
 .related-post-lists{position:relative;z-index:1;margin-bottom:-10px;padding-top:30px;background-color:#f7f7f7;}
 .related-post-lists .post-lists{max-width:940px;margin:0 auto;}
@@ -289,6 +318,7 @@ pre code::after {font-size: 1rem;color: #BFBFBF;position: absolute;top: 5px;righ
 .post-list-item-container .item-label.bg-yellow .item-meta .item-meta-date{color:#fff;}
 .post-list-item-container .item-label.bg-red .item-meta .item-meta-date{color:#fff;}
 .post-list-item-container .item-label.bg-orange .item-meta .item-meta-date{color:#fff;}
+
 
 /* ==========================================================================
    #directory

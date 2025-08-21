@@ -3,16 +3,16 @@
     <channel>
         <title>Rowl1ng|黑客与画家</title>
         <description>Tech & Art</description>
-        <link>/blog</link>
-        <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml" />
+        <link></link>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>单人间 2024</title>
             <category>write</category>
             <description>Work学业  毕业：          viva slides：                  scripts          用现在的眼光看第一篇工作的slides感觉不够简洁直观，得...</description>
             <pubDate>2025-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Room.html</link>
-            <guid isPermaLink="true">/blog/write/Room.html</guid>
+            <link>/write/Room_2024.html</link>
+            <guid isPermaLink="true">/write/Room_2024.html</guid>
         </item>
         
         <item>
@@ -20,8 +20,8 @@
             <category>write</category>
             <description>Work  3D VR sketch to shape generation:          Research：                  sketch to shape recon...</description>
             <pubDate>2024-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Wander_2023.html</link>
-            <guid isPermaLink="true">/blog/write/Wander_2023.html</guid>
+            <link>/write/Wander_2023.html</link>
+            <guid isPermaLink="true">/write/Wander_2023.html</guid>
         </item>
         
         <item>
@@ -29,17 +29,17 @@
             <category>write</category>
             <description>Work  jupyter notebook for stroke filtering；3DV21的project发布到github；制作sketch的gif图  upload sketchVR...</description>
             <pubDate>2023-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Montage_2022.html</link>
-            <guid isPermaLink="true">/blog/write/Montage_2022.html</guid>
+            <link>/write/Montage_2022.html</link>
+            <guid isPermaLink="true">/write/Montage_2022.html</guid>
         </item>
         
         <item>
             <title>少年游 2021</title>
             <category>write</category>
             <description>今年我的胃罢工了很长时间，一下子被生活迎面重击，倒地不起，但越躺平情况只会越严重，于是间歇性工作、持续性偷懒。今年最喜欢的一幅画：WorkProjectExperiments  critical...</description>
-            <pubDate>2022-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Youth_2021.html</link>
-            <guid isPermaLink="true">/blog/write/Youth_2021.html</guid>
+            <pubDate>2022-01-01 15:40:00 </pubDate>
+            <link>/write/Youth_2021.html</link>
+            <guid isPermaLink="true">/write/Youth_2021.html</guid>
         </item>
         
         <item>
@@ -47,17 +47,17 @@
             <category>art</category>
             <description></description>
             <pubDate>2021-10-14 00:00:00 </pubDate>
-            <link>/blog/art/guide.html</link>
-            <guid isPermaLink="true">/blog/art/guide.html</guid>
+            <link>/art/guide.html</link>
+            <guid isPermaLink="true">/art/guide.html</guid>
         </item>
         
         <item>
             <title>在一起 2020</title>
             <category>write</category>
             <description>今年的情况很不一样，所以总结的写法也调整一下好了（其实就是按往年的流水帐模式好不容易整理好结果没保存，泪）。工作TeachingFor the first time I tried to hel...</description>
-            <pubDate>2021-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Together_2020.html</link>
-            <guid isPermaLink="true">/blog/write/Together_2020.html</guid>
+            <pubDate>2021-01-01 20:19:00 </pubDate>
+            <link>/write/Together_2020.html</link>
+            <guid isPermaLink="true">/write/Together_2020.html</guid>
         </item>
         
         <item>
@@ -65,26 +65,17 @@
             <category>art</category>
             <description>字：Allblues画：Rowl1ng有约1.《与梦得沽酒闲饮且约后期》风月2.1 《兰亭集序》2.2 《玉蝴蝶》2.3 《前赤壁赋》2.4 《如梦令》芳丛3.1 《晓出净慈寺送林子方》3.2 ...</description>
             <pubDate>2020-01-24 02:42:00 </pubDate>
-            <link>/blog/art/24-poems.html</link>
-            <guid isPermaLink="true">/blog/art/24-poems.html</guid>
-        </item>
-        
-        <item>
-            <title>Sketch VR Development Log</title>
-            <category>tech</category>
-            <description>Raw Materials  Devices:          Oculus Rift: headset + handset x 2 + sensor x 2      Dell deskto...</description>
-            <pubDate>2020-01-22 14:00:00 </pubDate>
-            <link>/blog/tech/Sketch-VR.html</link>
-            <guid isPermaLink="true">/blog/tech/Sketch-VR.html</guid>
+            <link>/art/24-poems.html</link>
+            <guid isPermaLink="true">/art/24-poems.html</guid>
         </item>
         
         <item>
             <title>心所向 2019</title>
             <category>write</category>
             <description>工作申请  申请中：          skype，做ppt，面试；写research proposal；      开始申请ATAS（补充Why do you want to study th...</description>
-            <pubDate>2020-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Heart_2019.html</link>
-            <guid isPermaLink="true">/blog/write/Heart_2019.html</guid>
+            <pubDate>2020-01-01 20:19:00 </pubDate>
+            <link>/write/Heart_2019.html</link>
+            <guid isPermaLink="true">/write/Heart_2019.html</guid>
         </item>
         
         <item>
@@ -92,35 +83,44 @@
             <category>write</category>
             <description>序决定写些正经文字，以示进步。今年的最大收获大概是：己所不能，必求于人。因为申请phd的缘故，一门心思跳出了固有的小圈子，发现大世界里有太多太多力有不逮。也因为申请phd的缘故，最近第一次写pe...</description>
             <pubDate>2018-12-04 21:11:00 </pubDate>
-            <link>/blog/write/Again_2018.html</link>
-            <guid isPermaLink="true">/blog/write/Again_2018.html</guid>
-        </item>
-        
-        <item>
-            <title>Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</title>
-            <category>tech</category>
-            <description>Choose your language :简体中文EnglishDetectron（使用caffe2）是face book开源的的各种目标检测算法的打包（比如mask rcnn、FPN的）。本...</description>
-            <pubDate>2018-03-22 17:00:00 </pubDate>
-            <link>/blog/tech/faster-rcnn.html</link>
-            <guid isPermaLink="true">/blog/tech/faster-rcnn.html</guid>
+            <link>/write/Again_2018.html</link>
+            <guid isPermaLink="true">/write/Again_2018.html</guid>
         </item>
         
         <item>
             <title>愉快地画头像</title>
             <category>art</category>
-            <description>20212020201820162014~ 2012</description>
-            <pubDate>2018-03-19 22:56:00 </pubDate>
-            <link>/blog/art/avatar.html</link>
-            <guid isPermaLink="true">/blog/art/avatar.html</guid>
+            <description>202520242021给Duan画喜糖包装logo、感谢卡给Annie的猫猫头2020201820162014~ 2012</description>
+            <pubDate>2018-03-19 00:00:00 </pubDate>
+            <link>/art/avatar.html</link>
+            <guid isPermaLink="true">/art/avatar.html</guid>
         </item>
         
         <item>
-            <title>各种英语考试的经验</title>
-            <category>book</category>
-            <description>托福 : 104阅读 + 听力计时刷tpo  网易云的托福词以类记，午睡也能“听单词”了。托福是3264个单词，不多不多。推荐听podcast，比如每天早上一起床就开始听。推荐的podcast：...</description>
-            <pubDate>2018-03-19 18:50:00 </pubDate>
-            <link>/blog/book/English.html</link>
-            <guid isPermaLink="true">/blog/book/English.html</guid>
+            <title>再见啦 2017</title>
+            <category>write</category>
+            <description>干的活  May your choices reflect your hopes, not your fears.  电信诈骗识别          主题模型、CNN无监督段短文本分类     ...</description>
+            <pubDate>2017-12-31 14:24:00 </pubDate>
+            <link>/write/Bye_2017.html</link>
+            <guid isPermaLink="true">/write/Bye_2017.html</guid>
+        </item>
+        
+        <item>
+            <title>何事秋风空画扇</title>
+            <category>art</category>
+            <description>猫になりたい流云b站绘制过程江陵明月孤龙山烟雨荷柔</description>
+            <pubDate>2017-10-31 16:00:00 </pubDate>
+            <link>/art/fan.html</link>
+            <guid isPermaLink="true">/art/fan.html</guid>
+        </item>
+        
+        <item>
+            <title>仰望星空</title>
+            <category>write</category>
+            <description>——“我的青春我的梦”主题征文身处人生的迷宫，没有人可以告诉你出路何在，当我们在庸常中渐渐迷失、找不到出路时，总不自觉跌入喟叹“人生意义何在”的深渊中，这时不妨抬头，看那满天的星斗从遥远的地方发...</description>
+            <pubDate>2017-10-18 10:26:00 </pubDate>
+            <link>/write/star.html</link>
+            <guid isPermaLink="true">/write/star.html</guid>
         </item>
         
     </channel>

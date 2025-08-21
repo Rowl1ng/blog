@@ -21,25 +21,28 @@
 <meta property="og:description" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="og:keywords"  content="                        {% for posts in site.posts %}            {% if posts.tech%}                                  ..." property='og:description' />
 <meta name="theme-Jekyll by Rowl1ng" content="#eb5055">
-<link rel="icon" type="image/png" href="/blog/style/favicons/favicon.ico" />
-<link href="/blog/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
-<link rel="canonical" href="/blog/">
-<link rel="alternate" type="application/rss+xml" title="Rowl1ng" href="/blog/feed.xml">
+<link rel="icon" type="image/png" href="/style/favicons/favicon.ico" />
+<link href="/style/favicons/favicon.ico" rel="shortcut icon" type="image/png">
+<link rel="canonical" href="/">
+<link rel="alternate" type="application/rss+xml" title="Rowl1ng" href="/feed.xml">
 <meta charset="UTF-8">
 <!--<link rel="manifest" href="/manifest.json">-->
-<link rel="shortcut icon" href="/blog/style/favicons/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/style/favicons/favicon.ico" type="image/x-icon">
 <meta name="keywords"  content="                        {% for posts in site.posts %}            {% if posts.tech%}                                  ..." property='og:description' />
 <meta name="description" content="nothing is more practicla than a good theory" />
-<link href="https://cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
 
-<link href="/blog/style/style-rowl1ng.css" rel="stylesheet">
-<link href="/blog/style/tocbot.css" rel="stylesheet">
+<link href="/style/style-rowl1ng.css" rel="stylesheet">
+<link href="/style/tocbot.css" rel="stylesheet">
+
+<!-- SimpleLightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" rel="stylesheet">
 
 
-    <meta content='/blog' property='og:url' />
+    <meta content='' property='og:url' />
     <meta content="Tech & Art" property='og:description' />
     <meta content="blog" property="og:type" />
 
@@ -56,52 +59,71 @@
 
 <header id="header" class="header bg-white">
     <div class="navbar-container">
-        <a href="/blog" title="访问 Rowl1ng|黑客与画家" class="navbar-logo"> <img src="/blog/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家"> </a>
+        <a href="/" title="访问 Rowl1ng|黑客与画家" class="navbar-logo">
+        <img src="/style/images/logo-rowl1ng.png" alt="Rowl1ng|黑客与画家">
+        </a>
         <div class="navbar-menu">
             
-            <a href="/blog/tech">TECH</a>
+            <a href="/art">ART</a>
             
-            <a href="/blog/art">ART</a>
+            <a href="/book">BOOK</a>
             
-            <a href="/blog/book">BOOK</a>
+            <a href="/write">WRITE</a>
             
-            <a href="/blog/write">WRITE</a>
+            <a href="https://rowl1ng.com/posts">TECH</a>
             
-            <a href="/blog/archives">ARCHIVE</a>
+            <a href="/archives">ARCHIVE</a>
             
-            <a href="/blog/tags">TAGS</a>
+            <a href="/tags">TAGS</a>
             
-            <a href="/blog/about">ABOUT</a>
+            <a href="/about">ABOUT</a>
             
         </div>
+
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
             <form id="cb-search-btn" role="search">
-                        <span class="search-box">
-                             <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
-                        </span>
+                <span class="search-box">
+                    <input type="text" class="input" id="cb-search-content" required="true" placeholder="title label..." maxlength="30" autocomplete="off">
+                </span>
             </form>
         </div>
+
         <div class="navbar-mobile-menu" onclick="">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
                 
-                <li><a href="/blog/tech">TECH</a></li>
+                <li>
+                    <a href="/art">ART</a>
+                </li>
                 
-                <li><a href="/blog/art">ART</a></li>
+                <li>
+                    <a href="/book">BOOK</a>
+                </li>
                 
-                <li><a href="/blog/book">BOOK</a></li>
+                <li>
+                    <a href="/write">WRITE</a>
+                </li>
                 
-                <li><a href="/blog/write">WRITE</a></li>
+                <li>
+                    <a href="https://rowl1ng.com/posts">TECH</a>
+                </li>
                 
-                <li><a href="/blog/archives">ARCHIVE</a></li>
+                <li>
+                    <a href="/archives">ARCHIVE</a>
+                </li>
                 
-                <li><a href="/blog/tags">TAGS</a></li>
+                <li>
+                    <a href="/tags">TAGS</a>
+                </li>
                 
-                <li><a href="/blog/about">ABOUT</a></li>
+                <li>
+                    <a href="/about">ABOUT</a>
+                </li>
                 
             </ul>
         </div>
+
     </div>
 </header>
 
@@ -139,154 +161,6 @@
             
             
             
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/ndghatp2hshzuvinrvq96c9a/colorpicker.PNG');"></div>
-                    <a href="/blog/tech/Sketch-VR.html">
-                        <div class="item-desc">
-                            <p>VR Development</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/Sketch-VR.html">Sketch VR Development Log</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2020-01-22 14:00:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/9khganmk3o5gosnvde9l78o2/image_1c8u6de3r12s5oeog9i1ij6d1g9.png');"></div>
-                    <a href="/blog/tech/faster-rcnn.html">
-                        <div class="item-desc">
-                            <p>pytorch version of Detectron</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/faster-rcnn.html">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2018-03-22 17:00:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/an3ms22v79lqj34nkolbbihi/chatbot.png');"></div>
-                    <a href="/blog/tech/chatbot.html">
-                        <div class="item-desc">
-                            <p>Rasa_NLU + Rasa_Core + wxpy = Wechat chatbot</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/chatbot.html">基于Rasa_NLU的微信chatbot</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2017-11-05 00:00:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/o6i3xw4f4qgsc3j1pf4x33ir/%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C.png');"></div>
-                    <a href="/blog/tech/phoneme.html">
-                        <div class="item-desc">
-                            <p>exploring how to find similar content without ASR for scam recognition task</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/phoneme.html">基于音素识别的语音相似度研究</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2017-08-01 13:27:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/qbtrueqt9qagfxkd0opwblcc/image_1cdri1qfm19g6t1e1bbg13441a3e23.png');"></div>
-                    <a href="/blog/tech/luna.html">
-                        <div class="item-desc">
-                            <p>experience in the Tianchi Lung Nodule Detection Contest</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/luna.html">肺部结节检测</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2017-04-25 21:38:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             
             
@@ -304,57 +178,10 @@
             
             
             
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('');"></div>
-                    <a href="/blog/tech/word2vec.html">
-                        <div class="item-desc">
-                            <p>从零开始</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/word2vec.html">How to learn word2vec</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2015-12-25 11:12:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             
             
-            <div class="post-list-item">
-                <div class="post-list-item-container">
-                    <div class="item-thumb  bg-" style="background-image:url('http://static.zybuluo.com/sixijinling/8yy7ipdmeqi5yk30088vvcu3/road.png');"></div>
-                    <a href="/blog/tech/RoadNN.html">
-                        <div class="item-desc">
-                            <p>人工识别像划重点一样，真的很枯燥很累啊</p>
-                        </div>
-                    </a>
-                    <div class="item-slant reverse-slant  bg-"></div>
-                    <div class="item-slant"><div class="rowl1ng-title">
-
-                </div></div>
-                    <div class="item-label">
-                        <div class="item-title"><a href="/blog/tech/RoadNN.html">裂缝识别</a></div>
-                        <div class="item-meta clearfix">
-                            <div class="item-meta-ico bg-ico-code" style="background: url('../style/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                <a href="category/thoughts/index.html">tech</a>
-                                <a href="category/thoughts/index.html">2015-10-18 11:12:00 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             
             
             
@@ -374,14 +201,14 @@
     <div class="lists-navigator clearfix">
     <ol class="page-navigator">
         <li class="current">
-            <a href="/blog/?rowl1ng" data-hover="首页">
+            <a href="/?rowl1ng" data-hover="首页">
                 <span>首页</span>
             </a>
         </li>
         <li class="current">
             
                 
-                    <a href="/blog/page?rowl1ng" >
+                    <a href="/page?rowl1ng" >
                 
                     <span>&laquo;</span>
                     </a>
@@ -394,7 +221,7 @@
             
         </li>
         <li>
-            <a href="/blog/page?rowl1ng" data-hover="末页">
+            <a href="/page?rowl1ng" data-hover="末页">
                 <span>末页</span>
             </a>
         </li>
@@ -429,19 +256,11 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <a href="/" class="info-logo">
-                        <img src="/blog/style/images/logo-rowl1ng.png"   title="访问 Rowl1ng_blog" data-hover="Rowl1ng_blog" alt="Rowl1ng_blog" /> </a>
+                        <img src="/style/images/logo-rowl1ng.png"   title="访问 Rowl1ng_blog" data-hover="Rowl1ng_blog" alt="Rowl1ng_blog" /> </a>
                     <div class="info-text">
                         <p>Theme is <a href="http://rowl1ng.com/2017/08/03/Jekyllthemes.html" title="访问 Jekyll Rowl1ng主题"  data-hover="Jekyll Rowl1ng"target="_blank">Jekyll rowl1ng</a> by <a href="http://rowl1ng.com/about" target="_blank">Rowl1ng</a></p>
-                        <p>Powered by <a href="/blog/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
+                        <p>Powered by <a href="/tags/#Jekyll" title="Jekyll" data-hover="Jekyll" target="_blank" rel="nofollow">Jekyll</a></p>
                         <p>&copy; 2024 <a href="/feed.xml"  title="访问 Rowl1ng blog RSS" data-hover="Rowl1ng blog RSS">Rowl1ng blog RSS</a></p>
-                        <p>
-                            <span id="busuanzi_container_site_uv" style="display: inline">
-                           本站 UV <a href="http://ibruce.info" target="_blank"><span id="busuanzi_value_site_uv"></span></a>
-                            </span>
-                            本站 PV <span id="busuanzi_container_site_pv" style="display: inline"></span>
-                                <span id="busuanzi_value_site_pv"></span>
-                        </p>
-                        <!--<p>总计文章：篇</p>-->
                     </div>
                 </div>
             </div>
@@ -464,15 +283,6 @@
                 
                 
                 
-                <li><a href=" /blog/tech/Sketch-VR.html" title="访问 Sketch VR Development Log" data-hover="Sketch VR Development Log">Sketch VR Development Log</a></li>
-                
-                
-                
-                
-                
-                
-                
-                <li><a href=" /blog/tech/faster-rcnn.html" title="访问 Detectron代码分析：从Faster R-CNN 到 Mask R-CNN" data-hover="Detectron代码分析：从Faster R-CNN 到 Mask R-CNN">Detectron代码分析：从Faster R-CNN 到 Mask R-CNN</a></li>
                 
                 
                 
@@ -482,7 +292,10 @@
                 
                 
                 
-                <li><a href=" /blog/tech/chatbot.html" title="访问 基于Rasa_NLU的微信chatbot" data-hover="基于Rasa_NLU的微信chatbot">基于Rasa_NLU的微信chatbot</a></li>
+                
+                
+                
+                
                 
                 
                 <!--置顶-->
@@ -515,8 +328,6 @@
                 <!---->
                 
                 <!---->
-                    <li><a href=" /blog/book/English.html" title="访问 各种英语考试的经验" data-hover="各种英语考试的经验">各种英语考试的经验</a></li>
-                <!---->
                 
                 <!---->
                 
@@ -524,29 +335,37 @@
         </div>
     </div>
 </footer>
-<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
-<script src="/blog/search/js/cb-search.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="/js/typeahead.bundle.min.js"></script>
+<script src="/search/js/cb-search.js"></script>
+<!-- jQuery 已加载后 -->
 <script>
-    $(function () {
-        setTimeout(function () {
-            $('code').removeClass('hljs');
-            $('code').removeClass('language');
-        }, 90);
+$(document).ready(function(){
+    // 移动端点击切换菜单
+    $('.navbar-mobile-menu').on('click touchstart', function(e){
+        e.preventDefault();
+        $(this).find('ul').toggleClass('open');       // 切换菜单显示
+        $(this).find('.icon-menu').toggleClass('cross'); // 切换图标叉号
     });
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
+});
 </script>
+
+<!-- SimpleLightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var lightbox = new SimpleLightbox('.post-content a.lightbox', {
+    captions: true,
+    captionSelector: 'img',
+    captionType: 'attr',
+    captionsData: 'alt',
+    close: true,
+    showCounter: true
+  });
+});
+</script>
+
+
     </body>
 
 

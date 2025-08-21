@@ -4,7 +4,7 @@
 
 {
 "title" : "单人间 2024 - ",
-"url" : " /blog/write/Room.html"
+"url" : "/write/Room_2024.html"
 }
 
 ,
@@ -12,7 +12,7 @@
 
 {
 "title" : "散步去 2023 - ",
-"url" : " /blog/write/Wander_2023.html"
+"url" : "/write/Wander_2023.html"
 }
 
 ,
@@ -20,7 +20,7 @@
 
 {
 "title" : "蒙太奇 2022 - ",
-"url" : " /blog/write/Montage_2022.html"
+"url" : "/write/Montage_2022.html"
 }
 
 ,
@@ -28,7 +28,7 @@
 
 {
 "title" : "少年游 2021 - ",
-"url" : " /blog/write/Youth_2021.html"
+"url" : "/write/Youth_2021.html"
 }
 
 ,
@@ -36,7 +36,7 @@
 
 {
 "title" : "微信视频的漫画说明书 - ",
-"url" : " /blog/art/guide.html"
+"url" : "/art/guide.html"
 }
 
 ,
@@ -44,7 +44,7 @@
 
 {
 "title" : "在一起 2020 - ",
-"url" : " /blog/write/Together_2020.html"
+"url" : "/write/Together_2020.html"
 }
 
 ,
@@ -52,15 +52,7 @@
 
 {
 "title" : "二十五首 - ",
-"url" : " /blog/art/24-poems.html"
-}
-
-,
-
-
-{
-"title" : "Sketch VR Development Log - ",
-"url" : " /blog/tech/Sketch-VR.html"
+"url" : "/art/24-poems.html"
 }
 
 ,
@@ -68,7 +60,7 @@
 
 {
 "title" : "心所向 2019 - ",
-"url" : " /blog/write/Heart_2019.html"
+"url" : "/write/Heart_2019.html"
 }
 
 ,
@@ -76,15 +68,7 @@
 
 {
 "title" : "待从头 2018 - ",
-"url" : " /blog/write/Again_2018.html"
-}
-
-,
-
-
-{
-"title" : "Detectron代码分析：从Faster R-CNN 到 Mask R-CNN - ",
-"url" : " /blog/tech/faster-rcnn.html"
+"url" : "/write/Again_2018.html"
 }
 
 ,
@@ -92,15 +76,7 @@
 
 {
 "title" : "愉快地画头像 - ",
-"url" : " /blog/art/avatar.html"
-}
-
-,
-
-
-{
-"title" : "各种英语考试的经验 - ",
-"url" : " /blog/book/English.html"
+"url" : "/art/avatar.html"
 }
 
 ,
@@ -108,15 +84,7 @@
 
 {
 "title" : "再见啦 2017 - ",
-"url" : " /blog/write/Bye_2017.html"
-}
-
-,
-
-
-{
-"title" : "基于Rasa_NLU的微信chatbot - ",
-"url" : " /blog/tech/chatbot.html"
+"url" : "/write/Bye_2017.html"
 }
 
 ,
@@ -124,7 +92,7 @@
 
 {
 "title" : "何事秋风空画扇 - ",
-"url" : " /blog/art/fan.html"
+"url" : "/art/fan.html"
 }
 
 ,
@@ -132,31 +100,15 @@
 
 {
 "title" : "仰望星空 - ",
-"url" : " /blog/write/star.html"
+"url" : "/write/star.html"
 }
 
 ,
 
 
 {
-"title" : "动画笔记 - ",
-"url" : " /blog/art/animation.html"
-}
-
-,
-
-
-{
-"title" : "基于音素识别的语音相似度研究 - ",
-"url" : " /blog/tech/phoneme.html"
-}
-
-,
-
-
-{
-"title" : "肺部结节检测 - ",
-"url" : " /blog/tech/luna.html"
+"title" : "动画记录 - ",
+"url" : "/art/animation.html"
 }
 
 ,
@@ -164,7 +116,7 @@
 
 {
 "title" : "《观念的水位》+《柏林墙》 - ",
-"url" : " /blog/book/Socialism.html"
+"url" : "/book/Socialism.html"
 }
 
 ,
@@ -172,23 +124,7 @@
 
 {
 "title" : "请回答 2016 - ",
-"url" : " /blog/write/Reply_2016.html"
-}
-
-,
-
-
-{
-"title" : "爱好：看电视 - ",
-"url" : " /blog/book/watch_TV.html"
-}
-
-,
-
-
-{
-"title" : "摄影笔记 - ",
-"url" : " /blog/art/Photography.html"
+"url" : "/write/Reply_2016.html"
 }
 
 ,
@@ -196,7 +132,7 @@
 
 {
 "title" : "明信片 - ",
-"url" : " /blog/art/postcard.html"
+"url" : "/art/postcard.html"
 }
 
 ,
@@ -204,7 +140,7 @@
 
 {
 "title" : "四川之行 - ",
-"url" : " /blog/art/Sichuan.html"
+"url" : "/art/Sichuan.html"
 }
 
 ,
@@ -212,23 +148,7 @@
 
 {
 "title" : "Reading List - ",
-"url" : " /blog/book/reading-list.html"
-}
-
-,
-
-
-{
-"title" : "How to learn word2vec - ",
-"url" : " /blog/tech/word2vec.html"
-}
-
-,
-
-
-{
-"title" : "裂缝识别 - ",
-"url" : " /blog/tech/RoadNN.html"
+"url" : "/book/reading-list.html"
 }
 
 ,
@@ -236,7 +156,7 @@
 
 {
 "title" : "在山的那边海的那边 - ",
-"url" : " /blog/write/Shandong.html"
+"url" : "/write/Shandong.html"
 }
 
 ,
@@ -244,7 +164,7 @@
 
 {
 "title" : "鹤鸣 - ",
-"url" : " /blog/write/Goldbach-conjecture.html"
+"url" : "/write/Goldbach-conjecture.html"
 }
 
 ,
@@ -252,7 +172,7 @@
 
 {
 "title" : "就是爱音乐 - ",
-"url" : " /blog/art/LoveMusic.html"
+"url" : "/art/LoveMusic.html"
 }
 
 ,
@@ -260,7 +180,7 @@
 
 {
 "title" : "印象之印象 - ",
-"url" : " /blog/art/music.html"
+"url" : "/art/music.html"
 }
 
 ,
@@ -268,7 +188,7 @@
 
 {
 "title" : "岂曰无衣，与子同袍 - ",
-"url" : " /blog/write/college.html"
+"url" : "/write/college.html"
 }
 
 ,
@@ -276,7 +196,7 @@
 
 {
 "title" : "许我这一生 - ",
-"url" : " /blog/write/Life.html"
+"url" : "/write/Life.html"
 }
 
 
