@@ -7,6 +7,24 @@
         <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>十年撒花~施工中……</title>
+            <category>write</category>
+            <description>WorkNLP + Audio  本科毕设：review labeling  电信诈骗识别  智能客服/微信chatbot2D Vision  车道线识别  道路裂缝检测  医疗图像分析3D V...</description>
+            <pubDate>2026-01-20 00:00:00 </pubDate>
+            <link>/blog/write/10_years.html</link>
+            <guid isPermaLink="true">/blog/write/10_years.html</guid>
+        </item>
+        
+        <item>
+            <title>再回首 2025</title>
+            <category>write</category>
+            <description>Work  每次做尝试的中间结果尽量保存下来，比如存成npy文件，方便下次直接上手接着做。  下午上课，中午没时间休息，下午上完课又累又困，不想干活……一旦开始工作的话还是能很快进入状态的。  ...</description>
+            <pubDate>2026-01-01 00:00:00 </pubDate>
+            <link>/blog/write/Echo.html</link>
+            <guid isPermaLink="true">/blog/write/Echo.html</guid>
+        </item>
+        
+        <item>
             <title>单人间 2024</title>
             <category>write</category>
             <description>Work学业  毕业：          viva slides：                  scripts          用现在的眼光看第一篇工作的slides感觉不够简洁直观，得...</description>
@@ -103,24 +121,6 @@
             <pubDate>2017-12-31 14:24:00 </pubDate>
             <link>/blog/write/Bye_2017.html</link>
             <guid isPermaLink="true">/blog/write/Bye_2017.html</guid>
-        </item>
-        
-        <item>
-            <title>何事秋风空画扇</title>
-            <category>art</category>
-            <description>猫になりたい流云b站绘制过程江陵明月孤龙山烟雨荷柔</description>
-            <pubDate>2017-10-31 16:00:00 </pubDate>
-            <link>/blog/art/fan.html</link>
-            <guid isPermaLink="true">/blog/art/fan.html</guid>
-        </item>
-        
-        <item>
-            <title>仰望星空</title>
-            <category>write</category>
-            <description>——“我的青春我的梦”主题征文身处人生的迷宫，没有人可以告诉你出路何在，当我们在庸常中渐渐迷失、找不到出路时，总不自觉跌入喟叹“人生意义何在”的深渊中，这时不妨抬头，看那满天的星斗从遥远的地方发...</description>
-            <pubDate>2017-10-18 10:26:00 </pubDate>
-            <link>/blog/write/star.html</link>
-            <guid isPermaLink="true">/blog/write/star.html</guid>
         </item>
         
     </channel>
