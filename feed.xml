@@ -7,9 +7,9 @@
         <atom:link href="/blog/feed.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>十年撒花~施工中……</title>
+            <title>十年撒花~</title>
             <category>write</category>
-            <description>WorkNLP + Audio  本科毕设：review labeling  电信诈骗识别  智能客服/微信chatbot2D Vision  车道线识别  道路裂缝检测  医疗图像分析3D V...</description>
+            <description>从2016年的Reply到2025年的Echo，年终总结写了整整十年。最初是短短的清单，后来越写越长，项目、书影音、花花草草、亲友和身体的小毛病都挤进来了。把它们按主题放到一起，才发现有些事变了...</description>
             <pubDate>2026-01-20 00:00:00 </pubDate>
             <link>/blog/write/10_years.html</link>
             <guid isPermaLink="true">/blog/write/10_years.html</guid>
@@ -20,8 +20,8 @@
             <category>write</category>
             <description>Work  每次做尝试的中间结果尽量保存下来，比如存成npy文件，方便下次直接上手接着做。  下午上课，中午没时间休息，下午上完课又累又困，不想干活……一旦开始工作的话还是能很快进入状态的。  ...</description>
             <pubDate>2026-01-01 00:00:00 </pubDate>
-            <link>/blog/write/Echo.html</link>
-            <guid isPermaLink="true">/blog/write/Echo.html</guid>
+            <link>/blog/write/Echo_2025.html</link>
+            <guid isPermaLink="true">/blog/write/Echo_2025.html</guid>
         </item>
         
         <item>
